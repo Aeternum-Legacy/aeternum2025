@@ -132,6 +132,6 @@
   background-image: url("/patterns/BGPattern5.svg"),
     url("/patterns/BGPattern4.svg");
   background-repeat: no-repeat, no-repeat;
-  background-position: -50px -200px, top right;
-  background-size: 500px, 200px;
+  background-position: -150px -180px, calc(100% + 300px) -100px;
+  background-size: 500px, 600px;
 }
