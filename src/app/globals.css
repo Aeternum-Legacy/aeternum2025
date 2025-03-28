@@ -130,8 +130,10 @@
 
 .bg-pattern {
   background-image: url("/patterns/BGPattern5.svg"),
-    url("/patterns/BGPattern4.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: -150px -180px, calc(100% + 300px) -100px;
-  background-size: 500px, 600px;
+    url("/patterns/BGPattern4.svg"), url("/patterns/BGPattern5.svg"),
+    url("/patterns/BGPattern5.svg");
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: -150px -180px, calc(100% + 300px) -100px,
+    calc(100% + 100px) 1000px, -250px 1100px;
+  background-size: 500px, 600px, 400px, 500px;
 }
