@@ -4,12 +4,14 @@ import NavigationMenu from "../components/layout/navigation-menu";
 export default function Home() {
   return (
     <main className="bg-pattern overflow-x-hidden">
+      {/* Navigation */}
       <section className="p-5">
         <NavigationMenu />
       </section>
 
-      <section className="relative mt-24 pb-20 min-h-[600px] flex flex-col items-center text-center">
-        <div className="absolute top-0 z-10 w-full flex flex-col items-center mt-12 gap-4">
+      {/* Hero Section */}
+      <section className="relative min-h-[600px] py-20 flex flex-col items-center text-center">
+        <div className="absolute top-10 z-10 w-full flex flex-col items-center mt-12 gap-4">
           <h1 className="text-6xl text-black dark:text-white">
             How will you be remembered?
           </h1>
@@ -20,7 +22,9 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Image Strip */}
         <div className="pt-36 grid grid-cols-5 gap-2 w-[110vw]">
+          {/* Each image column */}
           <div className="flex justify-center items-start">
             <div className="relative w-[120%] aspect-[15/9]">
               <Image
@@ -78,8 +82,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-10 justify-center items-center m-16">
-        <div className="flex flex-row space-x-2">
+      {/* Did You Know Section */}
+      <section className="mt-20 mb-40 flex flex-col gap-10 justify-center items-center">
+        <div className="flex flex-row items-center space-x-2">
           <img
             src="/icons/arrow-right.svg"
             alt="Arrow Right Icon"
@@ -87,8 +92,10 @@ export default function Home() {
           />
           <p>Did you know...</p>
         </div>
+
         <div className="grid grid-cols-3 gap-12">
-          <div className="bg-[#FCFCF9] rounded-xl shadow-[3px_6px_4px_-1px_rgba(0,_0,_0,_0.3)] px-6 pt-20 pb-3 w-72 text-left">
+          {/* Fact 1 */}
+          <div className="bg-[#FCFCF9] rounded-xl shadow-[3px_6px_4px_-1px_rgba(0,_0,_0,_0.2)] px-6 pt-20 pb-6 w-72 text-left">
             <div className="flex items-start text-black text-6xl font-semibold leading-none">
               62
               <span className="text-3xl font-normal align-super ml-1">%</span>
@@ -99,12 +106,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-[#FCFCF9] rounded-xl shadow-[3px_6px_4px_-1px_rgba(0,_0,_0,_0.3)] px-6 pt-20 pb-3 w-72 text-left">
-            <div className="flex items-start text-black text-6xl font-semibold leading-none">
-              127
-              <span className="text-base font-medium align-baseline ml-1">
-                M
-              </span>
+          {/* Fact 2 */}
+          <div className="bg-[#FCFCF9] rounded-xl shadow-[3px_6px_4px_-1px_rgba(0,_0,_0,_0.2)] px-6 pt-20 pb-6 w-72 text-left">
+            <div className="flex items-end text-black text-6xl font-semibold leading-none">
+              <div>127</div>
+              <span className="text-4xl font-bold ml-1 self-end">M</span>
             </div>
             <p className="mt-3 text-sm text-black leading-snug">
               deceased social media accounts are at risk of being deleted,
@@ -112,7 +118,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-[#FCFCF9] rounded-xl shadow-[3px_6px_4px_-1px_rgba(0,_0,_0,_0.3)] px-6 pt-20 pb-3 w-72 text-left">
+          {/* Fact 3 */}
+          <div className="bg-[#FCFCF9] rounded-xl shadow-[3px_6px_4px_-1px_rgba(0,_0,_0,_0.2)] px-6 pt-20 pb-6 w-72 text-left">
             <div className="flex items-start text-black text-6xl font-semibold leading-none">
               71
               <span className="text-3xl font-normal align-super ml-1">%</span>
@@ -125,7 +132,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex items-center justify-center p-16 flex-col gap-4 text-center">
+      {/* Solution Section */}
+      <section className="mb-20 flex flex-col items-center justify-center gap-4 text-center">
         <h2 className="text-6xl text-black dark:text-white">
           What if there is a solution?
         </h2>
@@ -136,23 +144,128 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex items-center justify-center p-20 flex-col gap-4 text-center">
-        <div className="relative inline-block">
-          {/* Left Quote Icon */}
+      <section className="relative text-center overflow-hidden">
+        {/* Background image (fills container, stays in back) */}
+        <div className="absolute inset-0 -z-10">
           <img
-            src="/icons/quote.svg"
-            alt="Left Quote Icon"
-            className="absolute -top-6 -left-11 w-20 h-20 "
+            src="/images/mom&daughter.png"
+            alt="Family in a field"
+            className="w-full h-full object-cover object-[center_-200px]"
           />
+        </div>
 
-          {/* Right Quote Icon */}
-          <img
-            src="/icons/quote.svg"
-            alt="Right Quote Icon"
-            className="absolute -bottom-6 -right-11 w-20 h-20 rotate-180"
-          />
+        {/* Content that overlays the image */}
+        <div className="flex flex-col justify-start items-center pt-32 pb-96 px-6">
+          {/* Heading with quote icons */}
+          <div className="relative inline-block mb-24">
+            <img
+              src="/icons/quote.svg"
+              alt=""
+              aria-hidden="true"
+              className="absolute top-0 left-6 -translate-x-full -translate-y-1/4 w-20 h-20"
+            />
+            <img
+              src="/icons/quote.svg"
+              alt=""
+              aria-hidden="true"
+              className="absolute bottom-0 right-6 translate-x-full translate-y-1/4 w-20 h-20 rotate-180"
+            />
+            <h1 className="text-8xl relative z-10">Reimagine Your Legacy</h1>
+          </div>
 
-          <h1 className="text-8xl relative z-10">Reimagine Your Legacy</h1>
+          {/* Paragraph + Button */}
+          <div className="mx-10 mb-14 flex flex-col gap-10 items-end self-end text-right">
+            <p className="text-5xl leading-relaxed tracking-wider">
+              <span className="block">
+                Aeternum offers a{" "}
+                <span className="italic text-teal-700">private</span> and{" "}
+                <span className="italic text-teal-700">secure</span> digital
+              </span>
+              <span className="block">
+                space to <span className="italic text-teal-700">connect</span>{" "}
+                families, <span className="italic text-teal-700">share</span>{" "}
+                cherished
+              </span>
+              <span className="block">
+                memories, and{" "}
+                <span className="italic text-teal-700">deliver</span> loving
+                messages,
+              </span>
+              <span className="block">
+                <span className="italic text-teal-700">
+                  even after our passing.
+                </span>
+              </span>
+            </p>
+
+            <div>
+              <button className="bg-teal-700 hover:bg-gray-800 text-white text-lg font-medium px-6 py-2 rounded-full transition-colors duration-300">
+                Join Beta Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#F7F8EA] py-24 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 border-y border-gray-300">
+          {/* Feature 1 */}
+          <div className="flex flex-col items-center text-center px-6 md:border-r border-gray-300">
+            <img
+              src="/icons/security.svg"
+              alt="Privacy Icon"
+              className="w-10 h-10 mb-6"
+            />
+            <h3 className="text-xl font-semibold mb-4">
+              Privacy and
+              <br />
+              Security
+            </h3>
+            <p className="text-sm text-gray-700 max-w-[280px]">
+              Your family connections should be protected, free from outside
+              intrusion. Connect with linked ones in Aeternum’s Private Family
+              Tree — free from ads, forced content, and unwanted influence.
+            </p>
+          </div>
+
+          {/* Feature 2 */}
+          <div className="flex flex-col items-center text-center px-6 md:border-r border-gray-300">
+            <img
+              src="/icons/memory.svg"
+              alt="Memory Icon"
+              className="w-10 h-10 mb-6"
+            />
+            <h3 className="text-xl font-semibold mb-4">
+              Memory
+              <br />
+              Preservation
+            </h3>
+            <p className="text-sm text-gray-700 max-w-[280px]">
+              A photo without a story is just a snapshot in time. Aeternum keeps
+              your cherished memories into lasting legacies by pairing images
+              and videos with personal stories, voice recordings, and heartfelt
+              reflections.
+            </p>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="flex flex-col items-center text-center px-6">
+            <img
+              src="/icons/inheritance.svg"
+              alt="Legacy Icon"
+              className="w-10 h-10 mb-6"
+            />
+            <h3 className="text-xl font-semibold mb-4">
+              Legacy
+              <br />
+              Inheritance
+            </h3>
+            <p className="text-sm text-gray-700 max-w-[280px]">
+              Your legacy is more than memories: it’s the values, traditions,
+              and wisdom you pass down. With Aeternum’s proprietary design, you
+              can securely share your life’s story and ensure it reaches your
+              loved ones for generations to come.
+            </p>
+          </div>
         </div>
       </section>
     </main>
