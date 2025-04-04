@@ -70,7 +70,7 @@ export default function NavigationBar() {
           <li>
             <Link href="/" className="flex items-center space-x-2">
               <img
-                src="/icons/Logo.svg"
+                src="/icons/logo.svg"
                 alt="Aeternum"
                 className="h-6 w-auto"
               />

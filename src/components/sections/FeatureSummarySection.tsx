@@ -23,7 +23,7 @@ export default function FeatureSummarySection() {
   return (
     <section className="bg-[#F7F8EA] px-5 py-20 flex flex-col items-center">
       <div className="flex flex-col items-center gap-2">
-        <img src="icons/Logo2.svg" />
+        <img src="icons/logo2.svg" />
         <p className="leading-relaxed font-bold text-xs tracking-[0.25em] text-[#186E68]">
           AETERNUM
         </p>

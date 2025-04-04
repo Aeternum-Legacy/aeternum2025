@@ -3,6 +3,7 @@ import DidYouKnowSection from "@/components/sections/DidYouKnowSection";
 import SolutionSection from "@/components/sections/SolutionSection";
 import HeroSection from "@/components/sections/HeroSection";
 import NavigationBar from "../components/layout/NavigationBar";
+import FeatureDetailSection from "@/components/sections/FeatureDetailSection";
 
 export default function Home() {
   return (
@@ -61,6 +62,7 @@ export default function Home() {
         </div>
       </section>
       <FeatureSummarySection />
+      <FeatureDetailSection />
     </main>
   );
 }
