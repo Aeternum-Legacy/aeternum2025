@@ -155,7 +155,7 @@ export default function Home() {
         </div>
 
         {/* Content that overlays the image */}
-        <div className="flex flex-col justify-start items-center pt-32 pb-96 px-6">
+        <div className="flex flex-col justify-start items-center pt-32 px-6 h-[1150px]">
           {/* Heading with quote icons */}
           <div className="relative inline-block mb-24">
             <img
@@ -170,7 +170,9 @@ export default function Home() {
               aria-hidden="true"
               className="absolute bottom-0 right-6 translate-x-full translate-y-1/4 w-20 h-20 rotate-180"
             />
-            <h1 className="text-8xl relative z-10">Reimagine Your Legacy</h1>
+            <h1 className="text-[5.5rem] relative z-10">
+              Reimagine Your Legacy
+            </h1>
           </div>
 
           {/* Paragraph + Button */}
@@ -206,8 +208,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#F7F8EA] py-24 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 border-y border-gray-300">
+      <section className="bg-[#F7F8EA] py-20 flex flex-col items-center gap-10">
+        <div className="flex flex-col items-center gap-2">
+          <img src="icons/Logo2.svg" />
+          <p className="leading-relaxed font-bold text-xs tracking-[0.25em] text-[#186E68]">
+            AETERNUM
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 border-y border-gray-300 w-full">
           {/* Feature 1 */}
           <div className="flex flex-col items-center text-center px-6 md:border-r border-gray-300">
             <img

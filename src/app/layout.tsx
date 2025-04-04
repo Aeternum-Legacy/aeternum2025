@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
-import { headers } from "next/headers";
+// import { headers } from "next/headers";
 
 const lato = Lato({
-  weight: ["400", "700"],
+  weight: ["100", "300", "400", "700", "900"],
   subsets: ["latin"],
   display: "swap",
 });
