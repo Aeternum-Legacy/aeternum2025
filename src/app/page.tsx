@@ -133,51 +133,51 @@ export default function Home() {
       </section>
 
       {/* Solution Section */}
-      <section className="mb-20 flex flex-col items-center justify-center gap-4 text-center">
-        <h2 className="text-6xl text-black dark:text-white">
-          What if there is a solution?
-        </h2>
-        <div className="mt-4 text-xl text-[#738483]">
-          <p>Deliver timeless messages</p>
-          <p>Pass on cherished memories</p>
-          <p>Private and safe for families</p>
+      <section className="flex flex-col items-center justify-center gap-36 text-center">
+        <div>
+          <h2 className="text-6xl text-black">What if there is a solution?</h2>
+          <div className="mt-4 text-xl text-[#738483]">
+            <p>Deliver timeless messages</p>
+            <p>Pass on cherished memories</p>
+            <p>Private and safe for families</p>
+          </div>
+        </div>
+
+        <div className="relative inline-block">
+          <img
+            src="/icons/quote.svg"
+            alt=""
+            aria-hidden="true"
+            className="absolute top-0 left-6 -translate-x-full w-20 h-20"
+          />
+          <img
+            src="/icons/quote.svg"
+            alt=""
+            aria-hidden="true"
+            className="absolute bottom-0 right-6 translate-x-full translate-y-1/4 w-20 h-20 rotate-180"
+          />
+          <h1 className="text-[5.5rem] relative z-10">Reimagine Your Legacy</h1>
         </div>
       </section>
 
       <section className="relative text-center overflow-hidden">
         {/* Background image (fills container, stays in back) */}
-        <div className="absolute inset-0 -z-10">
-          <img
-            src="/images/mom&daughter.png"
-            alt="Family in a field"
-            className="w-full h-full object-cover object-[center_-200px]"
-          />
-        </div>
+        <img
+          src="/images/mom&daughter.png"
+          alt="Family in a field"
+          className="w-full object-cover"
+        />
 
         {/* Content that overlays the image */}
-        <div className="flex flex-col justify-start items-center pt-32 px-6 h-[1150px]">
+        <div className="absolute inset-0 flex flex-col justify-start items-center pt-14 px-6">
           {/* Heading with quote icons */}
-          <div className="relative inline-block mb-24">
-            <img
-              src="/icons/quote.svg"
-              alt=""
-              aria-hidden="true"
-              className="absolute top-0 left-6 -translate-x-full -translate-y-1/4 w-20 h-20"
-            />
-            <img
-              src="/icons/quote.svg"
-              alt=""
-              aria-hidden="true"
-              className="absolute bottom-0 right-6 translate-x-full translate-y-1/4 w-20 h-20 rotate-180"
-            />
-            <h1 className="text-[5.5rem] relative z-10">
-              Reimagine Your Legacy
-            </h1>
-          </div>
 
           {/* Paragraph + Button */}
           <div className="mx-10 mb-14 flex flex-col gap-10 items-end self-end text-right">
-            <p className="text-5xl leading-relaxed tracking-wider">
+            <p
+              className="text-5xl leading-relaxed tracking-wider"
+              style={{ fontWeight: 500, textShadow: "0 0 .9px currentColor" }}
+            >
               <span className="block">
                 Aeternum offers a{" "}
                 <span className="italic text-teal-700">private</span> and{" "}
