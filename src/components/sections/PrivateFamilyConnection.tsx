@@ -27,7 +27,7 @@ export default function PrivateFamilyConnection() {
     },
   ];
   return (
-    <div className="mb-70">
+    <div className="mb-60">
       <h2 className="text-6xl text-right">Private Family Connection</h2>
       <div className="grid md:grid-cols-2 gap-12">
         <div className="relative w-full mx-auto">
@@ -53,7 +53,7 @@ export default function PrivateFamilyConnection() {
         </div>
 
         <div className="text-center py-10 pr-7 flex flex-col gap-3">
-          <p className="text-[#4F4949]">
+          <p className="text-[#4F4949] text-lg">
             Your family’s safety and well being should never be compromised.
             Aeternum provides a private and secure digital space to connect,
             interact, and be remembered, for generations that follow.

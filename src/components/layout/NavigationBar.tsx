@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import NavButton from "../ui/nav-button";
+import NavButton from "../ui/NavButton";
 import { ChevronDown } from "lucide-react";
 
 export default function NavigationBar() {
