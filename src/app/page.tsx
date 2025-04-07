@@ -4,7 +4,8 @@ import SolutionSection from "@/components/sections/SolutionSection";
 import HeroSection from "@/components/sections/HeroSection";
 import NavigationBar from "../components/layout/NavigationBar";
 import FeatureDetailSection from "@/components/sections/FeatureDetailSection";
-import Image from "next/image";
+import ImageTile from "@/components/ui/ImageTile";
+import ImageTileSection from "@/components/sections/ImageTileSection";
 
 export default function Home() {
   return (
@@ -64,67 +65,8 @@ export default function Home() {
       </section>
       <FeatureSummarySection />
       <FeatureDetailSection />
-      <section className="flex flex-col">
-        <h3
-          className="px-20 tracking-tight leading-tight"
-          style={{ textShadow: "0 0 .9px currentColor", fontSize: "5.5rem" }}
-        >
-          <span className="block">Do not let memories fade</span>
-
-          <span className="flex items-center gap-7">
-            Secure
-            <img
-              src="/icons/logo3.svg"
-              alt="logo"
-              className="w-[90px] h-[90px]"
-            />
-            them forever
-          </span>
-        </h3>
-
-        <p className="px-20 mt-4 text-xl">
-          Your memories, your legacy – begin preserving them today.
-        </p>
-        <div className="grid grid-cols-6 grid-rows-3 gap-1 w-full mt-20">
-          {/* Image placed in row 3 (bottom) of column 1 */}
-          <div className="col-span-1 row-start-3">
-            <Image
-              src="/images/image-tile1.jpg"
-              alt="Tile 1"
-              width={400}
-              height={300}
-              className="object-cover w-full h-auto rounded-lg"
-            />
-          </div>
-          <div className="col-start-2 row-start-2">
-            <Image
-              src="/images/image-tile2.jpg"
-              alt="Tile 1"
-              width={400}
-              height={300}
-              className="object-cover w-full h-auto rounded-lg"
-            />
-          </div>
-          <div className="col-start-2 row-start-3">
-            <Image
-              src="/images/image-tile3.jpg"
-              alt="Tile 1"
-              width={400}
-              height={300}
-              className="object-cover w-full h-auto rounded-lg"
-            />
-          </div>
-          <div className="col-start-3 row-start-1">
-            <Image
-              src="/images/image-tile4.jpg"
-              alt="Tile 1"
-              width={400}
-              height={300}
-              className="object-cover w-full h-auto rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
+      <ImageTileSection />
+      <section></section>
     </main>
   );
 }
