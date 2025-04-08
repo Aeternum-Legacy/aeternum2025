@@ -16,7 +16,7 @@ const eslintConfig = [
     rules: {
       "@typescript-eslint/no-unused-vars": "warn",
     },
-  },
+  },pnp
 ];
 
 export default eslintConfig;

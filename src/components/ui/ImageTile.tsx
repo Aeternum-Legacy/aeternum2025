@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function ImageTile() {
   return (
-    <div className="flex flex-row gap-1.5 h-[900px] w-[110%] -ml-[10%] overflow-hidden">
+    <div className="flex flex-row gap-1.5 h-[900px] w-[110%] overflow-hidden">
       <div className="flex flex-col justify-end gap-1.5 basis-[12%]">
         <div className="relative w-[300px] h-[400px]">
           <Image
@@ -32,7 +32,7 @@ export default function ImageTile() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-end gap-1.5 basis-[16.66%]">
+      <div className="flex flex-col justify-end gap-1.5 basis-[13%]">
         <div className="relative w-[250px] h-[300px]">
           <Image
             src="/images/image-tile4.jpg"
