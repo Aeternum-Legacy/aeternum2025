@@ -4,7 +4,6 @@ import SolutionSection from "@/components/sections/SolutionSection";
 import HeroSection from "@/components/sections/HeroSection";
 import NavigationBar from "../components/layout/NavigationBar";
 import FeatureDetailSection from "@/components/sections/FeatureDetailSection";
-import ImageTile from "@/components/ui/ImageTile";
 import ImageTileSection from "@/components/sections/ImageTileSection";
 import Image from "next/image";
 import ReimagineYourLegacySection from "@/components/sections/ReimagineYourLegacySection";
@@ -12,7 +11,6 @@ import ReimagineYourLegacySection from "@/components/sections/ReimagineYourLegac
 export default function Home() {
   return (
     <main className="bg-pattern overflow-x-hidden">
-      <NavigationBar />
       <HeroSection />
       <DidYouKnowSection />
       <SolutionSection />
@@ -78,7 +76,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right: Form Area */}
         <div className="bg-[#F7F8EA] flex flex-col justify-center items-center px-20">
           <img
             src="/icons/logo4.svg"

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
+import NavigationBar from "@/components/layout/NavigationBar";
+import Footer from "@/components/layout/Footer";
 // import { headers } from "next/headers";
 
 const lato = Lato({
@@ -20,7 +22,11 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" className={`${lato.className}`}>
-      <body>{children}</body>
+      <body>
+        <NavigationBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
