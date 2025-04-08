@@ -18,7 +18,7 @@ export default function Home() {
       <FeatureSummarySection />
       <FeatureDetailSection />
       <ImageTileSection />
-      <section className="grid grid-cols-2 h-[700px]" id="signup">
+      <section className="grid grid-cols-2 h-[700px] mb-10" id="signup">
         <div className="relative">
           <Image
             src="/images/tree.png"
