@@ -66,7 +66,6 @@ export default function NavigationBar() {
     <div className="p-3 bg-white">
       <nav className="rounded-full bg-black text-white px-6 py-2">
         <ul className="flex items-center justify-between space-x-6">
-          {/* Logo */}
           <li>
             <Link href="/" className="flex items-center space-x-2">
               <img
@@ -77,7 +76,6 @@ export default function NavigationBar() {
             </Link>
           </li>
 
-          {/* Navigation Links */}
           <div className="flex items-center space-x-16">
             {navItems.map(({ title, links }) => (
               <li
@@ -87,7 +85,6 @@ export default function NavigationBar() {
                   menuRefs.current[title] = el;
                 }}
               >
-                {/* Dropdown Toggle */}
                 <button
                   onClick={() =>
                     setOpenMenu((prev) => (prev === title ? null : title))
@@ -102,7 +99,6 @@ export default function NavigationBar() {
                   />
                 </button>
 
-                {/* Dropdown Menu - always rendered for animation */}
                 <div
                   className={`
                 absolute left-0 top-full mt-3 w-40 bg-black text-white rounded-md shadow-md z-50 p-2
@@ -128,7 +124,6 @@ export default function NavigationBar() {
             ))}
           </div>
 
-          {/* CTA Button */}
           <li>
             <NavButton />
           </li>

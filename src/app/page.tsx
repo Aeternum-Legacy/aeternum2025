@@ -2,7 +2,6 @@ import FeatureSummarySection from "@/components/sections/FeatureSummarySection";
 import DidYouKnowSection from "@/components/sections/DidYouKnowSection";
 import SolutionSection from "@/components/sections/SolutionSection";
 import HeroSection from "@/components/sections/HeroSection";
-import NavigationBar from "../components/layout/NavigationBar";
 import FeatureDetailSection from "@/components/sections/FeatureDetailSection";
 import ImageTileSection from "@/components/sections/ImageTileSection";
 import Image from "next/image";
