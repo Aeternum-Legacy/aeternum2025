@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import NavButton from "../ui/NavButton";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 export default function NavigationBar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -68,9 +69,11 @@ export default function NavigationBar() {
         <ul className="flex items-center justify-between space-x-6">
           <li>
             <Link href="/" className="flex items-center space-x-2">
-              <img
+              <Image
                 src="/icons/logo.svg"
                 alt="Aeternum"
+                width={80}
+                height={24}
                 className="h-6 w-auto"
               />
             </Link>
