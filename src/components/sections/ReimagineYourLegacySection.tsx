@@ -6,7 +6,6 @@ export default function ReimagineYourLegacySection() {
   const router = useRouter();
 
   const handleClick = () => {
-    // Only run in client-side context
     if (typeof window !== "undefined") {
       const signupSection = document.getElementById("signup");
       if (signupSection) {
@@ -29,27 +28,31 @@ export default function ReimagineYourLegacySection() {
         <div className="mx-10 mb-14 flex flex-col gap-10 items-end self-end text-right">
           <p
             className="text-5xl leading-relaxed tracking-wider"
-            style={{ fontWeight: 500, textShadow: "0 0 .9px currentColor" }}
+            style={{ fontWeight: 500, textShadow: "0 0 1.5px currentColor" }}
           >
-            <span className="block">
-              Aeternum offers a{" "}
-              <span className="italic text-teal-700">private</span> and{" "}
-              <span className="italic text-teal-700">secure</span> digital
-            </span>
-            <span className="block">
-              space to <span className="italic text-teal-700">connect</span>{" "}
-              families, <span className="italic text-teal-700">share</span>{" "}
-              cherished
-            </span>
-            <span className="block">
-              memories, and{" "}
-              <span className="italic text-teal-700">deliver</span> loving
-              messages,
-            </span>
-            <span className="block">
-              <span className="italic text-teal-700">
-                even after our passing.
+            <span className="inline-flex items-baseline">
+              <span className="relative inline-flex items-center mr-3">
+                Aeternum
+                <img
+                  src="/icons/trademark.png"
+                  alt="Trademark"
+                  className="w-5 h-5 relative -mt-4"
+                />
               </span>
+              offers a <span className="text-teal-700">private</span> and{" "}
+              <span className="text-teal-700">secure</span> digital
+            </span>
+
+            <span className="block">
+              space to <span className=" text-teal-700">connect</span> families,{" "}
+              <span className=" text-teal-700">share</span> cherished
+            </span>
+            <span className="block">
+              memories, and <span className=" text-teal-700">deliver</span>{" "}
+              loving messages,
+            </span>
+            <span className="block">
+              <span className=" text-teal-700">even after our passing.</span>
             </span>
           </p>
 

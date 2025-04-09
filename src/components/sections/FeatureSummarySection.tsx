@@ -29,8 +29,7 @@ export default function FeatureSummarySection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 w-full px-10 py-3">
-        {/* Feature 1 */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 w-full px-10 py-3 -mr-20">
         {features.map((feature, index) => {
           return (
             <div key={index} className="relative flex items-center pl-9 pr-6">

@@ -27,7 +27,7 @@ export default function PrivateFamilyConnection() {
     },
   ];
   return (
-    <div className="mb-60">
+    <div className="mb-30">
       <h2 className="text-6xl text-right">Private Family Connection</h2>
       <div className="grid md:grid-cols-2 gap-12">
         <div className="relative w-full mx-auto">

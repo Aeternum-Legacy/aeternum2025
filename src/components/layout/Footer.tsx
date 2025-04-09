@@ -31,9 +31,6 @@ export default function Footer() {
               <li>
                 <Link href="#">Career</Link>
               </li>
-              <li>
-                <Link href="#">Investor Connect</Link>
-              </li>
             </ul>
           </div>
           <div>

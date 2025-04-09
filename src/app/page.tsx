@@ -28,8 +28,17 @@ export default function Home() {
 
           <div className="absolute inset-0 flex flex-col px-10 text-black items-center justify-start mt-10">
             <h2 className="text-[42px] mb-3 tracking-tighter">
-              Early Access to Aeternum
+              Early Access to{" "}
+              <span className="inline-flex items-center ml-1">
+                Aeternum
+                <img
+                  src="/icons/trademark.png"
+                  alt="Trademark"
+                  className="w-4 h-4 ml-1 relative -mt-4"
+                />
+              </span>
             </h2>
+
             <p className="mb-3 whitespace-nowrap text-left tracking-tight">
               Register as a Private User and gain exclusive access to Aeternum
               expected to launch in 2025.
