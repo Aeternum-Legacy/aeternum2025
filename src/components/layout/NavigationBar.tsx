@@ -84,7 +84,7 @@ export default function NavigationBar() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="rounded-full bg-black text-white px-6 py-2"
           >
             <ul className="flex items-center justify-between space-x-6">
