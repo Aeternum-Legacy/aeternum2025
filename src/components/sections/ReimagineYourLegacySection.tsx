@@ -6,11 +6,14 @@ export default function ReimagineYourLegacySection() {
   const router = useRouter();
 
   const handleClick = () => {
-    const signupSection = document.getElementById("signup");
-    if (signupSection) {
-      signupSection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      router.push("/#signup");
+    // Only run in client-side context
+    if (typeof window !== "undefined") {
+      const signupSection = document.getElementById("signup");
+      if (signupSection) {
+        signupSection.scrollIntoView({ behavior: "smooth" });
+      } else {
+        router.push("/#signup");
+      }
     }
   };
 

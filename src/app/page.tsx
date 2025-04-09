@@ -30,14 +30,12 @@ export default function Home() {
             <h2 className="text-[42px] mb-3 tracking-tighter">
               Early Access to Aeternum
             </h2>
-            <p className="mb-3 whitespace-nowrap text-left text-[15px] tracking-tight">
+            <p className="mb-3 whitespace-nowrap text-left tracking-tight">
               Register as a Private User and gain exclusive access to Aeternum
               expected to launch in 2025.
             </p>
-            <p className="tracking-tight text-sm mb-3">
-              As a Priority User, you will:
-            </p>
-            <ul className="ml-5 space-y-1 text-sm tracking-tighter">
+            <p className="tracking-tight mb-3">As a Priority User, you will:</p>
+            <ul className="ml-5 space-y-1 tracking-tight">
               <li className="flex items-start gap-1">
                 <img
                   src="/icons/list.svg"

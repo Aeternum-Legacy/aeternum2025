@@ -1,10 +1,18 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
 
 export default function HeroSection() {
+  const containerRef = useRef(null);
+
   return (
     <section className="relative min-h-[600px] py-20 flex flex-col items-center text-center">
       <div className="absolute top-10 z-10 w-full flex flex-col items-center mt-12 gap-4">
-        <h1 className="text-6xl text-black dark:text-white">
+        <h1
+          className="text-6xl text-black dark:text-white container"
+          ref={containerRef}
+        >
           How will you be remembered?
         </h1>
         <div className="text-xl text-[#738483]">
@@ -14,9 +22,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Image Strip */}
       <div className="pt-36 grid grid-cols-5 gap-2 w-[110vw]">
-        {/* Each image column */}
         <div className="flex justify-center items-start">
           <div className="relative w-[120%] aspect-[15/9]">
             <Image
