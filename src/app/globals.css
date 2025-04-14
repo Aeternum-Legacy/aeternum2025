@@ -137,3 +137,27 @@
     calc(100% + 100px) 1000px, -250px 1100px;
   background-size: 500px, 600px, 400px, 500px;
 }
+
+@media (max-width: 1024px) {
+  .bg-pattern {
+    background-size: 400px, 500px, 350px, 400px;
+    background-position: -120px -160px, calc(100% + 250px) -80px,
+      calc(100% + 80px) 900px, -200px 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-pattern {
+    background-size: 300px, 400px, 300px, 350px;
+    background-position: -100px -120px, calc(100% + 200px) -60px,
+      calc(100% + 60px) 800px, -180px 900px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-pattern {
+    background-size: 200px, 300px, 250px, 300px;
+    background-position: -80px -100px, calc(100% + 150px) -40px,
+      calc(100% + 40px) 700px, -150px 800px;
+  }
+}

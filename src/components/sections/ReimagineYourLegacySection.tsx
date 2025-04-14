@@ -24,19 +24,19 @@ export default function ReimagineYourLegacySection() {
         className="w-full object-cover"
       />
 
-      <div className="absolute inset-0 flex flex-col justify-start items-center pt-14 px-6">
-        <div className="mx-10 mb-14 flex flex-col items-end self-end text-right">
+      <div className="absolute inset-0 flex flex-col justify-start items-center md:pt-14 px-6">
+        <div className="md:mx-10 md:mb-14 flex flex-col items-end self-end text-right gap-6 md:gap-10">
           <p
-            className="text-5xl leading-relaxed tracking-wider"
+            className="md:text-5xl leading-relaxed tracking-wider"
             style={{ fontWeight: 500, textShadow: "0 0 1.5px currentColor" }}
           >
-            <span className="inline-flex items-baseline gap-3">
-              <span className="relative inline-flex items-center mr-3">
+            <span className="inline-flex items-baseline gap-1 md:gap-3">
+              <span className="relative inline-flex items-center md:mr-3">
                 Aeternum
                 <img
                   src="/icons/trademark.png"
                   alt="Trademark"
-                  className="w-5 h-5 relative -mt-4"
+                  className="w-3 h-3 md:w-5 md:h-5 relative -mt-2 md:-mt-4"
                 />
               </span>
               offers a <span className="text-teal-700">private</span> and{" "}

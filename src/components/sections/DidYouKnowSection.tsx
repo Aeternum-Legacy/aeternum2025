@@ -21,7 +21,7 @@ export default function FeatureSummarySection() {
   ];
 
   return (
-    <section className="mt-5 mb-40 flex flex-col gap-10 justify-center items-center">
+    <section className="mt-8 md:mt-5 mb-20 md:mb-40 flex flex-col gap-10 justify-center items-center">
       <div className="flex flex-row items-center space-x-2">
         <img
           src="/icons/arrow-right.svg"
@@ -31,7 +31,7 @@ export default function FeatureSummarySection() {
         <p>Did you know...</p>
       </div>
 
-      <div className="grid grid-cols-3 gap-24">
+      <div className="grid md:grid-cols-3 gap-5 md:gap-24">
         {facts.map((fact, index) => (
           <div
             key={index}

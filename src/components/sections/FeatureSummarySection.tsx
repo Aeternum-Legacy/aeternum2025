@@ -21,32 +21,35 @@ export default function FeatureSummarySection() {
   ];
 
   return (
-    <section className="bg-[#F7F8EA] px-5 py-20 flex flex-col items-center">
-      <div className="flex flex-col items-center gap-2">
-        <img src="icons/aeternum-logo2.svg" />
+    <section className="bg-[#F7F8EA] md:px-5 py-10 md:py-20 flex flex-col items-center">
+      <div className="flex flex-col items-center gap-2 mb-7 md:mb-0">
+        <img src="icons/aeternum-logo2.svg" className="w-10 md:w-auto" />
         <p className="leading-relaxed font-bold text-xs tracking-[0.25em] text-[#186E68]">
           AETERNUM
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 w-full px-10 py-3 -mr-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-0 w-full md:px-10 py-3 md:-mr-20">
         {features.map((feature, index) => {
           return (
-            <div key={index} className="relative flex items-center pl-9 pr-6">
-              <div>
+            <div
+              key={index}
+              className="relative flex items-center justify-center md:justify md:pr-6"
+            >
+              <div className="hidden md:block">
                 <div className="absolute left-0 top-0 h-full w-[1px] bg-gray-300" />
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 h-24 w-[2px] bg-[#42590F]" />
               </div>
-              <div className="flex flex-col items-start justify-center text-left py-5 gap-2">
+              <div className="flex flex-col items-center md:items-start justify-center md:text-left py-5 gap-2">
                 <img
                   src={feature.icon}
                   alt={`${feature.title} Icon`}
-                  className="w-15 h-15 mb-3"
+                  className="w-20 h-20 md:w-15 md:h-15 md:mb-3"
                 />
-                <h3 className="text-3xl font-bold mb-4 w-2/3">
+                <h3 className="text-3xl font-bold mb-4 w-2/3 text-center md:text-left whitespace-nowrap md:whitespace-normal -ml-20 md:-ml-0">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-[#052922] leading-4 w-80">
+                <p className="text-sm text-[#052922] leading-4 w-80 text-center md:text-left">
                   {feature.description}
                 </p>
               </div>
