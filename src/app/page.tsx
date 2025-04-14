@@ -84,7 +84,7 @@ export default function Home() {
 
         <div className="bg-[#F7F8EA] flex flex-col justify-center items-center px-20">
           <img
-            src="/icons/logo4.svg"
+            src="/icons/aeternum-logo4.svg"
             alt="Aeternum Logo"
             className="w-[250px] mb-15"
           />

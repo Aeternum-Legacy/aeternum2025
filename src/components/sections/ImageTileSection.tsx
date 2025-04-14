@@ -11,7 +11,7 @@ export default function ImageTileSection() {
         <span className="flex items-center gap-3">
           Secure them forever
           <img
-            src="/icons/logo3.svg"
+            src="/icons/aeternum-logo3.svg"
             alt="logo"
             className="w-[90px] h-[80px]"
           />
