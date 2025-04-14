@@ -25,12 +25,12 @@ export default function ReimagineYourLegacySection() {
       />
 
       <div className="absolute inset-0 flex flex-col justify-start items-center pt-14 px-6">
-        <div className="mx-10 mb-14 flex flex-col gap-10 items-end self-end text-right">
+        <div className="mx-10 mb-14 flex flex-col items-end self-end text-right">
           <p
             className="text-5xl leading-relaxed tracking-wider"
             style={{ fontWeight: 500, textShadow: "0 0 1.5px currentColor" }}
           >
-            <span className="inline-flex items-baseline">
+            <span className="inline-flex items-baseline gap-3">
               <span className="relative inline-flex items-center mr-3">
                 Aeternum
                 <img
