@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white px-8 py-5 rounded-3xl m-3">
       <div className="flex justify-center">
-        <Image src="/icons/logo.svg" alt="Logo" width={130} height={40} />
+        <Image src="/icons/aeternum-logo.svg" alt="Logo" width={130} height={40} />
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-white/40 pb-3 mt-3">

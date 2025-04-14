@@ -91,7 +91,7 @@ export default function NavigationBar() {
               <li>
                 <Link href="/" className="flex items-center space-x-2">
                   <Image
-                    src="/icons/logo.svg"
+                    src="/icons/aeternum-logo.svg"
                     alt="Aeternum"
                     width={50}
                     height={24}
