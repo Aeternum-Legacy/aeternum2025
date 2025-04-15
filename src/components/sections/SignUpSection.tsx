@@ -27,7 +27,7 @@ export default function SignUpSection() {
             </span>
           </h2>
 
-          <p className="mb-3 md:whitespace-nowrap text-center md:text-left tracking-tight">
+          <p className="mb-3 text-center md:text-left tracking-tight">
             Register as a Private User and gain exclusive access to Aeternum
             expected to launch in 2025.
           </p>
