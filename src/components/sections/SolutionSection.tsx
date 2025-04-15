@@ -25,7 +25,7 @@ export default function DidYouKnowSection() {
           aria-hidden="true"
           className="absolute top-2 md:top-0 md:bottom-0 right-6 translate-x-full translate-y-1/4 w-10 h-10 md:w-20 md:h-20 rotate-180"
         />
-        <h1 className="text-4xl md:text-[5.5rem] relative z-10">
+        <h1 className="text-4xl md:text-[4.5rem] lg:text-[5.5rem] relative z-10">
           Reimagine Your Legacy
         </h1>
       </div>

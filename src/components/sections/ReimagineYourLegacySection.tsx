@@ -27,7 +27,7 @@ export default function ReimagineYourLegacySection() {
       <div className="absolute inset-0 flex flex-col justify-start items-center md:pt-14 px-6">
         <div className="md:mx-10 md:mb-14 flex flex-col items-end self-end text-right gap-6 md:gap-10">
           <p
-            className="md:text-5xl leading-relaxed tracking-wider"
+            className="md:text-3xl lg:text-5xl leading-relaxed tracking-wider"
             style={{ fontWeight: 500, textShadow: "0 0 1.5px currentColor" }}
           >
             <span className="inline-flex items-baseline gap-1 md:gap-3">

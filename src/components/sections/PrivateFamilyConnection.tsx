@@ -28,9 +28,22 @@ export default function PrivateFamilyConnection() {
   ];
   return (
     <div className="mb-30">
-      <h2 className="text-6xl text-right">Private Family Connection</h2>
-      <div className="grid md:grid-cols-2 gap-12">
-        <div className="relative w-full mx-auto">
+      <div className="flex lg:hidden items-center justify-center mb-5">
+        <div className="w-80">
+          <Image
+            src="/images/pfc-image1.png"
+            alt="hands holding"
+            width={500}
+            height={400}
+          />
+        </div>
+      </div>
+
+      <h2 className="text-2xl text-center md:text-4xl lg:text-6xl lg:text-right">
+        Private Family Connection
+      </h2>
+      <div className="grid lg:grid-cols-2 gap-12">
+        <div className="hidden lg:block relative w-full mx-auto">
           <div className="relative w-full h-[320px] -mt-10">
             <Image
               src="/images/pfc-image1.png"
@@ -52,14 +65,14 @@ export default function PrivateFamilyConnection() {
           </div>
         </div>
 
-        <div className="text-center py-10 pr-7 flex flex-col gap-3">
-          <p className="text-[#4F4949] text-lg">
+        <div className="text-center py-4 lg:py-10 lg:pr-7 flex flex-col gap-3">
+          <p className="text-[#4F4949] text-sm w-4/5 mx-auto md:w-auto md:text-lg">
             Your family’s safety and well being should never be compromised.
             Aeternum provides a private and secure digital space to connect,
             interact, and be remembered, for generations that follow.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mt-10 justify-items-center">
             {features.map((feature, index) => (
               <FeatureCard
                 key={index}
@@ -88,7 +101,7 @@ function FeatureCard({
   iconSize: number;
 }) {
   return (
-    <div className="relative bg-[#F7F8EA] pt-16 p-4 rounded-t-[100px] text-center ">
+    <div className="relative bg-[#F7F8EA] pt-16 p-4 rounded-t-[100px] text-center w-2/3 md:w-auto">
       <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D8E3E4] p-2 rounded-full w-17 h-17 flex items-center justify-center border-3 border-white">
         <img
           src={icon}
