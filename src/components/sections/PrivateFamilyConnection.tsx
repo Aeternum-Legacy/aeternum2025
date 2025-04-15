@@ -118,7 +118,7 @@ function FeatureCard({
       <p className="font-semibold text-[#052922] mb-2 text-2xl lg:text-xl">
         {title}
       </p>
-      <p className="text-lg text-[#5B5B5B] lg:text-sm">{desc}</p>
+      <p className="text-lg text-[#5B5B5B] lg:text-base tracking-wide">{desc}</p>
     </div>
   );
 }

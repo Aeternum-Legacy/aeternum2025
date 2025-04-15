@@ -29,7 +29,7 @@ export default function FeatureSummarySection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-0 w-full lg:px-10 py-3 lg:-mr-20">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-0 w-full lg:px-10 py-3 lg:-mr-30">
         {features.map((feature, index) => {
           return (
             <div

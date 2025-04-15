@@ -21,7 +21,7 @@ export default function LegacyFeatureCard({
         <h3 className="font-semibold text-2xl md:text-xl text-black mb-2">
           {title}
         </h3>
-        <p className="text-lg md:text-sm text-[#484844] leading-6">
+        <p className="text-lg md:text-base text-[#484844] leading-6 tracking-wide">
           {description}
         </p>
       </div>

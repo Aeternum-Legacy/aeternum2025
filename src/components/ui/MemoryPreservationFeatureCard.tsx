@@ -20,7 +20,9 @@ export default function MemoryPreservationFeatureCard({
         </h3>
       </div>
 
-      <p className="text-[#484844] text-lg lg:text-sm">{content}</p>
+      <p className="text-[#484844] text-lg lg:text-base tracking-wide">
+        {content}
+      </p>
     </div>
   );
 }
