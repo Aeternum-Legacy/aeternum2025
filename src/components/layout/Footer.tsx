@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-row justify-between py-13 gap-8">
-        <div className="w-full md:w-[70%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 text-sm gap-x-3 p-5 md:p-0 gap-y-15">
+        <div className="w-full md:w-[70%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 text-sm gap-y-10 md:gap-y-0">
           <div className="hidden md:block">
             <h3 className="font-bold mb-2 text-xl md:text-lg">Home</h3>
           </div>
