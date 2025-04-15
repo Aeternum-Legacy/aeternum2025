@@ -17,7 +17,7 @@ export default function LegacyFeatureCard({
         <Image src={icon} alt={title} width={32} height={32} />
       </div>
 
-      <div className="pl-7 pr-10 text-left gap-3">
+      <div className="pl-7 md:pr-10 text-left gap-3">
         <h3 className="font-semibold text-lg text-black mb-2">{title}</h3>
         <p className="text-sm text-[#484844] leading-4">{description}</p>
       </div>

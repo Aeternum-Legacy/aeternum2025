@@ -22,40 +22,45 @@ export default function LegacyInheritanceSection() {
   ];
 
   return (
-    <>
-      {" "}
-      <div className="grid md:grid-cols-2 gap-12">
-        <div className="flex flex-col gap-6 text-center items-center justify-center">
-          <h2 className="text-6xl">Legacy Inheritance</h2>
-          <p className="text-[#4F4949] text-lg mt-4">
-            <span className="block">
-              Because the impact you leave behind matters,{" "}
-            </span>
-            <span className="block">
-              Aeternum ensures your legacy is preserved and inherited
-            </span>{" "}
-            by future generations, exactly as you intend.
-          </p>
-          <div className="flex flex-col gap-6 place-items-center justify-center mt-4">
-            {legacyFeatures.map((feature, idx) => (
-              <LegacyFeatureCard
-                key={idx}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="flex items-center justify-center">
-          <Image
-            src="/images/legacy-inheritance.png"
-            alt=""
-            width={530}
-            height={530}
-          />
+    <div className="grid lg:grid-cols-2 gap-5 lg:gap-12">
+      <div className="flex lg:hidden items-center justify-center">
+        <Image
+          src="/images/legacy-inheritance.png"
+          alt=""
+          width={350}
+          height={350}
+        />
+      </div>
+      <div className="flex flex-col gap-6 text-center items-center justify-center">
+        <h2 className="text-2xl md:text-4xl lg:text-6xl">Legacy Inheritance</h2>
+        <p className="text-[#4F4949] text-sm md:text-lg md:mt-4">
+          <span className="block">
+            Because the impact you leave behind matters,
+          </span>
+          <span className="block">
+            Aeternum ensures your legacy is preserved and inherited
+          </span>
+          by future generations, exactly as you intend.
+        </p>
+        <div className="flex flex-col gap-6 place-items-center justify-center mt-4">
+          {legacyFeatures.map((feature, idx) => (
+            <LegacyFeatureCard
+              key={idx}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+            />
+          ))}
         </div>
       </div>
-    </>
+      <div className="hidden lg:flex items-center justify-center">
+        <Image
+          src="/images/legacy-inheritance.png"
+          alt=""
+          width={530}
+          height={530}
+        />
+      </div>
+    </div>
   );
 }

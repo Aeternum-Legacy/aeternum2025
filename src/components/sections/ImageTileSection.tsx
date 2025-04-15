@@ -3,24 +3,24 @@ export default function ImageTileSection() {
   return (
     <section className="flex flex-col mb-10">
       <h3
-        className="px-20 tracking-tight leading-tight"
-        style={{ textShadow: "0 0 .9px currentColor", fontSize: "5.5rem" }}
+        className="text-center md:text-left px-10 lg:px-20 tracking-tight leading-tight text-3xl md:text-6xl lg:text-[5.5rem]"
+        style={{ textShadow: "0 0 .9px currentColor" }}
       >
         <span className="block">Do not let memories fade</span>
 
-        <span className="flex items-center gap-3">
+        <span className="flex items-center justify-center md:justify-start gap-3">
           Secure them forever
           <img
             src="/icons/aeternum-logo3.svg"
             alt="logo"
-            className="w-[90px] h-[80px]"
+            className="w-[30px] md:w-[90px] md:h-[80px]"
           />
         </span>
       </h3>
-      <p className="px-20 mt-4 text-xl">
+      <p className="px-20 mt-4 text-lg md:text-xl mb-5 md:mb-0 text-center md:text-left">
         Your memories, your legacy – begin preserving them today.
       </p>
-      <div className="-mt-18 -ml-28">
+      <div className="md:-mt-18 md:-ml-28">
         <ImageTile />
       </div>
     </section>
