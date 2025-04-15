@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="font-bold mb-2 text-xl md:text-lg">Company</h3>
-            <ul className="space-y-2 indent-8 md:indent-0 text-lg md:text-sm">
+            <ul className="space-y-2 indent-8 md:indent-0 text-base md:text-sm">
               <li>
                 <Link href="#">About Us</Link>
               </li>
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="font-bold mb-2 text-xl md:text-lg">Product</h3>
-            <ul className="space-y-2 indent-8 md:indent-0 text-lg md:text-sm">
+            <ul className="space-y-2 indent-8 md:indent-0 text-base md:text-sm">
               <li>
                 <Link href="#">Pricing Information</Link>
               </li>
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="font-bold mb-2 text-xl md:text-lg">Updates</h3>
-            <ul className="space-y-2 indent-8 md:indent-0 text-lg md:text-sm">
+            <ul className="space-y-2 indent-8 md:indent-0 text-base md:text-sm">
               <li>
                 <Link href="#">News</Link>
               </li>
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="font-bold mb-2 text-xl md:text-lg">Support</h3>
-            <ul className="space-y-2 indent-8 md:indent-0 text-lg md:text-sm">
+            <ul className="space-y-2 indent-8 md:indent-0 text-base md:text-sm">
               <li>
                 <Link href="#">Contact</Link>
               </li>
