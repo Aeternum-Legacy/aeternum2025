@@ -23,7 +23,7 @@ export default function LegacyInheritanceSection() {
 
   return (
     <div className="grid lg:grid-cols-2 gap-5 lg:gap-12 lg:px-20">
-      <div className="flex lg:hidden items-center justify-center">
+      <div className="flex lg:hidden items-center justify-center -ml-3">
         <div className="relative w-[500px] h-[500px]">
           <Image
             src="/images/legacy-inheritance.png"
