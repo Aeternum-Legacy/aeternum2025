@@ -22,18 +22,22 @@ export default function LegacyInheritanceSection() {
   ];
 
   return (
-    <div className="grid lg:grid-cols-2 gap-5 lg:gap-12">
+    <div className="grid lg:grid-cols-2 gap-5 lg:gap-12 lg:px-20">
       <div className="flex lg:hidden items-center justify-center">
-        <Image
-          src="/images/legacy-inheritance.png"
-          alt=""
-          width={350}
-          height={350}
-        />
+        <div className="relative w-[500px] h-[500px]">
+          <Image
+            src="/images/legacy-inheritance.png"
+            alt="Legacy Inheritance"
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
       <div className="flex flex-col gap-6 text-center items-center justify-center">
-        <h2 className="text-2xl md:text-4xl lg:text-6xl">Legacy Inheritance</h2>
-        <p className="text-[#4F4949] text-sm md:text-lg md:mt-4">
+        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold md:font-normal ">
+          Legacy Inheritance
+        </h2>
+        <p className="text-[#4F4949] text-lg md:text-xl md:mt-4">
           <span className="block">
             Because the impact you leave behind matters,
           </span>
@@ -54,12 +58,14 @@ export default function LegacyInheritanceSection() {
         </div>
       </div>
       <div className="hidden lg:flex items-center justify-center">
-        <Image
-          src="/images/legacy-inheritance.png"
-          alt=""
-          width={530}
-          height={530}
-        />
+        <div className="relative w-[750px] h-[800px]">
+          <Image
+            src="/images/legacy-inheritance.png"
+            alt="Legacy Inheritance"
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
     </div>
   );

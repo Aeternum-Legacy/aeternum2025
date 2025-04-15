@@ -125,7 +125,7 @@ export default function NavigationBar() {
                         onClick={() =>
                           setOpenMenu((prev) => (prev === title ? null : title))
                         }
-                        className="inline-flex items-center text-sm"
+                        className="inline-flex items-center text-base"
                       >
                         {title}
                         <ChevronDown

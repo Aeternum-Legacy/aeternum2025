@@ -1,11 +1,11 @@
 export default function DidYouKnowSection() {
   return (
-    <section className="flex flex-col items-center justify-center gap-20 md:gap-36 text-center mb-15">
-      <div>
-        <h2 className="text-3xl md:text-6xl text-black">
+    <section className="flex flex-col items-center justify-center gap-20 md:gap-36 text-center mb-15 mt-40 md:mt-0">
+      <div className="mb-20 md:mb-0">
+        <h2 className="text-3xl md:text-3xl text-black md:mb-5">
           What if there is a solution?
         </h2>
-        <div className="mt-4 text-xl text-[#738483]">
+        <div className="mt-4 text-xl md:text-xl text-[#738483] flex flex-col gap-2">
           <p>Deliver timeless messages</p>
           <p>Pass on cherished memories</p>
           <p>Private and safe for families</p>

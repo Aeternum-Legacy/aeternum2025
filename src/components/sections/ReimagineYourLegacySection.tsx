@@ -25,10 +25,10 @@ export default function ReimagineYourLegacySection() {
       />
 
       <div className="absolute inset-0 flex flex-col justify-start items-center md:pt-14 px-6">
-        <div className="md:mx-10 md:mb-14 flex flex-col items-end self-end text-right gap-6 md:gap-10">
+        <div className="md:mx-10 md:mb-14 flex flex-col items-end self-end text-right gap-10">
           <p
-            className="md:text-3xl lg:text-5xl leading-relaxed tracking-wider"
-            style={{ fontWeight: 500, textShadow: "0 0 1.5px currentColor" }}
+            className="text-2xl md:text-3xl lg:text-5xl leading-relaxed tracking-wider"
+            style={{ fontWeight: 500, textShadow: "0 0 0.5px currentColor" }}
           >
             <span className="inline-flex items-baseline gap-1 md:gap-3">
               <span className="relative inline-flex items-center md:mr-3">
@@ -36,7 +36,7 @@ export default function ReimagineYourLegacySection() {
                 <img
                   src="/icons/trademark.png"
                   alt="Trademark"
-                  className="w-3 h-3 md:w-5 md:h-5 relative -mt-2 md:-mt-4"
+                  className="w-3 h-3 md:w-10 md:h-10 relative -mt-2 md:-mt-4"
                 />
               </span>
               offers a <span className="text-teal-700">private</span> and{" "}
@@ -56,14 +56,12 @@ export default function ReimagineYourLegacySection() {
             </span>
           </p>
 
-          <div>
-            <button
-              className="bg-teal-700 hover:bg-gray-800 text-white text-lg font-medium px-6 py-2 rounded-full transition-colors duration-300"
-              onClick={handleClick}
-            >
-              Join Beta Now
-            </button>
-          </div>
+          <button
+            className="bg-teal-700 hover:bg-gray-800 text-white text-3xl md:text-xl font-medium px-18 py-5  md:px-10 md:py-3 rounded-full transition-colors duration-300 self-center md:self-end"
+            onClick={handleClick}
+          >
+            Join Beta Now
+          </button>
         </div>
       </div>
     </section>

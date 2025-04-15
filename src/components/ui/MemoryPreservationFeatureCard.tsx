@@ -15,10 +15,12 @@ export default function MemoryPreservationFeatureCard({
         <div className="bg-[#D8E3E4] p-3 rounded-full">
           <img src={icon} alt={title} />
         </div>
-        <h3 className="text-lg font-semibold text-black">{title}</h3>
+        <h3 className="text-2xl lg:text-xl font-semibold text-black">
+          {title}
+        </h3>
       </div>
 
-      <p className="text-[#484844]">{content}</p>
+      <p className="text-[#484844] text-lg lg:text-sm">{content}</p>
     </div>
   );
 }

@@ -33,7 +33,7 @@ export default function HamburgerNavigation() {
             transition={{ duration: 0.3 }}
             className="flex items-center justify-center"
           >
-            <img src="/icons/close.png" alt="Close" className="w-8 h-8" />
+            <img src="/icons/close.png" alt="Close" className="w-15 h-15" />
           </motion.button>
         ) : (
           <motion.button
@@ -48,7 +48,7 @@ export default function HamburgerNavigation() {
             <img
               src="/icons/hamburger.png"
               alt="Hamburger Menu"
-              className="w-8 h-8"
+              className="w-15 h-15"
             />
           </motion.button>
         )}
@@ -60,11 +60,11 @@ export default function HamburgerNavigation() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -10, scale: 0.95 }}
           transition={{ duration: 0.25 }}
-          className="absolute top-12 right-0 w-[230px] bg-white border border-gray-200 rounded-lg shadow-xl py-3 px-5 space-y-2"
+          className="absolute top-12 right-0 w-[300px] bg-white border border-gray-200 rounded-lg shadow-xl py-3 px-5 space-y-2"
         >
           {navItems.map((section, sectionIdx) => (
             <div key={section.title} className="space-y-1">
-              <h3 className="text-gray-800 font-semibold text-sm">
+              <h3 className="text-gray-800 font-semibold text-xl">
                 {section.title}
               </h3>
               <ul className="space-y-1 pl-2 flex flex-col">
@@ -76,7 +76,7 @@ export default function HamburgerNavigation() {
                   const linkElement = (
                     <Link
                       href={link.href}
-                      className={`block text-sm transition-all duration-300
+                      className={`block text-lg transition-all duration-300
           ${
             isLast
               ? "bg-teal-700 text-white font-semibold hover:bg-gray-800 text-center px-6 py-2 rounded-full w-2/3"

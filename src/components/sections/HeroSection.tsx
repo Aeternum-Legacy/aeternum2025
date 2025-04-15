@@ -4,18 +4,18 @@ import BlurIn from "../animations/BlurIn";
 export default function HeroSection() {
   return (
     <section className="relative min-h-full md:min-h-[600px] pt-15 md:py-20 flex flex-col items-center text-center">
-      <div className="absolute top-10 z-10 w-full flex flex-col items-center mt-3 md:mt-12 gap-2 md:gap-4">
-        <BlurIn className="text-[1.6875rem] md:text-5xl lg:text-6xl text-black dark:text-white">
+      <div className="absolute top-10 z-10 w-full flex flex-col items-center mt-3 md:mt-12 gap-4">
+        <BlurIn className="text-5xl lg:text-7xl text-black dark:text-white">
           How will you be remembered?
         </BlurIn>
-        <div className="flex  flex-col gap-1 md:gap-0 text-sm md:text-xl text-[#738483]">
+        <div className="flex flex-col gap-0 text-lg text-[#738483]">
           <p>Words left unspoken</p>
           <p>Memories left forgotten</p>
           <p>Stories left untold</p>
         </div>
       </div>
 
-      <div className="pt-36 grid md:grid-cols-5 gap-2 w-[110vw]">
+      <div className="pt-60 md:pt-36 grid md:grid-cols-5 gap-2 w-[110vw]">
         <div className="justify-center items-start hidden md:flex">
           <div className="relative w-[120%] aspect-[15/9]">
             <Image
