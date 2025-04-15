@@ -34,7 +34,7 @@ export default function FeatureSummarySection() {
           return (
             <div
               key={index}
-              className="relative flex items-center justify-center md:justify-start md:pr-3 md:gap-10"
+              className="relative flex items-center justify-center lg:justify-start md:pr-3 md:gap-10"
             >
               <div className="hidden lg:block">
                 <div className="absolute left-0 top-0 h-full w-[1px] bg-gray-300" />

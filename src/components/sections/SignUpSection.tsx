@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function SignUpSection() {
   return (
     <section
-      className="grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 h-[1500px] md:h-[700px] mb-10"
+      className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-[1500px] lg:h-[700px] mb-10"
       id="signup"
     >
       <div className="relative">
