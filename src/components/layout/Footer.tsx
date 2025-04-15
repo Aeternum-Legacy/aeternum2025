@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-row justify-between py-13 gap-8">
-        <div className="w-full md:w-[70%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5  text-sm gap-6">
+        <div className="w-full md:w-[70%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 text-sm gap-x-3 p-5 md:p-0 gap-y-15">
           <div className="hidden md:block">
             <h3 className="font-bold mb-2 text-xl md:text-lg">Home</h3>
           </div>
@@ -56,7 +56,9 @@ export default function Footer() {
                 <Link href="#">News</Link>
               </li>
               <li>
-                <Link href="#">Development Progress</Link>
+                <Link href="#" className="whitespace-nowrap">
+                  Development Progress
+                </Link>
               </li>
             </ul>
           </div>
@@ -93,7 +95,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Section */}
       <div className="flex flex-col justify-between items-center pt-6 text-xs gap-2 border-t border-white/40">
         <div className="flex space-x-4">
           <Link href="#">Terms & Conditions</Link>
