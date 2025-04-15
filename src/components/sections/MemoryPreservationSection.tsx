@@ -18,8 +18,8 @@ export default function MemoryPreservationSection() {
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold md:font-normal">
           Memory Preservation
         </h2>
-        <p className="text-[#4F4949] text-lg w-4/5 md:w-2/3 md:mb-5">
-          <span className="block">
+        <p className="text-[#4F4949] text-lg w-4/5 md:w-2/3 md:mb-5 ">
+          <span className="whitespace-nowrap block">
             Life moves fast, and precious memories can slip away.
           </span>
           Aeternum keeps your stories, moments, and legacies safe - secure,
