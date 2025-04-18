@@ -3,10 +3,13 @@ import Image from "next/image";
 export default function SignUpSection() {
   return (
     <section
-      className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-[1500px] lg:h-[700px] mb-10"
+      className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1
+                 h-auto lg:h-[700px] mb-10"
       id="signup"
     >
+      {/* Left: Tree + Text */}
       <div className="relative">
+        {/* Background image */}
         <Image
           src="/images/tree.png"
           alt="Tree"
@@ -14,8 +17,15 @@ export default function SignUpSection() {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 flex flex-col px-10 text-black items-center justify-start mt-10">
-          <h2 className="text-3xl md:text-[42px] mb-3 tracking-tighter">
+        {/* White overlay for mobile only */}
+        <div className="absolute inset-0 bg-white/50 block lg:hidden z-10" />
+
+        {/* Text Content */}
+        <div
+          className="absolute inset-0 z-20 flex flex-col items-center justify-start
+                     mt-10 px-4 sm:px-10 text-black"
+        >
+          <h2 className="text-3xl md:text-[42px] mb-3 tracking-tighter text-center md:text-left">
             Early Access to
             <span className="inline-flex items-center ml-1">
               Aeternum
@@ -27,57 +37,43 @@ export default function SignUpSection() {
             </span>
           </h2>
 
-          <p className="mb-3 text-center md:text-left tracking-tight">
+          <p className="mb-3 text-center md:text-left tracking-tight max-w-[90%] md:max-w-full">
             Register as a Private User and gain exclusive access to Aeternum
             expected to launch in 2025.
           </p>
+
           <p className="tracking-tight mb-3">As a Priority User, you will:</p>
-          <ul className="ml-5 space-y-1 tracking-tight">
-            <li className="flex items-start gap-1">
-              <img
-                src="/icons/list.svg"
-                alt="bullet"
-                className="w-4 h-4 mt-1"
-              />
-              <span>
-                Get an exclusive invitation to the Beta Test about the future of
-                legacy preservation.
-              </span>
-            </li>
-            <li className="flex items-start gap-1">
-              <img
-                src="/icons/list.svg"
-                alt="bullet"
-                className="w-4 h-4 mt-1"
-              />
-              <span>
-                Be the first to experience Aeternum’s new approach to memory
-                preservation.
-              </span>
-            </li>
-            <li className="flex items-start gap-1">
-              <img
-                src="/icons/list.svg"
-                alt="bullet"
-                className="w-4 h-4 mt-1"
-              />
-              <span>
-                Be chosen for limited updates and features, tests, and feedback
-                cycles.
-              </span>
-            </li>
+
+          <ul className="ml-5 space-y-2 tracking-tight max-w-[95%] md:max-w-full text-sm">
+            {[
+              "Get an exclusive invitation to the Beta Test about the future of legacy preservation.",
+              "Be the first to experience Aeternum’s new approach to memory preservation.",
+              "Be chosen for limited updates and features, tests, and feedback cycles.",
+            ].map((text, idx) => (
+              <li key={idx} className="flex items-start gap-2">
+                <img
+                  src="/icons/list.svg"
+                  alt="bullet"
+                  className="w-4 h-4 mt-[0.2rem]"
+                />
+                <span>{text}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
-      <div className="bg-[#F7F8EA] flex flex-col justify-center items-center px-20">
+      {/* Right: Form */}
+      <div className="bg-[#F7F8EA] flex flex-col items-center justify-center px-6 sm:px-20 py-10">
         <img
           src="/icons/aeternum-logo4.svg"
           alt="Aeternum Logo"
-          className="w-[250px] mb-15"
+          className="w-[200px] sm:w-[250px] mb-10"
         />
-        <form className="space-y-5">
-          <div className="grid grid-cols-2 gap-4">
+
+        <form className="w-full max-w-md space-y-5">
+          {/* Name Fields */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="relative">
               <label
                 htmlFor="first-name"
@@ -107,7 +103,8 @@ export default function SignUpSection() {
             </div>
           </div>
 
-          <div className="relative mb-15">
+          {/* Email */}
+          <div className="relative">
             <label
               htmlFor="email"
               className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-sm text-black"
@@ -121,8 +118,9 @@ export default function SignUpSection() {
             />
           </div>
 
-          <div className="flex items-center gap-2 text-sm mb-15">
-            <input type="checkbox" id="agree" className="w-4 h-4" />
+          {/* Agreement */}
+          <div className="flex items-start gap-2 text-sm">
+            <input type="checkbox" id="agree" className="w-4 h-4 mt-[0.2rem]" />
             <label htmlFor="agree" className="leading-snug">
               By registering, you agree to Aeternum’s&nbsp;
               <a href="#" className="underline text-blue-600">
@@ -132,10 +130,14 @@ export default function SignUpSection() {
             </label>
           </div>
 
+          {/* Submit */}
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-[#186E68] text-white px-6 py-2 rounded-full text-lg tracking-wider font-medium hover:bg-[#2c4a48] transition-colors duration-300"
+              className="bg-[#186E68] hover:bg-[#2c4a48]
+                         text-white px-6 py-2 rounded-full
+                         text-lg tracking-wider font-medium
+                         transition-colors duration-300"
             >
               Register Now
             </button>

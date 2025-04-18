@@ -39,42 +39,49 @@ export default function PrivateFamilyConnection() {
         </div>
       </div>
 
-      <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold md:font-normal text-center lg:text-right">
+      <h2 className="text-3xl md:hidden font-bold text-center">
         Private Family Connection
       </h2>
-      <div className="grid lg:grid-cols-2 gap-10">
-        <div className="hidden lg:flex justify-center relative w-full">
-          <div className="-mt-5 h-auto mx-auto -ml-20">
-            <div className="relative w-[700px] aspect-[5/4]">
-              <Image
-                src="/images/pfc-image1.png"
-                alt="hands holding"
-                fill
-                className="object-contain"
-              />
-            </div>
+      <div className="flex flex-col lg:flex-row gap-10">
+        {/* Left Column: Image */}
+        <div className="hidden lg:flex relative justify-center flex-[0.9] w-full h-auto">
+          {/* Main image - fills the parent */}
+          <div className="relative w-full h-full -left-5">
+            <Image
+              src="/images/pfc-image1.png"
+              alt="hands holding"
+              fill
+              className="object-contain"
+            />
           </div>
 
-          <div className="absolute left-3/5 -translate-x-2/6 top-[350px] h-auto z-10">
-            <div className="relative w-[350px] aspect-square">
-              <Image
-                src="/images/pfc-image2.png"
-                alt="photo album"
-                fill
-                className="object-contain"
-              />
-            </div>
+          {/* Overlapping image - bottom right corner */}
+          <div className="absolute bottom-0 -right-5 z-10 w-full max-w-[350px] aspect-square">
+            <Image
+              src="/images/pfc-image2.png"
+              alt="photo album"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
 
-        <div className="text-center py-4 lg:py-5 lg:pr-5 flex flex-col gap-3">
-          <p className="text-[#4F4949] text-lg w-4/5 md:w-auto mx-auto mb-5">
+        {/* Right Column: Text & Features */}
+        <div className="flex-[1.1] text-center py-4 flex flex-col gap-6">
+          <h2 className="hidden md:block text-4xl font-bold text-center">
+            Private Family Connection
+          </h2>
+
+          <p className="text-[#4F4949] text-lg w-full mx-auto mb-5 text-center">
             Your family’s safety and well being should never be compromised.
             Aeternum provides a private and secure digital space to connect,
             interact, and be remembered, for generations that follow.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mt-10 justify-items-center">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 mt-10
+                 justify-items-center"
+          >
             {features.map((feature, index) => (
               <FeatureCard
                 key={index}
@@ -103,8 +110,18 @@ function FeatureCard({
   iconSize: number;
 }) {
   return (
-    <div className="relative bg-[#F7F8EA] pt-16 p-6 rounded-t-[100px] text-center w-2/3 lg:w-72">
-      <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D8E3E4] p-2 rounded-full w-17 h-17 flex items-center justify-center border-3 border-white">
+    <div
+      className="relative bg-[#F7F8EA] pt-[3.5rem] px-4 pb-5
+                 rounded-t-[100px] text-center
+                 w-full max-w-[18rem] z-0"
+    >
+      {/* Floating Icon */}
+      <div
+        className="absolute -top-6 left-1/2 -translate-x-1/2
+                   bg-[#D8E3E4] p-2 rounded-full
+                   w-17 h-17 flex items-center justify-center
+                   border-3 border-white z-10"
+      >
         <img
           src={icon}
           alt={title}
@@ -115,10 +132,13 @@ function FeatureCard({
           }}
         />
       </div>
+
       <p className="font-semibold text-[#052922] mb-2 text-2xl lg:text-xl">
         {title}
       </p>
-      <p className="text-lg text-[#5B5B5B] lg:text-base tracking-wide">{desc}</p>
+      <p className="text-base text-[#5B5B5B] lg:text-base tracking-wide">
+        {desc}
+      </p>
     </div>
   );
 }

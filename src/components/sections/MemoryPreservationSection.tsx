@@ -3,9 +3,10 @@ import Image from "next/image";
 
 export default function MemoryPreservationSection() {
   return (
-    <div className="mb-30 md:mb-40">
+    <div className="mb-[7.5rem] md:mb-40 px-4">
+      {/* Mobile Image */}
       <div className="lg:hidden flex justify-center mb-5">
-        <div className="relative w-[100%] aspect-[4/4]">
+        <div className="relative w-full max-w-[90%] aspect-[4/4]">
           <Image
             src="/images/memory-preservation.png"
             alt="Memory Preservation"
@@ -14,20 +15,26 @@ export default function MemoryPreservationSection() {
           />
         </div>
       </div>
+
+      {/* Title & Description */}
       <div className="flex flex-col gap-3 md:gap-6 text-center items-center justify-center">
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold md:font-normal">
           Memory Preservation
         </h2>
-        <p className="text-[#4F4949] text-lg w-4/5 md:w-2/3 md:mb-5 ">
-          <span className="whitespace-nowrap block lg:whitespace-normal -ml-5">
+
+        <p className="text-[#4F4949] text-lg w-[90%] md:w-2/3 md:mb-5">
+          <span className="block whitespace-normal -ml-2 sm:-ml-5">
             Life moves fast, and precious memories can slip away.
           </span>
-          Aeternum keeps your stories, moments, and legacies safe - secure,
+          Aeternum keeps your stories, moments, and legacies safe — secure,
           shareable, and always within reach.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 items-center w-full mt-10 lg:mt-15">
-        <div className="flex flex-col gap-y-7 lg:gap-y-10 items-center justify-center h-full">
+
+      {/* Feature Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 items-center w-full mt-10 lg:mt-[3.75rem] lg:gap-x-5 lg:gap-y-5">
+        {/* Left Column */}
+        <div className="flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 h-full">
           <MemoryPreservationFeatureCard
             icon="/icons/history-book.svg"
             title="Record Your Memories"
@@ -41,12 +48,13 @@ export default function MemoryPreservationSection() {
           <MemoryPreservationFeatureCard
             icon="/icons/memory-lane.svg"
             title="Walk Down Memory Lane"
-            content="Effortlessly navigate through generations of famly memories in a single intuitive dashboard."
+            content="Effortlessly navigate through generations of family memories in a single intuitive dashboard."
           />
         </div>
 
+        {/* Center Image for Large Screens */}
         <div className="hidden relative lg:flex justify-center">
-          <div className="relative w-[500px] h-[500px] -translate-y-5 scale-120">
+          <div className="relative w-full max-w-[620px] h-[620px] -translate-y-5 scale-105">
             <Image
               src="/images/memory-preservation.png"
               alt="Memory Preservation"
@@ -56,16 +64,17 @@ export default function MemoryPreservationSection() {
           </div>
         </div>
 
-        <div className="mt-7 lg:mt-0 flex flex-col gap-y-7 lg:gap-y-10 items-center justify-center h-full">
+        {/* Right Column */}
+        <div className="mt-7 lg:mt-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 h-full">
           <MemoryPreservationFeatureCard
             icon="/icons/custom-memory-collections.svg"
             title="Custom Memory Collections"
-            content="Group memories into custom collections - Weddings, Baby Steps, Family Trips, Final Goodbyes."
+            content="Group memories into custom collections — Weddings, Baby Steps, Family Trips, Final Goodbyes."
           />
           <MemoryPreservationFeatureCard
             icon="/icons/timeless-sharing.svg"
             title="Timeless Sharing"
-            content="Control what to share, who receives it, and when - preserving your legacy for loved ones and later."
+            content="Control what to share, who receives it, and when — preserving your legacy for loved ones and later."
           />
         </div>
       </div>

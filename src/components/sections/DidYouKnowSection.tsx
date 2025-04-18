@@ -21,35 +21,51 @@ export default function FeatureSummarySection() {
   ];
 
   return (
-    <section className="mt-20 md:mt-5 mb-20 md:mb-40 flex flex-col gap-10 justify-center items-center">
-      <div className="flex flex-row items-center space-x-2">
+    <section
+      className="flex flex-col justify-center items-center gap-[2.5rem]
+                 mt-[5rem] md:mt-[1.25rem] lg:mt-[4rem]
+                 mb-[5rem] md:mb-[10rem] lg:mb-[12rem]
+                 px-4 lg:px-8"
+    >
+      {/* Header */}
+      <div className="flex flex-row items-center gap-[0.5rem]">
         <img
           src="/icons/arrow-right.svg"
           alt="Arrow Right Icon"
-          className="w-6 h-6"
+          className="w-[1.25rem] h-[1.25rem]"
         />
-        <p className="md:text-lg">Did you know...</p>
+        <p className="text-base">Did you know...</p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-5 md:gap-20">
+      {/* Stats Grid */}
+      <div
+        className="grid w-full max-w-6xl
+                   gap-[1.25rem]
+                   md:grid-cols-3 md:gap-[2rem]
+                  lg:max-w-7xl"
+      >
         {facts.map((fact, index) => (
           <div
             key={index}
-            className="bg-[#FCFCF9] rounded-xl shadow-[3px_6px_4px_-1px_rgba(0,_0,_0,_0.2)] px-6 pt-20 pb-6 w-80 text-left"
+            className="bg-[#FCFCF9] rounded-xl
+                       shadow-[3px_6px_4px_-1px_rgba(0,_0,_0,_0.2)]
+                       px-[1.5rem] pt-[5rem] pb-[1.5rem]
+                       text-left w-full max-w-[20rem] mx-auto"
           >
-            <div className="flex items-start text-black text-7xl font-semibold leading-none">
+            <div className="flex items-start text-black font-semibold leading-none text-[3.5rem] lg:text-[4rem]">
               {fact.title}
               {fact.measurement === "%" ? (
-                <span className="text-4xl font-normal align-super ml-1">
+                <span className="ml-[0.25rem] text-[2rem] lg:text-[2.25rem] font-normal align-super">
                   {fact.measurement}
                 </span>
               ) : (
-                <span className="text-4xl font-bold ml-1 self-end">
+                <span className="ml-[0.25rem] text-[2rem] lg:text-[2.25rem] font-bold self-end">
                   {fact.measurement}
                 </span>
               )}
             </div>
-            <p className="mt-3 text-lg text-black leading-snug">
+
+            <p className="mt-[0.75rem] text-base text-black leading-snug">
               {fact.description}
             </p>
           </div>

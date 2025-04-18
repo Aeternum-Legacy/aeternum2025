@@ -1,5 +1,6 @@
 import Image from "next/image";
 import LegacyFeatureCard from "../ui/LegacyFeatureCard";
+
 export default function LegacyInheritanceSection() {
   const legacyFeatures = [
     {
@@ -22,9 +23,10 @@ export default function LegacyInheritanceSection() {
   ];
 
   return (
-    <div className="grid lg:grid-cols-2 gap-5 lg:gap-12 lg:px-20">
-      <div className="flex lg:hidden items-center justify-center -ml-3">
-        <div className="relative w-[500px] h-[500px]">
+    <div className="grid lg:grid-cols-2 gap-5 lg:gap-12 px-4 mb-10">
+      {/* Mobile Image */}
+      <div className="flex lg:hidden items-center justify-center">
+        <div className="relative w-full max-w-[90%] aspect-[1/1] mx-auto">
           <Image
             src="/images/legacy-inheritance.png"
             alt="Legacy Inheritance"
@@ -33,11 +35,14 @@ export default function LegacyInheritanceSection() {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-6 text-center items-center justify-center">
-        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold md:font-normal ">
+
+      {/* Text + Cards */}
+      <div className="flex flex-col items-center justify-center text-center gap-6">
+        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold md:font-normal">
           Legacy Inheritance
         </h2>
-        <p className="text-[#4F4949] text-lg md:text-xl md:mt-4">
+
+        <p className="text-[#4F4949] text-lg md:text-xl md:mt-4 px-2 sm:px-0">
           <span className="block">
             Because the impact you leave behind matters,
           </span>
@@ -46,7 +51,8 @@ export default function LegacyInheritanceSection() {
           </span>
           by future generations, exactly as you intend.
         </p>
-        <div className="flex flex-col gap-6 place-items-center justify-center mt-4">
+
+        <div className="flex flex-col gap-6 items-center justify-center mt-4">
           {legacyFeatures.map((feature, idx) => (
             <LegacyFeatureCard
               key={idx}
@@ -57,6 +63,8 @@ export default function LegacyInheritanceSection() {
           ))}
         </div>
       </div>
+
+      {/* Desktop Image */}
       <div className="hidden lg:flex items-center justify-center">
         <div className="relative w-[750px] h-[800px]">
           <Image
