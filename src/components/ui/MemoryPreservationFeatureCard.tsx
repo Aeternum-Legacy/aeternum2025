@@ -10,7 +10,7 @@ export default function MemoryPreservationFeatureCard({
   content,
 }: FeatureCardProps) {
   return (
-    <div className="max-w-sm p-6 border border-[#8BA39C] rounded-4xl flex flex-col gap-3 items-start w-5/6">
+    <div className="max-w-sm p-6 border border-[#8BA39C] rounded-4xl flex flex-col gap-3 items-start w-5/6 bg-white">
       <div className="flex items-center justify-center gap-3">
         <div className="bg-[#D8E3E4] p-3 rounded-full">
           <img src={icon} alt={title} />

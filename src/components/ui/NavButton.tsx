@@ -13,7 +13,7 @@ export default function NavButton() {
       className="rounded-full border px-4 py-1 hover:bg-white hover:border-white transition-colors duration-300 ease-in-out flex items-center gap-2 text-white hover:text-black hover:font-semibold"
       onClick={handleButtonClick}
     >
-      <p className=" text-base font-light tracking-normal">Join Beta Now</p>
+      <p className=" text-base font-light tracking-normal">Sign Up</p>
     </button>
   );
 }

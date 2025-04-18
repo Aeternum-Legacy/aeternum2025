@@ -4,7 +4,6 @@ import SolutionSection from "@/components/sections/SolutionSection";
 import HeroSection from "@/components/sections/HeroSection";
 import FeatureDetailSection from "@/components/sections/FeatureDetailSection";
 import ImageTileSection from "@/components/sections/ImageTileSection";
-import Image from "next/image";
 import ReimagineYourLegacySection from "@/components/sections/ReimagineYourLegacySection";
 import SignUpSection from "@/components/sections/SignUpSection";
 

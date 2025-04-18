@@ -129,35 +129,82 @@
 }
 
 .bg-pattern {
-  background-image: url("/patterns/BGPattern5.svg"),
+  background-image:
+    /* Original 4 */ url("/patterns/BGPattern5.svg"),
     url("/patterns/BGPattern4.svg"), url("/patterns/BGPattern5.svg"),
+    url("/patterns/BGPattern5.svg"),
+    /* 26 new patterns scattered evenly */ url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
+    url("/patterns/BGPattern5.svg"), url("/patterns/BGPattern4.svg"),
     url("/patterns/BGPattern5.svg");
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: -150px -180px, calc(100% + 300px) -100px,
-    calc(100% + 100px) 1000px, -250px 1100px;
-  background-size: 500px, 600px, 400px, 500px;
+
+  background-repeat: no-repeat;
+
+  background-position:
+    /* Original 4 (unchanged) */ -150px -180px,
+    calc(100% + 300px) -100px, calc(100% + 100px) 1000px, -250px 1100px,
+    /* 26 evenly spaced across 9453px */ 10% 315px, 90% 630px, 25% 945px,
+    75% 1260px, 15% 1575px, 85% 1890px, 30% 2205px, 70% 2520px, 20% 2835px,
+    80% 3150px, 35% 3465px, 65% 3780px, 50% 4095px, 10% 4410px, 90% 4725px,
+    25% 5040px, 75% 5355px, 15% 5670px, 85% 5985px, 30% 6300px, 70% 6615px,
+    20% 6930px, 80% 7245px, 40% 7560px, 60% 7875px, 50% 8190px;
+
+  background-size:
+    /* Original 4 */ 500px, 600px, 400px, 500px,
+    /* New 26, varied sizes */ 300px, 280px, 250px, 320px, 300px, 260px, 280px,
+    240px, 300px, 250px, 280px, 220px, 300px, 260px, 280px, 250px, 270px, 230px,
+    290px, 250px;
 }
 
 @media (max-width: 1024px) {
   .bg-pattern {
-    background-size: 400px, 500px, 350px, 400px;
-    background-position: -120px -160px, calc(100% + 250px) -80px,
-      calc(100% + 80px) 900px, -200px 1000px;
+    background-size: 400px, 500px, 350px, 400px, /* original 4 */ 240px, 220px,
+      210px, 230px, 240px, 210px, 220px, 200px, 240px, 220px, 210px, 200px,
+      230px, 200px, 210px, 190px, 220px, 200px, 210px, 180px, 200px, 190px;
+
+    background-position: -150px -180px, calc(100% + 300px) -100px,
+      calc(100% + 100px) 1000px, -250px 1100px, 10% 300px, 90% 600px, 25% 900px,
+      75% 1200px, 15% 1500px, 85% 1800px, 30% 2100px, 70% 2400px, 20% 2700px,
+      80% 3000px, 35% 3300px, 65% 3600px, 50% 3900px, 10% 4200px, 90% 4500px,
+      25% 4800px, 75% 5100px, 15% 5400px, 85% 5700px, 30% 6000px, 70% 6300px,
+      20% 6600px;
   }
 }
 
 @media (max-width: 768px) {
   .bg-pattern {
-    background-size: 300px, 400px, 300px, 350px;
-    background-position: -100px -120px, calc(100% + 200px) -60px,
-      calc(100% + 60px) 800px, -180px 900px;
+    background-size: 300px, 350px, 300px, 300px, 180px, 160px, 150px, 170px,
+      160px, 150px, 140px, 130px, 160px, 150px, 140px, 130px, 160px, 140px,
+      130px, 120px, 140px, 130px, 140px, 120px, 120px, 110px;
+
+    background-position: -120px -150px, calc(100% + 220px) -80px,
+      calc(100% + 80px) 900px, -180px 1000px, 8% 280px, 88% 550px, 22% 820px,
+      72% 1090px, 12% 1360px, 82% 1630px, 27% 1900px, 67% 2170px, 18% 2440px,
+      78% 2710px, 33% 2980px, 63% 3250px, 45% 3520px, 12% 3790px, 88% 4060px,
+      24% 4330px, 74% 4600px, 14% 4870px, 84% 5140px, 30% 5410px, 70% 5680px,
+      20% 5950px;
   }
 }
 
 @media (max-width: 480px) {
   .bg-pattern {
-    background-size: 200px, 300px, 250px, 300px;
-    background-position: -80px -100px, calc(100% + 150px) -40px,
-      calc(100% + 40px) 700px, -150px 800px;
+    background-size: 200px, 250px, 220px, 230px, 120px, 100px, 100px, 110px,
+      120px, 110px, 100px, 90px, 110px, 100px, 95px, 85px, 100px, 90px, 95px,
+      85px, 90px, 85px, 90px, 80px, 80px, 75px;
+
+    background-position: -100px -120px, calc(100% + 180px) -50px,
+      calc(100% + 60px) 800px, -150px 900px, 5% 250px, 85% 500px, 20% 750px,
+      70% 1000px, 10% 1250px, 80% 1500px, 25% 1750px, 65% 2000px, 15% 2250px,
+      75% 2500px, 30% 2750px, 60% 3000px, 40% 3250px, 10% 3500px, 90% 3750px,
+      20% 4000px, 80% 4250px, 10% 4500px, 85% 4750px, 25% 5000px, 65% 5250px,
+      15% 5500px;
   }
 }

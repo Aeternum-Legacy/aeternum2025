@@ -80,7 +80,7 @@ export default function ReimagineYourLegacySection() {
                  rounded-full transition-colors duration-300"
             onClick={handleClick}
           >
-            Join Beta Now
+            Sign Up
           </button>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/layout/NavigationBar";
 import Footer from "@/components/layout/Footer";
+import SignUpStickyButton from "@/components/ui/SignUpStickyButton";
 // import { headers } from "next/headers";
 
 const lato = Lato({
@@ -25,6 +26,7 @@ export default async function RootLayout({
       <body>
         <NavigationBar />
         {children}
+        <SignUpStickyButton />
         <Footer />
       </body>
     </html>

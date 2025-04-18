@@ -27,7 +27,7 @@ export default function Footer() {
                      hover:bg-white hover:text-black
                      transition-colors duration-200"
         >
-          Join Beta Now
+          Sign Up
         </button>
       </div>
 

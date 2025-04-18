@@ -38,17 +38,17 @@ export default function SignUpSection() {
           </h2>
 
           <p className="mb-3 text-center md:text-left tracking-tight max-w-[90%] md:max-w-full">
-            Register as a Private User and gain exclusive access to Aeternum
-            expected to launch in 2025.
+            Sign up as a private user and get exclusive access to Aeternum,
+            launching in 2025.
           </p>
 
           <p className="tracking-tight mb-3">As a Priority User, you will:</p>
 
           <ul className="ml-5 space-y-2 tracking-tight max-w-[95%] md:max-w-full text-sm">
             {[
-              "Get an exclusive invitation to the Beta Test about the future of legacy preservation.",
+              "Be among the first to experience Aeternum with an exclusive Beta launch invitation.",
               "Be the first to experience Aeternum’s new approach to memory preservation.",
-              "Be chosen for limited updates and features, tests, and feedback cycles.",
+              "Get exclusive updates on special offers, discount codes, events, and development progress.",
             ].map((text, idx) => (
               <li key={idx} className="flex items-start gap-2">
                 <img
@@ -122,7 +122,7 @@ export default function SignUpSection() {
           <div className="flex items-start gap-2 text-sm">
             <input type="checkbox" id="agree" className="w-4 h-4 mt-[0.2rem]" />
             <label htmlFor="agree" className="leading-snug">
-              By registering, you agree to Aeternum’s&nbsp;
+              By signing up, you agree to Aeternum’s&nbsp;
               <a href="#" className="underline text-blue-600">
                 terms
               </a>{" "}
@@ -139,7 +139,7 @@ export default function SignUpSection() {
                          text-lg tracking-wider font-medium
                          transition-colors duration-300"
             >
-              Register Now
+              Sign Up
             </button>
           </div>
         </form>
