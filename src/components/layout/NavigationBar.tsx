@@ -136,7 +136,7 @@ export default function NavigationBar() {
                       </button>
 
                       <div
-                        className={`absolute left-0 top-full mt-3 w-40 bg-black text-white rounded-md shadow-md z-50 p-2 transition-all duration-300 ease-in-out transform ${
+                        className={`absolute left-0 top-full mt-4 w-40 bg-black text-white rounded-md shadow-md z-50 p-2 transition-all duration-300 ease-in-out transform ${
                           openMenu === title
                             ? "opacity-100 scale-100 translate-y-0 pointer-events-auto visible"
                             : "opacity-0 scale-95 -translate-y-2 pointer-events-none invisible"

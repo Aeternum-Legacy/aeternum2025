@@ -1,6 +1,28 @@
+"use client";
+
 import Image from "next/image";
 
 export default function SignUpSection() {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      firstName: formData.get("first-name"),
+      lastName: formData.get("last-name"),
+      email: formData.get("email"),
+    };
+
+    fetch("/api/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((res) => alert(res.message))
+      .catch((err) => alert("Failed to sign up"));
+  }
+
   return (
     <section
       className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1
@@ -10,13 +32,15 @@ export default function SignUpSection() {
       {/* Left: Tree + Text */}
       <div className="relative">
         {/* Background image */}
-        <Image
-          src="/images/tree.png"
-          alt="Tree"
-          fill
-          className="object-cover"
-        />
-
+        <div className="relative h-[700px] w-full">
+          {/* or any fixed height */}
+          <Image
+            src="/images/tree.png"
+            alt="Tree"
+            fill
+            className="object-cover"
+          />
+        </div>
         {/* White overlay for mobile only */}
         <div className="absolute inset-0 bg-white/50 block lg:hidden z-10" />
 
@@ -71,7 +95,7 @@ export default function SignUpSection() {
           className="w-[200px] sm:w-[250px] mb-10"
         />
 
-        <form className="w-full max-w-md space-y-5">
+        <form onSubmit={handleSubmit} className="w-full max-w-md space-y-5">
           {/* Name Fields */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="relative">
@@ -83,6 +107,7 @@ export default function SignUpSection() {
               </label>
               <input
                 id="first-name"
+                name="first-name"
                 type="text"
                 className="border border-black p-3 pt-5 rounded-md w-full bg-transparent"
               />
@@ -97,6 +122,7 @@ export default function SignUpSection() {
               </label>
               <input
                 id="last-name"
+                name="last-name"
                 type="text"
                 className="border border-black p-3 pt-5 rounded-md w-full bg-transparent"
               />
@@ -114,6 +140,7 @@ export default function SignUpSection() {
             <input
               id="email"
               type="email"
+              name="email"
               className="border border-black p-3 pt-5 rounded-md w-full bg-transparent"
             />
           </div>

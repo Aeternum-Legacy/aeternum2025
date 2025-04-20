@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BlurIn from "../animations/BlurIn";
+import TiltImageWrapper from "../ui/TiltImageWrapper";
 
 export default function HeroSection() {
   return (
@@ -33,62 +34,62 @@ export default function HeroSection() {
       >
         {/* Image 2 */}
         <div className="hidden md:flex justify-center items-start">
-          <div className="relative w-[120%] lg:w-[110%] aspect-[15/9]">
+          <TiltImageWrapper className="relative w-[120%] lg:w-[110%] aspect-[15/9]">
             <Image
               src="/images/Image2.jpg"
               alt="Aeternum"
               fill
               className="object-cover rounded-xl"
             />
-          </div>
+          </TiltImageWrapper>
         </div>
 
         {/* Image 3 */}
         <div className="hidden md:flex justify-center items-start pt-24 lg:pt-28">
-          <div className="relative w-[80%] lg:w-[85%] aspect-[3/4]">
+          <TiltImageWrapper className="relative w-[80%] lg:w-[85%] aspect-[3/4]">
             <Image
               src="/images/Image3.jpg"
               alt="Aeternum"
               fill
               className="object-cover rounded-xl"
             />
-          </div>
+          </TiltImageWrapper>
         </div>
 
         {/* Image 4 (visible on all sizes) */}
         <div className="flex justify-center items-start md:pt-44 lg:pt-52">
-          <div className="relative w-[90%] md:w-[130%] lg:w-[120%] aspect-[16/11]">
+          <TiltImageWrapper className="relative w-[90%] md:w-[130%] lg:w-[120%] aspect-[16/11]">
             <Image
               src="/images/Image4.jpg"
               alt="Aeternum"
               fill
               className="object-cover md:rounded-xl"
             />
-          </div>
+          </TiltImageWrapper>
         </div>
 
         {/* Image 5 */}
         <div className="hidden md:flex justify-center items-end">
-          <div className="relative w-[80%] lg:w-[85%] aspect-[3/4]">
+          <TiltImageWrapper className="relative w-[80%] lg:w-[85%] aspect-[3/4]">
             <Image
               src="/images/Image5.jpg"
               alt="Aeternum"
               fill
               className="object-cover rounded-xl"
             />
-          </div>
+          </TiltImageWrapper>
         </div>
 
         {/* Image 1 */}
         <div className="hidden md:flex justify-center items-start">
-          <div className="relative w-[120%] lg:w-[110%] aspect-[16/9]">
+          <TiltImageWrapper className="relative w-[120%] lg:w-[110%] aspect-[16/9]">
             <Image
               src="/images/Image1.jpg"
               alt="Aeternum"
               fill
               className="object-cover rounded-xl"
             />
-          </div>
+          </TiltImageWrapper>
         </div>
       </div>
     </section>

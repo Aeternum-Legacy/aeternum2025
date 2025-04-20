@@ -33,7 +33,7 @@ export default function HamburgerNavigation() {
             transition={{ duration: 0.3 }}
             className="flex items-center justify-center"
           >
-            <img src="/icons/close.png" alt="Close" className="w-15 h-15" />
+            <img src="/icons/close.png" alt="Close" className="w-10 h-10" />
           </motion.button>
         ) : (
           <motion.button
@@ -48,7 +48,7 @@ export default function HamburgerNavigation() {
             <img
               src="/icons/hamburger.png"
               alt="Hamburger Menu"
-              className="w-15 h-15"
+              className="w-10 h-10"
             />
           </motion.button>
         )}
