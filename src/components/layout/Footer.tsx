@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-black text-white px-6 py-6 md:rounded-3xl md:m-3">
-      {/* Logo */}
       <div className="flex justify-center mb-4">
         <Image
           src="/icons/aeternum-logo.svg"
@@ -14,7 +13,6 @@ export default function Footer() {
         />
       </div>
 
-      {/* Call to Action */}
       <div
         className="flex flex-col md:flex-row items-center justify-center md:justify-between
                    gap-3 md:gap-6 border-b border-white/40 pb-4 text-center md:text-left"
@@ -31,12 +29,10 @@ export default function Footer() {
         </button>
       </div>
 
-      {/* Navigation + Social */}
       <div
         className="flex flex-col md:flex-row justify-between pt-8 gap-10
                    items-center md:items-start text-center md:text-left"
       >
-        {/* Navigation */}
         <div
           className="w-full md:w-[70%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5
                      text-sm gap-y-10 sm:gap-y-6 place-items-center md:place-items-start"
@@ -70,7 +66,11 @@ export default function Footer() {
                   <li key={label}>
                     <Link
                       href="#"
-                      className={label === "Development Progress" ? "whitespace-nowrap" : ""}
+                      className={
+                        label === "Development Progress"
+                          ? "whitespace-nowrap"
+                          : ""
+                      }
                     >
                       {label}
                     </Link>
@@ -81,7 +81,6 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Social Icons */}
         <div className="flex justify-center md:flex-col items-center gap-4">
           {[
             { icon: "facebook", alt: "Facebook" },
@@ -90,25 +89,20 @@ export default function Footer() {
             { icon: "youtube", alt: "YouTube" },
           ].map(({ icon, alt }) => (
             <Link href="#" key={icon}>
-              <img
-                src={`/icons/${icon}.svg`}
-                alt={alt}
-                className="w-5 h-5"
-              />
+              <img src={`/icons/${icon}.svg`} alt={alt} className="w-5 h-5" />
             </Link>
           ))}
         </div>
       </div>
 
-      {/* Legal */}
       <div
         className="flex flex-col items-center justify-center gap-2 pt-6 mt-6
                    text-xs border-t border-white/40 text-center"
       >
         <div className="flex flex-wrap justify-center gap-2">
-          <Link href="#">Terms & Conditions</Link>
+          <Link href="/terms">Terms & Conditions</Link>
           <span className="hidden sm:inline">|</span>
-          <Link href="#">Privacy Policy</Link>
+          <Link href="/privacy">Privacy Policy</Link>
         </div>
         <p className="italic">©2025 Aeternum Corp. All rights reserved.</p>
       </div>

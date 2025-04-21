@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@aws-sdk/client-ses": "^3.787.0",
+    "@radix-ui/react-hover-card": "^1.1.10",
     "clsx": "^2.1.1",
     "framer-motion": "^12.6.3",
     "lucide-react": "^0.487.0",
     "next": "15.0.3",
+    "qss": "^3.0.0",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "sharp": "^0.33.5",
