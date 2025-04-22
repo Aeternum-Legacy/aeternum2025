@@ -1,5 +1,7 @@
 "use client";
 
+import SectionBlock from "@/components/ui/SectionBlock";
+
 const toId = (title: string) => title.toLowerCase().replace(/\s+/g, "-");
 
 const lastUpdated = "March 5th, 2025";
@@ -121,7 +123,7 @@ export default function TermsPage() {
       <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-4 sm:px-10 md:px-20">
         <div className="border-t border-black" />
       </div>
-      
+
       <div className="bg-[#E6F3F1] rounded-xl px-6 py-4 text-sm text-gray-800 max-w-4xl mx-auto my-16 tracking-widest">
         <p>
           If any provision of these Terms is found to be unenforceable, the
@@ -142,41 +144,3 @@ export default function TermsPage() {
     </section>
   );
 }
-
-interface SectionBlockProps {
-  id?: string;
-  title: string;
-  intro?: string;
-  bullets?: string[];
-  outro?: string;
-}
-
-export const SectionBlock = ({
-  id,
-  title,
-  intro,
-  bullets,
-  outro,
-}: SectionBlockProps) => {
-  return (
-    <div id={id} className="my-20 px-6 md:px-20 scroll-mt-28">
-      <h1 className="tracking-wider font-bold text-[#186E68] text-3xl text-left">
-        {title}
-      </h1>
-
-      <div className="mt-6 text-md tracking-wider text-gray-800 text-left ml-6 md:ml-10 lg:ml-64 leading-loose">
-        {intro && <p>{intro}</p>}
-
-        {bullets && (
-          <ul className="list-disc pl-6 mt-4 space-y-2">
-            {bullets.map((point, idx) => (
-              <li key={idx}>{point}</li>
-            ))}
-          </ul>
-        )}
-
-        {outro && <p className="mt-4">{outro}</p>}
-      </div>
-    </div>
-  );
-};

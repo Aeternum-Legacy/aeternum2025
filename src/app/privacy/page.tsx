@@ -1,6 +1,6 @@
 "use client";
 
-import { SectionBlock } from "../terms/page";
+import SectionBlock from "@/components/ui/SectionBlock";
 
 const toId = (title: string) => title.toLowerCase().replace(/\s+/g, "-");
 
