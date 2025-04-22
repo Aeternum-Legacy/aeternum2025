@@ -3,9 +3,7 @@ import Image from "next/image";
 export default function ImageTile() {
   return (
     <>
-      {/* Desktop View */}
       <div className="hidden md:flex flex-row gap-1.5 h-[900px] w-[110%] overflow-hidden">
-        {/* Column 1 */}
         <div className="flex flex-col justify-end gap-1.5 basis-[12%]">
           <div className="relative w-full h-[400px]">
             <Image
@@ -17,7 +15,6 @@ export default function ImageTile() {
           </div>
         </div>
 
-        {/* Column 2 */}
         <div className="flex flex-col justify-end gap-1.5 basis-[10%]">
           <div className="relative w-full h-[250px]">
             <Image
@@ -37,7 +34,6 @@ export default function ImageTile() {
           </div>
         </div>
 
-        {/* Column 3 */}
         <div className="flex flex-col justify-end gap-1.5 basis-[13%]">
           <div className="relative w-full h-[300px]">
             <Image
@@ -65,7 +61,6 @@ export default function ImageTile() {
           </div>
         </div>
 
-        {/* Column 4 */}
         <div className="flex flex-col justify-end gap-1.5 basis-[16.66%]">
           <div className="relative w-full h-[180px]">
             <Image
@@ -93,7 +88,6 @@ export default function ImageTile() {
           </div>
         </div>
 
-        {/* Column 5 */}
         <div className="flex flex-col justify-end gap-1.5 basis-[16.66%]">
           <div className="relative w-full h-[300px]">
             <Image
@@ -121,7 +115,6 @@ export default function ImageTile() {
           </div>
         </div>
 
-        {/* Column 6 */}
         <div className="flex flex-col justify-end gap-1.5 basis-[16.66%]">
           <div className="relative w-full h-[380px]">
             <Image
@@ -150,7 +143,6 @@ export default function ImageTile() {
         </div>
       </div>
 
-      {/* Mobile View */}
       <div className="relative overflow-hidden -ml-4 block md:hidden">
         <div className="grid grid-cols-3 gap-1 w-[115%]">
           {[

@@ -4,7 +4,8 @@ import "./globals.css";
 import NavigationBar from "@/components/layout/NavigationBar";
 import Footer from "@/components/layout/Footer";
 import SignUpStickyButton from "@/components/ui/SignUpStickyButton";
-// import { headers } from "next/headers";
+import CookieBanner from "@/components/ui/CookieBanner";
+
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -27,6 +28,7 @@ export default async function RootLayout({
         <NavigationBar />
         {children}
         <SignUpStickyButton />
+        <CookieBanner />
         <Footer />
       </body>
     </html>

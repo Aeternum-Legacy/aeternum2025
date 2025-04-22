@@ -13,7 +13,7 @@ export default function TiltImageWrapper({
   const animationFrame = useRef<number>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (window.innerWidth < 768) return; // Skip on small screens
+    if (window.innerWidth < 768) return;
 
     const el = ref.current;
     if (!el) return;

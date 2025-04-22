@@ -25,7 +25,6 @@ export default function FeatureSummarySection() {
       className="bg-[#F7F8EA] py-7 lg:py-20 px-4 lg:px-8
                  flex flex-col items-center"
     >
-      {/* Logo & Title */}
       <div className="flex flex-col items-center gap-2 mb-7 lg:mb-10">
         <img src="icons/aeternum-logo2.svg" className="w-12" />
         <p className="font-bold leading-relaxed tracking-[0.25em] text-[#186E68] text-xs md:text-sm">
@@ -33,7 +32,6 @@ export default function FeatureSummarySection() {
         </p>
       </div>
 
-      {/* Feature Blocks */}
       <div
         className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-x-13 w-full
                    lg:px-12 py-3"
@@ -44,7 +42,7 @@ export default function FeatureSummarySection() {
             className="relative flex items-center justify-center
                        lg:justify-start md:pr-3 md:gap-10"
           >
-            {/* Vertical line indicators (only visible on lg) */}
+    
             <div className="hidden lg:block">
               <div className="absolute left-0 top-0 h-full w-[1px] bg-gray-300" />
               <div className="absolute left-0 top-1/2 -translate-y-1/2 h-24 w-[2px] bg-[#42590F]" />

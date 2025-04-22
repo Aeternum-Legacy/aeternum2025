@@ -4,7 +4,6 @@ import Image from "next/image";
 export default function MemoryPreservationSection() {
   return (
     <div className="mb-[7.5rem] md:mb-40 px-4">
-      {/* Mobile Image */}
       <div className="lg:hidden flex justify-center mb-5">
         <div className="relative w-full max-w-[90%] aspect-[4/4]">
           <Image
@@ -16,7 +15,6 @@ export default function MemoryPreservationSection() {
         </div>
       </div>
 
-      {/* Title & Description */}
       <div className="flex flex-col gap-3 md:gap-6 text-center items-center justify-center">
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold md:font-normal">
           Memory Preservation
@@ -31,9 +29,7 @@ export default function MemoryPreservationSection() {
         </p>
       </div>
 
-      {/* Feature Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 items-center w-full mt-10 lg:mt-[3.75rem] lg:gap-x-5 lg:gap-y-5">
-        {/* Left Column */}
         <div className="flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 h-full">
           <MemoryPreservationFeatureCard
             icon="/icons/history-book.svg"
@@ -52,7 +48,6 @@ export default function MemoryPreservationSection() {
           />
         </div>
 
-        {/* Center Image for Large Screens */}
         <div className="hidden relative lg:flex justify-center">
           <div className="relative w-full max-w-[620px] h-[620px] -translate-y-5 scale-105">
             <Image
@@ -64,7 +59,6 @@ export default function MemoryPreservationSection() {
           </div>
         </div>
 
-        {/* Right Column */}
         <div className="mt-7 lg:mt-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 h-full">
           <MemoryPreservationFeatureCard
             icon="/icons/custom-memory-collections.svg"

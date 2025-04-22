@@ -43,9 +43,7 @@ export default function PrivateFamilyConnection() {
         Private Family Connection
       </h2>
       <div className="flex flex-col lg:flex-row gap-10">
-        {/* Left Column: Image */}
         <div className="hidden lg:flex relative justify-center flex-[0.9] w-full h-auto">
-          {/* Main image - fills the parent */}
           <div className="relative w-full h-full -left-5">
             <Image
               src="/images/pfc-image1.png"
@@ -55,7 +53,6 @@ export default function PrivateFamilyConnection() {
             />
           </div>
 
-          {/* Overlapping image - bottom right corner */}
           <div className="absolute bottom-0 -right-5 z-10 w-full max-w-[350px] aspect-square">
             <Image
               src="/images/pfc-image2.png"
@@ -66,7 +63,6 @@ export default function PrivateFamilyConnection() {
           </div>
         </div>
 
-        {/* Right Column: Text & Features */}
         <div className="flex-[1.1] text-center py-4 flex flex-col gap-6">
           <h2 className="hidden md:block text-4xl font-bold text-center">
             Private Family Connection
@@ -115,7 +111,6 @@ function FeatureCard({
                  rounded-t-[100px] text-center
                  w-full max-w-[18rem] z-0"
     >
-      {/* Floating Icon */}
       <div
         className="absolute -top-6 left-1/2 -translate-x-1/2
                    bg-[#D8E3E4] p-2 rounded-full

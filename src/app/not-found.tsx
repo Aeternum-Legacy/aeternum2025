@@ -41,7 +41,6 @@ export default function NotFound() {
           </span>
         </div>
 
-        {/* Animated construction GIF */}
         <div className="flex items-center justify-center rounded-md overflow-hidden max-w-md mx-auto mt-4">
           <img
             src="/gifs/construction.gif"

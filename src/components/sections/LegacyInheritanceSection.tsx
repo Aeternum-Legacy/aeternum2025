@@ -24,7 +24,6 @@ export default function LegacyInheritanceSection() {
 
   return (
     <div className="grid lg:grid-cols-2 gap-5 lg:gap-12 px-4 mb-10">
-      {/* Mobile Image */}
       <div className="flex lg:hidden items-center justify-center">
         <div className="relative w-full max-w-[90%] aspect-[1/1] mx-auto">
           <Image
@@ -36,7 +35,6 @@ export default function LegacyInheritanceSection() {
         </div>
       </div>
 
-      {/* Text + Cards */}
       <div className="flex flex-col items-center justify-center text-center gap-6">
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold md:font-normal">
           Legacy Inheritance
@@ -64,7 +62,6 @@ export default function LegacyInheritanceSection() {
         </div>
       </div>
 
-      {/* Desktop Image */}
       <div className="hidden lg:flex items-center justify-center">
         <div className="relative w-[750px] h-[800px]">
           <Image

@@ -3,7 +3,6 @@ import ImageTile from "../ui/ImageTile";
 export default function ImageTileSection() {
   return (
     <section className="flex flex-col mb-10">
-      {/* Heading */}
       <h3
         className="text-3xl md:text-6xl lg:text-[5.5rem]
                    leading-tight tracking-tight
@@ -23,7 +22,6 @@ export default function ImageTileSection() {
         </span>
       </h3>
 
-      {/* Paragraph */}
       <p
         className="text-lg md:text-xl mt-4 mb-5 md:mb-0
                    text-center md:text-left
@@ -33,7 +31,6 @@ export default function ImageTileSection() {
         Your memories, your legacy – begin preserving them today.
       </p>
 
-      {/* Image Tiles */}
       <div className="relative overflow-x-hidden w-full md:-mt-18">
         <div className="w-[120%]">
           <ImageTile />

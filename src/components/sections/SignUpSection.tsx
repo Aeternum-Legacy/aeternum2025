@@ -29,11 +29,8 @@ export default function SignUpSection() {
                  h-auto lg:h-[700px] mb-10"
       id="signup"
     >
-      {/* Left: Tree + Text */}
       <div className="relative">
-        {/* Background image */}
         <div className="relative h-[700px] w-full">
-          {/* or any fixed height */}
           <Image
             src="/images/tree.png"
             alt="Tree"
@@ -41,10 +38,8 @@ export default function SignUpSection() {
             className="object-cover"
           />
         </div>
-        {/* White overlay for mobile only */}
         <div className="absolute inset-0 bg-white/50 block lg:hidden z-10" />
 
-        {/* Text Content */}
         <div
           className="absolute inset-0 z-20 flex flex-col items-center justify-start
                      mt-10 px-4 sm:px-10 text-black"
@@ -87,7 +82,6 @@ export default function SignUpSection() {
         </div>
       </div>
 
-      {/* Right: Form */}
       <div className="bg-[#F7F8EA] flex flex-col items-center justify-center px-6 sm:px-20 py-10">
         <img
           src="/icons/aeternum-logo4.svg"
@@ -96,7 +90,6 @@ export default function SignUpSection() {
         />
 
         <form onSubmit={handleSubmit} className="w-full max-w-md space-y-5">
-          {/* Name Fields */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="relative">
               <label
@@ -129,7 +122,6 @@ export default function SignUpSection() {
             </div>
           </div>
 
-          {/* Email */}
           <div className="relative">
             <label
               htmlFor="email"
@@ -145,7 +137,6 @@ export default function SignUpSection() {
             />
           </div>
 
-          {/* Agreement */}
           <div className="flex items-start gap-2 text-sm">
             <input type="checkbox" id="agree" className="w-4 h-4 mt-[0.2rem]" />
             <label htmlFor="agree" className="leading-snug">
@@ -157,7 +148,6 @@ export default function SignUpSection() {
             </label>
           </div>
 
-          {/* Submit */}
           <div className="flex justify-center">
             <button
               type="submit"

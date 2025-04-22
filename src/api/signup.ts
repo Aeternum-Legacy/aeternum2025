@@ -3,7 +3,7 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-// ✅ Use credentials from env
+
 const ses = new SESClient({
   region: process.env.AWS_REGION,
   credentials: {

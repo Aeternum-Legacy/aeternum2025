@@ -27,7 +27,6 @@ export default function FeatureSummarySection() {
                  mb-[5rem] md:mb-[10rem] lg:mb-[12rem]
                  px-4 lg:px-8"
     >
-      {/* Header */}
       <div className="flex flex-row items-center gap-[0.5rem]">
         <img
           src="/icons/arrow-right.svg"
@@ -37,7 +36,6 @@ export default function FeatureSummarySection() {
         <p className="text-base">Did you know...</p>
       </div>
 
-      {/* Stats Grid */}
       <div
         className="grid w-full max-w-6xl
                    gap-[1.25rem]
