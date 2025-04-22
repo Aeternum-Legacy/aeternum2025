@@ -121,7 +121,7 @@ export default function TermsPage() {
       <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-4 sm:px-10 md:px-20">
         <div className="border-t border-black" />
       </div>
-
+      
       <div className="bg-[#E6F3F1] rounded-xl px-6 py-4 text-sm text-gray-800 max-w-4xl mx-auto my-16 tracking-widest">
         <p>
           If any provision of these Terms is found to be unenforceable, the
@@ -151,7 +151,7 @@ interface SectionBlockProps {
   outro?: string;
 }
 
-const SectionBlock = ({
+export const SectionBlock = ({
   id,
   title,
   intro,
