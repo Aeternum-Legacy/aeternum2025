@@ -11,7 +11,7 @@ export default function SectionBlock({
         {title}
       </h1>
 
-      <div className="mt-3 md:mt-6 text-sm md:text-md tracking-wider text-gray-800 text-left md:ml-10 lg:ml-64 leading-loose">
+      <div className="mt-3 md:mt-6 text-sm md:text-lg tracking-wider text-gray-800 text-left md:ml-10 lg:ml-64 leading-loose">
         {intro && <p>{intro}</p>}
 
         {bullets && (

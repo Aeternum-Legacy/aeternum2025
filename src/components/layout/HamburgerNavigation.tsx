@@ -62,47 +62,58 @@ export default function HamburgerNavigation() {
           transition={{ duration: 0.25 }}
           className="absolute top-12 right-0 w-[300px] bg-white border border-gray-200 rounded-lg shadow-xl py-3 px-5 space-y-2"
         >
-          {navItems.map((section, sectionIdx) => (
-            <div key={section.title} className="space-y-1">
-              <h3 className="text-gray-800 font-semibold text-xl">
-                {section.title}
-              </h3>
-              <ul className="space-y-1 pl-2 flex flex-col">
-                {section.links.map((link, linkIdx) => {
-                  const isLast =
-                    sectionIdx === navItems.length - 1 &&
-                    linkIdx === section.links.length - 1;
+          {/* Home Button */}
+          <div className="flex justify-center mt-2 border-b-2">
+            <Link
+              href="/"
+              className="block px-6 py-2 rounded-full transition-colors duration-200 mb-4"
+            >
+              <img src="/icons/aeternum-logo4.svg" alt="" className="w-30" />
+            </Link>
+          </div>
+          <div className="mt-4 ml-2">
+            {navItems.map((section, sectionIdx) => (
+              <div key={section.title} className="space-y-1 ">
+                <h3 className="text-gray-800 font-semibold text-xl">
+                  {section.title}
+                </h3>
+                <ul className="space-y-1 pl-2 flex flex-col">
+                  {section.links.map((link, linkIdx) => {
+                    const isLast =
+                      sectionIdx === navItems.length - 1 &&
+                      linkIdx === section.links.length - 1;
 
-                  const linkElement = (
-                    <Link
-                      href={link.href}
-                      className={`block text-lg transition-all duration-300
+                    const linkElement = (
+                      <Link
+                        href={link.href}
+                        className={`block text-lg transition-all duration-300
           ${
             isLast
               ? "bg-teal-700 text-white font-semibold hover:bg-gray-800 text-center px-6 py-2 rounded-full w-2/3"
               : "text-gray-600 hover:text-black hover:bg-gray-100 px-3 py-1 rounded-full"
           }
         `}
-                    >
-                      {link.label}
-                    </Link>
-                  );
+                      >
+                        {link.label}
+                      </Link>
+                    );
 
-                  return (
-                    <li key={link.href}>
-                      {isLast ? (
-                        <div className="flex justify-center mt-3">
-                          {linkElement}
-                        </div>
-                      ) : (
-                        linkElement
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
+                    return (
+                      <li key={link.href}>
+                        {isLast ? (
+                          <div className="flex justify-center mt-3">
+                            {linkElement}
+                          </div>
+                        ) : (
+                          linkElement
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
+          </div>
         </motion.div>
       )}
     </div>

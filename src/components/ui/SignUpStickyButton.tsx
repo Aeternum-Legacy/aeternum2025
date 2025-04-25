@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./MovingBorder";
@@ -8,6 +9,8 @@ import { Button } from "./MovingBorder";
 export default function SignUpStickyButton() {
   const [isVisible, setIsVisible] = useState(true);
   const controls = useAnimation();
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,8 +28,14 @@ export default function SignUpStickyButton() {
   }, []);
 
   const handleClick = () => {
-    const section = document.getElementById("signup");
-    section?.scrollIntoView({ behavior: "smooth" });
+    if (pathname !== "/") {
+      // If not on homepage, navigate to /#signup
+      router.push("/#signup");
+    } else {
+      // Already on homepage, just scroll to it
+      const section = document.getElementById("signup");
+      section?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

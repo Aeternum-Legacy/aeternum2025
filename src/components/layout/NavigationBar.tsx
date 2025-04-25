@@ -34,7 +34,7 @@ export const navItems = [
     title: "Support",
     links: [
       { href: "/contact", label: "Contact" },
-      { href: "/signup", label: "Sign Up" },
+      { href: "/#signup", label: "Sign Up" },
     ],
   },
 ];

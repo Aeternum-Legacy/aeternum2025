@@ -20,13 +20,15 @@ export default function Footer() {
         <h2 className="text-lg md:text-2xl font-light max-w-[90%]">
           Ready to turn your memories into a lasting legacy?
         </h2>
-        <button
-          className="rounded-full border border-white px-6 py-1
-                     hover:bg-white hover:text-black
-                     transition-colors duration-200"
-        >
-          Sign Up
-        </button>
+        <Link href="/#signup">
+          <button
+            className="rounded-full border border-white px-6 py-1
+               hover:bg-white hover:text-black
+               transition-colors duration-200"
+          >
+            Sign Up
+          </button>
+        </Link>
       </div>
 
       <div

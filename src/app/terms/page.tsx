@@ -2,6 +2,7 @@
 
 import SectionBlock from "@/components/ui/SectionBlock";
 import Notification from "@/components/ui/Notification";
+import Link from "next/link";
 
 const toId = (title: string) => title.toLowerCase().replace(/\s+/g, "-");
 
@@ -44,6 +45,17 @@ export default function TermsPage() {
             18, please do not provide any personal information.
           </p>
           <p>We may update these Terms at any time without notice.</p>
+          <p>
+            Click to see the{" "}
+            <Link
+              href="/cookie-policy"
+              className="text-teal-700 hover:underline font-medium"
+              aria-label="View our Cookie Policy"
+            >
+              Cookie Policy
+            </Link>
+            .
+          </p>
         </div>
       </div>
 
