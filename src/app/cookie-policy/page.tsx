@@ -10,7 +10,7 @@ const sections = ["What Are Cookies?", "Types of Cookies We Use"];
 export default function CookiePolicyPage() {
   return (
     <section className="text-center tracking-wide bg-pattern">
-      <div className="max-w-4xl mx-auto px-6 py-14">
+      <div className="max-w-4xl mx-auto px-6 py-5 md:py-14">
         <h1 className="text-4xl md:text-5xl font-semibold mb-2">
           Cookie Policy
         </h1>
@@ -18,7 +18,7 @@ export default function CookiePolicyPage() {
           Last Updated: <span className="font-semibold">{lastUpdated}</span>
         </p>
 
-        <div className="text-gray-700 text-sm leading-relaxed space-y-2 mb-12 text-center">
+        <div className="text-gray-700 text-xs md:text-sm leading-relaxed space-y-2 mb-12 text-center">
           <p>
             This Cookie Policy explains how we use cookies and similar
             technologies to provide and improve our website experience.
@@ -38,24 +38,24 @@ export default function CookiePolicyPage() {
           return (
             <a key={id} href={`#${id}`} className="block">
               <div className="flex justify-between items-stretch border-b border-black group hover:bg-[#09B285]/5 h-16">
-                <div className="flex-shrink-0 relative w-96 overflow-hidden flex items-end">
-                  <span className="text-[64px] font-light translate-y-3 block leading-none">
+                <div className="flex-shrink-0 relative w-auto sm:w-96 md:overflow-hidden flex items-center md:items-end justify-center sm:justify-start">
+                  <span className="text-[32px] sm:text-[64px] font-light sm:translate-y-3 md:block leading-none">
                     0{index + 1}
                   </span>
-                  <div className="absolute bottom-0 right-0 h-12 w-px bg-gray-600 translate-y-1" />
+                  <div className="hidden md:block absolute bottom-0 right-0 h-12 w-px bg-gray-600 translate-y-1" />
                 </div>
 
-                <div className="flex-1 px-6 py-6 text-left flex items-center">
-                  <span className="text-xl font-medium text-black">
+                <div className="flex-1 px-4 sm:px-6 py-4 sm:py-6 text-left flex items-center">
+                  <span className="text-base sm:text-xl font-medium text-black">
                     {title}
                   </span>
                 </div>
 
-                <div className="flex items-center ml-auto pr-6">
+                <div className="flex items-center ml-auto pr-4 sm:pr-6">
                   <img
                     src="/icons/down-arrow.svg"
                     alt="Arrow Icon"
-                    className="w-16 h-16 transition-transform duration-300 group-hover:translate-x-2"
+                    className="w-10 h-10 sm:w-16 sm:h-16 transition-transform duration-300 group-hover:translate-x-2"
                   />
                 </div>
               </div>

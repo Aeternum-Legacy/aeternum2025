@@ -6,12 +6,12 @@ export default function SectionBlock({
   outro,
 }: SectionBlockProps) {
   return (
-    <div id={id} className="my-20 px-6 md:px-20 scroll-mt-28">
-      <h1 className="tracking-wider font-bold text-[#186E68] text-3xl text-left">
+    <div id={id} className="my-20 px-5 md:px-20 scroll-mt-28">
+      <h1 className="tracking-wider font-bold text-[#186E68] text-xl md:text-3xl text-left">
         {title}
       </h1>
 
-      <div className="mt-6 text-md tracking-wider text-gray-800 text-left ml-6 md:ml-10 lg:ml-64 leading-loose">
+      <div className="mt-3 md:mt-6 text-sm md:text-md tracking-wider text-gray-800 text-left md:ml-10 lg:ml-64 leading-loose">
         {intro && <p>{intro}</p>}
 
         {bullets && (

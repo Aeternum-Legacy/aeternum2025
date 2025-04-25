@@ -17,7 +17,7 @@ export default function Footer() {
         className="flex flex-col md:flex-row items-center justify-center md:justify-between
                    gap-3 md:gap-6 border-b border-white/40 pb-4 text-center md:text-left"
       >
-        <h2 className="text-2xl font-light max-w-[90%]">
+        <h2 className="text-lg md:text-2xl font-light max-w-[90%]">
           Ready to turn your memories into a lasting legacy?
         </h2>
         <button
@@ -30,7 +30,7 @@ export default function Footer() {
       </div>
 
       <div
-        className="flex flex-col md:flex-row justify-between pt-8 gap-10
+        className="flex flex-col md:flex-row justify-between pt-8 gap-10 mx-5
                    items-center md:items-start text-center md:text-left"
       >
         <div
@@ -60,8 +60,8 @@ export default function Footer() {
             },
           ].map(({ title, links }) => (
             <div key={title}>
-              <h3 className="font-bold mb-2 text-xl md:text-lg">{title}</h3>
-              <ul className="space-y-2 text-base md:text-sm indent-6 md:indent-0">
+              <h3 className="font-bold mb-2 text-lg">{title}</h3>
+              <ul className="space-y-2 text-sm indent-6 md:indent-0">
                 {links.map((label) => (
                   <li key={label}>
                     <Link

@@ -26,7 +26,7 @@ export default function FeatureSummarySection() {
                  flex flex-col items-center"
     >
       <div className="flex flex-col items-center gap-2 mb-7 lg:mb-10">
-        <img src="icons/aeternum-logo2.svg" className="w-12" />
+        <img src="icons/aeternum-logo2.svg" className="w-8 md:w-12" />
         <p className="font-bold leading-relaxed tracking-[0.25em] text-[#186E68] text-xs md:text-sm">
           AETERNUM
         </p>
@@ -42,7 +42,6 @@ export default function FeatureSummarySection() {
             className="relative flex items-center justify-center
                        lg:justify-start md:pr-3 md:gap-10"
           >
-    
             <div className="hidden lg:block">
               <div className="absolute left-0 top-0 h-full w-[1px] bg-gray-300" />
               <div className="absolute left-0 top-1/2 -translate-y-1/2 h-24 w-[2px] bg-[#42590F]" />

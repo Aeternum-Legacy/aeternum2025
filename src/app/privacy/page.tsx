@@ -1,5 +1,6 @@
 "use client";
 
+import Notification from "@/components/ui/Notification";
 import SectionBlock from "@/components/ui/SectionBlock";
 
 const toId = (title: string) => title.toLowerCase().replace(/\s+/g, "-");
@@ -17,8 +18,7 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <section className="text-center tracking-wide bg-pattern">
-      {/* Header */}
-      <div className="max-w-4xl mx-auto px-6 py-14">
+      <div className="max-w-4xl mx-auto px-6 py-5 md:py-14">
         <h1 className="text-4xl md:text-5xl font-semibold mb-2">
           Privacy Policy
         </h1>
@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
           Last Updated: <span className="font-semibold">{lastUpdated}</span>
         </p>
 
-        <div className="text-gray-700 text-sm leading-relaxed space-y-2 mb-12 text-center">
+        <div className="text-gray-700 text-xs md:text-sm leading-relaxed space-y-2 mb-12 text-center">
           <p>
             Aeternum respects your privacy. By using the Website, you agree to
             this Privacy Policy.
@@ -50,24 +50,24 @@ export default function PrivacyPolicyPage() {
           return (
             <a key={id} href={`#${id}`} className="block">
               <div className="flex justify-between items-stretch border-b border-black group hover:bg-[#09B285]/5 h-16">
-                <div className="flex-shrink-0 relative w-96 overflow-hidden flex items-end">
-                  <span className="text-[64px] font-light translate-y-3 block leading-none">
+                <div className="flex-shrink-0 relative w-auto sm:w-96 md:overflow-hidden flex items-center md:items-end justify-center sm:justify-start">
+                  <span className="text-[32px] sm:text-[64px] font-light sm:translate-y-3 md:block leading-none">
                     0{index + 1}
                   </span>
-                  <div className="absolute bottom-0 right-0 h-12 w-px bg-gray-600 translate-y-1" />
+                  <div className="hidden md:block absolute bottom-0 right-0 h-12 w-px bg-gray-600 translate-y-1" />
                 </div>
 
-                <div className="flex-1 px-6 py-6 text-left flex items-center">
-                  <span className="text-xl font-medium text-black">
+                <div className="flex-1 px-4 sm:px-6 py-4 sm:py-6 text-left flex items-center">
+                  <span className="text-base sm:text-xl font-medium text-black">
                     {title}
                   </span>
                 </div>
 
-                <div className="flex items-center ml-auto pr-6">
+                <div className="flex items-center ml-auto pr-4 sm:pr-6">
                   <img
                     src="/icons/down-arrow.svg"
                     alt="Arrow Icon"
-                    className="w-16 h-16 transition-transform duration-300 group-hover:translate-x-2"
+                    className="w-10 h-10 sm:w-16 sm:h-16 transition-transform duration-300 group-hover:translate-x-2"
                   />
                 </div>
               </div>
@@ -137,23 +137,10 @@ export default function PrivacyPolicyPage() {
         <div className="border-t border-black" />
       </div>
 
-      <div className="bg-[#E6F3F1] rounded-xl px-6 py-4 text-sm text-gray-800 max-w-4xl mx-auto my-16 tracking-widest text-center">
-        <p>We may update this Privacy Policy at any time.</p>
-        <p className="mt-2">
-          Changes will be posted on this page, and your continued use of the
-          Website will indicate acceptance.
-        </p>
-        <p className="mt-2">
-          For questions regarding this Privacy Policy, contact us at{" "}
-          <a
-            href="mailto:info@aeternumproject.com"
-            className="underline underline-offset-2 font-medium"
-          >
-            info@aeternumproject.com
-          </a>
-          .
-        </p>
-      </div>
+      <Notification
+        title="Privacy Policy"
+        text="We may update this Privacy Policy at any time.  Changes will be posted on this page, and your continued use of the Website will indicate acceptance."
+      />
     </section>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import SectionBlock from "@/components/ui/SectionBlock";
+import Notification from "@/components/ui/Notification";
 
 const toId = (title: string) => title.toLowerCase().replace(/\s+/g, "-");
 
@@ -17,7 +18,7 @@ const sections = [
 export default function TermsPage() {
   return (
     <section className="text-center tracking-wide bg-pattern">
-      <div className="max-w-4xl mx-auto px-6 py-14">
+      <div className="max-w-4xl mx-auto px-6 py-5 md:py-14">
         <h1 className="text-4xl md:text-5xl font-semibold mb-2">
           Terms & Conditions
         </h1>
@@ -25,7 +26,7 @@ export default function TermsPage() {
           Last Updated: <span className="font-semibold">{lastUpdated}</span>
         </p>
 
-        <div className="text-gray-700 text-sm leading-relaxed space-y-2 mb-12 text-center">
+        <div className="text-gray-700 text-xs md:text-sm leading-relaxed space-y-2 mb-12 text-center">
           <p>
             These Terms & Conditions ("Terms") govern your access and use of the
             Aeternum website (the "Website").
@@ -54,24 +55,24 @@ export default function TermsPage() {
           return (
             <a key={id} href={`#${id}`} className="block">
               <div className="flex justify-between items-stretch border-b border-black group hover:bg-[#09B285]/5 h-16">
-                <div className="flex-shrink-0 relative w-96 overflow-hidden flex items-end">
-                  <span className="text-[64px] font-light translate-y-3 block leading-none">
+                <div className="flex-shrink-0 relative w-auto sm:w-96 md:overflow-hidden flex items-center md:items-end">
+                  <span className="text-[32px] sm:text-[64px] font-light sm:translate-y-3 md:block leading-none ">
                     0{index + 1}
                   </span>
-                  <div className="absolute bottom-0 right-0 h-12 w-px bg-gray-600 translate-y-1" />
+                  <div className="hidden md:block absolute bottom-0 right-0 h-12 w-px bg-gray-600 translate-y-1" />
                 </div>
 
-                <div className="flex-1 px-6 py-6 text-left flex items-center">
-                  <span className="text-xl font-medium text-black">
+                <div className="flex-1 px-4 sm:px-6 py-4 sm:py-6 text-left flex items-center">
+                  <span className="text-base sm:text-xl font-medium text-black">
                     {title}
                   </span>
                 </div>
 
-                <div className="flex items-center ml-auto pr-6">
+                <div className="flex items-center ml-auto pr-4 sm:pr-6">
                   <img
                     src="/icons/down-arrow.svg"
                     alt="Arrow Icon"
-                    className="w-16 h-16 transition-transform duration-300 group-hover:translate-x-2"
+                    className="w-10 h-10 sm:w-16 sm:h-16 transition-transform duration-300 group-hover:translate-x-2"
                   />
                 </div>
               </div>
@@ -120,27 +121,15 @@ export default function TermsPage() {
         intro="These Terms are governed by the laws of the Province of Alberta, Canada. Any disputes shall be resolved in the courts of Edmonton or through arbitration, as determined by Aeternum."
       />
 
-      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-4 sm:px-10 md:px-20">
+      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-4 md:px-20">
         <div className="border-t border-black" />
       </div>
 
-      <div className="bg-[#E6F3F1] rounded-xl px-6 py-4 text-sm text-gray-800 max-w-4xl mx-auto my-16 tracking-widest">
-        <p>
-          If any provision of these Terms is found to be unenforceable, the
-          remaining provisions will remain in effect.
-        </p>
-        <p className="mt-2">
-          For <span className="font-bold">any questions</span> regarding these
-          Terms & Conditions, contact us at{" "}
-          <a
-            href="mailto:info@aeternumproject.com"
-            className="underline underline-offset-2 font-medium"
-          >
-            info@aeternumproject.com
-          </a>
-          .
-        </p>
-      </div>
+      <Notification
+        title="Terms & Conditions"
+        text="If any provision of these Terms is found to be unenforceable, the
+          remaining provisions will remain in effect."
+      />
     </section>
   );
 }
