@@ -42,6 +42,8 @@ export const navItems = [
 export default function NavigationBar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const menuRefs = useRef<Record<string, HTMLLIElement | null>>({});
 
   useEffect(() => {

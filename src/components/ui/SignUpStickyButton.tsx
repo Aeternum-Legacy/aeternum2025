@@ -12,6 +12,7 @@ export default function SignUpStickyButton() {
   const router = useRouter();
   const pathname = usePathname();
 
+
   useEffect(() => {
     const handleScroll = () => {
       const footer = document.querySelector("footer");

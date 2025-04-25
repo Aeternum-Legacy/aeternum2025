@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
-import NavigationBar from "@/components/layout/NavigationBar";
+// import NavigationBar from "@/components/layout/NavigationBar";
 import Footer from "@/components/layout/Footer";
 import SignUpStickyButton from "@/components/ui/SignUpStickyButton";
 import CookieBanner from "@/components/ui/CookieBanner";
-
+import { NavbarDemo } from "@/components/layout/NavBar";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Aeternum",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -25,7 +25,8 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${lato.className}`}>
       <body>
-        <NavigationBar />
+        <NavbarDemo />
+        {/* <NavigationBar /> */}
         {children}
         <SignUpStickyButton />
         <CookieBanner />

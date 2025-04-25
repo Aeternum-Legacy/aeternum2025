@@ -6,8 +6,8 @@ export default function HeroSection() {
   return (
     <section
       className="relative flex flex-col items-center text-center
-                 min-h-full pt-[3.75rem]
-                 md:min-h-[600px] md:py-20 lg:min-h-[700px] lg:py-28"
+               min-h-full pt-[3.75rem] mt-6 md:mt-18
+               md:min-h-[600px] md:py-20 lg:min-h-[700px] lg:py-28"
     >
       <div
         className="absolute z-10 w-full flex flex-col items-center
