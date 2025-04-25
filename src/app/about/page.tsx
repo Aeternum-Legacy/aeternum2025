@@ -6,8 +6,8 @@ export default function AboutPage() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <>
-      <section className="md:mx-28 md:px-6 py-10 md:py-24 relative flex flex-col md:flex-row items-center justify-center md:gap-8">
+    <section className="mt-10 md:mt-25">
+      <div className="md:mx-28 md:px-6 py-10 md:py-24 relative flex flex-col md:flex-row items-center justify-center md:gap-8">
         <div className="w-full md:flex-1 md:relative md:z-10">
           <div className="relative inline-block w-full">
             <img
@@ -60,9 +60,9 @@ export default function AboutPage() {
             className="object-cover w-full h-[300px] sm:h-[400px] md:h-[550px] shadow-xl"
           />
         </div>
-      </section>
+      </div>
 
-      <section className="w-full h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative mb-20">
+      <div className="w-full h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative mb-20">
         <div className="order-1 lg:order-2 lg:h-full text-left">
           <h2 className="text-xl mb-2 w-fit pb-1 ml-10 lg:ml-0">Our Vision</h2>
           <div className="border-t-2 border-[#009688]" />
@@ -96,9 +96,9 @@ export default function AboutPage() {
             across time.
           </p>
         </div>
-      </section>
+      </div>
 
-      <section className="relative w-full h-auto lg:h-screen">
+      <div className="relative w-full h-auto lg:h-screen">
         <div className="relative w-full h-[240px] lg:h-full group">
           <video
             className="w-full h-full object-cover"
@@ -141,7 +141,7 @@ export default function AboutPage() {
             </div>
           </div>
         )}
-      </section>
+      </div>
 
       <div className="mt-15 lg:mt-20 flex flex-col gap-15">
         <div className="flex flex-col items-center gap-2">
@@ -151,7 +151,7 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="lg:mt-10">
-          <section className="w-full h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative">
+          <div className="w-full h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative">
             <div className="order-1 lg:order-2 lg:h-full text-center lg:text-left">
               <h3 className="text-2xl font-bold my-3 text-left ml-10 lg:ml-0">
                 Family First
@@ -182,9 +182,9 @@ export default function AboutPage() {
                 meaningful benefits well into the future.
               </p>
             </div>
-          </section>
+          </div>
 
-          <section className="w-full h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative my-15 lg:my-0">
+          <div className="w-full h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative my-15 lg:my-0">
             <div className="lg:order-2 h-full">
               <h3 className="text-2xl font-bold mb-3 ml-10 lg:ml-24">Trust</h3>
               <div className="border-t-2 border-[#009688] lg:ml-24" />
@@ -210,9 +210,9 @@ export default function AboutPage() {
                 valued.
               </p>
             </div>
-          </section>
+          </div>
 
-          <section className="w-full h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative my-15 lg:my-0">
+          <div className="w-full h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative my-15 lg:my-0">
             <div className="lg:col-start-2 h-full">
               <h3 className="text-2xl font-bold mb-3 ml-10 lg:ml-0">
                 Security & Privacy
@@ -227,9 +227,9 @@ export default function AboutPage() {
                 new benchmark for how families should be safeguarded.
               </p>
             </div>
-          </section>
+          </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }

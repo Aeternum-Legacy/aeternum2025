@@ -1,17 +1,37 @@
 "use client";
 
 import Image from "next/image";
+import { Input } from "../ui/input";
+import { useState } from "react";
 
 export default function SignUpSection() {
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    agree: "",
+  });
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
-    const data = {
-      firstName: formData.get("first-name"),
-      lastName: formData.get("last-name"),
-      email: formData.get("email"),
+    const firstName = formData.get("first-name")?.toString().trim() || "";
+    const lastName = formData.get("last-name")?.toString().trim() || "";
+    const email = formData.get("email")?.toString().trim() || "";
+    const agree = formData.get("agree");
+
+    const newErrors = {
+      firstName: firstName ? "" : "First name is required.",
+      lastName: lastName ? "" : "Last name is required.",
+      email: email ? "" : "Email is required.",
+      agree: agree ? "" : "You must agree to the terms.",
     };
+
+    setErrors(newErrors);
+    if (Object.values(newErrors).some((err) => err)) return;
+
+    const data = { firstName, lastName, email };
 
     fetch("/api/signup", {
       method: "POST",
@@ -20,14 +40,13 @@ export default function SignUpSection() {
     })
       .then((res) => res.json())
       .then((res) => alert(res.message))
-      .catch((err) => alert("Failed to sign up"));
+      .catch(() => alert("Failed to sign up"));
   }
 
   return (
     <section
-      className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1
-                 h-auto lg:h-[700px] mb-10"
       id="signup"
+      className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-auto lg:h-[700px] mb-10"
     >
       <div className="relative">
         <div className="relative h-[700px] w-full">
@@ -40,12 +59,9 @@ export default function SignUpSection() {
         </div>
         <div className="absolute inset-0 bg-white/50 block lg:hidden z-10" />
 
-        <div
-          className="absolute inset-0 z-20 flex flex-col items-center justify-start
-                     mt-10 px-4 sm:px-10 text-black"
-        >
+        <div className="absolute inset-0 z-20 mt-10 px-4 sm:px-10 text-black flex flex-col justify-start items-center">
           <h2 className="text-3xl md:text-[42px] mb-3 tracking-tighter text-center md:text-left">
-            Early Access to
+            Early Access to{" "}
             <span className="inline-flex items-center ml-1">
               Aeternum
               <img
@@ -55,15 +71,12 @@ export default function SignUpSection() {
               />
             </span>
           </h2>
-
           <p className="mb-3 text-center md:text-left tracking-tight max-w-[90%] md:max-w-full">
             Sign up as a private user and get exclusive access to Aeternum,
             launching in 2025.
           </p>
-
           <p className="tracking-tight mb-3">As a Priority User, you will:</p>
-
-          <ul className="ml-5 space-y-2 tracking-tight max-w-[95%] md:max-w-full text-sm">
+          <ul className="ml-5 space-y-2 text-sm tracking-tight max-w-[95%] md:max-w-full">
             {[
               "Be among the first to experience Aeternum with an exclusive Beta launch invitation.",
               "Be the first to experience Aeternum’s new approach to memory preservation.",
@@ -98,12 +111,15 @@ export default function SignUpSection() {
               >
                 First Name
               </label>
-              <input
+              <Input
                 id="first-name"
                 name="first-name"
                 type="text"
-                className="border border-black p-3 pt-5 rounded-md w-full bg-transparent"
+                className="bg-[#F6F6E9]"
               />
+              {errors.firstName && (
+                <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+              )}
             </div>
 
             <div className="relative">
@@ -113,12 +129,15 @@ export default function SignUpSection() {
               >
                 Last Name
               </label>
-              <input
+              <Input
                 id="last-name"
                 name="last-name"
                 type="text"
-                className="border border-black p-3 pt-5 rounded-md w-full bg-transparent"
+                className="bg-[#F6F6E9]"
               />
+              {errors.lastName && (
+                <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+              )}
             </div>
           </div>
 
@@ -129,32 +148,42 @@ export default function SignUpSection() {
             >
               Email
             </label>
-            <input
+            <Input
               id="email"
               type="email"
               name="email"
-              className="border border-black p-3 pt-5 rounded-md w-full bg-transparent"
+              className="bg-[#F6F6E9]"
             />
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+            )}
           </div>
 
-          <div className="flex items-start gap-2 text-sm">
-            <input type="checkbox" id="agree" className="w-4 h-4 mt-[0.2rem]" />
-            <label htmlFor="agree" className="leading-snug">
-              By signing up, you agree to Aeternum’s&nbsp;
-              <a href="#" className="underline text-blue-600">
-                terms
-              </a>{" "}
-              regarding data collection and usage.
-            </label>
+          <div className="text-sm space-y-1">
+            <div className="flex items-start gap-2">
+              <input
+                type="checkbox"
+                id="agree"
+                name="agree"
+                className="w-4 h-4 mt-[0.2rem]"
+              />
+              <label htmlFor="agree" className="leading-snug">
+                By signing up, you agree to Aeternum’s{" "}
+                <a href="#" className="underline text-blue-600">
+                  terms
+                </a>{" "}
+                regarding data collection and usage.
+              </label>
+            </div>
+            {errors.agree && (
+              <p className="text-red-500 text-sm">{errors.agree}</p>
+            )}
           </div>
 
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-[#186E68] hover:bg-[#2c4a48]
-                         text-white px-6 py-2 rounded-full
-                         text-lg tracking-wider font-medium
-                         transition-colors duration-300"
+              className="bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-lg tracking-wider font-medium transition-colors duration-300"
             >
               Sign Up
             </button>
