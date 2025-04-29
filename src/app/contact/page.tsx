@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
-import { Input } from "@/components/ui/input_temp";
+import { Input } from "@/components/ui/Input";
 
 export default function Contact() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {

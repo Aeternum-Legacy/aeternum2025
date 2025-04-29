@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Input } from "../ui/input_temp";
+import { Input } from "../ui/Input";
 import { useState } from "react";
 import { toast, Toaster } from "sonner";
 
