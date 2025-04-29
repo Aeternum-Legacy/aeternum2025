@@ -3,7 +3,7 @@ import { LinkPreview } from "@/components/ui/LinkPreview";
 
 export default function NotFound() {
   return (
-    <div className="relative flex flex-col items-center justify-center px-4 text-center py-32 overflow-hidden md:mt-10">
+    <div className="relative flex flex-col items-center justify-center px-4 text-center py-28 overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center z-0">
         <Image
           src="/images/tool-icon.png"

@@ -9,7 +9,7 @@ import {
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
-} from "@/components/ui/resizable-navbar";
+} from "@/components/ui/ResizableNavbar";
 import { useState, useEffect } from "react";
 import { navItems } from "./NavigationBar";
 
@@ -27,7 +27,6 @@ export function NavbarDemo() {
   return (
     <div className="relative w-full">
       <Navbar>
-        {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
@@ -38,7 +37,6 @@ export function NavbarDemo() {
           </div>
         </NavBody>
 
-        {/* Mobile Navigation */}
         <MobileNav className="fixed top-0 left-0 w-full z-50 md:relative">
           <MobileNavHeader>
             <NavbarLogo />
@@ -82,7 +80,6 @@ export function NavbarDemo() {
         </MobileNav>
       </Navbar>
 
-      {/* Navbar */}
     </div>
   );
 }

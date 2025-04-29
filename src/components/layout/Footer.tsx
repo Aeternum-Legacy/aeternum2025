@@ -46,28 +46,43 @@ export default function Footer() {
           {[
             {
               title: "Company",
-              links: ["About Us", "Career"],
+              links: [
+                { label: "About Us", href: "/about" },
+                { label: "Career", href: "/career" },
+              ],
             },
             {
               title: "Product",
-              links: ["Pricing Information", "FAQ"],
+              links: [
+                { label: "Pricing Information", href: "/pricing" },
+                { label: "FAQ", href: "/faq" },
+              ],
             },
             {
               title: "Updates",
-              links: ["News", "Development Progress"],
+              links: [
+                { label: "News", href: "/news" },
+                {
+                  label: "Development Progress",
+                  href: "/development-progress",
+                },
+              ],
             },
             {
               title: "Support",
-              links: ["Contact", "Sign Up"],
+              links: [
+                { label: "Contact", href: "/contact" },
+                { label: "Sign Up", href: "/#signup" },
+              ],
             },
           ].map(({ title, links }) => (
             <div key={title}>
               <h3 className="font-bold mb-2 text-lg">{title}</h3>
               <ul className="space-y-2 text-sm indent-6 md:indent-0">
-                {links.map((label) => (
+                {links.map(({ label, href }) => (
                   <li key={label}>
                     <Link
-                      href="#"
+                      href={href}
                       className={
                         label === "Development Progress"
                           ? "whitespace-nowrap"
@@ -85,12 +100,28 @@ export default function Footer() {
 
         <div className="flex justify-center md:flex-col items-center gap-4">
           {[
-            { icon: "facebook", alt: "Facebook" },
-            { icon: "instagram", alt: "Instagram" },
-            { icon: "linkedin", alt: "LinkedIn" },
-            { icon: "youtube", alt: "YouTube" },
-          ].map(({ icon, alt }) => (
-            <Link href="#" key={icon}>
+            {
+              icon: "facebook",
+              alt: "Facebook",
+              link: "https://www.facebook.com/profile.php?id=100093069313770",
+            },
+            {
+              icon: "instagram",
+              alt: "Instagram",
+              link: "https://www.instagram.com/aeternumlegacyproject/",
+            },
+            {
+              icon: "linkedin",
+              alt: "LinkedIn",
+              link: "https://www.linkedin.com/company/aeternum-project",
+            },
+            {
+              icon: "youtube",
+              alt: "YouTube",
+              link: "https://youtu.be/83ONjbzulhY",
+            },
+          ].map(({ icon, alt, link }) => (
+            <Link href={link} key={icon}>
               <img src={`/icons/${icon}.svg`} alt={alt} className="w-5 h-5" />
             </Link>
           ))}

@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Input } from "../ui/input";
+import { Input } from "../ui/Input";
 import { useState } from "react";
+import { toast, Toaster } from "sonner";
 
 export default function SignUpSection() {
   const [errors, setErrors] = useState({
@@ -12,10 +13,15 @@ export default function SignUpSection() {
     agree: "",
   });
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  const [loading, setLoading] = useState(false);
 
-    const formData = new FormData(e.currentTarget);
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.currentTarget; // ✅ Save form reference first
+
+    const formData = new FormData(form);
     const firstName = formData.get("first-name")?.toString().trim() || "";
     const lastName = formData.get("last-name")?.toString().trim() || "";
     const email = formData.get("email")?.toString().trim() || "";
@@ -29,18 +35,38 @@ export default function SignUpSection() {
     };
 
     setErrors(newErrors);
-    if (Object.values(newErrors).some((err) => err)) return;
+    if (Object.values(newErrors).some((err) => err)) {
+      setLoading(false);
+      return;
+    }
 
-    const data = { firstName, lastName, email };
+    try {
+      const res = await fetch("/api/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstName, lastName, email }),
+      });
 
-    fetch("/api/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((res) => alert(res.message))
-      .catch(() => alert("Failed to sign up"));
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to sign up.");
+      }
+
+      toast.success(data.message || "Successfully signed up!");
+
+      form.reset(); // ✅ safe to reset form here
+      setErrors({
+        firstName: "",
+        lastName: "",
+        email: "",
+        agree: "",
+      });
+    } catch (error: any) {
+      toast.error(error.message || "Failed to sign up. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -169,7 +195,7 @@ export default function SignUpSection() {
               />
               <label htmlFor="agree" className="leading-snug">
                 By signing up, you agree to Aeternum’s{" "}
-                <a href="#" className="underline text-blue-600">
+                <a href="/terms" className="underline text-blue-600">
                   terms
                 </a>{" "}
                 regarding data collection and usage.
@@ -183,9 +209,16 @@ export default function SignUpSection() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-lg tracking-wider font-medium transition-colors duration-300"
+              disabled={loading}
+              className="bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-lg tracking-wider font-medium transition-colors duration-300 flex items-center justify-center relative"
             >
-              Sign Up
+              {loading && (
+                <div className="absolute w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              )}
+
+              <span className={loading ? "opacity-0" : "opacity-100"}>
+                Sign Up
+              </span>
             </button>
           </div>
         </form>

@@ -248,7 +248,6 @@ export const MobileNavMenu = ({
             className
           )}
         >
-          {/* Close Button */}
           <div className="flex justify-between items-center mb-8 mt-3 mx-4">
             <Link href="/">
               <img
@@ -263,7 +262,6 @@ export const MobileNavMenu = ({
             </button>
           </div>
 
-          {/* Menu Items */}
           <div className="space-y-5 px-8">
             {navItems.map((item) => (
               <div key={item.title} className="w-full">

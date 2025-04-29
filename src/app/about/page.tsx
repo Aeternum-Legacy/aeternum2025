@@ -6,7 +6,7 @@ export default function AboutPage() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="mt-10 md:mt-25">
+    <section>
       <div className="md:mx-28 md:px-6 py-10 md:py-24 relative flex flex-col md:flex-row items-center justify-center md:gap-8">
         <div className="w-full md:flex-1 md:relative md:z-10">
           <div className="relative inline-block w-full">
@@ -23,15 +23,12 @@ export default function AboutPage() {
               className="absolute right-16 md:right-0 md:left-80 bottom-0 translate-x-full translate-y-1/4 rotate-180 w-10 h-10 md:w-20 md:h-20"
             />
 
-            {/* Headline Text */}
             <p className="mx-4 md:mx-0 relative z-10 text-2xl sm:text-3xl md:text-[5.4rem] font-bold tracking-wide">
-              {/* sm version (2 lines, centered) */}
               <span className="block md:hidden text-center leading-snug">
                 <span className="block">CONNECTING GENERATIONS</span>
                 <span className="block">THROUGH CHERISHED MOMENTS</span>
               </span>
 
-              {/* md+ version (stacked words) */}
               <span className="hidden md:block">
                 <span className="block">CONNECTING</span>
                 <span className="block">GENERATIONS</span>
@@ -42,7 +39,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Logo */}
           <img
             src="/icons/aeternum-logo4.svg"
             alt="Aeternum Logo"
@@ -50,7 +46,6 @@ export default function AboutPage() {
           />
         </div>
 
-        {/* Image */}
         <div className="w-full md:flex-1 relative z-0 mt-6 md:mt-0 md:absolute md:right-[2rem] md:top-1/2 md:translate-y-[-43%] md:w-[55%]">
           <Image
             src="/images/family-walking.jpg"
@@ -109,7 +104,6 @@ export default function AboutPage() {
             loop
           />
 
-          {/* Button always visible on sm and md */}
           <div className="absolute bottom-4 right-4 z-10 block">
             <button
               onClick={() => setShowModal(true)}
@@ -120,7 +114,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Modal */}
         {showModal && (
           <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center px-4">
             <div className="relative w-full max-w-4xl aspect-video">

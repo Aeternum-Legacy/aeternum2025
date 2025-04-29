@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import SignUpStickyButton from "@/components/ui/SignUpStickyButton";
 import CookieBanner from "@/components/ui/CookieBanner";
 import { NavbarDemo } from "@/components/layout/NavBar";
+import { Toaster, toast } from "sonner";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -27,10 +28,12 @@ export default function RootLayout({
       <body>
         <NavbarDemo />
         {/* <NavigationBar /> */}
-        {children}
+        <div className="mt-10 md:mt-25">{children}</div>
         <SignUpStickyButton />
         <CookieBanner />
+        <Toaster />
         <Footer />
+      
       </body>
     </html>
   );

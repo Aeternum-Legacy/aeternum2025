@@ -62,7 +62,6 @@ export default function HamburgerNavigation() {
           transition={{ duration: 0.25 }}
           className="absolute top-12 right-0 w-[300px] bg-white border border-gray-200 rounded-lg shadow-xl py-3 px-5 space-y-2"
         >
-          {/* Home Button */}
           <div className="flex justify-center mt-2 border-b-2">
             <Link
               href="/"
