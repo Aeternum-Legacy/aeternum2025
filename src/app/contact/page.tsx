@@ -1,3 +1,5 @@
+//src/app/contact/page.tsx
+
 "use client";
 
 import Link from "next/link";
@@ -9,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
-import { Input } from "@/components/ui/Input";
+import { Input } from "@/components/ui/input_temp";
 
 export default function Contact() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -43,7 +45,7 @@ export default function Contact() {
 
     if (res.ok) {
       alert("Message sent! We'll get back to you soon.");
-      form.reset(); // ✅ Safe now
+      form.reset();
     } else {
       alert("There was a problem. Please try again later.");
     }
@@ -255,38 +257,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  );
-}
-
-function ContactCard({
-  icon,
-  title,
-  explanation,
-  link,
-  linkText,
-}: {
-  icon: string;
-  title: string;
-  explanation: string;
-  link: string;
-  linkText: string;
-}) {
-  return (
-    <div className="border rounded-xl p-6 md:w-80 text-left shadow-sm hover:shadow-md transition border-[#979980]">
-      <div className="text-3xl mb-8">
-        <img src={icon} alt={title} className="w-15 h-15" />
-      </div>
-      <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-
-      <p className="text-sm text-gray-600">
-        {explanation}{" "}
-        <Link
-          href={link}
-          className="underline text-teal-700 hover:text-teal-900 transition-colors"
-        >
-          {linkText}
-        </Link>
-      </p>
-    </div>
   );
 }

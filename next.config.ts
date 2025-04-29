@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {},
+  experimental: { caseSensitiveRoutes: true },
   images: {
     domains: ["api.microlink.io"],
   },
