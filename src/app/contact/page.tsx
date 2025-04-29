@@ -166,7 +166,6 @@ export default function Contact() {
             <div className="absolute w-[600px] h-[600px] bg-[#F3FAF9] rounded-full shadow-[0_0_100px_rgba(255,255,255,0.6)] opacity-90" />
           </div>
 
-
           <form
             onSubmit={handleSubmit}
             className="flex flex-col justify-between w-full max-w-md h-[550px] z-10 px-4 py-10"
