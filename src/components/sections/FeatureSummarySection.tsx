@@ -1,3 +1,8 @@
+"use client";
+
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function FeatureSummarySection() {
   const features = [
     {
@@ -21,10 +26,7 @@ export default function FeatureSummarySection() {
   ];
 
   return (
-    <section
-      className="bg-[#F7F8EA] py-7 lg:py-20 px-4 lg:px-8
-                 flex flex-col items-center"
-    >
+    <section className="bg-[#F7F8EA] py-7 lg:py-20 px-4 lg:px-8 flex flex-col items-center">
       <div className="flex flex-col items-center gap-2 mb-7 lg:mb-10">
         <img src="icons/aeternum-logo2.svg" className="w-8 md:w-12" />
         <p className="font-bold leading-relaxed tracking-[0.25em] text-[#186E68] text-xs md:text-sm">
@@ -32,50 +34,45 @@ export default function FeatureSummarySection() {
         </p>
       </div>
 
-      <div
-        className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-x-13 w-full
-                   lg:px-12 py-3"
-      >
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="relative flex items-center justify-center
-                       lg:justify-start md:pr-3 md:gap-10"
-          >
-            <div className="hidden lg:block">
-              <div className="absolute left-0 top-0 h-full w-[1px] bg-gray-300" />
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 h-24 w-[2px] bg-[#42590F]" />
-            </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-x-13 w-full lg:px-12 py-3">
+        {features.map((feature, index) => {
+          const ref = useRef(null);
+          const inView = useInView(ref, { once: true, amount: 0.5 });
 
-            <div
-              className="flex flex-col items-center lg:items-start justify-center
-             gap-2 py-5 text-center sm:text-center lg:text-left
-             lg:w-[90%]"
+          return (
+            <motion.div
+              key={index}
+              ref={ref}
+              initial={{ opacity: 0, y: 40 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: index * 0.8,
+              }}
+              className="relative flex items-center justify-center lg:justify-start md:pr-3 md:gap-10"
             >
-              <img
-                src={feature.icon}
-                alt={`${feature.title} Icon`}
-                className="w-20 h-20 md:w-15 md:h-15 lg:mb-3"
-              />
-              <h3
-                className="text-2xl font-bold
-                           text-center sm:text-center lg:text-left
-                           whitespace-nowrap lg:whitespace-normal
-                           lg:mb-4 lg:w-2/3"
-              >
-                {feature.title}
-              </h3>
-              <p
-                className="text-base text-[#052922] leading-6
-             max-w-[22rem] sm:w-[90%] lg:max-w-[26rem]
-             text-center sm:text-center lg:text-left
-             md:tracking-wide lg:tracking-normal"
-              >
-                {feature.description}
-              </p>
-            </div>
-          </div>
-        ))}
+              <div className="hidden lg:block">
+                <div className="absolute left-0 top-0 h-full w-[1px] bg-gray-300" />
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 h-24 w-[2px] bg-[#42590F]" />
+              </div>
+
+              <div className="flex flex-col items-center lg:items-start justify-center gap-2 py-5 text-center sm:text-center lg:text-left lg:w-[90%]">
+                <img
+                  src={feature.icon}
+                  alt={`${feature.title} Icon`}
+                  className="w-20 h-20 md:w-15 md:h-15 lg:mb-3"
+                />
+                <h3 className="text-2xl font-bold text-center sm:text-center lg:text-left whitespace-nowrap lg:whitespace-normal lg:mb-4 lg:w-2/3">
+                  {feature.title}
+                </h3>
+                <p className="text-base text-[#052922] leading-6 max-w-[22rem] sm:w-[90%] lg:max-w-[26rem] text-center sm:text-center lg:text-left md:tracking-wide lg:tracking-normal">
+                  {feature.description}
+                </p>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

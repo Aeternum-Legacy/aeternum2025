@@ -1,5 +1,3 @@
-//src/app/contact/page.tsx
-
 "use client";
 
 import Link from "next/link";
@@ -12,42 +10,45 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
 import { Input } from "@/components/ui/Input";
+import { useState } from "react";
+import { toast } from "sonner";
 
 export default function Contact() {
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const [loading, setLoading] = useState(false);
+
+  async function handleContactSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setLoading(true);
 
     const form = e.currentTarget;
-
     const formData = new FormData(form);
-    const firstName = formData.get("first-name");
-    const lastName = formData.get("last-name");
-    const email = formData.get("email");
-    const notes = formData.get("notes");
 
-    if (!firstName || !email) {
-      alert("First name and Email are required.");
-      return;
-    }
+    const firstName = formData.get("first-name")?.toString().trim() || "";
+    const lastName = formData.get("last-name")?.toString().trim() || "";
+    const email = formData.get("email")?.toString().trim() || "";
+    const notes = formData.get("notes")?.toString().trim() || "";
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        notes,
-      }),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstName, lastName, email, notes }),
+      });
 
-    if (res.ok) {
-      alert("Message sent! We'll get back to you soon.");
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.message || "Submission failed.");
+
+      toast.success(
+        "Your message has been sent. We'll get back to you shortly."
+      );
       form.reset();
-    } else {
-      alert("There was a problem. Please try again later.");
+    } catch (err: any) {
+      toast.error(
+        "Something went wrong. Please try again later or email us directly."
+      );
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -169,7 +170,7 @@ export default function Contact() {
           </div>
 
           <form
-            onSubmit={handleSubmit}
+            onSubmit={handleContactSubmit}
             className="flex flex-col justify-between w-full max-w-md h-[550px] z-10 px-4 py-10"
           >
             <div className="flex justify-center mb-6">
@@ -238,19 +239,25 @@ export default function Contact() {
                 <textarea
                   id="notes"
                   name="notes"
-                  rows={8} // <-- made it taller
+                  rows={8}
                   placeholder=""
                   className="w-full bg-[#F3FAF9] border border-black rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-black resize-none"
                 ></textarea>
               </div>
             </div>
 
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-2 rounded-full text-lg tracking-wider font-medium transition"
+                disabled={loading}
+                className="bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-lg tracking-wider font-medium transition-colors duration-300 flex items-center justify-center relative"
               >
-                Submit
+                {loading && (
+                  <div className="absolute w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                )}
+                <span className={loading ? "opacity-0" : "opacity-100"}>
+                  Submit
+                </span>
               </button>
             </div>
           </form>

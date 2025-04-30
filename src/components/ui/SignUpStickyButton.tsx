@@ -30,10 +30,8 @@ export default function SignUpStickyButton() {
 
   const handleClick = () => {
     if (pathname !== "/") {
-      // If not on homepage, navigate to /#signup
       router.push("/#signup");
     } else {
-      // Already on homepage, just scroll to it
       const section = document.getElementById("signup");
       section?.scrollIntoView({ behavior: "smooth" });
     }

@@ -6,10 +6,11 @@ import FeatureDetailSection from "@/components/sections/FeatureDetailSection";
 import ImageTileSection from "@/components/sections/ImageTileSection";
 import ReimagineYourLegacySection from "@/components/sections/ReimagineYourLegacySection";
 import SignUpSection from "@/components/sections/SignUpSection";
+import { TextReveal } from "@/components/animations/TextReveal";
 
 export default function Home() {
   return (
-    <main className="bg-pattern overflow-x-hidden">
+    <main className="bg-pattern">
       <HeroSection />
       <DidYouKnowSection />
       <SolutionSection />

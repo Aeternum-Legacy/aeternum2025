@@ -19,58 +19,59 @@ export async function POST(req: Request) {
     );
   }
 
+  const companyEmail = "selina.park@aeternumproject.com";
+
+  const sendToCompany = new SendEmailCommand({
+    FromEmailAddress: companyEmail,
+    Destination: {
+      ToAddresses: [companyEmail],
+    },
+    Content: {
+      Simple: {
+        Subject: { Data: `New Contact Form Submission from ${firstName}` },
+        Body: {
+          Text: {
+            Data: `You have a new contact form submission:\n\nName: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${
+              notes || "No message provided."
+            }`,
+          },
+        },
+      },
+    },
+  });
+
+  const sendToUser = new SendEmailCommand({
+    FromEmailAddress: companyEmail,
+    Destination: {
+      ToAddresses: [email],
+    },
+    Content: {
+      Simple: {
+        Subject: { Data: "Thanks for contacting Aeternum!" },
+        Body: {
+          Text: {
+            Data: `Hi ${firstName},\n\nThank you for reaching out to Aeternum. We've received your message and will respond as soon as possible.\n\nBest regards,\nThe Aeternum Team`,
+          },
+        },
+      },
+    },
+  });
+
   try {
-    const companyEmail = "selina.park@aeternumproject.com"; // ← send FROM here and TO here
-
-    // 1. Send email to your company
-    const sendToCompany = new SendEmailCommand({
-      FromEmailAddress: companyEmail,
-      Destination: {
-        ToAddresses: [companyEmail],
-      },
-      Content: {
-        Simple: {
-          Subject: { Data: `New Contact Form Submission from ${firstName}` },
-          Body: {
-            Text: {
-              Data: `You have a new contact form submission:\n\nName: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${
-                notes || "No message provided."
-              }`,
-            },
-          },
-        },
-      },
-    });
-
-    // 2. Send confirmation email to user
-    const sendToUser = new SendEmailCommand({
-      FromEmailAddress: companyEmail,
-      Destination: {
-        ToAddresses: [email],
-      },
-      Content: {
-        Simple: {
-          Subject: { Data: "Thanks for contacting Aeternum!" },
-          Body: {
-            Text: {
-              Data: `Hi ${firstName},\n\nThank you for reaching out to Aeternum. We've received your message and will respond as soon as possible.\n\nBest regards,\nThe Aeternum Team`,
-            },
-          },
-        },
-      },
-    });
-
-    await Promise.all([
-      sesClient.send(sendToCompany),
-      sesClient.send(sendToUser),
-    ]);
-
-    return NextResponse.json({ message: "Emails sent successfully!" });
-  } catch (error) {
-    console.error(error);
+    await sesClient.send(sendToCompany);
+  } catch (err) {
+    console.error("❌ Failed to send to company:", err);
     return NextResponse.json(
-      { message: "Failed to send emails" },
+      { message: "Failed to notify company" },
       { status: 500 }
     );
   }
+
+  try {
+    await sesClient.send(sendToUser);
+  } catch (err) {
+    console.error("⚠️ Failed to send confirmation to user:", err);
+  }
+
+  return NextResponse.json({ message: "Submission complete!" });
 }

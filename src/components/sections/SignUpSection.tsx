@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Input } from "../ui/Input";
 import { useState } from "react";
-import { toast, Toaster } from "sonner";
+import { toast } from "sonner";
 
 export default function SignUpSection() {
   const [errors, setErrors] = useState({
@@ -19,7 +19,7 @@ export default function SignUpSection() {
     e.preventDefault();
     setLoading(true);
 
-    const form = e.currentTarget; // ✅ Save form reference first
+    const form = e.currentTarget;
 
     const formData = new FormData(form);
     const firstName = formData.get("first-name")?.toString().trim() || "";
@@ -55,7 +55,7 @@ export default function SignUpSection() {
 
       toast.success(data.message || "Successfully signed up!");
 
-      form.reset(); // ✅ safe to reset form here
+      form.reset(); 
       setErrors({
         firstName: "",
         lastName: "",

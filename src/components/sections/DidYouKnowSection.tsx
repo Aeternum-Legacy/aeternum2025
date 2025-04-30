@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function FeatureSummarySection() {
   const facts = [
     {
@@ -43,8 +47,12 @@ export default function FeatureSummarySection() {
                   lg:max-w-7xl"
       >
         {facts.map((fact, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.8 }}
+            viewport={{ once: true }}
             className="bg-[#FCFCF9] rounded-xl
                        shadow-[3px_6px_4px_-1px_rgba(0,_0,_0,_0.2)]
                        px-[1.5rem] pt-[5rem] pb-[1.5rem]
@@ -63,10 +71,10 @@ export default function FeatureSummarySection() {
               )}
             </div>
 
-            <p className="mt-[0.75rem] text-base text-black leading-snug">
+            <p className="mt-[0.75rem] text-[1.0625rem] text-black leading-snug">
               {fact.description}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -1,3 +1,5 @@
+import { AnimatedHighlight } from "../animations/AnimatedHighlight";
+
 export default function DidYouKnowSection() {
   return (
     <section
@@ -6,14 +8,14 @@ export default function DidYouKnowSection() {
                  mt-[10rem] mb-[3.75rem] md:mt-0"
     >
       <div className="mb-[5rem] md:mb-0">
-        <h2 className="text-3xl md:text-3xl text-black md:mb-5">
+        <h2 className="text-3xl text-black md:mb-5 font-semibold">
           What if there is a solution?
         </h2>
 
         <div className="flex flex-col gap-2 mt-4 text-xl md:text-xl text-[#738483]">
-          <p>Deliver timeless messages</p>
-          <p>Pass on cherished memories</p>
-          <p>Private and safe for families</p>
+          <AnimatedHighlight highlight="Deliver timeless messages" />
+          <AnimatedHighlight highlight="Pass on cherished memories" />
+          <AnimatedHighlight highlight="Private and safe for families" />
         </div>
       </div>
 
