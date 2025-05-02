@@ -1,3 +1,5 @@
+//src/app/layout.tsx
+
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
@@ -5,7 +7,7 @@ import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import SignUpStickyButton from "@/components/ui/SignUpStickyButton";
 import CookieBanner from "@/components/ui/CookieBanner";
-import { NavbarDemo } from "@/components/layout/NavBar";
+import { NavbarDemo } from "@/components/layout/NavBarDemo";
 import { Toaster, toast } from "sonner";
 
 const lato = Lato({
@@ -33,7 +35,6 @@ export default function RootLayout({
         <CookieBanner />
         <Toaster />
         <Footer />
-      
       </body>
     </html>
   );

@@ -1,4 +1,6 @@
 "use client";
+
+import { useState, useEffect } from "react";
 import {
   Navbar,
   NavBody,
@@ -10,18 +12,16 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/ResizableNavbar";
-import { useState, useEffect } from "react";
 import { navItems } from "./NavigationBar";
+import { SignUpButton } from "../ui/SignUpButton";
+import { useRouter } from "next/navigation";
 
 export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
   }, [isMobileMenuOpen]);
 
   return (
@@ -33,7 +33,7 @@ export function NavbarDemo() {
           <div className="flex items-center gap-4">
             <NavbarButton href="/#signup" variant="primary">
               Sign Up
-            </NavbarButton>{" "}
+            </NavbarButton>
           </div>
         </NavBody>
 
@@ -51,35 +51,19 @@ export function NavbarDemo() {
             onClose={() => setIsMobileMenuOpen(false)}
             navItems={navItems}
           >
-            {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
-              >
-                <span className="block">{item.title}</span>
-              </a>
-            ))}
-            <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
+            <div className="flex flex-col gap-4 px-8 pb-8">
+              <SignUpButton
+                text="Sign Up"
                 className="w-full"
-              >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Sign Up
-              </NavbarButton>
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  router.push("/#signup");
+                }}
+              />
             </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
-
     </div>
   );
 }
