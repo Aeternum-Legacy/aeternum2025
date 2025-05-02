@@ -15,9 +15,10 @@ import {
 import { navItems } from "./NavigationBar";
 import { SignUpButton } from "../ui/SignUpButton";
 import { useRouter } from "next/navigation";
+import { useMobileNav } from "@/context/MobileNavContext";
 
 export function NavbarDemo() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isMobileMenuOpen, setIsMobileMenuOpen } = useMobileNav();
   const router = useRouter();
 
   useEffect(() => {

@@ -1,14 +1,13 @@
-//src/components/ui/SignUpStickyButton.tsx
-
 "use client";
 
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { SignUpButton } from "./SignUpButton";
+import { useMobileNav } from "@/context/MobileNavContext";
 
 export default function SignUpStickyButton() {
+  const { isMobileMenuOpen } = useMobileNav();
   const [isVisible, setIsVisible] = useState(true);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -23,18 +22,9 @@ export default function SignUpStickyButton() {
       setIsVisible(!isOverlapping && !isMobileMenuOpen);
     };
 
-    const observer = new MutationObserver(() => {
-      const mobileMenu = document.querySelector("[data-mobile-nav]");
-      setIsMobileMenuOpen(!!mobileMenu);
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("scroll", handleScroll);
-    };
+    handleScroll(); // call once on mount
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobileMenuOpen]);
 
   const handleClick = () => {
