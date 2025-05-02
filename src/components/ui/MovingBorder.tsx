@@ -32,7 +32,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "relative h-10 w-30 overflow-hidden bg-transparent p-[1px] text-xl",
+        "relative h-12 w-40 overflow-hidden bg-transparent p-[1px]",
         containerClassName
       )}
       style={{
@@ -56,7 +56,7 @@ export function Button({
 
       <div
         className={cn(
-          "relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/[0.8] text-sm text-white antialiased backdrop-blur-xl",
+          "relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/[0.8] text-base md:text-sm text-white backdrop-blur-xl",
           className
         )}
         style={{

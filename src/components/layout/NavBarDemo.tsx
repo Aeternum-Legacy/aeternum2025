@@ -11,11 +11,42 @@ import {
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
+  NavbarBrowserLogo,
 } from "@/components/ui/ResizableNavbar";
-import { navItems } from "./NavigationBar";
 import { SignUpButton } from "../ui/SignUpButton";
 import { useRouter } from "next/navigation";
 import { useMobileNav } from "@/context/MobileNavContext";
+
+const navItems = [
+  {
+    title: "Company",
+    links: [
+      { href: "/about", label: "About Us" },
+      { href: "/careers", label: "Careers" },
+    ],
+  },
+  {
+    title: "Product",
+    links: [
+      { href: "/pricing", label: "Pricing Information" },
+      { href: "/faq", label: "FAQ" },
+    ],
+  },
+  {
+    title: "Updates",
+    links: [
+      { href: "/news", label: "News" },
+      { href: "/development", label: "Development Progress" },
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      { href: "/contact", label: "Contact" },
+      { href: "/#signup", label: "Sign Up" },
+    ],
+  },
+];
 
 export function NavbarDemo() {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useMobileNav();
@@ -29,7 +60,7 @@ export function NavbarDemo() {
     <div className="relative w-full">
       <Navbar>
         <NavBody>
-          <NavbarLogo />
+          <NavbarBrowserLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             <NavbarButton href="/#signup" variant="primary">

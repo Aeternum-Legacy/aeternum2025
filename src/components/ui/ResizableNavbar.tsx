@@ -298,6 +298,16 @@ export const NavbarLogo = ({ onClick }: { onClick?: () => void }) => (
   </a>
 );
 
+export const NavbarBrowserLogo = ({ onClick }: { onClick?: () => void }) => (
+  <a
+    href="/"
+    onClick={onClick}
+    className="relative z-20 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black dark:text-white"
+  >
+    <img src="/icons/aeternum-logo.svg" alt="logo" width={120} height={30} />
+  </a>
+);
+
 export const NavbarButton = ({
   href,
   as: Tag = "a",

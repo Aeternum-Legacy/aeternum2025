@@ -228,3 +228,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+.teal-brand-color {
+  background-color: #186E68;
+  color: white;
+}
