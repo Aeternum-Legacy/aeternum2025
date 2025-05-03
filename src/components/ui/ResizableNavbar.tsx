@@ -33,7 +33,7 @@ export const Navbar = ({
     <motion.div
       ref={ref}
       className={cn(
-        "fixed top-2 left-4 right-4 z-40 w-auto transition-shadow duration-300",
+        "fixed top-2 left-4 right-4 z-40 w-auto transition-shadow duration-300 md:shadow-none",
         visible && "shadow-md",
         className
       )}
@@ -211,7 +211,6 @@ interface MobileNavMenuProps {
   children?: React.ReactNode;
 }
 
-//src/components/ui/ResizableNavbar.tsx
 export const MobileNavMenu = ({
   navItems,
   className,

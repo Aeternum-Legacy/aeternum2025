@@ -35,7 +35,20 @@ export default function SignUpSection() {
     };
 
     setErrors(newErrors);
-    if (Object.values(newErrors).some((err) => err)) {
+    const missingFields = Object.entries(newErrors)
+      .filter(([_, msg]) => msg)
+      .map(([key]) => {
+        if (key === "firstName") return "first name";
+        if (key === "lastName") return "last name";
+        if (key === "email") return "email";
+        if (key === "agree") return "agreement to the terms";
+      });
+
+    if (missingFields.length > 0) {
+      const errorMessage = `Please provide your ${missingFields
+        .join(", ")
+        .replace(/, ([^,]*)$/, " and $1")}.`;
+      toast.error(errorMessage);
       setLoading(false);
       return;
     }
@@ -55,7 +68,7 @@ export default function SignUpSection() {
 
       toast.success(data.message || "Successfully signed up!");
 
-      form.reset(); 
+      form.reset();
       setErrors({
         firstName: "",
         lastName: "",
@@ -72,10 +85,10 @@ export default function SignUpSection() {
   return (
     <section
       id="signup"
-      className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-auto lg:h-[700px] mb-10"
+      className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-[700px] mb-10"
     >
       <div className="relative">
-        <div className="relative h-[700px] w-full">
+        <div className="relative h-full w-full">
           <Image
             src="/images/tree.png"
             alt="Tree"
@@ -83,7 +96,7 @@ export default function SignUpSection() {
             className="object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-white/50 block lg:hidden z-10" />
+        <div className="absolute inset-0 bg-white/70 md:bg-white/50 block lg:hidden z-10" />
 
         <div className="absolute inset-0 z-20 mt-10 px-4 sm:px-10 text-black flex flex-col justify-start items-center">
           <h2 className="text-3xl md:text-[42px] mb-3 tracking-tighter text-center md:text-left">
@@ -121,19 +134,22 @@ export default function SignUpSection() {
         </div>
       </div>
 
-      <div className="bg-[#F7F8EA] flex flex-col items-center justify-center px-6 sm:px-20 py-10">
+      <div className="bg-[#F7F8EA] h-full flex flex-col items-center justify-center px-4 sm:px-20 py-6">
         <img
           src="/icons/aeternum-logo4.svg"
           alt="Aeternum Logo"
-          className="w-[200px] sm:w-[250px] mb-10"
+          className="hidden sm:block w-[250px] mb-10"
         />
 
-        <form onSubmit={handleSubmit} className="w-full max-w-md space-y-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-md space-y-4 sm:space-y-5 text-sm"
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div className="relative">
               <label
                 htmlFor="first-name"
-                className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-sm text-black"
+                className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-xs sm:text-sm text-black"
               >
                 First Name
               </label>
@@ -141,17 +157,14 @@ export default function SignUpSection() {
                 id="first-name"
                 name="first-name"
                 type="text"
-                className="bg-[#F6F6E9]"
+                className="bg-[#F6F6E9] text-sm rounded-md px-3 py-2"
               />
-              {errors.firstName && (
-                <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
-              )}
             </div>
 
             <div className="relative">
               <label
                 htmlFor="last-name"
-                className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-sm text-black"
+                className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-xs sm:text-sm text-black"
               >
                 Last Name
               </label>
@@ -159,18 +172,15 @@ export default function SignUpSection() {
                 id="last-name"
                 name="last-name"
                 type="text"
-                className="bg-[#F6F6E9]"
+                className="bg-[#F6F6E9] text-sm rounded-md px-3 py-2"
               />
-              {errors.lastName && (
-                <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
-              )}
             </div>
           </div>
 
           <div className="relative">
             <label
               htmlFor="email"
-              className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-sm text-black"
+              className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-xs sm:text-sm text-black"
             >
               Email
             </label>
@@ -178,14 +188,11 @@ export default function SignUpSection() {
               id="email"
               type="email"
               name="email"
-              className="bg-[#F6F6E9]"
+              className="bg-[#F6F6E9] text-sm rounded-md px-3 py-2"
             />
-            {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-            )}
           </div>
 
-          <div className="text-sm space-y-1">
+          <div className="text-xs sm:text-sm space-y-1">
             <div className="flex items-start gap-2">
               <input
                 type="checkbox"
@@ -201,21 +208,17 @@ export default function SignUpSection() {
                 regarding data collection and usage.
               </label>
             </div>
-            {errors.agree && (
-              <p className="text-red-500 text-sm">{errors.agree}</p>
-            )}
           </div>
 
           <div className="flex justify-center">
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-lg tracking-wider font-medium transition-colors duration-300 flex items-center justify-center relative"
+              className="w-full sm:w-auto bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-base sm:text-lg tracking-wide font-medium transition-colors duration-300 flex items-center justify-center relative"
             >
               {loading && (
                 <div className="absolute w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
               )}
-
               <span className={loading ? "opacity-0" : "opacity-100"}>
                 Sign Up
               </span>

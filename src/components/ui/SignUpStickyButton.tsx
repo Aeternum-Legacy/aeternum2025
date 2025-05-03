@@ -1,4 +1,3 @@
-//src/components/ui/SignUpStickyButton.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -6,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useMobileNav } from "@/context/MobileNavContext";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-import { Button } from "./MovingBorder"; // your animated button base
+import { Button } from "./MovingBorder"; 
 
 export default function SignUpStickyButton() {
   const { isMobileMenuOpen } = useMobileNav();
