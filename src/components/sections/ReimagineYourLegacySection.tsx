@@ -34,15 +34,10 @@ export default function ReimagineYourLegacySection() {
           >
             <span className="inline-flex items-center justify-center md:justify-end gap-[0.25rem] md:gap-3 flex-wrap">
               <span className="relative inline-flex items-center md:mr-3">
-                Aeternum
-                <img
-                  src="/icons/trademark.png"
-                  alt="Trademark"
-                  className="ml-1 w-[0.75rem] h-[0.75rem] translate-y-[2px] md:w-10 md:h-10 md:-mt-4"
-                />
+                Aeternum™ offers a
               </span>
-              offers a <AnimatedWord word="private" /> and{" "}
-              <AnimatedWord word="secure" /> digital
+              <AnimatedWord word="private" /> and <AnimatedWord word="secure" />{" "}
+              digital
             </span>
 
             <span className="block">

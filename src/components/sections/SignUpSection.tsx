@@ -101,14 +101,7 @@ export default function SignUpSection() {
         <div className="absolute inset-0 z-20 mt-10 px-4 sm:px-10 text-black flex flex-col justify-start items-center">
           <h2 className="text-3xl md:text-[42px] mb-3 tracking-tighter text-center md:text-left">
             Early Access to{" "}
-            <span className="inline-flex items-center ml-1">
-              Aeternum
-              <img
-                src="/icons/trademark.png"
-                alt="Trademark"
-                className="w-4 h-4 ml-1 relative -mt-4"
-              />
-            </span>
+            <span className="inline-flex items-center ml-1">Aeternum™</span>
           </h2>
           <p className="mb-3 text-center md:text-left tracking-tight max-w-[90%] md:max-w-full">
             Sign up as a private user and get exclusive access to Aeternum,
