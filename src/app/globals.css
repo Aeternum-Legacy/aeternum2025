@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-sans: "Lato", sans-serif;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -86,9 +90,25 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --btn-primary: #0f766e; /* Tailwind teal-700 */
+  --btn-primary-hover: #0e5f5a; /* darker hover */
+
+  --btn-secondary: #e0eec2; /* from your left column swatches */
+  --btn-secondary-hover: #c6ca8b;
+
+  --btn-outline: #bfbfb2; /* neutral gray */
+  --btn-outline-hover: #ececec;
 }
 
 .dark {
+  --btn-primary: #5eead4; /* Tailwind teal-300 */
+  --btn-primary-hover: #2dd4bf;
+
+  --btn-secondary: #97a97c;
+  --btn-secondary-hover: #bcc8a4;
+
+  --btn-outline: #aaaaaa;
+  --btn-outline-hover: #cccccc;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -123,12 +143,61 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  h1 {
+    @apply text-[2.75rem] sm:text-[3.25rem] md:text-[3.815rem] lg:text-[4.209rem] xl:text-[4.75rem] 2xl:text-[5.25rem] tracking-wide leading-tight;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  h2 {
+    @apply text-[2.25rem] sm:text-[2.625rem] md:text-[3.052rem] lg:text-[3.5rem] xl:text-[4rem] 2xl:text-[4.5rem] tracking-wide leading-tight;
   }
+
+  h3 {
+    @apply text-[1.875rem] sm:text-[2.125rem] md:text-[2.441rem] lg:text-[2.75rem] xl:text-[3rem] 2xl:text-[3.25rem] tracking-wide leading-snug;
+  }
+
+  h4 {
+    @apply text-[1.5rem] sm:text-[1.75rem] md:text-[1.953rem] lg:text-[2.125rem] xl:text-[2.5rem] 2xl:text-[2.75rem] tracking-wide leading-snug;
+  }
+
+  h5 {
+    @apply text-[1.25rem] sm:text-[1.375rem] md:text-[1.563rem] lg:text-[1.75rem] xl:text-[2rem] 2xl:text-[2.25rem] tracking-wide leading-normal;
+  }
+
+  h6 {
+    @apply text-[1rem] sm:text-[1.125rem] md:text-[1.25rem] lg:text-[1.375rem] xl:text-[1.5rem] 2xl:text-[1.625rem] tracking-wide leading-normal;
+  }
+
+  p {
+    @apply text-[1.1rem] tracking-wide leading-relaxed;
+  }
+
+  small {
+    @apply text-[0.75rem] sm:text-[0.775rem] md:text-[0.8rem] lg:text-[0.875rem] xl:text-[0.95rem] 2xl:text-[1rem] tracking-wide leading-snug;
+  }
+
+  .text-xxs {
+    @apply text-[0.64rem] sm:text-[0.66rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[0.72rem] 2xl:text-[0.75rem] leading-none;
+  }
+
+  .page-wrapper {
+    @apply mt-10 md:mt-16 lg:mt-16;
+  }
+
+  .section-wrapper {
+    @apply py-5 md:py-16 mt-12 md:mt-20;
+  }
+
+  .content-wrapper {
+    @apply w-full max-w-screen-xl mx-auto px-6 lg:px-8 gap-6;
+  }
+
+  .grid-wrapper {
+    @apply gap-6 md:gap-8 xl:gap-14;
+  }
+}
+
+.loose {
+  @apply leading-16;
 }
 
 .bg-pattern {
@@ -230,6 +299,6 @@ html {
 }
 
 .teal-brand-color {
-  background-color: #186E68;
+  background-color: #186e68;
   color: white;
 }

@@ -1,5 +1,6 @@
+//src/components/ui/TextGenerateEffect.tsx
 "use client";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion, stagger, useAnimate } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +16,8 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  const wordsArray = words.split(" ");
+
   useEffect(() => {
     animate(
       "span",
@@ -24,44 +26,42 @@ export const TextGenerateEffect = ({
         filter: filter ? "blur(0px)" : "none",
       },
       {
-        duration: duration ? duration : 1,
+        duration,
         delay: stagger(0.2),
       }
     );
   }, [scope.current]);
 
-  const renderWords = () => {
-    return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className="dark:text-white text-black opacity-0"
-              style={{
-                filter: filter ? "blur(10px)" : "none",
-              }}
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
-      </motion.div>
-    );
-  };
+  const renderWords = () => (
+    <motion.div
+      ref={scope}
+      className="flex flex-wrap justify-center text-balance"
+    >
+      {wordsArray.map((word, idx) => (
+        <motion.span
+          key={word + idx}
+          className="dark:text-white text-black opacity-0 whitespace-pre-wrap break-words"
+          style={{
+            filter: filter ? "blur(10px)" : "none",
+          }}
+        >
+          {word}&nbsp;
+        </motion.span>
+      ))}
+    </motion.div>
+  );
 
   return (
     <div className={className}>
-      <div className="mt-4">
-        <div
-          className={cn(
-            "dark:text-white text-black leading-snug tracking-wide",
-            className
-          )}
-        >
-          {renderWords()}
-        </div>
-      </div>
+      <h1
+        className={cn(
+          // 👇 Tailwind utility: h3 on mobile, h1 on md+
+          "text-[2.441rem] md:text-[5.61rem] leading-tight tracking-wide text-center break-words",
+          className
+        )}
+      >
+        {renderWords()}
+      </h1>
     </div>
   );
 };

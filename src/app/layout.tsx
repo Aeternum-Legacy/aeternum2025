@@ -27,10 +27,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={lato.className}>
-      <body>
+      <body className="bg-pattern">
         <MobileNavProvider>
           <NavbarDemo />
-          <div className="mt-10 md:mt-25">{children}</div>
+          <div className="fixed top-0 left-0 bg-black text-white text-sm px-2 py-1 z-[9999]">
+            <div className="block sm:hidden">xs</div>
+            <div className="hidden sm:block md:hidden">sm</div>
+            <div className="hidden md:block lg:hidden">md</div>
+            <div className="hidden lg:block xl:hidden">lg</div>
+            <div className="hidden xl:block 2xl:hidden">xl</div>
+            <div className="hidden 2xl:block">2xl</div>
+          </div>
+          {children}
           <SignUpStickyButton />
           <CookieBanner />
           <Toaster />

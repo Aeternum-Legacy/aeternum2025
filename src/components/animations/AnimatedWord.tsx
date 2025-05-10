@@ -1,3 +1,4 @@
+//src/components/animations/AnimatedWord.tsx
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -22,7 +23,7 @@ export default function AnimatedWord({ word }: { word: string }) {
   return (
     <span
       ref={ref}
-      className={`transition-colors duration-[3000ms] ease-in-out
+      className={`transition-colors duration-[3000ms] ease-in-out font-bold
         ${isVisible ? "text-teal-700" : "text-gray-500/40"}
       `}
     >

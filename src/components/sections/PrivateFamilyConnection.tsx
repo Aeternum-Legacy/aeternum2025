@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 export default function PrivateFamilyConnection() {
   const features = [
     {
@@ -26,8 +27,9 @@ export default function PrivateFamilyConnection() {
       iconSize: 35,
     },
   ];
+
   return (
-    <div className="mb-30 md:mb-40">
+    <section className="content-wrapper">
       <div className="flex lg:hidden items-center justify-center mb-10">
         <div className="relative w-[100%] aspect-[5/4]">
           <Image
@@ -39,11 +41,10 @@ export default function PrivateFamilyConnection() {
         </div>
       </div>
 
-      <h2 className="text-3xl md:hidden font-bold text-center">
-        Private Family Connection
-      </h2>
-      <div className="flex flex-col lg:flex-row gap-10">
-        <div className="hidden lg:flex relative justify-center flex-[0.9] w-full h-auto">
+      <h2 className="md:hidden text-center">Private Family Connection</h2>
+
+      <div className="flex flex-col lg:flex-row gap-10 ">
+        <div className="hidden lg:flex relative justify-center flex-[0.9]">
           <div className="relative w-full h-full -left-5">
             <Image
               src="/images/pfc-image1.png"
@@ -53,7 +54,7 @@ export default function PrivateFamilyConnection() {
             />
           </div>
 
-          <div className="absolute bottom-0 -right-5 z-10 w-full max-w-[350px] aspect-square">
+          <div className="absolute bottom-10 -right-5 z-10 w-full max-w-[350px] aspect-square">
             <Image
               src="/images/pfc-image2.png"
               alt="photo album"
@@ -64,11 +65,11 @@ export default function PrivateFamilyConnection() {
         </div>
 
         <div className="flex-[1.1] text-center py-4 flex flex-col gap-6">
-          <h2 className="hidden md:block text-4xl font-bold text-center">
+          <h3 className="hidden md:block text-center">
             Private Family Connection
-          </h2>
+          </h3>
 
-          <p className="text-[#4F4949] text-lg w-full mx-auto mb-5 text-center">
+          <p className=" text-[#4F4949] mb-5 text-center">
             Your family’s safety and well being should never be compromised.
             Aeternum provides a private and secure digital space to connect,
             interact, and be remembered, for generations that follow.
@@ -90,7 +91,7 @@ export default function PrivateFamilyConnection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -128,12 +129,8 @@ function FeatureCard({
         />
       </div>
 
-      <p className="font-semibold text-[#052922] mb-2 text-2xl lg:text-xl">
-        {title}
-      </p>
-      <p className="text-base text-[#5B5B5B] lg:text-base tracking-wide">
-        {desc}
-      </p>
+      <h6 className="font-semibold text-[#052922] mb-2">{title}</h6>
+      <p className="text-[#5B5B5B]">{desc}</p>
     </div>
   );
 }

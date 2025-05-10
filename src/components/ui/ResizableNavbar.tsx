@@ -1,3 +1,4 @@
+//src/components/ui/ResizeableNavbar.tsx
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
@@ -10,6 +11,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
+import Image from "next/image";
 
 export const Navbar = ({
   children,
@@ -33,8 +35,8 @@ export const Navbar = ({
     <motion.div
       ref={ref}
       className={cn(
-        "fixed top-2 left-4 right-4 z-40 w-auto transition-shadow duration-300 md:shadow-none",
-        visible && "shadow-md",
+        "fixed top-0 left-0 right-0 z-40 w-full transition-all duration-500 ease-in-out",
+        visible ? "px-0" : "top-4 px-3",
         className
       )}
     >
@@ -65,13 +67,17 @@ export const NavBody = ({
       boxShadow: visible
         ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
         : "none",
-      width: visible ? "40%" : "100%",
-      y: visible ? 20 : 0,
+      width: "100%",
     }}
-    transition={{ type: "spring", stiffness: 200, damping: 50 }}
+    transition={{
+      type: "tween",
+      duration: 0.5,
+      ease: "easeInOut",
+    }}
     style={{ minWidth: "800px" }}
     className={cn(
-      "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start rounded-full bg-black px-6 py-2 text-white md:flex",
+      "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start bg-black text-white md:flex px-6 py-2",
+      visible ? "rounded-none " : "rounded-full ",
       className
     )}
   >
@@ -89,77 +95,71 @@ export const NavItems = ({
   onItemClick?: () => void;
 }) => {
   const [hovered, setHovered] = useState<number | null>(null);
-  const [openMenu, setOpenMenu] = useState<number | null>(null);
-  const menuRefs = useRef<Record<number, HTMLDivElement | null>>({});
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      const isOutside = Object.values(menuRefs.current).every(
-        (ref) => ref && !ref.contains(e.target as Node)
-      );
-      if (isOutside) {
-        setOpenMenu(null);
-        setHovered(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   return (
-    <motion.div
-      onMouseLeave={() => openMenu === null && setHovered(null)}
+    <nav
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 md:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 md:flex lg:space-x-10",
         className
       )}
+      aria-label="Main navigation"
     >
-      {items.map(({ title, links }, idx) => (
-        <div
-          key={title}
-          className="relative"
-          ref={(el) => {
-            menuRefs.current[idx] = el;
-          }}
-        >
-          <button
+      <ul className="flex flex-row gap-10 text-base font-medium text-zinc-600">
+        {items.map(({ title, links }, idx) => (
+          <li
+            key={title}
+            className="relative"
             onMouseEnter={() => setHovered(idx)}
-            onClick={() => setOpenMenu((prev) => (prev === idx ? null : idx))}
-            className="relative px-4 py-2 text-gray-300 hover:text-black dark:text-neutral-300"
+            onMouseLeave={() => setHovered(null)}
           >
-            {(hovered === idx || openMenu === idx) && (
-              <motion.div
-                layoutId="hovered"
-                className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800 z-0"
-              />
-            )}
-            <span className="relative z-20">{title}</span>
-          </button>
-          <AnimatePresence>
-            {openMenu === idx && (
-              <motion.div
-                initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                transition={{ duration: 0.2 }}
-                className="absolute left-1/2 top-full mt-3 w-40 -translate-x-1/2 rounded-md bg-black text-white shadow-lg z-50 p-2"
+            <div>
+              <button
+                className={cn(
+                  "relative px-4 py-2 dark:text-neutral-300 transition-colors",
+                  hovered === idx ? "text-black" : "text-gray-300",
+                  "hover:text-black"
+                )}
               >
-                {links.map(({ href, label }) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    onClick={onItemClick}
-                    className="block px-3 py-2 text-sm rounded hover:bg-white hover:text-black transition-colors"
+                {hovered === idx && (
+                  <motion.div
+                    layoutId="hovered"
+                    className="absolute inset-x-0 top-1/2 h-8 -translate-y-1/2 w-full rounded-full bg-gray-100 dark:bg-neutral-800 z-0"
+                    transition={{ duration: 0.25 }}
+                  />
+                )}
+                <span className="relative z-20">{title}</span>
+              </button>
+
+              <AnimatePresence>
+                {hovered === idx && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-1/2 top-full w-40 -translate-x-1/2 z-50"
                   >
-                    {label}
-                  </Link>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      ))}
-    </motion.div>
+                    <div className="h-2 w-full bg-transparent pointer-events-none" />
+                    <div className="rounded-md bg-black text-white shadow-lg p-2">
+                      {links.map(({ href, label }) => (
+                        <Link
+                          key={href}
+                          href={href}
+                          onClick={onItemClick}
+                          className="block px-3 py-2 text-base text-white rounded transition-colors hover:text-black hover:bg-white"
+                        >
+                          {label}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 
@@ -293,7 +293,7 @@ export const NavbarLogo = ({ onClick }: { onClick?: () => void }) => (
     onClick={onClick}
     className="relative z-20 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black dark:text-white"
   >
-    <img src="/icons/aeternum-logo4.svg" alt="logo" width={120} height={30} />
+    <Image src="/icons/aeternum-logo4.svg" alt="logo" width={150} height={40} />
   </a>
 );
 

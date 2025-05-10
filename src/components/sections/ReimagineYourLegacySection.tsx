@@ -8,57 +8,72 @@ export default function ReimagineYourLegacySection() {
   const router = useRouter();
 
   const handleClick = () => {
-    if (typeof window !== "undefined") {
-      const signupSection = document.getElementById("signup");
-      if (signupSection) {
-        signupSection.scrollIntoView({ behavior: "smooth" });
-      } else {
-        router.push("/#signup");
-      }
+    const signupSection = document.getElementById("signup");
+    if (signupSection) {
+      signupSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/#signup");
     }
   };
 
   return (
-    <section className="relative overflow-hidden text-center">
-      <img
-        src="/images/mom&daughter.png"
-        alt="Family in a field"
-        className="w-full object-cover"
-      />
+    <section
+      id="reimagine"
+      aria-labelledby="reimagine-heading"
+      className="section-wrapper relative text-center overflow-hidden pb-0"
+    >
+      <div className="content-wrapper relative z-10 flex flex-col items-center justify-center text-black">
+        <div className="flex flex-col items-center text-center">
+          <h2>What if there is a solution?</h2>
+          <div className="text-[#738483] space-y-1 text-[1.333rem] tracking-wide mt-4">
+            <h5 className="leading-tight tracking-normal">
+              Deliver timeless <span className="inline-block">messages</span>
+            </h5>
+            <h5 className="leading-tight tracking-normal">
+              Pass on cherished <span className="inline-block">memories</span>
+            </h5>
+            <h5 className="leading-tight tracking-normal">
+              Private and safe{" "}
+              <span className="inline-block">for families</span>
+            </h5>
+          </div>
+        </div>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-start md:px-[1.2rem] md:pt-14">
-        <div className="flex flex-col items-center sm:items-center md:items-end text-center sm:text-center md:text-right gap-[2.5rem] self-center md:self-end md:mx-10 md:mb-14">
-          <p
-            className="text-sm sm:text-base md:text-3xl lg:text-5xl leading-relaxed tracking-wider font-medium px-4 md:px-0 mx-auto"
-            style={{ textShadow: "0 0 0.5px currentColor" }}
-          >
-            <span className="inline-flex items-center justify-center md:justify-end gap-[0.25rem] md:gap-3 flex-wrap">
-              <span className="relative inline-flex items-center md:mr-3">
-                Aeternum™ offers a
-              </span>
-              <AnimatedWord word="private" /> and <AnimatedWord word="secure" />{" "}
-              digital
-            </span>
+        <div className="mt-20 md:mt-28">
+          <h1 id="reimagine-heading">Reimagine Your Legacy</h1>
+        </div>
 
-            <span className="block">
-              space to <AnimatedWord word="connect" /> families,{" "}
-              <AnimatedWord word="share" /> cherished
-            </span>
-            <span className="block">
-              memories, and <AnimatedWord word="deliver" /> loving messages,
-            </span>
-            <span className="block">
-              <AnimatedWord word="even after our passing." />
-            </span>
-          </p>
+        <h3 className="mt-7 leading-relaxed text-center">
+          <span className="block">
+            Aeternum offers a <AnimatedWord word="private" /> digital space
+          </span>
+          <span className="block">
+            to <AnimatedWord word="connect" /> families,{" "}
+            <AnimatedWord word="share" /> cherished memories,
+          </span>
+          <span className="block">
+            and <AnimatedWord word="deliver" /> loving messages,{" "}
+          </span>
+          <AnimatedWord word="even after our passing." />
+        </h3>
+
+        <div className="mt-7">
           <ShinyButton
             onClick={handleClick}
-            buttonClassName="self-center md:self-end bg-teal-700 hover:bg-gray-800 text-white text-[1.875rem] md:text-xl font-medium px-[4rem] py-[1.25rem] md:px-10 md:py-3 rounded-full transition-colors duration-300"
-            textClassName="text-white font-medium text-[1.875rem] md:text-xl"
+            buttonClassName="bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-lg md:text-xl font-medium px-6 py-2 md:px-10 md:py-2 rounded-full transition-colors duration-300"
+            textClassName="text-white font-medium"
           >
             Sign Up
           </ShinyButton>
         </div>
+      </div>
+
+      <div className="relative z-0 w-full -mt-[15rem] sm:-mt-[20rem] md:-mt-[25rem] xl:-mt-[30rem] 2xl:-mt-[40rem]">
+        <img
+          src="/images/mom&daughter.png"
+          alt="Mother and daughter hugging in a sunny field"
+          className="w-full h-auto"
+        />
       </div>
     </section>
   );

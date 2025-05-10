@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function ImageTile() {
   return (
     <>
-      <div className="hidden md:flex flex-row gap-1.5 h-[900px] w-[110%] overflow-hidden">
-        <div className="flex flex-col justify-end gap-1.5 basis-[12%]">
+      <div className="hidden md:flex flex-row gap-3 h-[900px] w-[110%] overflow-hidden">
+        <div className="flex flex-col justify-end gap-3 basis-[12%]">
           <div className="relative w-full h-[400px]">
             <Image
               src="/images/image-tile1.jpg"
@@ -15,7 +15,7 @@ export default function ImageTile() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-end gap-1.5 basis-[10%]">
+        <div className="flex flex-col justify-end gap-3 basis-[10%]">
           <div className="relative w-full h-[250px]">
             <Image
               src="/images/image-tile2.jpg"
@@ -34,7 +34,7 @@ export default function ImageTile() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-end gap-1.5 basis-[13%]">
+        <div className="flex flex-col justify-end gap-3 basis-[13%]">
           <div className="relative w-full h-[300px]">
             <Image
               src="/images/image-tile4.jpg"
@@ -61,7 +61,7 @@ export default function ImageTile() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-end gap-1.5 basis-[16.66%]">
+        <div className="flex flex-col justify-end gap-3 basis-[16.66%]">
           <div className="relative w-full h-[180px]">
             <Image
               src="/images/image-tile9.jpg"
@@ -88,7 +88,7 @@ export default function ImageTile() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-end gap-1.5 basis-[16.66%]">
+        <div className="flex flex-col justify-end gap-3 basis-[16.66%]">
           <div className="relative w-full h-[300px]">
             <Image
               src="/images/image-tile12.jpg"
@@ -115,7 +115,7 @@ export default function ImageTile() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-end gap-1.5 basis-[16.66%]">
+        <div className="flex flex-col justify-end gap-3 basis-[16.66%]">
           <div className="relative w-full h-[380px]">
             <Image
               src="/images/image-tile15.jpg"

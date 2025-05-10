@@ -23,7 +23,7 @@ export default function LegacyInheritanceSection() {
   ];
 
   return (
-    <div className="grid lg:grid-cols-2 gap-5 lg:gap-12 px-4 mb-10">
+    <div className="content-wrapper grid lg:grid-cols-2 gap-5 lg:gap-12 ">
       <div className="flex lg:hidden items-center justify-center">
         <div className="relative w-full max-w-[90%] aspect-[1/1] mx-auto">
           <Image
@@ -36,11 +36,9 @@ export default function LegacyInheritanceSection() {
       </div>
 
       <div className="flex flex-col items-center justify-center text-center gap-6">
-        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold md:font-normal">
-          Legacy Inheritance
-        </h2>
+        <h3 className="text-center">Legacy Inheritance</h3>
 
-        <p className="text-[#4F4949] text-lg md:text-xl md:mt-4 px-2 sm:px-0">
+        <p className="text-[#4F4949]">
           <span className="block">
             Because the impact you leave behind matters,
           </span>

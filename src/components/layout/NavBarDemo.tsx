@@ -1,3 +1,4 @@
+//src/components/layout/NavBarDemo.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -63,9 +64,9 @@ export function NavbarDemo() {
           <NavbarBrowserLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton href="/#signup" variant="primary">
+            {/* <NavbarButton href="/#signup" variant="primary">
               Sign Up
-            </NavbarButton>
+            </NavbarButton> */}
           </div>
         </NavBody>
 

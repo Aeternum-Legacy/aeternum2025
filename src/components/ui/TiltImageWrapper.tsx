@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { useRef } from "react";
 
 export default function TiltImageWrapper({
@@ -56,7 +57,7 @@ export default function TiltImageWrapper({
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`will-change-transform ${className}`}
+      className={cn("will-change-transform overflow-hidden", className)}
     >
       {children}
     </div>

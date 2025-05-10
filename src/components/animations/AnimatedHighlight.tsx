@@ -1,6 +1,8 @@
 "use client";
+
+import React, { ElementType, useEffect, useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const defaultHighlightVariants = {
   initial: { width: 0, opacity: 0 },
@@ -16,25 +18,34 @@ const defaultHighlightVariants = {
   },
 };
 
-export function AnimatedHighlight({
-  text,
-  highlight,
-  withScrollAnimation = false,
-  viewportOnce = true,
-  scrollDuration = 0.8,
-  scrollDelay = 0,
-  highlightAppearDelay = 500,
-  highlightDisappearDelay = 3000,
-}: {
+interface AnimatedHighlightProps {
   text?: string;
   highlight: string;
+  as?: ElementType;
   withScrollAnimation?: boolean;
   viewportOnce?: boolean;
   scrollDuration?: number;
   scrollDelay?: number;
   highlightAppearDelay?: number;
   highlightDisappearDelay?: number;
-}) {
+  mobileTextSize?: string;
+  desktopTextSize?: string;
+  className?: string;
+}
+
+export function AnimatedHighlight({
+  text,
+  highlight,
+  as: Tag = "p",
+  withScrollAnimation = false,
+  viewportOnce = true,
+  scrollDuration = 0.8,
+  scrollDelay = 0,
+  highlightAppearDelay = 500,
+  highlightDisappearDelay = 3000,
+
+  className,
+}: AnimatedHighlightProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: viewportOnce });
   const [showHighlight, setShowHighlight] = useState(false);
@@ -74,22 +85,29 @@ export function AnimatedHighlight({
     : {};
 
   return (
-    <motion.p ref={ref} {...animationProps} className="relative">
-      {text}
-      <span className="relative inline-block">
-        {highlight}
-        <AnimatePresence>
-          {showHighlight && (
-            <motion.span
-              className="absolute bottom-0 left-0 h-[2px] bg-gray-400/30"
-              variants={defaultHighlightVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-            />
-          )}
-        </AnimatePresence>
-      </span>
-    </motion.p>
+    <motion.div ref={ref} {...animationProps}>
+      <Tag
+        className={cn(
+          className,
+          "relative inline-flex items-baseline gap-1 flex-wrap"
+        )}
+      >
+        <span className="inline">{text}</span>
+        <span className="relative inline-block">
+          {highlight}
+          <AnimatePresence>
+            {showHighlight && (
+              <motion.span
+                className="absolute bottom-0 left-0 h-[2px] bg-gray-400/30"
+                variants={defaultHighlightVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              />
+            )}
+          </AnimatePresence>
+        </span>
+      </Tag>
+    </motion.div>
   );
 }

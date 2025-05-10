@@ -1,3 +1,4 @@
+//src/components/ui/ShinyButton.tsx
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -29,8 +30,8 @@ interface ShinyButtonProps
   extends Omit<React.HTMLAttributes<HTMLButtonElement>, keyof MotionProps>,
     MotionProps {
   children: React.ReactNode;
-  className?: string; 
-  buttonClassName?: string; 
+  className?: string;
+  buttonClassName?: string;
   textClassName?: string;
 }
 
@@ -43,6 +44,8 @@ export const ShinyButton = React.forwardRef<
       ref={ref}
       className={cn(
         "relative rounded-lg backdrop-blur-xl transition-shadow duration-300 ease-in-out hover:shadow dark:bg-[radial-gradient(circle_at_50%_0%,var(--primary)/10%_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_var(--primary)/10%]",
+        "px-4 py-2 text-sm", // ✅ for sm screens only
+        "md:px-6 md:py-3 md:text-base", // ✅ keep full size at md+
         buttonClassName,
         className
       )}
@@ -51,7 +54,7 @@ export const ShinyButton = React.forwardRef<
     >
       <span
         className={cn(
-          "relative block size-full tracking-wide text-[rgb(0,0,0,65%)] dark:text-[rgb(255,255,255,90%)]",
+          "relative block size-full tracking-wide text-[rgb(0,0,0,65%)] dark:text-[rgb(255,255,255,90%)] text-sm md:text-base",
           textClassName
         )}
         style={{
