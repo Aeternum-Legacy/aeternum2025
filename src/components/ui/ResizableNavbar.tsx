@@ -1,4 +1,3 @@
-//src/components/ui/ResizeableNavbar.tsx
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
@@ -104,7 +103,7 @@ export const NavItems = ({
       )}
       aria-label="Main navigation"
     >
-      <ul className="flex flex-row gap-10 text-base font-medium text-zinc-600">
+      <ul className="flex flex-row md:gap-5 lg:gap-10 text-base font-medium text-zinc-600">
         {items.map(({ title, links }, idx) => (
           <li
             key={title}
@@ -237,7 +236,7 @@ export const MobileNavMenu = ({
           </button>
         </div>
 
-        <div className="space-y-5 p-8">
+        <div className="space-y-5 p-6">
           {navItems.map((item) => {
             const filteredLinks = item.links.filter(
               (link) => !["Sign Up", "Login"].includes(link.label)

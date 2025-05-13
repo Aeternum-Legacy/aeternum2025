@@ -23,53 +23,75 @@ export default function LegacyInheritanceSection() {
   ];
 
   return (
-    <div className="content-wrapper grid lg:grid-cols-2 gap-5 lg:gap-12 ">
-      <div className="flex lg:hidden items-center justify-center">
-        <div className="relative w-full max-w-[90%] aspect-[1/1] mx-auto">
-          <Image
-            src="/images/legacy-inheritance.png"
-            alt="Legacy Inheritance"
-            fill
-            className="object-contain"
-          />
-        </div>
-      </div>
+    <section
+      className="content-wrapper "
+      aria-labelledby="legacy-inheritance-heading"
+    >
+      {/* Heading and subtext for mobile to lg */}
+      <h2 className="xl:hidden text-center">Legacy Inheritance</h2>
+      <p className="text-[#4F4949] text-center mt-5 mb-5 xl:hidden">
+        Because the impact you leave behind matters, Aeternum ensures your
+        legacy is preserved and inherited by future generations, exactly as you
+        intend.
+      </p>
 
-      <div className="flex flex-col items-center justify-center text-center gap-6">
-        <h3 className="text-center">Legacy Inheritance</h3>
-
-        <p className="text-[#4F4949]">
-          <span className="block">
-            Because the impact you leave behind matters,
-          </span>
-          <span className="block">
-            Aeternum ensures your legacy is preserved and inherited
-          </span>
-          by future generations, exactly as you intend.
-        </p>
-
-        <div className="flex flex-col gap-6 items-center justify-center mt-4">
-          {legacyFeatures.map((feature, idx) => (
-            <LegacyFeatureCard
-              key={idx}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
+      <div className="grid lg:grid-cols-2 gap-5">
+        {/* Mobile Image */}
+        <div className="flex lg:hidden items-center justify-center">
+          <div className="relative w-full max-w-[90%] aspect-[1/1] mx-auto">
+            <Image
+              src="/images/legacy-inheritance.png"
+              alt="Illustration of a digital legacy being preserved"
+              fill
+              className="object-contain"
             />
-          ))}
+          </div>
         </div>
-      </div>
 
-      <div className="hidden lg:flex items-center justify-center">
-        <div className="relative w-[750px] h-[800px]">
-          <Image
-            src="/images/legacy-inheritance.png"
-            alt="Legacy Inheritance"
-            fill
-            className="object-contain"
-          />
+        {/* Content */}
+        <div className="flex flex-col items-center justify-start text-center gap-6 px-8 xl:px-0">
+          <h2
+            id="legacy-inheritance-heading"
+            className="text-center hidden xl:block"
+          >
+            Legacy Inheritance
+          </h2>
+
+          <p className="text-[#4F4949] hidden xl:block">
+            <span className="block">
+              Because the impact you leave behind matters,
+            </span>
+            <span className="block">
+              Aeternum ensures your legacy is preserved and inherited
+            </span>
+            by future generations, exactly as you intend.
+          </p>
+
+          <div className="flex flex-col gap-6 items-center justify-center">
+            {legacyFeatures.map((feature, idx) => (
+              <LegacyFeatureCard
+                key={idx}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Image */}
+        <div className="hidden lg:flex items-center justify-center h-full">
+          <div className="relative w-full max-w-[750px]">
+            <Image
+              src="/images/legacy-inheritance.png"
+              alt="Illustration of a digital legacy being preserved"
+              width={750}
+              height={600}
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

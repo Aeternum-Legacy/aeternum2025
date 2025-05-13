@@ -1,4 +1,3 @@
-//src/components/animations/AnimatedWord.tsx
 "use client";
 
 import { useEffect, useRef, useState } from "react";

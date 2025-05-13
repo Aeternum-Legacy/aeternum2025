@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface FadeInTextProps {
-  text: string;
+  text: React.ReactNode;
   className?: string;
   duration?: number;
   delay?: number;
 }
-
 export const FadeInText: React.FC<FadeInTextProps> = ({
   text,
   className,
@@ -23,7 +22,7 @@ export const FadeInText: React.FC<FadeInTextProps> = ({
       animate={{ opacity: 1 }}
       transition={{ duration, delay }}
       className={cn(
-        "text-center break-words font-semibold md:font-normal",
+        "text-center break-words whitespace-normal font-semibold md:font-normal max-w-4xl",
         className
       )}
     >

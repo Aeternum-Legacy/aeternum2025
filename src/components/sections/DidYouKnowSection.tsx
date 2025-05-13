@@ -1,4 +1,3 @@
-// src/components/sections/DidYouKnowSection.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -36,7 +35,7 @@ export default function DidYouKnowSection() {
           <img
             src="/icons/arrow-right.svg"
             alt="Right arrow icon indicating insight"
-            className="w-5 h-5 grayscale brightness-75"
+            className="w-5 h-5 grayscale brightness-75 hidden sm:block"
           />
           <h5 id="problem-heading" className="text-[#738483]">
             Our legacies are at risk of being lost...
@@ -51,7 +50,7 @@ export default function DidYouKnowSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.3 }}
               viewport={{ once: true }}
-              className="flex flex-col gap-y-5 bg-[#FCFCF9] rounded-xl shadow-[0px_8px_10px_-2px_rgba(0,_0,_0,_0.35)] px-7 py-10 text-center md:text-left lg:min-h-[320px]"
+              className="flex flex-col gap-y-5 bg-[#FCFCF9] rounded-xl shadow-[0px_8px_10px_-2px_rgba(0,_0,_0,_0.35)] px-5 py-5 sm:px-7 sm:py-10 text-center md:text-left lg:min-h-[320px]"
             >
               <div className="hidden md:block md:h-[10px] lg:h-[50px]" />
 

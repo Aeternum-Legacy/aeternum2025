@@ -12,12 +12,19 @@ export default function LegacyFeatureCard({
   description,
 }: LegacyFeatureCardProps) {
   return (
-    <div className="relative flex items-start gap-6 border border-[#8BA39C] rounded-xl p-5 w-4/5 max-w-2xl bg-white">
-      <div className="absolute -left-8 top-6 bg-[#BCC6C7] p-3 rounded-full">
-        <Image src={icon} alt={title} width={32} height={32} />
+    <div className="relative w-full mx-auto">
+      {/* Icon placed exactly on the border */}
+      <div className="absolute -left-[1.5rem] top-5 bg-[#BCC6C7] p-3 rounded-full z-10">
+        <Image
+          src={icon}
+          alt={`Icon representing: ${title}`}
+          width={32}
+          height={32}
+        />
       </div>
 
-      <div className="pl-7 md:pr-10 text-left gap-3">
+      {/* Card */}
+      <div className="flex flex-col border border-[#8BA39C] rounded-xl bg-white p-5 pl-7">
         <h3 className="font-semibold text-2xl md:text-xl text-black mb-2">
           {title}
         </h3>

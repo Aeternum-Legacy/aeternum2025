@@ -1,9 +1,6 @@
-// src/components/sections/HeroSection.tsx
-
 import Image from "next/image";
 import TiltImageWrapper from "../ui/TiltImageWrapper";
 import { FadeInText } from "../animations/FadeInText";
-// import { AnimatedHighlight } from "../animations/AnimatedHighlight";
 
 export default function HeroSection() {
   return (
@@ -13,10 +10,23 @@ export default function HeroSection() {
       className="page-wrapper flex flex-col items-center text-center overflow-x-hidden"
     >
       <div className="section-wrapper">
-        <div className="w-full px-4 sm:px-6 lg:px-8 mx-auto">
-          <header className="flex flex-col items-center">
+        <div className="content-wrapper">
+          <header className="flex flex-col items-center w-full max-w-full break-words text-balance text-center">
             <FadeInText
-              text="How will you be remembered?"
+              text={
+                <>
+                  <span className="block sm:hidden">
+                    How will
+                    <br />
+                    you be
+                    <br />
+                    remembered?
+                  </span>
+                  <span className="hidden sm:inline">
+                    How will you be remembered?
+                  </span>
+                </>
+              }
               className="text-black dark:text-white mb-4"
               duration={4}
             />
@@ -27,7 +37,7 @@ export default function HeroSection() {
           </header>
         </div>
 
-        <div className="grid md:w-[150vw] lg:w-[130vw] md:grid-cols-5">
+        <div className="grid w-[140vw] 2xl:w-[130vw] md:grid-cols-5">
           <div className="hidden md:flex justify-center items-start">
             <TiltImageWrapper className="relative w-[120%] lg:w-[110%] aspect-[15/9] mt-7">
               <Image
@@ -61,9 +71,6 @@ export default function HeroSection() {
               <h5 className="leading-tight tracking-normal">
                 Stories left untold
               </h5>
-              {/* <AnimatedHighlight text="Words left " highlight="unspoken" as="h5" />
-              <AnimatedHighlight text="Memories left " highlight="forgotten" as="h5" />
-              <AnimatedHighlight text="Stories left " highlight="untold" as="h5" /> */}
             </div>
 
             <TiltImageWrapper className="relative w-full aspect-[16/11] md:mb-20">

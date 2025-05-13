@@ -39,7 +39,7 @@ export default function ReimagineYourLegacySection() {
           </div>
         </div>
 
-        <div className="mt-20 md:mt-28">
+        <div className="mt-20 md:mt-28 font-bold">
           <h1 id="reimagine-heading">Reimagine Your Legacy</h1>
         </div>
 
@@ -68,7 +68,7 @@ export default function ReimagineYourLegacySection() {
         </div>
       </div>
 
-      <div className="relative z-0 w-full -mt-[15rem] sm:-mt-[20rem] md:-mt-[25rem] xl:-mt-[30rem] 2xl:-mt-[40rem]">
+      <div className="relative z-0 w-full -mt-[10rem] sm:-mt-[20rem] md:-mt-[25rem] xl:-mt-[30rem] 2xl:-mt-[40rem]">
         <img
           src="/images/mom&daughter.png"
           alt="Mother and daughter hugging in a sunny field"

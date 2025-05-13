@@ -1,4 +1,3 @@
-//src/components/ui/ShinyButton.tsx
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -44,8 +43,8 @@ export const ShinyButton = React.forwardRef<
       ref={ref}
       className={cn(
         "relative rounded-lg backdrop-blur-xl transition-shadow duration-300 ease-in-out hover:shadow dark:bg-[radial-gradient(circle_at_50%_0%,var(--primary)/10%_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_var(--primary)/10%]",
-        "px-4 py-2 text-sm", // ✅ for sm screens only
-        "md:px-6 md:py-3 md:text-base", // ✅ keep full size at md+
+        "px-4 py-2 text-sm", 
+        "md:px-6 md:py-3 md:text-base", 
         buttonClassName,
         className
       )}

@@ -1,15 +1,19 @@
-import MemoryPreservationFeatureCard from "../ui/MemoryPreservationFeatureCard";
 import Image from "next/image";
+import MemoryPreservationFeatureCard from "../ui/MemoryPreservationFeatureCard";
 
 export default function MemoryPreservationSection() {
   return (
-    <section className="section-wrapper mb-[7.5rem] md:mb-40">
-      <div className="content-wrapper">
+    <section
+      className="content-wrapper mb-[7.5rem] md:mb-40 "
+      aria-labelledby="memory-preservation-heading"
+    >
+      <div className="content-wrapper px-4 mx-auto max-w-screen-xl">
+        {/* Mobile Image */}
         <div className="lg:hidden flex justify-center mb-10">
           <div className="relative w-full max-w-[90%] aspect-[4/4]">
             <Image
               src="/images/memory-preservation.png"
-              alt="Memory Preservation"
+              alt="Illustration of digital memory preservation in Aeternum"
               fill
               className="object-contain"
             />
@@ -18,7 +22,9 @@ export default function MemoryPreservationSection() {
 
         {/* Title and Description */}
         <header className="flex flex-col gap-4 md:gap-6 text-center items-center justify-center">
-          <h3 className="text-center">Memory Preservation</h3>
+          <h2 id="memory-preservation-heading" className="text-center">
+            Memory Preservation
+          </h2>
           <p className="text-[#4F4949]">
             <span className="block whitespace-normal -ml-2 sm:-ml-5">
               Life moves fast, and precious memories can slip away.
@@ -28,9 +34,10 @@ export default function MemoryPreservationSection() {
           </p>
         </header>
 
-        {/* Feature Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 items-center w-full mt-10 lg:mt-[3.75rem] lg:gap-x-5 lg:gap-y-5">
-          <div className="flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 h-full">
+        {/* Feature Cards Layout */}
+        <div className="flex flex-col lg:grid lg:grid-cols-3 items-center mt-10 lg:mt-[3.75rem] lg:gap-x-5 lg:gap-y-5">
+          {/* Left Column */}
+          <div className="flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 w-full">
             <MemoryPreservationFeatureCard
               icon="/icons/history-book.svg"
               title="Record Your Memories"
@@ -48,18 +55,20 @@ export default function MemoryPreservationSection() {
             />
           </div>
 
-          <div className="hidden relative lg:flex justify-center">
+          {/* Center Image (desktop only) */}
+          <div className="hidden lg:flex justify-center">
             <div className="relative w-full max-w-[620px] h-[620px] -translate-y-5 scale-105">
               <Image
                 src="/images/memory-preservation.png"
-                alt="Memory Preservation"
+                alt="Illustration of digital memory preservation in Aeternum"
                 fill
                 className="object-contain"
               />
             </div>
           </div>
 
-          <div className="mt-7 lg:mt-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 h-full">
+          {/* Right Column */}
+          <div className="mt-7 lg:mt-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 w-full">
             <MemoryPreservationFeatureCard
               icon="/icons/custom-memory-collections.svg"
               title="Custom Memory Collections"
@@ -73,7 +82,6 @@ export default function MemoryPreservationSection() {
           </div>
         </div>
       </div>
-      {/* Mobile Image */}
     </section>
   );
 }

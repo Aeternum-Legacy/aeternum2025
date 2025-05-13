@@ -1,4 +1,3 @@
-//src/components/ui/TextGenerateEffect.tsx
 "use client";
 import React, { useEffect } from "react";
 import { motion, stagger, useAnimate } from "motion/react";
@@ -55,7 +54,6 @@ export const TextGenerateEffect = ({
     <div className={className}>
       <h1
         className={cn(
-          // 👇 Tailwind utility: h3 on mobile, h1 on md+
           "text-[2.441rem] md:text-[5.61rem] leading-tight tracking-wide text-center break-words",
           className
         )}

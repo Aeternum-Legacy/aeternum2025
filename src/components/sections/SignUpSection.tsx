@@ -74,42 +74,33 @@ export default function SignUpSection() {
 
   return (
     <section
-      id="signup"
-      className="flex flex-col md:flex-row mb-10"
+      className="flex flex-col lg:flex-row"
       aria-labelledby="signup-heading"
     >
-      <div className="content-wrapper relative w-full md:w-1/2 h-[450px] md:h-auto md:min-h-[700px] overflow-hidden">
-        <Image
-          src="/images/tree.png"
-          alt="Tree"
-          fill
-          className="object-cover"
-          priority
-        />
+      <div className="content-wrapper relative w-full lg:w-1/2 min-h-[700px] 2xl:min-h-[900px] bg-[url('/images/tree.png')] bg-cover bg-center flex flex-col items-center justify-center px-4 sm:px-20 py-16">
+        <div className="absolute inset-0 bg-white/70 lg:bg-white/50 z-10" />
 
-        <div className="absolute inset-0 bg-white/70 md:bg-white/50 block lg:hidden z-10" />
-
-        <header className="absolute inset-0 z-20 mt-10 px-4 sm:px-10 text-black flex flex-col justify-start items-center text-center">
+        <header className="relative z-20 px-2 sm:px-6 text-black text-center max-w-xl">
           <h4
             id="signup-heading"
-            className="mb-4 tracking-tight font-bold md:font-normal"
+            className="mb-4 tracking-tight font-bold lg:font-normal"
           >
             Early Access to Aeternum
           </h4>
 
           <p className="mb-4">
             Sign up as a priority user
-            <span className="block md:inline">
+            <span className="block lg:inline">
               and get exclusive early access to Aeternum,
             </span>
-            <span className="block md:inline">launching in 2025.</span>
+            <span className="block lg:inline">launching in 2025.</span>
           </p>
 
-          <p className="mb-4 font-semibold md:font-normal">
+          <p className="mb-4 font-semibold lg:font-normal">
             As a Priority User, you will:
           </p>
 
-          <ul className="ml-5 space-y-2 text-[1rem] tracking-wide text-left max-w-[95%] md:max-w-lg">
+          <ul className="ml-5 space-y-2 text-[1rem] tracking-wide text-left max-w-[95%] lg:max-w-lg">
             {[
               "Be among the first to experience Aeternum with an exclusive Beta launch invitation.",
               "Be the first to experience Aeternum’s new approach to memory preservation.",
@@ -130,7 +121,10 @@ export default function SignUpSection() {
         </header>
       </div>
 
-      <div className="bg-[#F7F8EA] content-wrapper w-full md:w-1/2 md:min-h-[700px] flex flex-col items-center justify-center px-4 sm:px-20 py-16">
+      <div
+        id="signup"
+        className="bg-[#F7F8EA] content-wrapper w-full lg:w-1/2 flex flex-col items-center justify-center px-4 sm:px-20 py-16"
+      >
         <Image
           src="/icons/aeternum-logo4.svg"
           alt="Aeternum Logo"
@@ -141,7 +135,7 @@ export default function SignUpSection() {
 
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-md space-y-5 text-[1rem]"
+          className="w-full max-w-lg space-y-5 text-[1rem]"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -159,7 +153,7 @@ export default function SignUpSection() {
                   id={id}
                   name={id}
                   type="text"
-                  className="bg-[#F6F6E9] text-sm rounded-md px-3 py-2"
+                  className="bg-[#F6F6E9] text-sm rounded-lg px-3 py-2"
                 />
               </div>
             ))}
@@ -176,7 +170,7 @@ export default function SignUpSection() {
               id="email"
               name="email"
               type="email"
-              className="bg-[#F6F6E9] text-sm rounded-md px-3 py-2"
+              className="bg-[#F6F6E9] text-sm rounded-lg px-3 py-2"
             />
           </div>
 

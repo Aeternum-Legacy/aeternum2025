@@ -53,214 +53,175 @@ export default function Contact() {
   }
 
   return (
-    <section className="text-center tracking-wide bg-pattern">
-      <div className="max-w-4xl mx-auto px-6 py-5 md:pt-14 md:pb-8">
-        <h1 className="text-4xl md:text-5xl mb-2">Get in Touch</h1>
+    <section className="page-wrapper bg-pattern overflow-x-hidden relative">
+      <div className="section-wrapper relative z-10">
+        <div className="content-wrapper">
+          <header>
+            <h1 className="text-center mb-6 text-nowrap">Get in Touch</h1>
+          </header>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-black mb-8">
-          <DropdownMenu modal={false}>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-2 px-2 py-1 hover:bg-gray-100 rounded-md transition">
-                <img src="/icons/sns.png" alt="SNS" className="w-5 h-5" />
-                SNS
-              </button>
-            </DropdownMenuTrigger>
-
-            <DropdownMenuContent>
-              <DropdownMenuLabel>Social Media</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-
-              <DropdownMenuItem asChild>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100093069313770"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Facebook
-                </a>
-              </DropdownMenuItem>
-
-              <DropdownMenuItem asChild>
-                <a
-                  href="https://www.instagram.com/aeternumlegacyproject/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Instagram
-                </a>
-              </DropdownMenuItem>
-
-              <DropdownMenuItem asChild>
-                <a
-                  href="https://www.linkedin.com/company/aeternum-project"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </DropdownMenuItem>
-
-              <DropdownMenuItem asChild>
-                <a
-                  href="https://youtu.be/83ONjbzulhY"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  YouTube
-                </a>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <a
-            href="mailto:media@aeternumproject.com"
-            className="flex items-center gap-2 text-sm text-black hover:underline"
-          >
-            <img src="/icons/arroba.png" alt="Email" className="w-5 h-5" />
-            <span>media@aeternumproject.com</span>
-          </a>
-        </div>
-
-        <p className="text-gray-500 mb-5">
-          We want to hear from you. Let us know how we can help.
-          <br />
-          We'll respond promptly to your inquiries and feedback.
-        </p>
-      </div>
-
-      <div className="flex flex-col md:flex-row justify-center gap-16 px-4">
-        <div className="border rounded-xl p-6 md:w-80 text-left shadow-sm hover:shadow-md transition border-[#979980]">
-          <div className="text-3xl mb-8">
-            <img src="icons/faq.svg" alt="FAQ" className="w-15 h-15" />
-          </div>
-          <h3 className="text-2xl font-semibold mb-2">FAQ</h3>
-          <p className="text-sm text-gray-600">
-            Before reaching out, check our
-          </p>
-          <Link
-            href="/faq"
-            className="underline text-teal-700 hover:text-teal-900 transition-colors text-sm"
-          >
-            Frequently Asked Questions
-          </Link>
-        </div>
-
-        <div className="border rounded-xl p-6 md:w-80 text-left shadow-sm hover:shadow-md transition border-[#979980]">
-          <div className="text-3xl mb-8">
-            <img src="icons/news.svg" alt="News" className="w-15 h-15" />
-          </div>
-          <h3 className="text-2xl font-semibold mb-2">News</h3>
-          <p className="text-sm text-gray-600">
-            Stay updated with our latest news, insights, and updates on our{" "}
-          </p>
-          <Link
-            href="/news"
-            className="underline text-teal-700 hover:text-teal-900 transition-colors text-sm"
-          >
-            Blog
-          </Link>
-        </div>
-      </div>
-
-      <div>
-        <div className="relative flex items-center justify-center min-h-[800px]">
-          <div className="absolute inset-0 flex items-center justify-center z-0">
-            <div className="w-fit h-[1200px] bg-white opacity-[0.15] rounded-full blur-[300px]" />
-            <div className="absolute w-[600px] h-[600px] bg-[#F3FAF9] rounded-full shadow-[0_0_100px_rgba(255,255,255,0.6)] opacity-90" />
-          </div>
-
-          <form
-            onSubmit={handleContactSubmit}
-            className="flex flex-col justify-between w-full max-w-md h-[550px] z-10 px-4 py-10"
-          >
-            <div className="flex justify-center mb-6">
-              <img
-                src="icons/aeternum-logo4.svg"
-                alt="Aeternum Logo"
-                className="w-[180px]"
-              />
-            </div>
-
-            <div className="flex flex-col gap-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="relative">
-                  <label
-                    htmlFor="first-name"
-                    className="absolute -top-2 left-3 bg-[#F3FAF9] px-1 text-sm text-black"
+          {/* <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-black mb-8">
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-2 px-2 py-1 hover:bg-gray-100 rounded-md transition">
+                  <img src="/icons/sns.png" alt="SNS" className="w-5 h-5" />
+                  SNS
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuLabel>Social Media</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100093069313770"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    First Name
-                  </label>
-                  <Input
-                    id="first-name"
-                    name="first-name"
-                    type="text"
-                    className="bg-[#F3FAF9] border border-black rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-black"
-                  />
-                </div>
-
-                <div className="relative">
-                  <label
-                    htmlFor="last-name"
-                    className="absolute -top-2 left-3 bg-[#F3FAF9] px-1 text-sm text-black"
+                    Facebook
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://www.instagram.com/aeternumlegacyproject/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Last Name
-                  </label>
-                  <Input
-                    id="last-name"
-                    name="last-name"
-                    type="text"
-                    className="bg-[#F3FAF9] border border-black rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-black"
-                  />
-                </div>
-              </div>
+                    Instagram
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://www.linkedin.com/company/aeternum-project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="https://youtu.be/83ONjbzulhY"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    YouTube
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-              <div className="relative">
-                <label
-                  htmlFor="email"
-                  className="absolute -top-2 left-3 bg-[#F3FAF9] px-1 text-sm text-black"
-                >
-                  Email
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="bg-[#F3FAF9] border border-black rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-black"
-                />
-              </div>
+            <a
+              href="mailto:media@aeternumproject.com"
+              className="flex items-center gap-2 text-sm text-black hover:underline"
+            >
+              <img src="/icons/arroba.png" alt="Email" className="w-5 h-5" />
+              <span>media@aeternumproject.com</span>
+            </a>
+          </div> */}
 
-              <div className="relative">
-                <label
-                  htmlFor="notes"
-                  className="absolute -top-2 left-3 bg-[#F3FAF9] px-1 text-sm text-black"
+          <p className="text-center text-gray-500 mb-10">
+            We want to hear from you. Let us know how we can help.
+            <br />
+            We'll respond promptly to your inquiries and feedback.
+          </p>
+
+          <div className="flex items-center justify-center w-full">
+            {/* Circle wrapper */}
+            <div className="w-full max-w-md sm:max-w-[500px] sm:aspect-square sm:rounded-full sm:bg-[#F3FAF9] sm:shadow-xl sm:flex sm:items-center sm:justify-center">
+              {/* Inner wrapper to center the form inside the circle */}
+              <div className="w-full h-full sm:w-[80%] sm:h-[80%] sm:flex sm:flex-col sm:items-center sm:justify-center">
+                <form
+                  onSubmit={handleContactSubmit}
+                  className="flex flex-col w-full z-10 gap-4"
                 >
-                  Notes
-                </label>
-                <textarea
-                  id="notes"
-                  name="notes"
-                  rows={8}
-                  placeholder=""
-                  className="w-full bg-[#F3FAF9] border border-black rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-black resize-none"
-                ></textarea>
+                  <div className="flex justify-center">
+                    <img
+                      src="/icons/aeternum-logo4.svg"
+                      alt="Aeternum Logo"
+                      className="w-[140px]"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="relative">
+                      <label
+                        htmlFor="first-name"
+                        className="absolute -top-2 left-3 bg-white sm:bg-[#F3FAF9] px-1 text-sm text-black"
+                      >
+                        First Name
+                      </label>
+                      <Input
+                        id="first-name"
+                        name="first-name"
+                        type="text"
+                        className="bg-white sm:bg-[#F3FAF9] border border-black rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-black"
+                      />
+                    </div>
+
+                    <div className="relative">
+                      <label
+                        htmlFor="last-name"
+                        className="absolute -top-2 left-3 bg-white sm:bg-[#F3FAF9] px-1 text-sm text-black"
+                      >
+                        Last Name
+                      </label>
+                      <Input
+                        id="last-name"
+                        name="last-name"
+                        type="text"
+                        className="bg-white sm:bg-[#F3FAF9] border border-black rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-black"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="relative">
+                    <label
+                      htmlFor="email"
+                      className="absolute -top-2 left-3 bg-white sm:bg-[#F3FAF9] px-1 text-sm text-black"
+                    >
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      className="bg-white sm:bg-[#F3FAF9] border border-black rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-black"
+                    />
+                  </div>
+
+                  <div className="relative">
+                    <label
+                      htmlFor="notes"
+                      className="absolute -top-2 left-3 bg-white sm:bg-[#F3FAF9] px-1 text-sm text-black"
+                    >
+                      Notes
+                    </label>
+                    <textarea
+                      id="notes"
+                      name="notes"
+                      rows={4}
+                      className="w-full bg-white sm:bg-[#F3FAF9] border border-black rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-black resize-none"
+                    ></textarea>
+                  </div>
+
+                  <div className="flex justify-center">
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-lg tracking-wider font-medium transition-colors duration-300 flex items-center justify-center relative"
+                    >
+                      {loading && (
+                        <div className="absolute w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      )}
+                      <span className={loading ? "opacity-0" : "opacity-100"}>
+                        Submit
+                      </span>
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
-
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                disabled={loading}
-                className="bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-lg tracking-wider font-medium transition-colors duration-300 flex items-center justify-center relative"
-              >
-                {loading && (
-                  <div className="absolute w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                )}
-                <span className={loading ? "opacity-0" : "opacity-100"}>
-                  Submit
-                </span>
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
