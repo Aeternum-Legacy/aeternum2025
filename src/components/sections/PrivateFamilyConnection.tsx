@@ -57,7 +57,7 @@ export default function PrivateFamilyConnection() {
 
       <div className="flex flex-col lg:flex-row gap-12 xl:gap-16">
         <div className="hidden lg:flex relative justify-center flex-[0.9]">
-          <div className="relative w-full h-full lg:bottom-20">
+          <div className="relative w-full h-full lg:bottom-10">
             <Image
               src="/images/pfc-image1.png"
               alt="hands holding"
@@ -66,7 +66,7 @@ export default function PrivateFamilyConnection() {
             />
           </div>
 
-          <div className="absolute bottom-10 -right-5 z-10 w-full max-w-[350px] aspect-square">
+          <div className="absolute bottom-5 -right-5 z-10 w-full max-w-[350px] aspect-square">
             <Image
               src="/images/pfc-image2.png"
               alt="photo album"
