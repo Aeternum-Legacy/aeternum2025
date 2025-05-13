@@ -14,9 +14,9 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6 border-b border-white/40 pb-6 text-center lg:text-left px-4 md:px-10">
-        <h3 className="font-light leading-snug max-w-[80%]">
+        <h5 className="font-light leading-snug max-w-[80%]">
           Ready to turn your memories into a lasting legacy?
-        </h3>
+        </h5>
         <Link href="/#signup">
           <button className="font-medium px-6 py-2 border border-white rounded-full transition-colors duration-200 hover:bg-white hover:text-black">
             Sign Up
@@ -63,7 +63,7 @@ export default function Footer() {
               key={title}
               className="flex flex-col w-full min-w-0 items-center sm:items-start text-center sm:text-left break-words"
             >
-              <h5 className="font-bold mb-4 break-words">{title}</h5>
+              <h6 className="font-bold mb-4 break-words">{title}</h6>
               <ul className="space-y-3 break-words">
                 {links.map(({ label, href }) => (
                   <li key={label}>
