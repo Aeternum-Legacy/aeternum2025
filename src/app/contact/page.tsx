@@ -120,9 +120,9 @@ export default function Contact() {
           </div> */}
 
           <p className="text-center text-gray-500 mb-10">
-            We want to hear from you. Let us know how we can help.
+            We want to hear from you and
             <br />
-            We'll respond promptly to your inquiries and feedback.
+            will endeavor to respond to your inquiries and feedback promptly.
           </p>
 
           <div className="flex items-center justify-center w-full">
@@ -194,7 +194,7 @@ export default function Contact() {
                       htmlFor="notes"
                       className="absolute -top-2 left-3 bg-white sm:bg-[#F3FAF9] px-1 text-sm text-black"
                     >
-                      Notes
+                      Feedback
                     </label>
                     <textarea
                       id="notes"

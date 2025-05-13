@@ -178,7 +178,7 @@ export default function AboutPage() {
             <p className="text-gray-700 ">
               Respect is a core value of Aeternum. We embrace the richness of
               diverse experiences, perspectives, and identities, and believe
-              that dignity is best shown in how we engage with one another —
+              that respect is best shown in how we engage with one another —
               especially when our views differ. Through empathy, openness, and
               humility, we foster a culture where all voices are heard and
               valued.
