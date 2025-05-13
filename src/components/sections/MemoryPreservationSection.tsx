@@ -8,7 +8,6 @@ export default function MemoryPreservationSection() {
       aria-labelledby="memory-preservation-heading"
     >
       <div className="content-wrapper px-4 mx-auto max-w-screen-xl">
-        {/* Mobile Image */}
         <div className="lg:hidden flex justify-center mb-10">
           <div className="relative w-full max-w-[90%] aspect-[4/4]">
             <Image
@@ -20,7 +19,6 @@ export default function MemoryPreservationSection() {
           </div>
         </div>
 
-        {/* Title and Description */}
         <header className="flex flex-col gap-4 md:gap-6 text-center items-center justify-center">
           <h2 id="memory-preservation-heading" className="text-center">
             Memory Preservation
@@ -34,9 +32,7 @@ export default function MemoryPreservationSection() {
           </p>
         </header>
 
-        {/* Feature Cards Layout */}
-        <div className="flex flex-col lg:grid lg:grid-cols-3 items-center mt-10 lg:mt-[3.75rem] lg:gap-x-5 lg:gap-y-5">
-          {/* Left Column */}
+        <div className="flex flex-col lg:grid lg:grid-cols-3 items-center mt-10 lg:mt-[3.75rem] gap-x-12 xl:gap-x-16 lg:gap-y-5">
           <div className="flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 w-full">
             <MemoryPreservationFeatureCard
               icon="/icons/history-book.svg"
@@ -55,7 +51,6 @@ export default function MemoryPreservationSection() {
             />
           </div>
 
-          {/* Center Image (desktop only) */}
           <div className="hidden lg:flex justify-center">
             <div className="relative w-full max-w-[620px] h-[620px] -translate-y-5 scale-105">
               <Image
@@ -67,7 +62,6 @@ export default function MemoryPreservationSection() {
             </div>
           </div>
 
-          {/* Right Column */}
           <div className="mt-7 lg:mt-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-10 w-full">
             <MemoryPreservationFeatureCard
               icon="/icons/custom-memory-collections.svg"

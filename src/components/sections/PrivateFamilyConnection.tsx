@@ -36,8 +36,7 @@ const features: FeatureCardProps[] = [
 
 export default function PrivateFamilyConnection() {
   return (
-    <section className="content-wrapper  mb-[7.5rem] md:mb-40">
-      {/* Mobile Image */}
+    <section className="content-wrapper mb-[7.5rem] md:mb-40">
       <div className="flex lg:hidden items-center justify-center mb-10">
         <div className="relative w-full aspect-[5/4]">
           <Image
@@ -49,7 +48,6 @@ export default function PrivateFamilyConnection() {
         </div>
       </div>
 
-      {/* Heading and Description */}
       <h2 className="xl:hidden text-center">Private Family Connection</h2>
       <p className="text-[#4F4949] text-center mt-5 mb-5 xl:hidden">
         Your family’s safety and well-being should never be compromised.
@@ -57,9 +55,7 @@ export default function PrivateFamilyConnection() {
         interact, and be remembered, for generations that follow.
       </p>
 
-      {/* Main Content */}
-      <div className="flex flex-col lg:flex-row gap-10">
-        {/* Desktop Image Block */}
+      <div className="flex flex-col lg:flex-row gap-12 xl:gap-16">
         <div className="hidden lg:flex relative justify-center flex-[0.9]">
           <div className="relative w-full h-full lg:bottom-20">
             <Image
@@ -80,7 +76,6 @@ export default function PrivateFamilyConnection() {
           </div>
         </div>
 
-        {/* Features Section */}
         <div className="flex-[1.1] text-center py-4 flex flex-col gap-6">
           <h2 className="hidden xl:block text-center">
             Private Family Connection
@@ -90,8 +85,6 @@ export default function PrivateFamilyConnection() {
             Aeternum provides a private and secure digital space to connect,
             interact, and be remembered, for generations that follow.
           </p>
-
-          {/* Feature Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 mt-10 justify-items-center">
             {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />

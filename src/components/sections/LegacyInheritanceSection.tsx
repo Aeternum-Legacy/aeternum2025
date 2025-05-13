@@ -27,16 +27,16 @@ export default function LegacyInheritanceSection() {
       className="content-wrapper "
       aria-labelledby="legacy-inheritance-heading"
     >
-      {/* Heading and subtext for mobile to lg */}
       <h2 className="xl:hidden text-center">Legacy Inheritance</h2>
       <p className="text-[#4F4949] text-center mt-5 mb-5 xl:hidden">
-        Because the impact you leave behind matters, Aeternum ensures your
-        legacy is preserved and inherited by future generations, exactly as you
-        intend.
+        <span className="block whitespace-normal -ml-2 sm:-ml-5">
+          Because the impact you leave behind matters,
+        </span>
+        Aeternum ensures your legacy is preserved and inherited by future
+        generations, exactly as you intend.
       </p>
 
-      <div className="grid lg:grid-cols-2 gap-5">
-        {/* Mobile Image */}
+      <div className="grid lg:grid-cols-2 gap-12 xl:gap-16">
         <div className="flex lg:hidden items-center justify-center">
           <div className="relative w-full max-w-[90%] aspect-[1/1] mx-auto">
             <Image
@@ -48,8 +48,7 @@ export default function LegacyInheritanceSection() {
           </div>
         </div>
 
-        {/* Content */}
-        <div className="flex flex-col items-center justify-start text-center gap-6 px-8 xl:px-0">
+        <div className="flex flex-col items-center justify-center text-center gap-10 px-8 xl:px-0">
           <h2
             id="legacy-inheritance-heading"
             className="text-center hidden xl:block"
@@ -79,7 +78,6 @@ export default function LegacyInheritanceSection() {
           </div>
         </div>
 
-        {/* Desktop Image */}
         <div className="hidden lg:flex items-center justify-center h-full">
           <div className="relative w-full max-w-[750px]">
             <Image

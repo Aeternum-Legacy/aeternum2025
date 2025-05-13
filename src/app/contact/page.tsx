@@ -126,9 +126,7 @@ export default function Contact() {
           </p>
 
           <div className="flex items-center justify-center w-full">
-            {/* Circle wrapper */}
             <div className="w-full max-w-md sm:max-w-[500px] sm:aspect-square sm:rounded-full sm:bg-[#F3FAF9] sm:shadow-xl sm:flex sm:items-center sm:justify-center">
-              {/* Inner wrapper to center the form inside the circle */}
               <div className="w-full h-full sm:w-[80%] sm:h-[80%] sm:flex sm:flex-col sm:items-center sm:justify-center">
                 <form
                   onSubmit={handleContactSubmit}

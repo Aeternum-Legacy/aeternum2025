@@ -17,7 +17,6 @@ export default function AboutPage() {
 
   return (
     <section className="page-wrapper overflow-hidden">
-      {/* Hero Section */}
       <div className="relative w-full h-[500px] overflow-hidden">
         <motion.div
           initial={{ opacity: 1 }}
@@ -62,7 +61,6 @@ export default function AboutPage() {
         </motion.div>
       </div>
 
-      {/* Mission and Vision */}
       <div className="section-wrapper relative">
         <div className="content-wrapper grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative mb-20">
           <div className="h-full">
@@ -100,7 +98,6 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Video Section */}
       <div className="relative w-full h-auto">
         <div className="relative w-full h-[320px] md:h-[500px] lg:h-[1000px] group">
           <video
@@ -143,7 +140,6 @@ export default function AboutPage() {
         )}
       </div>
 
-      {/* Values Section */}
       <div className="section-wrapper flex flex-col">
         <LogoLabel
           src="icons/aeternum-logo2.svg"
@@ -152,7 +148,6 @@ export default function AboutPage() {
         />
 
         <div className="grid md:grid-cols-2 content-wrapper grid-wrapper">
-          {/* Timeless Purpose */}
           <div>
             <div className=" w-full mb-4">
               <h5 className="font-bold ">Timeless Purpose</h5>
@@ -169,7 +164,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Respect */}
           <div>
             <div className=" w-full mb-4">
               <h5 className="font-bold ">Respect</h5>
@@ -185,7 +179,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Family First */}
           <div>
             <div className="w-full mb-4">
               <h5 className="font-bold ">Family First</h5>
@@ -202,7 +195,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Trust */}
           <div>
             <div className="relative w-full mb-4">
               <h5 className="font-bold ">Trust</h5>
@@ -216,7 +208,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Security & Privacy */}
           <div>
             <div className=" w-full mb-4">
               <h5 className="font-bold ">Security & Privacy</h5>

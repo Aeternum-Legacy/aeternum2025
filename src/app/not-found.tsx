@@ -27,7 +27,6 @@ export default function NotFound() {
         </div>
 
         <div className="relative z-10 w-full max-w-xl">
-          {/* Logo visible only from md and up */}
           <Image
             src="/icons/aeternum-logo4.svg"
             alt="Aeternum logo"

@@ -13,7 +13,6 @@ export default function LegacyFeatureCard({
 }: LegacyFeatureCardProps) {
   return (
     <div className="relative w-full mx-auto">
-      {/* Icon placed exactly on the border */}
       <div className="absolute -left-[1.5rem] top-5 bg-[#BCC6C7] p-3 rounded-full z-10">
         <Image
           src={icon}
@@ -23,7 +22,6 @@ export default function LegacyFeatureCard({
         />
       </div>
 
-      {/* Card */}
       <div className="flex flex-col border border-[#8BA39C] rounded-xl bg-white p-5 pl-7">
         <h3 className="font-semibold text-2xl md:text-xl text-black mb-2">
           {title}
