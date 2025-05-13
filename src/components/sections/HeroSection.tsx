@@ -9,34 +9,38 @@ export default function HeroSection() {
       aria-label="Hero introduction"
       className="page-wrapper flex flex-col items-center text-center overflow-x-hidden"
     >
-      <div className="section-wrapper">
-        <div className="content-wrapper">
-          <header className="flex flex-col items-center w-full max-w-full break-words text-balance text-center">
-            <FadeInText
-              text={
-                <>
-                  <span className="block sm:hidden">
-                    How will
-                    <br />
-                    you be
-                    <br />
-                    remembered?
-                  </span>
-                  <span className="hidden sm:inline">
-                    How will you be remembered?
-                  </span>
-                </>
-              }
-              className="text-black dark:text-white mb-4"
-              duration={4}
-            />
-            <p className="sr-only">
-              Aeternum helps you preserve memories, values, and stories for
-              future generations.
-            </p>
-          </header>
+      <div className="w-full text-center mt-15 md:mt-30">
+        <div>
+          <FadeInText
+            text={
+              <>
+                <span className="block sm:hidden">
+                  How will
+                  <br />
+                  you be
+                  <br />
+                  remembered?
+                </span>
+                <span className="hidden sm:block text-nowrap">
+                  How will you be remembered?
+                </span>
+              </>
+            }
+            className="text-black dark:text-white mb-4"
+            duration={4}
+          />
         </div>
 
+        <div className="text-[#738483]">
+          <h5 className="leading-tight tracking-normal">Words left unspoken</h5>
+          <h5 className="leading-tight tracking-normal">
+            Memories left forgotten
+          </h5>
+          <h5 className="leading-tight tracking-normal">Stories left untold</h5>
+        </div>
+      </div>
+
+      <div className="section-wrapper md:-mt-50">
         <div className="grid w-[140vw] 2xl:w-[130vw] md:grid-cols-5">
           <div className="hidden md:flex justify-center items-start">
             <TiltImageWrapper className="relative w-[120%] lg:w-[110%] aspect-[15/9] mt-7">
@@ -60,20 +64,8 @@ export default function HeroSection() {
             </TiltImageWrapper>
           </div>
 
-          <div className="flex flex-col justify-between items-center w-full h-full gap-y-10 md:gap-y-0">
-            <div className="w-full self-start text-[#738483]">
-              <h5 className="leading-tight tracking-normal">
-                Words left unspoken
-              </h5>
-              <h5 className="leading-tight tracking-normal">
-                Memories left forgotten
-              </h5>
-              <h5 className="leading-tight tracking-normal">
-                Stories left untold
-              </h5>
-            </div>
-
-            <TiltImageWrapper className="relative w-full aspect-[16/11] md:mb-20">
+          <div className="flex justify-center items-end w-full h-full md:pb-10">
+            <TiltImageWrapper className="relative w-full aspect-[16/11]">
               <Image
                 src="/images/Image4.jpg"
                 alt="Father holding his daughter"

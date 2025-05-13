@@ -144,7 +144,7 @@
 
 @layer base {
   h1 {
-    @apply text-[2.35rem] sm:text-[2.85rem] md:text-[3.815rem] lg:text-[4.209rem] xl:text-[4.75rem] 2xl:text-[5.25rem] tracking-wide leading-tight;
+    @apply text-[2.35rem] sm:text-[2.85rem] md:text-[3.515rem] lg:text-[4.209rem] xl:text-[4.75rem] 2xl:text-[5.25rem] tracking-wide leading-tight;
   }
 
   h2 {

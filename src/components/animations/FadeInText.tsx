@@ -22,7 +22,7 @@ export const FadeInText: React.FC<FadeInTextProps> = ({
       animate={{ opacity: 1 }}
       transition={{ duration, delay }}
       className={cn(
-        "text-center break-words whitespace-normal font-semibold md:font-normal max-w-4xl",
+        "break-words whitespace-normal font-semibold md:font-normal",
         className
       )}
     >
