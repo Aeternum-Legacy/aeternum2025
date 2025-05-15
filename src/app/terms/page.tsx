@@ -5,8 +5,7 @@ import Notification from "@/components/ui/Notification";
 import LegalSectionTitle from "@/components/ui/LegalSectionTitle";
 import Link from "next/link";
 import SectionLinkList from "@/components/ui/SectionLinkList";
-
-export const toId = (title: string) => title.toLowerCase().replace(/\s+/g, "-");
+import { toId } from '@/lib/utils';
 
 const lastUpdated = "May 14th, 2025";
 const sections = [

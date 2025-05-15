@@ -1,7 +1,7 @@
 "use client";
 
 import SectionBlock from "@/components/ui/SectionBlock";
-import { toId } from "../terms/page";
+import { toId } from '@/lib/utils';
 import LegalSectionTitle from "@/components/ui/LegalSectionTitle";
 import SectionLinkList from "@/components/ui/SectionLinkList";
 import Notification from "@/components/ui/Notification";
