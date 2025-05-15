@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image"; 
+import Image from "next/image";
 import LogoLabel from "../ui/LogoLabel";
 
 export default function FeatureSummarySection() {
@@ -57,9 +57,9 @@ export default function FeatureSummarySection() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{
-                  duration: 0.8,
+                  duration: 0.5,
                   ease: "easeOut",
-                  delay: index * 0.8,
+                  delay: index * 0.5,
                 }}
                 className="relative flex items-center justify-center lg:justify-start gap-x-8"
               >

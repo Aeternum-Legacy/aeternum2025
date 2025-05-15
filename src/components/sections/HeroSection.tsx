@@ -65,7 +65,7 @@ export default function HeroSection() {
             </TiltImageWrapper>
           </div>
 
-          <div className="flex justify-center items-end w-full h-full md:pb-10">
+          <div className="-mt-4 md:-mt-0 flex justify-center items-end w-full h-full md:pb-10">
             <TiltImageWrapper className="relative w-full aspect-[16/11]">
               <Image
                 src="/images/Image4.jpg"

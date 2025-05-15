@@ -66,7 +66,7 @@ export default function Footer() {
               <h6 className="font-bold mb-4 break-words">{title}</h6>
               <ul className="space-y-3 break-words">
                 {links.map(({ label, href }) => (
-                  <li key={label}>
+                  <li key={label} className="tracking-normal leading-normal">
                     <Link
                       href={href}
                       className="block break-words whitespace-normal leading-snug"

@@ -15,7 +15,7 @@ export default function ImageTileSection() {
               src="/icons/aeternum-logo3.svg"
               alt="Aeternum logo representing memory preservation"
               title="Aeternum logo"
-              className="w-[30px] md:w-[90px] md:h-[80px]"
+              className="hidden md:block w-[90px] md:h-[80px]"
             />
           </span>
         </h1>
@@ -23,7 +23,7 @@ export default function ImageTileSection() {
         <p className="text-lg md:text-xl mt-4 mb-5 md:mb-0 text-center md:text-left">
           <span className="sr-only">
             Preserve your memories today with Aeternum.
-          </span>
+        </span>
           Your memories, your legacy – <span className="block sm:hidden" />
           begin preserving them today.
         </p>
