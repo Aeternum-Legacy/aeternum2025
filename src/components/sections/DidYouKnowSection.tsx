@@ -68,6 +68,10 @@ export default function DidYouKnowSection() {
               </h2>
 
               <p className="text-black tracking-normal leading-tight">
+                <span className="sr-only">
+                  {fact.title}
+                  {fact.measurement === "%" ? "%" : " million"} —{" "}
+                </span>
                 {fact.description}
               </p>
             </motion.article>

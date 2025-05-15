@@ -75,7 +75,7 @@ export const NavBody = ({
     }}
     style={{ minWidth: "800px" }}
     className={cn(
-      "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start bg-black text-white md:flex px-6 py-2",
+      "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start bg-black text-white md:flex px-6 py-4",
       visible ? "rounded-none " : "rounded-full ",
       className
     )}
@@ -292,7 +292,26 @@ export const NavbarLogo = ({ onClick }: { onClick?: () => void }) => (
     onClick={onClick}
     className="relative z-20 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black dark:text-white"
   >
-    <Image src="/icons/aeternum-logo4.svg" alt="logo" width={150} height={40} />
+    <Image
+      src="icons/Aeternum_logo_TM_black.svg"
+      alt="logo"
+      width={150}
+      height={40}
+    />
+  </a>
+);
+
+export const NavbarMdLogo = ({ onClick }: { onClick?: () => void }) => (
+  <a
+    href="/"
+    onClick={onClick}
+    className="flex lg:hidden relative z-20  items-center w-10 h-auto bottom-0.5"
+  >
+    <img
+      src="/icons/aeternum-logo5.svg"
+      alt="logo"
+      className="w-full h-full object-contain"
+    />
   </a>
 );
 
@@ -300,9 +319,13 @@ export const NavbarBrowserLogo = ({ onClick }: { onClick?: () => void }) => (
   <a
     href="/"
     onClick={onClick}
-    className="relative z-20 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black dark:text-white"
+    className="hidden lg:flex relative z-20  items-center w-32 h-auto bottom-0.5"
   >
-    <img src="/icons/aeternum-logo.svg" alt="logo" width={120} height={30} />
+    <img
+      src="/icons/Aeternum_logo_TM_white.svg"
+      alt="logo"
+      className="w-full h-full object-contain"
+    />
   </a>
 );
 

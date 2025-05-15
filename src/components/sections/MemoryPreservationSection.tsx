@@ -12,7 +12,8 @@ export default function MemoryPreservationSection() {
           <div className="relative w-full max-w-[90%] aspect-[4/4]">
             <Image
               src="/images/memory-preservation.png"
-              alt="Illustration of digital memory preservation in Aeternum"
+              alt="Illustration of Aeternum platform preserving digital family memories"
+              title="Aeternum Memory Preservation"
               fill
               className="object-contain"
             />

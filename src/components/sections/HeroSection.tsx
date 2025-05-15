@@ -11,6 +11,7 @@ export default function HeroSection() {
     >
       <div className="w-full text-center mt-15 md:mt-30">
         <div>
+          <h1 className="sr-only">How will you be remembered?</h1>
           <FadeInText
             text={
               <>
@@ -79,7 +80,8 @@ export default function HeroSection() {
             <TiltImageWrapper className="relative w-[80%] lg:w-[85%] aspect-[3/4] mt-7">
               <Image
                 src="/images/Image5.jpg"
-                alt="Old couple holding hands"
+                alt="Senior couple holding hands peacefully together"
+                title="Old couple together"
                 fill
                 className="object-cover rounded-xl"
               />

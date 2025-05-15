@@ -78,7 +78,7 @@ export default function SignUpSection() {
       aria-labelledby="signup-heading"
     >
       <div className="content-wrapper relative w-full lg:w-1/2 min-h-[700px] 2xl:min-h-[900px] bg-[url('/images/tree.png')] bg-cover bg-center flex flex-col items-center justify-center px-4 sm:px-20 py-16">
-        <div className="absolute inset-0 bg-white/70 lg:bg-white/50 z-10" />
+        <div className="absolute inset-0 bg-white/70 lg:bg-white/70 z-10" />
 
         <header className="relative z-20 px-2 sm:px-6 text-black text-center max-w-xl">
           <h4
@@ -89,30 +89,32 @@ export default function SignUpSection() {
           </h4>
 
           <p className="mb-4">
-            Sign up as a priority user
+            Sign up as a priority user{" "}
             <span className="block lg:inline">
-              and get exclusive early access to Aeternum,
+              and get exclusive early access to Aeternum,{" "}
             </span>
             <span className="block lg:inline">launching in 2025.</span>
           </p>
 
-          <p className="mb-4 font-semibold lg:font-normal">
-            As a Priority User, you will:
-          </p>
+          <p className="mb-4 font-semibold">As a Priority User, you will:</p>
 
-          <ul className="ml-5 space-y-2 text-[1rem] tracking-wide text-left max-w-[95%] lg:max-w-lg">
+          <ul className="text-left">
             {[
-              "Be among the first to experience Aeternum with an exclusive Beta launch invitation.",
-              "Be the first to experience Aeternum’s new approach to memory preservation.",
+              "Get an exclusive invitation to the Beta Test and shape the future of legacy preservation.",
+              "Be the first to experience Aeternum through early access to the final version.",
               "Get exclusive updates on special offers, discount codes, events, and development progress.",
+              "Get 50% off during the beta phase, plus 20% off an annual subscription when Aeternum officially launches.",
             ].map((text, idx) => (
-              <li key={idx} className="flex items-start gap-2">
+              <li
+                key={idx}
+                className="flex items-start gap-2 tracking-normal leading-normal"
+              >
                 <Image
                   src="/icons/list.svg"
                   alt="check icon"
                   width={20}
                   height={20}
-                  className="mt-[0.2rem]"
+                  className="mt-[0.3rem]"
                 />
                 <span>{text}</span>
               </li>

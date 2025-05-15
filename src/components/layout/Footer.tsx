@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-black text-white px-4 py-6 mt-16 md:mt-20">
       <div className="flex justify-center mb-6">
         <Image
-          src="/icons/aeternum-logo.svg"
+          src="/icons/Aeternum_logo_TM_white.svg"
           alt="Aeternum Logo"
           width={130}
           height={40}
@@ -61,7 +61,7 @@ export default function Footer() {
           ].map(({ title, links }) => (
             <div
               key={title}
-              className="flex flex-col w-full min-w-0 items-center sm:items-start text-center sm:text-left break-words"
+              className="flex flex-col w-full min-w-0 items-center md:items-start text-center md:text-left break-words"
             >
               <h6 className="font-bold mb-4 break-words">{title}</h6>
               <ul className="space-y-3 break-words">

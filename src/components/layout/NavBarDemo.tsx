@@ -1,17 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {
   Navbar,
   NavBody,
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
   NavbarBrowserLogo,
+  NavbarMdLogo,
 } from "@/components/ui/ResizableNavbar";
 import { SignUpButton } from "../ui/SignUpButton";
 import { useRouter } from "next/navigation";
@@ -60,6 +60,7 @@ export function NavbarDemo() {
     <div className="relative w-full">
       <Navbar>
         <NavBody>
+          <NavbarMdLogo />
           <NavbarBrowserLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">

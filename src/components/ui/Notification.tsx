@@ -1,8 +1,15 @@
 export default function Notification({ title, text }: NotificationProps) {
+  const lines = text?.split("(next line)").map((line) => line.trim()) || [];
+
   return (
-    <div className="bg-[#E6F3F1] rounded-xl px-6 py-4 text-xs md:text-sm text-gray-800 max-w-4xl mx-5 md:mx-auto my-10 md:my-16 tracking-widest ">
-      <p>{text}</p>
-      <p className="mt-2">
+    <div className="bg-[#E6F3F1] rounded-xl px-6 py-4 text-gray-800 w-10/12 tracking-widest text-center">
+      {lines.map((line, idx) => (
+        <p key={idx} className={idx > 0 ? "mt-2" : ""}>
+          {line}
+        </p>
+      ))}
+
+      <p className="mt-4">
         For <span className="font-bold">any questions</span> regarding these{" "}
         {title}, contact us at{" "}
         <a

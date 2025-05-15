@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Sorry, this page is currently under construction. Visit our homepage to explore more.",
   robots: {
-    index: false, 
+    index: false,
     follow: false,
   },
 };
@@ -59,10 +59,6 @@ export default function NotFound() {
             />
           </div>
         </div>
-
-        <footer className="relative z-10 mt-16 text-gray-400">
-          © {new Date().getFullYear()} Aeternum. All rights reserved.
-        </footer>
       </div>
     </section>
   );

@@ -175,16 +175,20 @@
     @apply text-[0.75rem] sm:text-[0.775rem] md:text-[0.8rem] lg:text-[0.875rem] xl:text-[0.95rem] 2xl:text-[1rem] tracking-wide leading-snug;
   }
 
+  li {
+    @apply text-[1.1rem] tracking-widest leading-loose;
+  }
+
   .text-xxs {
     @apply text-[0.64rem] sm:text-[0.66rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[0.72rem] 2xl:text-[0.75rem] leading-none;
   }
 
   .page-wrapper {
-    @apply mt-10 sm:mt-16 md:mt-20;
+    @apply mt-16 md:mt-20;
   }
 
   .section-wrapper {
-    @apply py-5 md:py-16 mt-12 md:mt-20;
+    @apply py-16 mt-12 md:mt-20;
   }
 
   .content-wrapper {

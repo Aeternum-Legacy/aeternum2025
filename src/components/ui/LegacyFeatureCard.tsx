@@ -14,12 +14,7 @@ export default function LegacyFeatureCard({
   return (
     <div className="relative w-full mx-auto">
       <div className="absolute -left-[1.5rem] top-5 bg-[#BCC6C7] p-3 rounded-full z-10">
-        <Image
-          src={icon}
-          alt={`Icon representing: ${title}`}
-          width={32}
-          height={32}
-        />
+        <Image src={icon} alt={`${title} icon`} width={32} height={32} />
       </div>
 
       <div className="flex flex-col border border-[#8BA39C] rounded-xl bg-white p-5 pl-7">

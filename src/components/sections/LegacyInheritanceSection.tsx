@@ -31,13 +31,16 @@ export default function LegacyInheritanceSection() {
         <div className="relative w-full max-w-[90%] aspect-[1/1] mx-auto">
           <Image
             src="/images/legacy-inheritance.png"
-            alt="Illustration of a digital legacy being preserved"
+            alt="Aeternum platform preserving a digital legacy for future generations"
+            title="Digital legacy preservation with Aeternum"
             fill
             className="object-contain"
           />
         </div>
       </div>
-      <h2 className="xl:hidden text-center">Legacy Inheritance</h2>
+      <h2 className="xl:hidden text-center" id="legacy-inheritance-heading">
+        Legacy Inheritance
+      </h2>
       <p className="text-[#4F4949] text-center mt-5 mb-10 xl:hidden">
         <span className="block whitespace-normal -ml-2 sm:-ml-5">
           Because the impact you leave behind matters,

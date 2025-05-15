@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import AnimatedWord from "../animations/AnimatedWord";
 import { ShinyButton } from "../ui/ShinyButton";
+import Image from "next/image";
 
 export default function ReimagineYourLegacySection() {
   const router = useRouter();
@@ -69,10 +70,13 @@ export default function ReimagineYourLegacySection() {
       </div>
 
       <div className="relative z-0 w-full -mt-[10rem] sm:-mt-[20rem] md:-mt-[25rem] xl:-mt-[30rem] 2xl:-mt-[40rem]">
-        <img
+        <Image
           src="/images/mom&daughter.png"
           alt="Mother and daughter hugging in a sunny field"
-          className="w-full h-auto"
+          title="Preserving memories with Aeternum"
+          width={1920}
+          height={1080}
+          className="w-full h-auto object-cover"
         />
       </div>
     </section>

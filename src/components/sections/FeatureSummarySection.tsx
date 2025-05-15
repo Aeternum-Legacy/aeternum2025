@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image"; 
 import LogoLabel from "../ui/LogoLabel";
 
 export default function FeatureSummarySection() {
@@ -62,16 +63,18 @@ export default function FeatureSummarySection() {
                 }}
                 className="relative flex items-center justify-center lg:justify-start gap-x-8"
               >
-\                <div className="hidden lg:block">
+                <div className="hidden lg:block">
                   <div className="absolute left-0 top-0 h-full w-[1px] bg-gray-300" />
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 h-28 w-[1.5px] bg-[#42590F]" />
                 </div>
 
                 <div className="flex flex-col items-center lg:items-start justify-center gap-2 py-5 text-center lg:text-left lg:w-[90%]">
-                  <img
+                  <Image
                     src={feature.icon}
                     alt={`${feature.title} icon`}
                     title={feature.title}
+                    width={80}
+                    height={80}
                     className="w-10 h-10 md:w-15 md:h-15 lg:w-20 lg:h-20 lg:mb-2"
                   />
                   <h4 className="font-bold leading-snug lg:mb-2">
@@ -80,6 +83,7 @@ export default function FeatureSummarySection() {
                     {secondLine}
                   </h4>
                   <p className="text-[#052922] max-w-[25rem] leading-tight">
+                    <span className="sr-only">{feature.title}: </span>
                     {feature.description}
                   </p>
                 </div>

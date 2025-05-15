@@ -4,25 +4,30 @@ export default function SectionBlock({
   intro,
   bullets,
   outro,
+  useRomanStyle = false,
 }: SectionBlockProps) {
   return (
-    <div id={id} className="my-20 px-5 md:px-20 scroll-mt-28">
-      <h1 className="tracking-wider font-bold text-[#186E68] text-xl md:text-3xl text-left">
+    <div id={id}>
+      <h5 className="font-extrabold text-[#186E68] text-left tracking-widest uppercase">
         {title}
-      </h1>
+      </h5>
 
-      <div className="mt-3 md:mt-6 text-sm md:text-lg tracking-wider text-gray-800 text-left md:ml-10 lg:ml-64 leading-loose">
-        {intro && <p>{intro}</p>}
+      <div className="mt-3 md:mt-6 text-left md:ml-10 lg:ml-64">
+        {intro && <div className="tracking-widest leading-loose">{intro}</div>}
 
         {bullets && (
-          <ul className="list-disc pl-6 mt-4 space-y-2">
+          <ul
+            className={`pl-6 mt-4 tracking-wider leading-loose ${
+              useRomanStyle ? "list-[lower-roman]" : "list-disc"
+            }`}
+          >
             {bullets.map((point, idx) => (
               <li key={idx}>{point}</li>
             ))}
           </ul>
         )}
 
-        {outro && <p className="mt-4">{outro}</p>}
+        {outro && <p className="mt-4 tracking-widest leading-loose">{outro}</p>}
       </div>
     </div>
   );
@@ -31,7 +36,8 @@ export default function SectionBlock({
 interface SectionBlockProps {
   id?: string;
   title: string;
-  intro?: string;
-  bullets?: string[];
-  outro?: string;
+  intro?: string | React.ReactNode;
+  bullets?: React.ReactNode[];
+  outro?: string | React.ReactNode;
+  useRomanStyle?: boolean;
 }

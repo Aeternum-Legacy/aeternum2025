@@ -41,7 +41,8 @@ export default function PrivateFamilyConnection() {
         <div className="relative w-full aspect-[5/4]">
           <Image
             src="/images/pfc-image1.png"
-            alt="hands holding"
+            alt="holding hands symbolizing family connection"
+            title="Family holding hands"
             fill
             className="object-contain"
           />
@@ -60,7 +61,8 @@ export default function PrivateFamilyConnection() {
           <div className="relative w-full h-full lg:bottom-10">
             <Image
               src="/images/pfc-image1.png"
-              alt="hands holding"
+              alt="holding hands symbolizing family connection"
+              title="Family holding hands"
               fill
               className="object-contain"
             />
@@ -69,7 +71,8 @@ export default function PrivateFamilyConnection() {
           <div className="absolute bottom-5 -right-5 z-10 w-full max-w-[350px] aspect-square">
             <Image
               src="/images/pfc-image2.png"
-              alt="photo album"
+              alt="Photo album representing preserved family memories"
+              title="Photo album"
               fill
               className="object-contain"
             />
@@ -100,14 +103,13 @@ function FeatureCard({ title, desc, icon, iconSize }: FeatureCardProps) {
   return (
     <div className="relative bg-[#F7F8EA] pt-14 px-4 pb-5 rounded-t-[100px] text-center w-full max-w-[18rem] z-0">
       <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D8E3E4] p-2 rounded-full w-17 h-17 flex items-center justify-center border-[3px] border-white z-10">
-        <img
+        <Image
           src={icon}
-          alt={title}
-          style={{
-            width: `${iconSize}px`,
-            height: `${iconSize}px`,
-            objectFit: "contain",
-          }}
+          alt={`${title} icon`}
+          title={title}
+          width={iconSize}
+          height={iconSize}
+          className="object-contain"
         />
       </div>
 
