@@ -1,572 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 261.1 36.1">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 271.1 36.1">
   <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
   <defs>
     <style>
       .st0 {
-        clip-path: url(#clippath-1);
-      }
-
-      .st1 {
-        clip-path: url(#clippath-3);
-      }
-
-      .st2 {
-        clip-path: url(#clippath-2);
-      }
-
-      .st3 {
         fill: #fff;
       }
 
-      .st4 {
+      .st1 {
         clip-path: url(#clippath);
       }
     </style>
     <clipPath id="clippath">
-      <path class="st3" d="M20.7,13.8c.4-.5.5-1.1.6-1.8,1.5-1.3,3.4-1.8,5.3-1.6.5,2.9,3.6,2.8,5.8,2.5.4,0,.6-.4.5-.8-.4-1-1-2-1.6-2.8,1.2-.8,2.1-3.4,2.2-3.7.1-.3-.1-.7-.5-.7-.3,0-3.1-.3-4.2.5-1.2.8-1.8,2.1-1.4,3.1-.3.2-.5.4-.6.8-1-.1-2,0-2.9.2.1-.6.3-1.5.4-2.3,3.1.6,3.6-3.5,3.5-5.7,0-.4-.4-.6-.8-.5-1.2.4-2.3,1-3.3,1.7-.9-.8-1.9-1.6-2.9-2.1-.3-.2-.7,0-.8.4-.5,2-.3,7.5,3.2,6,0,1-.3,2-.5,2.9-.8.4-1.6.8-2.2,1.5-2.1,1.4-3.1,1.3-5.1,0-.6-.6-1.4-1.1-2.2-1.5-.2-1-.4-1.9-.5-2.9,3.4,1.5,3.7-3.6,3.2-6,0-.4-.5-.5-.8-.4-1.1.5-2.1,1.2-2.9,2.1-1-.7-2.1-1.3-3.3-1.7-.4-.1-.7.1-.7.5-.2,2.1.4,6.3,3.4,5.7.1.8.2,1.7.4,2.3-.9-.2-1.9-.3-2.8-.2-.1-.3-.4-.5-.6-.7.4-1-.2-2.3-1.4-3.1-1.2-.8-3.9-.5-4.2-.5-.4,0-.6.4-.5.7.4,1.2,1.2,3,2.2,3.7-.6.9-1.2,1.8-1.6,2.8-.1.4,0,.7.5.8,2.3.3,5.4.4,5.9-2.5,1.9-.2,3.8.4,5.2,1.6,0,.6.3,1.2.6,1.7-3.9-1.1-7.7.3-10.7,2.9-.2.2-.4.5-.4.8-1.2,0-2.3.3-2.4,1.7v14.6c0,1,.8,1.7,1.8,1.7h13.7c.3,0,.6,0,.9-.2.3.1.6.2.9.2h13.7c1,0,1.7-.8,1.7-1.7v-14.6c0-1.5-1.2-1.7-2.3-1.7,0,0-4.2-5.2-11.2-3.6h0ZM28.8,11.6c-.6-.4-1.6-1.6-.6-2.1,1.8,1.2,2-1,3.4,2.4-1,0-2.2,0-2.8-.3h0ZM29.5,6.4c1-.4,1.7-.4,2.8-.4-.4.9-1,2-1.5,2.3-1.8,1.3-3.2-.7-1.3-2h0ZM26.6,2.4c0,1-.6,4.8-2.4,3.5.3-.6.2-1.5,0-2.1.5-.6,1.6-1.1,2.3-1.4h0ZM20.9,2c1.2.7,2.6,1.6,2.3,3.1-.2,1.6-3,1-2.3-3.1h0ZM14.8,2c.9,5.4-3.4,4.4-2.1,1.8.3-.5,1.3-1.3,2.1-1.8h0ZM9.1,2.4c1,.4,1.6.6,2.4,1.4-.2.6-.2,1.5,0,2.1-1.8,1.3-2.4-2.5-2.4-3.5h0ZM3.5,6c1,0,2.2,0,2.7.4,2,1.3.7,3.2-1.2,2-.5-.3-1.1-1.4-1.5-2.3h0ZM6.9,11.6c-.5.3-1.7.3-2.7.3.3-.8.8-1.5,1.3-2.1.7.2,1.5,0,2.1-.3.9.5,0,1.8-.6,2.1h0ZM17.9,23.2c-3.1-2.1-3.1-4.3,0-6.5,3.1,2.1,3.1,4.3,0,6.5h0ZM15.9,13c1.3.7,2.6.7,3.9,0-.5.9-1.1,1.6-2,2.1-1-.6-1.4-1.1-2-2.1h0ZM16.9,23.9c-.9.8-2.5,2.4-2.5,4.1s1.2.8,1.2,0c0-1.2,1.5-2.6,2.3-3.4.9.7,2.3,2.1,2.3,3.4s1.2.8,1.2,0c0-1.7-1.6-3.3-2.6-4.1,3.3-2.6,3.3-5.4,0-7.9,3.3-3,8.9-.9,11.9,1.6v14.5c-4-3-8.5-3.1-12.9,0-4.3-3-8.9-2.9-12.9,0v-14.5c3-2.5,8.6-4.5,11.9-1.6-3.4,2.6-3.5,5.3,0,7.9h0ZM28.6,32h-8.7c2.7-1.5,6-1.5,8.7,0h0ZM15.8,32H7.1c2.7-1.5,6-1.5,8.7,0h0ZM33.1,33.8c0,.3-.3.6-.6.6h-13.7c-.4,0-.4-.3-.7-.4-.2,0-.4,0-.5,0-.2.1-.3.3-.5.3H3.3c-.3,0-.6-.3-.6-.6v-14.6c0-.7.7-.6,1.2-.6v13.4c0,.7.5,1.2,1.1,1.2h25.7c.7,0,1.2-.5,1.2-1.2v-13.4c.5,0,1.2,0,1.2.6v14.6h0Z"/>
+      <path class="st0" d="M20.7,13.8c.4-.5.5-1.1.6-1.8,1.5-1.3,3.4-1.8,5.3-1.6.5,2.9,3.6,2.8,5.8,2.5.4,0,.6-.4.5-.8-.4-1-1-2-1.6-2.8,1.2-.8,2.1-3.4,2.2-3.7,0-.3,0-.7-.5-.7s-3.1-.3-4.2.5c-1.2.8-1.8,2.1-1.4,3.1-.3.2-.5.4-.6.8-1-.1-2,0-2.9.2.1-.6.3-1.5.4-2.3,3.1.6,3.6-3.5,3.5-5.7,0-.4-.4-.6-.8-.5-1.2.4-2.3,1-3.3,1.7-.9-.8-1.9-1.6-2.9-2.1-.3-.2-.7,0-.8.4-.5,2-.3,7.5,3.2,6,0,1-.3,2-.5,2.9-.8.4-1.6.8-2.2,1.5-2.1,1.4-3.1,1.3-5.1,0-.6-.6-1.4-1.1-2.2-1.5-.2-1-.4-1.9-.5-2.9,3.4,1.5,3.7-3.6,3.2-6,0-.4-.5-.5-.8-.4-1.1.5-2.1,1.2-2.9,2.1-1-.7-2.1-1.3-3.3-1.7-.4-.1-.7.1-.7.5-.2,2.1.4,6.3,3.4,5.7.1.8.2,1.7.4,2.3-.9-.2-1.9-.3-2.8-.2-.1-.3-.4-.5-.6-.7.4-1-.2-2.3-1.4-3.1s-3.9-.5-4.2-.5-.6.4-.5.7c.4,1.2,1.2,3,2.2,3.7-.6.9-1.2,1.8-1.6,2.8,0,.4,0,.7.5.8,2.3.3,5.4.4,5.9-2.5,1.9-.2,3.8.4,5.2,1.6,0,.6.3,1.2.6,1.7-3.9-1.1-7.7.3-10.7,2.9-.2.2-.4.5-.4.8-1.2,0-2.3.3-2.4,1.7v14.6c0,1,.8,1.7,1.8,1.7h13.7c.3,0,.6,0,.9-.2.3,0,.6.2.9.2h13.7c1,0,1.7-.8,1.7-1.7v-14.6c0-1.5-1.2-1.7-2.3-1.7,0,0-4.2-5.2-11.2-3.6h-.3ZM28.8,11.6c-.6-.4-1.6-1.6-.6-2.1,1.8,1.2,2-1,3.4,2.4-1,0-2.2,0-2.8-.3ZM29.5,6.4c1-.4,1.7-.4,2.8-.4-.4.9-1,2-1.5,2.3-1.8,1.3-3.2-.7-1.3-2h0ZM26.6,2.4c0,1-.6,4.8-2.4,3.5.3-.6.2-1.5,0-2.1.5-.6,1.6-1.1,2.3-1.4h.1ZM20.9,2c1.2.7,2.6,1.6,2.3,3.1-.2,1.6-3,1-2.3-3.1ZM14.8,2c.9,5.4-3.4,4.4-2.1,1.8.3-.5,1.3-1.3,2.1-1.8ZM9.1,2.4c1,.4,1.6.6,2.4,1.4-.2.6-.2,1.5,0,2.1-1.8,1.3-2.4-2.5-2.4-3.5ZM3.5,6c1,0,2.2,0,2.7.4,2,1.3.7,3.2-1.2,2-.5-.3-1.1-1.4-1.5-2.3h0ZM6.9,11.6c-.5.3-1.7.3-2.7.3.3-.8.8-1.5,1.3-2.1.7.2,1.5,0,2.1-.3.9.5,0,1.8-.6,2.1h0ZM17.9,23.2c-3.1-2.1-3.1-4.3,0-6.5,3.1,2.1,3.1,4.3,0,6.5ZM15.9,13c1.3.7,2.6.7,3.9,0-.5.9-1.1,1.6-2,2.1-1-.6-1.4-1.1-2-2.1h.1ZM16.9,23.9c-.9.8-2.5,2.4-2.5,4.1s1.2.8,1.2,0c0-1.2,1.5-2.6,2.3-3.4.9.7,2.3,2.1,2.3,3.4s1.2.8,1.2,0c0-1.7-1.6-3.3-2.6-4.1,3.3-2.6,3.3-5.4,0-7.9,3.3-3,8.9-.9,11.9,1.6v14.5c-4-3-8.5-3.1-12.9,0-4.3-3-8.9-2.9-12.9,0v-14.5c3-2.5,8.6-4.5,11.9-1.6-3.4,2.6-3.5,5.3,0,7.9h.1ZM28.6,32h-8.7c2.7-1.5,6-1.5,8.7,0ZM15.8,32H7.1c2.7-1.5,6-1.5,8.7,0ZM33.1,33.8c0,.3-.3.6-.6.6h-13.7c-.4,0-.4-.3-.7-.4h-.5c-.2,0-.3.3-.5.3H3.3c-.3,0-.6-.3-.6-.6v-14.6c0-.7.7-.6,1.2-.6v13.4c0,.7.5,1.2,1.1,1.2h25.7c.7,0,1.2-.5,1.2-1.2v-13.4c.5,0,1.2,0,1.2.6v14.6h0Z"/>
     </clipPath>
     <clipPath id="clippath-1">
-      <path class="st3" d="M16.4,18.5c0,0,0,.3,0,.4l2.7,2.7c0,0,.2,0,.3,0s0-.3,0-.4l-2.6-2.7c0,0-.3,0-.4,0h0Z"/>
+      <path class="st0" d="M16.4,18.5v.4l2.7,2.7h.3c0,0,0-.3,0-.4l-2.6-2.7h-.4Z"/>
     </clipPath>
     <clipPath id="clippath-2">
-      <path class="st3" d="M18.9,19.3l-1.4-1.4c0,0-.2,0-.3,0s0,.3,0,.3l1.3,1.4c.1.1.3.1.4,0,0-.1,0-.3,0-.4h0Z"/>
+      <path class="st0" d="M18.9,19.3l-1.4-1.4h-.3c0,0,0,.3,0,.3l1.3,1.4c.1,0,.3,0,.4,0v-.4h0Z"/>
     </clipPath>
     <clipPath id="clippath-3">
-      <path class="st3" d="M18.6,21.6l-1.4-1.4c0,0-.2,0-.3,0,0,0,0,.2,0,.3l1.3,1.4c.1,0,.3,0,.4,0,0,0,0-.3,0-.4h0Z"/>
+      <path class="st0" d="M18.6,21.6l-1.4-1.4h-.3v.3l1.3,1.4h.4v-.4h0Z"/>
     </clipPath>
   </defs>
   <g>
     <g>
-      <path class="st3" d="M20.7,13.8c.4-.5.5-1.1.6-1.8,1.5-1.3,3.4-1.8,5.3-1.6.5,2.9,3.6,2.8,5.8,2.5.4,0,.6-.4.5-.8-.4-1-1-2-1.6-2.8,1.2-.8,2.1-3.4,2.2-3.7.1-.3-.1-.7-.5-.7-.3,0-3.1-.3-4.2.5-1.2.8-1.8,2.1-1.4,3.1-.3.2-.5.4-.6.8-1-.1-2,0-2.9.2.1-.6.3-1.5.4-2.3,3.1.6,3.6-3.5,3.5-5.7,0-.4-.4-.6-.8-.5-1.2.4-2.3,1-3.3,1.7-.9-.8-1.9-1.6-2.9-2.1-.3-.2-.7,0-.8.4-.5,2-.3,7.5,3.2,6,0,1-.3,2-.5,2.9-.8.4-1.6.8-2.2,1.5-2.1,1.4-3.1,1.3-5.1,0-.6-.6-1.4-1.1-2.2-1.5-.2-1-.4-1.9-.5-2.9,3.4,1.5,3.7-3.6,3.2-6,0-.4-.5-.5-.8-.4-1.1.5-2.1,1.2-2.9,2.1-1-.7-2.1-1.3-3.3-1.7-.4-.1-.7.1-.7.5-.2,2.1.4,6.3,3.4,5.7.1.8.2,1.7.4,2.3-.9-.2-1.9-.3-2.8-.2-.1-.3-.4-.5-.6-.7.4-1-.2-2.3-1.4-3.1-1.2-.8-3.9-.5-4.2-.5-.4,0-.6.4-.5.7.4,1.2,1.2,3,2.2,3.7-.6.9-1.2,1.8-1.6,2.8-.1.4,0,.7.5.8,2.3.3,5.4.4,5.9-2.5,1.9-.2,3.8.4,5.2,1.6,0,.6.3,1.2.6,1.7-3.9-1.1-7.7.3-10.7,2.9-.2.2-.4.5-.4.8-1.2,0-2.3.3-2.4,1.7v14.6c0,1,.8,1.7,1.8,1.7h13.7c.3,0,.6,0,.9-.2.3.1.6.2.9.2h13.7c1,0,1.7-.8,1.7-1.7v-14.6c0-1.5-1.2-1.7-2.3-1.7,0,0-4.2-5.2-11.2-3.6h0ZM28.8,11.6c-.6-.4-1.6-1.6-.6-2.1,1.8,1.2,2-1,3.4,2.4-1,0-2.2,0-2.8-.3h0ZM29.5,6.4c1-.4,1.7-.4,2.8-.4-.4.9-1,2-1.5,2.3-1.8,1.3-3.2-.7-1.3-2h0ZM26.6,2.4c0,1-.6,4.8-2.4,3.5.3-.6.2-1.5,0-2.1.5-.6,1.6-1.1,2.3-1.4h0ZM20.9,2c1.2.7,2.6,1.6,2.3,3.1-.2,1.6-3,1-2.3-3.1h0ZM14.8,2c.9,5.4-3.4,4.4-2.1,1.8.3-.5,1.3-1.3,2.1-1.8h0ZM9.1,2.4c1,.4,1.6.6,2.4,1.4-.2.6-.2,1.5,0,2.1-1.8,1.3-2.4-2.5-2.4-3.5h0ZM3.5,6c1,0,2.2,0,2.7.4,2,1.3.7,3.2-1.2,2-.5-.3-1.1-1.4-1.5-2.3h0ZM6.9,11.6c-.5.3-1.7.3-2.7.3.3-.8.8-1.5,1.3-2.1.7.2,1.5,0,2.1-.3.9.5,0,1.8-.6,2.1h0ZM17.9,23.2c-3.1-2.1-3.1-4.3,0-6.5,3.1,2.1,3.1,4.3,0,6.5h0ZM15.9,13c1.3.7,2.6.7,3.9,0-.5.9-1.1,1.6-2,2.1-1-.6-1.4-1.1-2-2.1h0ZM16.9,23.9c-.9.8-2.5,2.4-2.5,4.1s1.2.8,1.2,0c0-1.2,1.5-2.6,2.3-3.4.9.7,2.3,2.1,2.3,3.4s1.2.8,1.2,0c0-1.7-1.6-3.3-2.6-4.1,3.3-2.6,3.3-5.4,0-7.9,3.3-3,8.9-.9,11.9,1.6v14.5c-4-3-8.5-3.1-12.9,0-4.3-3-8.9-2.9-12.9,0v-14.5c3-2.5,8.6-4.5,11.9-1.6-3.4,2.6-3.5,5.3,0,7.9h0ZM28.6,32h-8.7c2.7-1.5,6-1.5,8.7,0h0ZM15.8,32H7.1c2.7-1.5,6-1.5,8.7,0h0ZM33.1,33.8c0,.3-.3.6-.6.6h-13.7c-.4,0-.4-.3-.7-.4-.2,0-.4,0-.5,0-.2.1-.3.3-.5.3H3.3c-.3,0-.6-.3-.6-.6v-14.6c0-.7.7-.6,1.2-.6v13.4c0,.7.5,1.2,1.1,1.2h25.7c.7,0,1.2-.5,1.2-1.2v-13.4c.5,0,1.2,0,1.2.6v14.6h0Z"/>
-      <g class="st4">
-        <rect class="st3" x="1.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="1.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="2.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="2.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="2.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="3.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="3.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="3.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="4.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="4.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="4.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="5.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="5.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="5.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="5.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="6.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="6.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="6.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="6.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="7.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="7.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="7.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="7.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="8.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="8.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="8.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="8.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="9.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="9.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="9.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="9.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="10.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="10.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="10.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="11" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="11.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="11.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="11.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="12" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="12.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="12.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="12.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="13" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="13.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="13.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="13.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="14" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="14.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="14.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="14.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="15.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="15.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="15.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="15.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="16.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="16.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="16.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="16.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="17.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="17.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="17.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="17.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="18.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="18.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="18.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="18.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="19.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="19.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="19.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="19.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="20.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="20.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="20.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="20.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="21.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="21.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="21.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="22" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="22.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="22.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="22.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="23" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="23.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="23.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="23.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="24" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="24.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="24.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="24.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="25" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="25.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="25.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="25.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="26.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="26.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="26.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="26.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="27.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="27.3" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="27.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="27.8" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="28.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="28.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="28.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="28.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="29.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="29.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="29.6" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="29.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="30.1" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="30.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="30.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="30.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="31.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="31.4" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="31.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="31.9" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="32.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="32.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="32.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="33" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="33.2" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="33.5" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="33.7" y=".4" width=".3" height="35.1"/>
-        <rect class="st3" x="34" y=".4" width=".3" height="35.1"/>
+      <path class="st0" d="M20.7,13.8c.4-.5.5-1.1.6-1.8,1.5-1.3,3.4-1.8,5.3-1.6.5,2.9,3.6,2.8,5.8,2.5.4,0,.6-.4.5-.8-.4-1-1-2-1.6-2.8,1.2-.8,2.1-3.4,2.2-3.7,0-.3,0-.7-.5-.7s-3.1-.3-4.2.5c-1.2.8-1.8,2.1-1.4,3.1-.3.2-.5.4-.6.8-1-.1-2,0-2.9.2.1-.6.3-1.5.4-2.3,3.1.6,3.6-3.5,3.5-5.7,0-.4-.4-.6-.8-.5-1.2.4-2.3,1-3.3,1.7-.9-.8-1.9-1.6-2.9-2.1-.3-.2-.7,0-.8.4-.5,2-.3,7.5,3.2,6,0,1-.3,2-.5,2.9-.8.4-1.6.8-2.2,1.5-2.1,1.4-3.1,1.3-5.1,0-.6-.6-1.4-1.1-2.2-1.5-.2-1-.4-1.9-.5-2.9,3.4,1.5,3.7-3.6,3.2-6,0-.4-.5-.5-.8-.4-1.1.5-2.1,1.2-2.9,2.1-1-.7-2.1-1.3-3.3-1.7-.4-.1-.7.1-.7.5-.2,2.1.4,6.3,3.4,5.7.1.8.2,1.7.4,2.3-.9-.2-1.9-.3-2.8-.2-.1-.3-.4-.5-.6-.7.4-1-.2-2.3-1.4-3.1-1.2-.8-3.9-.5-4.2-.5s-.6.4-.5.7c.4,1.2,1.2,3,2.2,3.7-.6.9-1.2,1.8-1.6,2.8,0,.4,0,.7.5.8,2.3.3,5.4.4,5.9-2.5,1.9-.2,3.8.4,5.2,1.6,0,.6.3,1.2.6,1.7-3.9-1.1-7.7.3-10.7,2.9-.2.2-.4.5-.4.8-1.2,0-2.3.3-2.4,1.7v14.6c0,1,.8,1.7,1.8,1.7h13.7c.3,0,.6,0,.9-.2.3,0,.6.2.9.2h13.7c1,0,1.7-.8,1.7-1.7v-14.6c0-1.5-1.2-1.7-2.3-1.7,0,0-4.2-5.2-11.2-3.6h-.3ZM28.8,11.6c-.6-.4-1.6-1.6-.6-2.1,1.8,1.2,2-1,3.4,2.4-1,0-2.2,0-2.8-.3h0ZM29.5,6.4c1-.4,1.7-.4,2.8-.4-.4.9-1,2-1.5,2.3-1.8,1.3-3.2-.7-1.3-2h0ZM26.6,2.4c0,1-.6,4.8-2.4,3.5.3-.6.2-1.5,0-2.1.5-.6,1.6-1.1,2.3-1.4h.1ZM20.9,2c1.2.7,2.6,1.6,2.3,3.1-.2,1.6-3,1-2.3-3.1h0ZM14.8,2c.9,5.4-3.4,4.4-2.1,1.8.3-.5,1.3-1.3,2.1-1.8h0ZM9.1,2.4c1,.4,1.6.6,2.4,1.4-.2.6-.2,1.5,0,2.1-1.8,1.3-2.4-2.5-2.4-3.5h0ZM3.5,6c1,0,2.2,0,2.7.4,2,1.3.7,3.2-1.2,2-.5-.3-1.1-1.4-1.5-2.3h0ZM6.9,11.6c-.5.3-1.7.3-2.7.3.3-.8.8-1.5,1.3-2.1.7.2,1.5,0,2.1-.3.9.5,0,1.8-.6,2.1h0ZM17.9,23.2c-3.1-2.1-3.1-4.3,0-6.5,3.1,2.1,3.1,4.3,0,6.5h0ZM15.9,13c1.3.7,2.6.7,3.9,0-.5.9-1.1,1.6-2,2.1-1-.6-1.4-1.1-2-2.1h.1ZM16.9,23.9c-.9.8-2.5,2.4-2.5,4.1s1.2.8,1.2,0c0-1.2,1.5-2.6,2.3-3.4.9.7,2.3,2.1,2.3,3.4s1.2.8,1.2,0c0-1.7-1.6-3.3-2.6-4.1,3.3-2.6,3.3-5.4,0-7.9,3.3-3,8.9-.9,11.9,1.6v14.5c-4-3-8.5-3.1-12.9,0-4.3-3-8.9-2.9-12.9,0v-14.5c3-2.5,8.6-4.5,11.9-1.6-3.4,2.6-3.5,5.3,0,7.9h.1ZM28.6,32h-8.7c2.7-1.5,6-1.5,8.7,0h0ZM15.8,32H7.1c2.7-1.5,6-1.5,8.7,0h0ZM33.1,33.8c0,.3-.3.6-.6.6h-13.7c-.4,0-.4-.3-.7-.4h-.5c-.2,0-.3.3-.5.3H3.3c-.3,0-.6-.3-.6-.6v-14.6c0-.7.7-.6,1.2-.6v13.4c0,.7.5,1.2,1.1,1.2h25.7c.7,0,1.2-.5,1.2-1.2v-13.4c.5,0,1.2,0,1.2.6v14.6h0Z"/>
+      <g>
+        <path class="st0" d="M20.7,13.8c.4-.5.5-1.1.6-1.8,1.5-1.3,3.4-1.8,5.3-1.6.5,2.9,3.6,2.8,5.8,2.5.4,0,.6-.4.5-.8-.4-1-1-2-1.6-2.8,1.2-.8,2.1-3.4,2.2-3.7,0-.3,0-.7-.5-.7s-3.1-.3-4.2.5c-1.2.8-1.8,2.1-1.4,3.1-.3.2-.5.4-.6.8-1-.1-2,0-2.9.2.1-.6.3-1.5.4-2.3,3.1.6,3.6-3.5,3.5-5.7,0-.4-.4-.6-.8-.5-1.2.4-2.3,1-3.3,1.7-.9-.8-1.9-1.6-2.9-2.1-.3-.2-.7,0-.8.4-.5,2-.3,7.5,3.2,6,0,1-.3,2-.5,2.9-.8.4-1.6.8-2.2,1.5-2.1,1.4-3.1,1.3-5.1,0-.6-.6-1.4-1.1-2.2-1.5-.2-1-.4-1.9-.5-2.9,3.4,1.5,3.7-3.6,3.2-6,0-.4-.5-.5-.8-.4-1.1.5-2.1,1.2-2.9,2.1-1-.7-2.1-1.3-3.3-1.7-.4-.1-.7.1-.7.5-.2,2.1.4,6.3,3.4,5.7.1.8.2,1.7.4,2.3-.9-.2-1.9-.3-2.8-.2-.1-.3-.4-.5-.6-.7.4-1-.2-2.3-1.4-3.1s-3.9-.5-4.2-.5-.6.4-.5.7c.4,1.2,1.2,3,2.2,3.7-.6.9-1.2,1.8-1.6,2.8,0,.4,0,.7.5.8,2.3.3,5.4.4,5.9-2.5,1.9-.2,3.8.4,5.2,1.6,0,.6.3,1.2.6,1.7-3.9-1.1-7.7.3-10.7,2.9-.2.2-.4.5-.4.8-1.2,0-2.3.3-2.4,1.7v14.6c0,1,.8,1.7,1.8,1.7h13.7c.3,0,.6,0,.9-.2.3,0,.6.2.9.2h13.7c1,0,1.7-.8,1.7-1.7v-14.6c0-1.5-1.2-1.7-2.3-1.7,0,0-4.2-5.2-11.2-3.6h-.3ZM28.8,11.6c-.6-.4-1.6-1.6-.6-2.1,1.8,1.2,2-1,3.4,2.4-1,0-2.2,0-2.8-.3ZM29.5,6.4c1-.4,1.7-.4,2.8-.4-.4.9-1,2-1.5,2.3-1.8,1.3-3.2-.7-1.3-2h0ZM26.6,2.4c0,1-.6,4.8-2.4,3.5.3-.6.2-1.5,0-2.1.5-.6,1.6-1.1,2.3-1.4h.1ZM20.9,2c1.2.7,2.6,1.6,2.3,3.1-.2,1.6-3,1-2.3-3.1ZM14.8,2c.9,5.4-3.4,4.4-2.1,1.8.3-.5,1.3-1.3,2.1-1.8ZM9.1,2.4c1,.4,1.6.6,2.4,1.4-.2.6-.2,1.5,0,2.1-1.8,1.3-2.4-2.5-2.4-3.5ZM3.5,6c1,0,2.2,0,2.7.4,2,1.3.7,3.2-1.2,2-.5-.3-1.1-1.4-1.5-2.3h0ZM6.9,11.6c-.5.3-1.7.3-2.7.3.3-.8.8-1.5,1.3-2.1.7.2,1.5,0,2.1-.3.9.5,0,1.8-.6,2.1h0ZM17.9,23.2c-3.1-2.1-3.1-4.3,0-6.5,3.1,2.1,3.1,4.3,0,6.5ZM15.9,13c1.3.7,2.6.7,3.9,0-.5.9-1.1,1.6-2,2.1-1-.6-1.4-1.1-2-2.1h.1ZM16.9,23.9c-.9.8-2.5,2.4-2.5,4.1s1.2.8,1.2,0c0-1.2,1.5-2.6,2.3-3.4.9.7,2.3,2.1,2.3,3.4s1.2.8,1.2,0c0-1.7-1.6-3.3-2.6-4.1,3.3-2.6,3.3-5.4,0-7.9,3.3-3,8.9-.9,11.9,1.6v14.5c-4-3-8.5-3.1-12.9,0-4.3-3-8.9-2.9-12.9,0v-14.5c3-2.5,8.6-4.5,11.9-1.6-3.4,2.6-3.5,5.3,0,7.9h.1ZM28.6,32h-8.7c2.7-1.5,6-1.5,8.7,0ZM15.8,32H7.1c2.7-1.5,6-1.5,8.7,0ZM33.1,33.8c0,.3-.3.6-.6.6h-13.7c-.4,0-.4-.3-.7-.4h-.5c-.2,0-.3.3-.5.3H3.3c-.3,0-.6-.3-.6-.6v-14.6c0-.7.7-.6,1.2-.6v13.4c0,.7.5,1.2,1.1,1.2h25.7c.7,0,1.2-.5,1.2-1.2v-13.4c.5,0,1.2,0,1.2.6v14.6h0Z"/>
+        <g class="st1">
+          <g>
+            <rect class="st0" x="1.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="1.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="2.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="2.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="2.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="3.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="3.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="3.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="4.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="4.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="4.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="5.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="5.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="5.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="5.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="6.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="6.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="6.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="6.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="7.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="7.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="7.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="7.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="8.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="8.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="8.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="8.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="9.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="9.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="9.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="9.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="10.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="10.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="10.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="11" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="11.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="11.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="11.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="12" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="12.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="12.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="12.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="13" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="13.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="13.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="13.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="14" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="14.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="14.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="14.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="15.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="15.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="15.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="15.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="16.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="16.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="16.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="16.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="17.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="17.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="17.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="17.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="18.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="18.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="18.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="18.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="19.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="19.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="19.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="19.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="20.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="20.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="20.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="20.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="21.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="21.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="21.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="22" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="22.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="22.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="22.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="23" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="23.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="23.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="23.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="24" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="24.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="24.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="24.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="25" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="25.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="25.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="25.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="26.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="26.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="26.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="26.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="27.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="27.3" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="27.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="27.8" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="28.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="28.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="28.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="28.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="29.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="29.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="29.6" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="29.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="30.1" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="30.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="30.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="30.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="31.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="31.4" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="31.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="31.9" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="32.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="32.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="32.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="33" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="33.2" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="33.5" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="33.7" y=".4" width=".3" height="35.1"/>
+            <rect class="st0" x="34" y=".4" width=".3" height="35.1"/>
+          </g>
+        </g>
       </g>
     </g>
     <g>
-      <path class="st3" d="M16.4,18.5c0,0,0,.3,0,.4l2.7,2.7c0,0,.2,0,.3,0s0-.3,0-.4l-2.6-2.7c0,0-.3,0-.4,0h0Z"/>
-      <g class="st0">
-        <rect class="st3" x="16.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="16.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="17.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.5" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.6" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.7" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.8" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="18.9" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.1" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.2" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.3" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.4" y="18.4" width="0" height="3.2"/>
-        <rect class="st3" x="19.4" y="18.4" width="0" height="3.2"/>
-      </g>
+      <path class="st0" d="M16.4,18.5v.4l2.7,2.7h.3c0,0,0-.3,0-.4l-2.6-2.7h-.4Z"/>
+      <path class="st0" d="M16.4,18.5v.4l2.7,2.7h.3c0,0,0-.3,0-.4l-2.6-2.7h-.4Z"/>
     </g>
     <g>
-      <path class="st3" d="M18.9,19.3l-1.4-1.4c0,0-.2,0-.3,0s0,.3,0,.3l1.3,1.4c.1.1.3.1.4,0,0-.1,0-.3,0-.4h0Z"/>
-      <g class="st2">
-        <rect class="st3" x="17.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.7" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.8" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.9" y="17.8" width="0" height="1.9"/>
-        <rect class="st3" x="18.9" y="17.8" width="0" height="1.9"/>
-      </g>
+      <path class="st0" d="M18.9,19.3l-1.4-1.4h-.3c0,0,0,.3,0,.3l1.3,1.4c.1.1.3.1.4,0v-.4h0Z"/>
+      <path class="st0" d="M18.9,19.3l-1.4-1.4h-.3c0,0,0,.3,0,.3l1.3,1.4c.1,0,.3,0,.4,0v-.4h0Z"/>
     </g>
     <g>
-      <path class="st3" d="M18.6,21.6l-1.4-1.4c0,0-.2,0-.3,0,0,0,0,.2,0,.3l1.3,1.4c.1,0,.3,0,.4,0,0,0,0-.3,0-.4h0Z"/>
-      <g class="st1">
-        <rect class="st3" x="16.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="16.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.7" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.8" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="17.9" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.1" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.2" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.3" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.4" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.5" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="20.2" width="0" height="1.9"/>
-        <rect class="st3" x="18.6" y="20.2" width="0" height="1.9"/>
-      </g>
+      <path class="st0" d="M18.6,21.6l-1.4-1.4h-.3v.3l1.3,1.4h.4v-.4h0Z"/>
+      <path class="st0" d="M18.6,21.6l-1.4-1.4h-.3v.3l1.3,1.4h.4v-.4h0Z"/>
     </g>
   </g>
-  <path class="st3" d="M62.4,34.6c.1.3,0,.5-.4.5h-1.4c-.2,0-.4,0-.5-.4l-1.6-4.2h-9.9l-1.6,4.2c-.1.3-.3.4-.5.4h-1.4c-.3,0-.5-.2-.4-.5l7.5-19.7c0-.2.3-.4.5-.4h1.5c.2,0,.4.1.5.4l7.5,19.7h0ZM49.5,28.5h8.4l-4.2-11.1-4.2,11.1h0ZM86,33c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-12.5c-.3,0-.4-.2-.4-.4V15.1c0-.3.2-.4.4-.4h12.4c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-10.6v6.6h9.8c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-9.8v7.6h10.6ZM112.2,14.6c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-6.3v18c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4v-18h-6.3c-.3,0-.4-.2-.4-.4v-1.2c0-.3.2-.4.4-.4h15ZM136.5,33c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-12.5c-.3,0-.4-.2-.4-.4V15.1c0-.3.2-.4.4-.4h12.4c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-10.6v6.6h9.8c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-9.8v7.6h10.6ZM158.9,27l4,7.6c.2.3,0,.5-.3.5h-1.5c-.2,0-.4-.1-.5-.3l-3.9-7.5h-5.9v7.4c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4V15.1c0-.3.2-.4.4-.4h7.3c5.2,0,7.2,2.3,7.2,6.3s-1.3,5.4-4.5,6.1h0ZM150.7,16.7v8.4h5.6c2.8,0,4.8-.8,4.8-4.2s-2-4.2-4.8-4.2h-5.6ZM189,14.6c.3,0,.4.2.4.4v19.6c0,.2-.1.4-.4.4h-2c-.2,0-.4,0-.5-.3l-10-16.9v16.8c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4V15.1c0-.2.1-.4.4-.4h2c.2,0,.4,0,.5.3l10,16.9V15.1c0-.3.2-.4.4-.4h1.4ZM216.9,14.6c.3,0,.4.2.4.4v11.8c0,5.8-3,8.7-8.2,8.7s-8.2-2.9-8.2-8.7v-11.8c0-.3.2-.4.4-.4h1.4c.3,0,.4.2.4.4v11.8c0,4.5,2.4,6.6,5.9,6.6s5.9-2.1,5.9-6.6v-11.8c0-.3.2-.4.4-.4h1.4,0ZM249,14.6c.3,0,.4.2.4.4v19.6c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4v-15.9l-6.8,16.1c0,.2-.3.3-.5.3h-1.4c-.2,0-.4,0-.5-.3l-6.8-15.9v15.8c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4V15.1c0-.3.2-.4.4-.4h1.9c.2,0,.4,0,.5.3l7.4,17.7,7.4-17.7c0-.2.3-.3.5-.3h1.9Z"/>
+  <path class="st0" d="M62.4,34.6c0,.3,0,.5-.4.5h-1.4c-.2,0-.4,0-.5-.4l-1.6-4.2h-9.9l-1.6,4.2c0,.3-.3.4-.5.4h-1.4c-.3,0-.5-.2-.4-.5l7.5-19.7c0-.2.3-.4.5-.4h1.5c.2,0,.4.1.5.4l7.5,19.7h.2ZM49.5,28.5h8.4l-4.2-11.1-4.2,11.1h0ZM86,33c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-12.5c-.3,0-.4-.2-.4-.4V15.1c0-.3.2-.4.4-.4h12.4c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-10.6v6.6h9.8c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-9.8v7.6h10.7ZM112.2,14.6c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-6.3v18c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4v-18h-6.3c-.3,0-.4-.2-.4-.4v-1.2c0-.3.2-.4.4-.4h15-.2ZM136.5,33c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-12.5c-.3,0-.4-.2-.4-.4V15.1c0-.3.2-.4.4-.4h12.4c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-10.6v6.6h9.8c.3,0,.4.2.4.4v1.2c0,.3-.2.4-.4.4h-9.8v7.6h10.7ZM158.9,27l4,7.6c.2.3,0,.5-.3.5h-1.5c-.2,0-.4,0-.5-.3l-3.9-7.5h-5.9v7.4c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4V15.1c0-.3.2-.4.4-.4h7.3c5.2,0,7.2,2.3,7.2,6.3s-1.3,5.4-4.5,6.1h-.1ZM150.7,16.7v8.4h5.6c2.8,0,4.8-.8,4.8-4.2s-2-4.2-4.8-4.2h-5.6ZM189,14.6c.3,0,.4.2.4.4v19.6c0,.2-.1.4-.4.4h-2c-.2,0-.4,0-.5-.3l-10-16.9v16.8c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4V15.1c0-.2.1-.4.4-.4h2c.2,0,.4,0,.5.3l10,16.9V15.1c0-.3.2-.4.4-.4h1.4ZM216.9,14.6c.3,0,.4.2.4.4v11.8c0,5.8-3,8.7-8.2,8.7s-8.2-2.9-8.2-8.7v-11.8c0-.3.2-.4.4-.4h1.4c.3,0,.4.2.4.4v11.8c0,4.5,2.4,6.6,5.9,6.6s5.9-2.1,5.9-6.6v-11.8c0-.3.2-.4.4-.4h1.6ZM249,14.6c.3,0,.4.2.4.4v19.6c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4v-15.9l-6.8,16.1c0,.2-.3.3-.5.3h-1.4c-.2,0-.4,0-.5-.3l-6.8-15.9v15.8c0,.3-.2.4-.4.4h-1.4c-.3,0-.4-.2-.4-.4V15.1c0-.3.2-.4.4-.4h1.9c.2,0,.4,0,.5.3l7.4,17.7,7.4-17.7c0-.2.3-.3.5-.3h1.9Z"/>
   <g>
-    <path class="st3" d="M252.8,15v.4h1.3v3.1h.5v-3.1h1.3v-.4h-3.2Z"/>
-    <path class="st3" d="M259.6,15c-.4,1.1-1.1,2.5-1.2,2.9h0c-.1-.3-.7-1.8-1.2-2.9h-.7v3.5h.5v-1.4c0-.6,0-1.3,0-1.7h0c.2.6.9,2.2,1.2,3.2h.4c.5-1.2,1.1-2.6,1.3-3.2h0c0,.4,0,1,0,1.6v1.5h.5v-3.5h-.7Z"/>
+    <path class="st0" d="M252.9,15v.8h2.5v6h1v-6h2.5v-.8h-6.2.2Z"/>
+    <path class="st0" d="M266.2,15c-.8,2.1-2.1,4.9-2.3,5.7h0c-.2-.6-1.4-3.5-2.3-5.7h-1.4v6.8h1v-6h0c.4,1.2,1.8,4.3,2.3,6.2h.8c1-2.3,2.1-5.1,2.5-6.2h0v6h1v-6.8h-1.6Z"/>
   </g>
 </svg>

@@ -4,7 +4,11 @@ import Image from "next/image";
 import { Input } from "../ui/Input";
 import { useState } from "react";
 import { toast } from "sonner";
-
+declare global {
+  interface Window {
+    fbq: (...args: any[]) => void;
+  }
+}
 export default function SignUpSection() {
   const [errors, setErrors] = useState({
     firstName: "",
@@ -63,6 +67,10 @@ export default function SignUpSection() {
       if (!res.ok) throw new Error(data.message || "Failed to sign up.");
 
       toast.success(data.message || "Successfully signed up!");
+
+      if (typeof window !== "undefined" && window.fbq) {
+        window.fbq("track", "CompleteRegistration");
+      }
       form.reset();
       setErrors({ firstName: "", lastName: "", email: "", agree: "" });
     } catch (error: any) {
