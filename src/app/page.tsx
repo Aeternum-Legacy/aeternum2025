@@ -5,6 +5,7 @@ import FeatureDetailSection from "@/components/sections/FeatureDetailSection";
 import ImageTileSection from "@/components/sections/ImageTileSection";
 import ReimagineYourLegacySection from "@/components/sections/ReimagineYourLegacySection";
 import SignUpSection from "@/components/sections/SignUpSection";
+import WhatIfSection from "@/components/sections/WhatIfSection";
 
 export const metadata = {
   title: "Reimagine Your Legacy | Aeternum",
@@ -14,9 +15,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col gap-y-12">
       <HeroSection />
       <DidYouKnowSection />
+      <WhatIfSection />
       <ReimagineYourLegacySection />
       <FeatureSummarySection />
       <FeatureDetailSection />

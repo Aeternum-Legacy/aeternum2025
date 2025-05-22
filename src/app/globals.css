@@ -188,15 +188,15 @@
   }
 
   .section-wrapper {
-    @apply py-16 mt-12 md:mt-20;
+    @apply max-w-screen-xl flex flex-col py-6 px-6 lg:px-8 w-full mx-auto gap-6 text-center;
   }
 
-  .content-wrapper {
-    @apply w-full max-w-screen-xl mx-auto px-6 lg:px-8 gap-6;
-  }
+  /* .content-wrapper {
+    @apply w-full mx-auto px-6 lg:px-8 gap-6;
+  } */
 
   .grid-wrapper {
-    @apply gap-6 md:gap-8 xl:gap-14;
+    @apply grid gap-10 xl:gap-14;
   }
 }
 

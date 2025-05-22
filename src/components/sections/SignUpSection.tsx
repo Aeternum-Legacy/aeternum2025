@@ -82,141 +82,144 @@ export default function SignUpSection() {
 
   return (
     <section
-      className="flex flex-col lg:flex-row"
+      className="-mt-12 md:-mt-0 flex flex-col lg:flex-row"
       aria-labelledby="signup-heading"
     >
-      <div className="content-wrapper relative w-full lg:w-1/2 min-h-[700px] 2xl:min-h-[900px] bg-[url('/images/tree.png')] bg-cover bg-center flex flex-col items-center justify-center px-4 sm:px-20 py-16">
-        <div className="absolute inset-0 bg-white/70 lg:bg-white/70 z-10" />
+      <div className="relative w-full lg:w-1/2 h-screen md:min-h-[700px] 2xl:min-h-[900px] bg-[url('/images/tree.png')] bg-cover bg-center flex flex-col items-center justify-center px-4 sm:px-20 py-16">
+        <div className="section-wrapper">
+          <div className="absolute inset-0 bg-white/70 lg:bg-white/70 z-10" />
 
-        <header className="relative z-20 px-2 sm:px-6 text-black text-center max-w-xl">
-          <h4
-            id="signup-heading"
-            className="mb-4 tracking-tight font-bold lg:font-normal"
-          >
-            Early Access to Aeternum
-          </h4>
+          <header className="relative z-20 px-2 sm:px-6 text-black text-center max-w-xl">
+            <h4
+              id="signup-heading"
+              className="mb-4 tracking-tight font-bold lg:font-normal"
+            >
+              Early Access to Aeternum
+            </h4>
 
-          <p className="mb-4">
-            Sign up as a priority user{" "}
-            <span className="block lg:inline">
-              and get exclusive early access to Aeternum,{" "}
-            </span>
-            <span className="block lg:inline">launching in 2025.</span>
-          </p>
+            <p className="mb-4">
+              Sign up as a priority user{" "}
+              <span className="block lg:inline">
+                and get exclusive early access to Aeternum,{" "}
+              </span>
+              <span className="block lg:inline">launching in 2025.</span>
+            </p>
 
-          <p className="mb-4 font-semibold">As a Priority User, you will:</p>
+            <p className="mb-4 font-semibold">As a Priority User, you will:</p>
 
-          <ul className="text-left">
-            {[
-              "Get an exclusive invitation to the Beta Test and shape the future of legacy preservation.",
-              "Be the first to experience Aeternum through early access to the final version.",
-              "Get exclusive updates on special offers, discount codes, events, and development progress.",
-              "Get 50% off during the beta phase, plus 20% off an annual subscription when Aeternum officially launches.",
-            ].map((text, idx) => (
-              <li
-                key={idx}
-                className="flex items-start gap-2 tracking-normal leading-normal"
-              >
-                <Image
-                  src="/icons/list.svg"
-                  alt="check icon"
-                  width={20}
-                  height={20}
-                  className="mt-[0.3rem]"
-                />
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </header>
+            <ul className="text-left">
+              {[
+                "Get an exclusive invitation to the Beta Test and shape the future of legacy preservation.",
+                "Be the first to experience Aeternum through early access to the final version.",
+                "Get exclusive updates on special offers, discount codes, events, and development progress.",
+                "Get 50% off during the beta phase, plus 20% off an annual subscription when Aeternum officially launches.",
+              ].map((text, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-2 tracking-normal leading-normal"
+                >
+                  <Image
+                    src="/icons/list.svg"
+                    alt="check icon"
+                    width={20}
+                    height={20}
+                    className="mt-[0.3rem]"
+                  />
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ul>
+          </header>
+        </div>
       </div>
 
       <div
         id="signup"
-        className="bg-[#F7F8EA] content-wrapper w-full lg:w-1/2 flex flex-col items-center justify-center px-4 sm:px-20 py-16"
+        className="bg-[#F7F8EA] h-screen md:min-h-[700px] w-full  flex flex-col items-center justify-center"
       >
-        <Image
-          src="/icons/aeternum-logo4.svg"
-          alt="Aeternum Logo"
-          width={250}
-          height={60}
-          className="mb-10"
-        />
-
-        <form
-          onSubmit={handleSubmit}
-          className="w-full max-w-lg space-y-5 text-[1rem]"
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { id: "first-name", label: "First Name" },
-              { id: "last-name", label: "Last Name" },
-            ].map(({ id, label }) => (
-              <div className="relative" key={id}>
-                <label
-                  htmlFor={id}
-                  className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-sm text-black"
-                >
-                  {label}
-                </label>
-                <Input
-                  id={id}
-                  name={id}
-                  type="text"
-                  className="bg-[#F6F6E9] text-sm rounded-lg px-3 py-2"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="relative">
-            <label
-              htmlFor="email"
-              className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-sm text-black"
-            >
-              Email
-            </label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              className="bg-[#F6F6E9] text-sm rounded-lg px-3 py-2"
-            />
-          </div>
-
-          <div className="text-sm space-y-1">
-            <div className="flex items-start gap-2">
-              <input
-                type="checkbox"
-                id="agree"
-                name="agree"
-                className="w-4 h-4 mt-[0.2rem]"
-              />
-              <label htmlFor="agree" className="leading-snug">
-                By signing up, you agree to Aeternum’s{" "}
-                <a href="/terms" className="underline text-blue-600">
-                  terms
-                </a>{" "}
-                regarding data collection and usage.
-              </label>
+        <div className="section-wrapper">
+          <Image
+            src="/icons/aeternum-logo4.svg"
+            alt="Aeternum Logo"
+            width={250}
+            height={60}
+            className="mb-10 mx-auto"
+          />
+          <form
+            onSubmit={handleSubmit}
+            className="w-full max-w-lg space-y-5 text-[1rem]"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { id: "first-name", label: "First Name" },
+                { id: "last-name", label: "Last Name" },
+              ].map(({ id, label }) => (
+                <div className="relative" key={id}>
+                  <label
+                    htmlFor={id}
+                    className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-sm text-black"
+                  >
+                    {label}
+                  </label>
+                  <Input
+                    id={id}
+                    name={id}
+                    type="text"
+                    className="bg-[#F6F6E9] text-sm rounded-lg px-3 py-2"
+                  />
+                </div>
+              ))}
             </div>
-          </div>
 
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full sm:w-auto bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-base font-medium tracking-wide transition-colors duration-300 flex items-center justify-center relative"
-            >
-              {loading && (
-                <div className="absolute w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              )}
-              <span className={loading ? "opacity-0" : "opacity-100"}>
-                Sign Up
-              </span>
-            </button>
-          </div>
-        </form>
+            <div className="relative">
+              <label
+                htmlFor="email"
+                className="absolute -top-2 left-3 bg-[#F6F6E9] px-1 text-sm text-black"
+              >
+                Email
+              </label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                className="bg-[#F6F6E9] text-sm rounded-lg px-3 py-2"
+              />
+            </div>
+
+            <div className="text-sm space-y-1">
+              <div className="flex items-center gap-2 text-left">
+                <input
+                  type="checkbox"
+                  id="agree"
+                  name="agree"
+                  className="w-4 h-4"
+                />
+                <label htmlFor="agree" className="text-sm">
+                  By signing up, you agree to Aeternum’s{" "}
+                  <a href="/terms" className="underline text-blue-600">
+                    terms
+                  </a>{" "}
+                  regarding data collection and usage.
+                </label>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full sm:w-auto bg-[#186E68] hover:bg-[#2c4a48] text-white px-6 py-2 rounded-full text-base font-medium tracking-wide transition-colors duration-300 flex items-center justify-center relative"
+              >
+                {loading && (
+                  <div className="absolute w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                )}
+                <span className={loading ? "opacity-0" : "opacity-100"}>
+                  Sign Up
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   );
