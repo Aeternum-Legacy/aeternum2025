@@ -187,12 +187,12 @@ export default function SignUpSection() {
             </div>
 
             <div className="text-sm space-y-1">
-              <div className="flex items-center gap-2 text-left">
+              <div className="flex items-start gap-2 text-left">
                 <input
                   type="checkbox"
                   id="agree"
                   name="agree"
-                  className="w-4 h-4"
+                  className="w-4 h-4 mt-1"
                 />
                 <label htmlFor="agree" className="text-sm">
                   By signing up, you agree to Aeternum’s{" "}

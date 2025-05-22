@@ -7,17 +7,17 @@ export default function SectionBlock({
   useRomanStyle = false,
 }: SectionBlockProps) {
   return (
-    <div id={id}>
-      <h5 className="font-extrabold text-[#186E68] text-left tracking-widest uppercase">
+    <div id={id} className="flex flex-col gap-2 text-left">
+      <h5 className="font-extrabold text-[#186E68] tracking-widest uppercase">
         {title}
       </h5>
 
-      <div className="mt-3 md:mt-6 text-left md:ml-10 lg:ml-64">
+      <div className="flex flex-col gap-2 md:ml-10 lg:ml-64">
         {intro && <div className="tracking-widest leading-loose">{intro}</div>}
 
         {bullets && (
           <ul
-            className={`pl-6 mt-4 tracking-wider leading-loose ${
+            className={`pl-6 tracking-wider leading-loose ${
               useRomanStyle ? "list-[lower-roman]" : "list-disc"
             }`}
           >
@@ -27,7 +27,7 @@ export default function SectionBlock({
           </ul>
         )}
 
-        {outro && <p className="mt-4 tracking-widest leading-loose">{outro}</p>}
+        {outro && <p className="tracking-widest leading-loose">{outro}</p>}
       </div>
     </div>
   );

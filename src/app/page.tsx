@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-y-12">
+    <main className="page-wrapper mt-0">
       <HeroSection />
       <DidYouKnowSection />
       <WhatIfSection />

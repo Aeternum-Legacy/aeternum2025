@@ -1,7 +1,7 @@
 "use client";
 
 import SectionBlock from "@/components/ui/SectionBlock";
-import { toId } from '@/lib/utils';
+import { toId } from "@/lib/utils";
 import LegalSectionTitle from "@/components/ui/LegalSectionTitle";
 import SectionLinkList from "@/components/ui/SectionLinkList";
 import Notification from "@/components/ui/Notification";
@@ -21,14 +21,9 @@ export default function CookiePolicyPage() {
             "By continuing to browse our site, you agree to the use of cookies as outlined in this policy.",
           ]}
         />
-      </div>
-
-      <div className="content-wrapper">
         <SectionLinkList sections={sections} toId={toId} />
-      </div>
 
-      <div className="section-wrapper">
-        <div className="content-wrapper flex flex-col gap-12">
+        <div className="content-wrapper gap-12 mt-12 text-left items-start">
           <SectionBlock
             id="what-are-cookies?"
             title="01 WHAT ARE COOKIES?"
@@ -45,13 +40,13 @@ export default function CookiePolicyPage() {
             ]}
             outro="If we introduce Non-Essential Cookies, we will update this page and ask for your consent before enabling them. Please check back regularly for any changes."
           />
-          <div className="border-t border-black my-12" />
-          <div className="flex justify-center items-center">
-            <Notification
-              title="Cookie Policy"
-              text="We use cookies to enhance your experience, analyze site traffic, and serve targeted content. (next line) By continuing to use this Website, you consent to the use of cookies in accordance with this Cookie Policy."
-            />
-          </div>
+        </div>
+        <div className="border-t border-black my-12" />
+        <div className="flex justify-center items-center">
+          <Notification
+            title="Cookie Policy"
+            text="We use cookies to enhance your experience, analyze site traffic, and serve targeted content. (next line) By continuing to use this Website, you consent to the use of cookies in accordance with this Cookie Policy."
+          />
         </div>
       </div>
     </section>

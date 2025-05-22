@@ -99,3 +99,40 @@ export interface LegacyFeatureCardProps {
   title: string;
   description: string;
 }
+
+// data/aboutContent.ts
+export const aboutContent = {
+  mission: {
+    title: "Our Mission",
+    headline: "Preserving Legacies, Connecting Generations",
+    body: `At Aeternum, our mission is to preserve legacies and connect generations through a secure, timeless digital platform. Aeternum empowers families to safeguard their memories, share their stories, and pass down their history, values, and wisdom. We strive to ensure that every person’s voice, love, and essence remain a beacon for their descendants — not just as memories, but as a lasting presence across time.`,
+  },
+  vision: {
+    title: "Our Vision",
+    headline: "Where Memories Live Forever",
+    body: `Our vision is a world where every family is prepared for the inevitable — where loss doesn’t mean disconnection, and every story, lesson, and memory lives on. We envision a future where families, across generations, remain bonded by love, wisdom, and the voices of those who came before them. In this world, farewells are softened by lasting presence, and no life fades into silence.`,
+  },
+  values: [
+    {
+      title: "Timeless Purpose",
+      body: `At Aeternum, we make decisions with the future in mind, striving to create lasting positive impacts that grow in value over time. We are committed to building something that improves the present, connects our past, and enriches the generations that follow. As time changes, so do we — learning, adapting, and evolving to ensure the choices we make today continue to bring meaningful benefits well into the future.`,
+    },
+    {
+      title: "Respect",
+      body: `Respect is a core value of Aeternum. We embrace the richness of diverse experiences, perspectives, and identities, and believe that respect is best shown in how we engage with one another — especially when our views differ. Through empathy, openness, and humility, we foster a culture where all voices are heard and valued.`,
+    },
+    {
+      title: "Family First",
+      body: `At Aeternum, we believe that family is at the heart of everything we do. Our Family First Policy provides employees with the flexibility and support to prioritize their families, recognizing that caring for loved ones, being present for life’s precious moments, and maintaining personal wellness are essential to a fulfilling life. By caring for our own families, we better understand how to care for the families we serve.`,
+    },
+    {
+      title: "Trust",
+      body: `We believe that trust is built through presence, support, and honesty. It serves as the foundation for strong relationships and underpins the way Aeternum operates. Our commitment to reliability and integrity ensures a secure and respectful environment for all.`,
+    },
+    {
+      title: "Security & Privacy",
+      body: `Security and privacy are not just obligations at Aeternum — they are responsibilities we take personally. We safeguard personal data and moderate content with the same care and vigilance we would expect for our own families. For us, it is not about meeting the minimum regulatory standards; it is about setting a new benchmark for how families should be safeguarded.`,
+    },
+  ],
+};
+

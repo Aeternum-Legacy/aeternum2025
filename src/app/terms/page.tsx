@@ -5,7 +5,7 @@ import Notification from "@/components/ui/Notification";
 import LegalSectionTitle from "@/components/ui/LegalSectionTitle";
 import Link from "next/link";
 import SectionLinkList from "@/components/ui/SectionLinkList";
-import { toId } from '@/lib/utils';
+import { toId } from "@/lib/utils";
 
 const lastUpdated = "May 14th, 2025";
 const sections = [
@@ -50,14 +50,8 @@ export default function TermsPage() {
             </>,
           ]}
         />
-      </div>
-
-      <div className="content-wrapper">
         <SectionLinkList sections={sections} toId={toId} />
-      </div>
-
-      <div className="section-wrapper">
-        <div className="content-wrapper flex flex-col gap-12">
+        <div className="content-wrapper gap-12 mt-12 text-left items-start">
           <SectionBlock
             id="introduction"
             title="01 INTRODUCTION"
@@ -348,14 +342,14 @@ export default function TermsPage() {
               </>
             }
           />
-          <div className="border-t border-black my-12" />
-          <div className="flex justify-center items-center">
-            <Notification
-              title="Terms & Conditions"
-              text="If any provision of these Terms is found to be unenforceable, the
+        </div>
+        <div className="border-t border-black my-12" />
+        <div className="flex justify-center items-center">
+          <Notification
+            title="Terms & Conditions"
+            text="If any provision of these Terms is found to be unenforceable, the
           remaining provisions will remain in effect."
-            />
-          </div>
+          />
         </div>
       </div>
     </section>
