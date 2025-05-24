@@ -2,7 +2,7 @@
 
 import Notification from "@/components/ui/Notification";
 import SectionBlock from "@/components/ui/SectionBlock";
-import { toId } from '@/lib/utils';
+import { toId } from "@/lib/utils";
 import LegalSectionTitle from "@/components/ui/LegalSectionTitle";
 import SectionLinkList from "@/components/ui/SectionLinkList";
 
@@ -18,7 +18,7 @@ const sections = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="page-wrapper text-center tracking-wide bg-pattern">
+    <section className="page-wrapper bg-pattern">
       <div className="section-wrapper">
         <LegalSectionTitle
           title="Privacy Policy"
@@ -28,14 +28,8 @@ export default function PrivacyPolicyPage() {
             "This Privacy Policy explains how we collect, use, and protect your personal information when you use our Website.",
           ]}
         />
-      </div>
-
-      <div className="content-wrapper">
         <SectionLinkList sections={sections} toId={toId} />
-      </div>
-
-      <div className="section-wrapper">
-        <div className="content-wrapper flex flex-col gap-12">
+        <div className="flex flex-col gap-12 mt-12 text-left items-start">
           <SectionBlock
             id="information-we-collect"
             title="01 INFORMATION WE COLLECT"
@@ -84,7 +78,18 @@ export default function PrivacyPolicyPage() {
               "Request a copy of your information.",
               "Withdraw consent for data processing.",
             ]}
-            outro='To exercise these rights, contact us at <a href="mailto:info@aeternumproject.com" className="underline font-medium">info@aeternumproject.com</a>.'
+            outro={
+              <span>
+                To exercise these rights, contact us at{" "}
+                <a
+                  href="mailto:info@aeternumproject.com"
+                  className="underline font-medium"
+                >
+                  info@aeternumproject.com
+                </a>
+                .
+              </span>
+            }
           />
 
           <SectionBlock
@@ -92,13 +97,13 @@ export default function PrivacyPolicyPage() {
             title="06 THIRD-PARTY LINKS"
             intro="Our Website may contain links to third-party websites. We are not responsible for their privacy policies or practices."
           />
-          <div className="border-t border-black my-12" />
-          <div className="flex justify-center items-center">
-            <Notification
-              title="Privacy Policy"
-              text="We may update this Privacy Policy at any time.  (next line) Changes will be posted on this page, and your continued use of the Website will indicate acceptance."
-            />
-          </div>
+        </div>
+        <div className="border-t border-black my-12" />
+        <div className="flex justify-center items-center">
+          <Notification
+            title="Privacy Policy"
+            text="We may update this Privacy Policy at any time.  (next line) Changes will be posted on this page, and your continued use of the Website will indicate acceptance."
+          />
         </div>
       </div>
     </section>

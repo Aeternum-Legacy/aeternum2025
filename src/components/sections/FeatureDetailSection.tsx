@@ -6,11 +6,12 @@ import LogoLabel from "../ui/LogoLabel";
 
 export default function FeatureDetailSection() {
   return (
-    <section className="section-wrapper">
+    <section className="section-wrapper gap-20 md:gap-42">
       <LogoLabel
         src="/icons/features.svg"
-        text="FEATURES"
         alt="Features Logo"
+        text="FEATURES"
+        className="md:-mb-18"
       />
       <PrivateFamilyConnection />
       <MemoryPreservationSection />

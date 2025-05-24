@@ -19,7 +19,7 @@ export default function LogoLabel({
   textClassName = "font-bold leading-relaxed tracking-[0.25em] text-[#186E68] text-xs md:text-sm",
 }: LogoLabelProps) {
   return (
-    <div className={`flex flex-col items-center gap-2 mb-10 ${className}`}>
+    <div className={`flex flex-col items-center gap-2 my-4 ${className}`}>
       <Image
         src={src}
         alt={alt}

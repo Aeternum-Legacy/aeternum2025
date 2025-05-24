@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
@@ -73,7 +74,6 @@ export const NavBody = ({
       duration: 0.5,
       ease: "easeInOut",
     }}
-    style={{ minWidth: "800px" }}
     className={cn(
       "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start bg-black text-white md:flex px-6 py-4",
       visible ? "rounded-none " : "rounded-full ",
