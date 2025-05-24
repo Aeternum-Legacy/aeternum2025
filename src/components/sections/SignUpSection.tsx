@@ -4,11 +4,14 @@ import Image from "next/image";
 import { Input } from "../ui/Input";
 import { useState } from "react";
 import { toast } from "sonner";
+
 declare global {
   interface Window {
     fbq: (...args: any[]) => void;
+    gtag: (...args: any[]) => void;
   }
 }
+
 export default function SignUpSection() {
   const [errors, setErrors] = useState({
     firstName: "",
@@ -68,8 +71,16 @@ export default function SignUpSection() {
 
       toast.success(data.message || "Successfully signed up!");
 
-      if (typeof window !== "undefined" && window.fbq) {
-        window.fbq("track", "CompleteRegistration");
+      if (typeof window !== "undefined") {
+        if (window.fbq) {
+          window.fbq("track", "CompleteRegistration");
+        }
+
+        if (window.gtag) {
+          window.gtag("event", "conversion", {
+            send_to: "AW-11453881245/abcDEFghiJKLmnopQRSt", // ← REPLACE this with the actual event label
+          });
+        }
       }
       form.reset();
       setErrors({ firstName: "", lastName: "", email: "", agree: "" });
@@ -81,7 +92,6 @@ export default function SignUpSection() {
   }
 
   return (
-
     <section
       className="-mt-12 lg:-mt-32 flex flex-col lg:flex-row"
       aria-labelledby="signup-heading"
