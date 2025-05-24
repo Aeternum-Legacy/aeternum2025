@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useMobileNav } from "@/context/MobileNavContext";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-import { Button } from "./MovingBorder"; 
+import { Button } from "./MovingBorder";
 
 export default function SignUpStickyButton() {
   const { isMobileMenuOpen } = useMobileNav();
@@ -15,14 +15,21 @@ export default function SignUpStickyButton() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const footer = document.querySelector("footer");
-      const button = document.getElementById("sticky-signup-btn");
-      if (!footer || !button) return;
+    const footer = document.querySelector("footer");
+    const button = document.getElementById("sticky-signup-btn");
+    const hero = document.getElementById("hero-mobile");
 
+    if (!footer || !button || !hero) return;
+
+    const handleScroll = () => {
       const footerRect = footer.getBoundingClientRect();
-      const isOverlapping = footerRect.top < window.innerHeight;
-      setIsVisible(!isOverlapping && !isMobileMenuOpen);
+      const heroRect = hero.getBoundingClientRect();
+
+      const isOverlappingFooter = footerRect.top < window.innerHeight;
+      const isHeroVisible =
+        heroRect.bottom > 0 && heroRect.top < window.innerHeight;
+
+      setIsVisible(!isOverlappingFooter && !isHeroVisible && !isMobileMenuOpen);
     };
 
     window.addEventListener("scroll", handleScroll);

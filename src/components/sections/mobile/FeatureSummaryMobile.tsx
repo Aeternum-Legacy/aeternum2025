@@ -25,7 +25,10 @@ export default function FeatureSummaryMobile() {
           ];
 
           return (
-            <article key={index} >
+            <article
+              key={index}
+              className="flex flex-col items-center text-center gap-2"
+            >
               <Image
                 src={feature.icon}
                 alt={`${feature.title} icon`}
