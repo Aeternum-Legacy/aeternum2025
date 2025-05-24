@@ -1,4 +1,3 @@
-//src/app/layout.tsx
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
@@ -53,7 +52,6 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* ✅ Google Tag for Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-11453881245"
           strategy="afterInteractive"

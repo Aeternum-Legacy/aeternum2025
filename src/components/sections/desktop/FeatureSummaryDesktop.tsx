@@ -31,9 +31,9 @@ export default function FeatureSummaryDesktop() {
     <section
       id="features"
       aria-labelledby="features-heading"
-      className="-mt-24 bg-[#F7F8EA] hidden md:flex items-center justify-center"
+      className="-mt-32 bg-[#F7F8EA] hidden md:flex items-center justify-center"
     >
-      <div className="content-wrapper">
+      <div className="section-wrapper">
         <LogoLabel
           src="/icons/aeternum-logo2.svg"
           alt="Aeternum logo"

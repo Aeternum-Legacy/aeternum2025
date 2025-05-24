@@ -81,11 +81,12 @@ export default function SignUpSection() {
   }
 
   return (
+
     <section
-      className="-mt-12 md:-mt-0 flex flex-col lg:flex-row"
+      className="-mt-12 lg:-mt-32 flex flex-col lg:flex-row"
       aria-labelledby="signup-heading"
     >
-      <div className="relative w-full lg:w-1/2 h-screen md:min-h-[700px] 2xl:min-h-[900px] bg-[url('/images/tree.png')] bg-cover bg-center flex flex-col items-center justify-center px-4 sm:px-20 py-16">
+      <div className="relative w-full h-auto min-h-[600px] lg:min-h-0 bg-[url('/images/tree.png')] bg-cover bg-center flex flex-col items-center justify-center px-4 sm:px-20 py-16 lg:px-0 ">
         <div className="section-wrapper">
           <div className="absolute inset-0 bg-white/70 lg:bg-white/70 z-10" />
 
@@ -135,9 +136,9 @@ export default function SignUpSection() {
 
       <div
         id="signup"
-        className="bg-[#F7F8EA] h-screen md:min-h-[700px] w-full  flex flex-col items-center justify-center"
+        className="bg-[#F7F8EA] w-full h-auto min-h-[600px] lg:min-h-0 flex flex-col items-center justify-center"
       >
-        <div className="section-wrapper">
+        <div className="section-wrapper h-full flex flex-col justify-center items-center">
           <Image
             src="/icons/aeternum-logo4.svg"
             alt="Aeternum Logo"

@@ -17,7 +17,7 @@ export default function LegacyFeatureCard({
         <Image src={icon} alt={`${title} icon`} width={32} height={32} />
       </div>
 
-      <div className="flex flex-col border border-[#8BA39C] rounded-xl bg-white p-5 pl-7">
+      <div className="flex flex-col border border-[#8BA39C] rounded-xl bg-white p-5 pl-8">
         <h3 className="font-semibold text-2xl md:text-xl text-black mb-2">
           {title}
         </h3>

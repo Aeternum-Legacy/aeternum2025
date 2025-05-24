@@ -16,7 +16,7 @@ export default function AboutDesktop() {
   }, []);
 
   return (
-    <section className="page-wrapper overflow-hidden hidden md:block">
+    <section className="page-wrapper overflow-hidden">
       <div className="relative w-full h-[500px] overflow-hidden">
         <motion.div
           initial={{ opacity: 1 }}
@@ -56,13 +56,13 @@ export default function AboutDesktop() {
           <img
             src="/icons/aeternum-logo.svg"
             alt="Aeternum Logo"
-            className="w-28 md:w-72 mt-4"
+            className="w-72 mt-4"
           />
         </motion.div>
       </div>
 
       <div className="section-wrapper relative">
-        <div className="content-wrapper grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start relative ">
           <div className="h-full">
             <p className="mb-2 w-fit pb-1">Our Mission</p>
             <div className="border-t-2 border-[#009688] w-full mb-4" />
@@ -99,7 +99,7 @@ export default function AboutDesktop() {
       </div>
 
       <div className="relative w-full h-auto">
-        <div className="relative w-full h-[320px] md:h-[500px] lg:h-[1000px] group">
+        <div className="relative w-full h-[500px] lg:h-[1000px] group">
           <video
             className="w-full h-full object-cover"
             src="/videos/website_banner.mp4"
@@ -147,7 +147,7 @@ export default function AboutDesktop() {
           text="VALUES"
         />
 
-        <div className="grid md:grid-cols-2 content-wrapper grid-wrapper">
+        <div className="grid grid-cols-2 grid-wrapper">
           <div>
             <div className=" w-full mb-4">
               <h5 className="font-bold ">Timeless Purpose</h5>

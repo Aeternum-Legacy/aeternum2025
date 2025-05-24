@@ -26,9 +26,7 @@ const facts = [
 export default function DidYouKnowDesktop() {
   return (
     <section className="section-wrapper hidden md:flex">
-      <div></div>
-      {/* Top label */}
-      <div className="flex items-center justify-center gap-2 mb-6">
+      <div className="flex items-center justify-center gap-2">
         <img
           src="/icons/arrow-right.svg"
           alt="Right arrow icon indicating insight"
@@ -50,7 +48,7 @@ export default function DidYouKnowDesktop() {
               viewport={{ once: true }}
               className="flex flex-col gap-y-4 bg-[#FCFCF9] rounded-xl shadow-[0px_8px_10px_-2px_rgba(0,_0,_0,_0.35)] px-7 py-5 text-left "
             >
-              <div className="h-[10px] lg:h-[40px]" />
+              <div className="hidden lg:block h-[10px] lg:h-[40px]" />
 
               <h2 className="flex items-center justify-start text-black font-semibold leading-none">
                 {fact.title}

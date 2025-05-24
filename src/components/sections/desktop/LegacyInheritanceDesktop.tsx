@@ -2,33 +2,24 @@
 
 import Image from "next/image";
 import LegacyFeatureCard from "../../ui/LegacyFeatureCard";
+import { legacyFeatures } from "@/lib/facts";
 
 export default function LegacyInheritanceDesktop() {
-  const legacyFeatures = [
-    {
-      icon: "/icons/inheritance2.svg",
-      title: "Digital Inheritance",
-      description:
-        "Designate loved ones as inheritors of your digital legacy, ensuring your story, values, and wisdom will remain accessible to those that come after.",
-    },
-    {
-      icon: "/icons/legacy-pin.svg",
-      title: "Unfold Your Legacy",
-      description:
-        "Capture the essence of a life well-lived with a personal profile showcasing milestones, passions, achievements, and the tapestry of memories you preserved.",
-    },
-    {
-      icon: "/icons/message.svg",
-      title: "Legacy Messages",
-      description: `"I'm sorry I can't be there with you, but remember that I will always love you." — Ensure your words, love, and wisdom reach your loved ones at just the right moment, even after you are gone.`,
-    },
-  ];
-
   return (
     <section
-      className="hidden md:block content-wrapper"
+      className="hidden md:flex flex-col gap-10"
       aria-labelledby="legacy-inheritance-heading"
     >
+      <div className="flex lg:hidden justify-center px-4">
+        <div className="relative w-full max-w-[620px] h-[500px]">
+          <Image
+            src="/images/legacy-inheritance.png"
+            alt="Illustration of a digital legacy being preserved"
+            fill
+            className="object-contain"
+          />
+        </div>
+      </div>
       <div className="grid lg:grid-cols-2 gap-12 xl:gap-16">
         <div className="flex flex-col items-center justify-center text-center gap-10 px-8 xl:px-0">
           <h2 id="legacy-inheritance-heading" className="text-center">

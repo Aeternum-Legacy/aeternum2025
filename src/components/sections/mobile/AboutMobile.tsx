@@ -63,7 +63,7 @@ export default function AboutMobile() {
 
       <div className="section-wrapper">
         <div className="grid-wrapper grid-cols-1">
-          <div className="content-wrapper">
+          <div>
             <p className="w-full border-b-2 border-[#009688] pb-2">
               {aboutContent.mission.title}
             </p>
@@ -73,7 +73,7 @@ export default function AboutMobile() {
             </p>
           </div>
 
-          <div className="content-wrapper">
+          <div>
             <p className="w-full border-b-2 border-[#009688]">
               {aboutContent.vision.title}
             </p>
@@ -134,7 +134,7 @@ export default function AboutMobile() {
           text="VALUES"
         />
 
-        <div className="grid content-wrapper grid-wrapper">
+        <div className="grid grid-wrapper">
           {aboutContent.values.map((value, index) => (
             <div key={index}>
               <div className="w-full mb-4">

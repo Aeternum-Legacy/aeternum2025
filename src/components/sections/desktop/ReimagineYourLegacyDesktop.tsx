@@ -27,28 +27,30 @@ export default function ReimagineYourLegacyDesktop() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         WebkitMaskImage: "linear-gradient(to top, black 90%, transparent)",
-        maskImage: "linear-gradient(to top, black 90%, transparent)",
+        maskImage: "linear-gradient(to top, black 85%, transparent)",
       }}
     >
-      <div className="content-wrapper pb-96">
+      <div className="section-wrapper pt-18 pb-82">
         <h1 id="reimagine-heading" className="font-bold">
           Reimagine Your Legacy
         </h1>
 
-        <div className="pt-16">
-          <h3 className="mt-7 leading-relaxed text-center">
+        <div className="pt-16 ">
+          <h3 className="leading-relaxed text-center">
             Aeternum offers a <AnimatedWord word="private" /> digital space to{" "}
-            <br />
+            <br className="hidden lg:block" />
             <AnimatedWord word="connect" /> families,{" "}
-            <AnimatedWord word="share" /> cherished memories, <br />
-            and <AnimatedWord word="deliver" /> loving messages, <br />
+            <AnimatedWord word="share" /> cherished memories,{" "}
+            <br className="hidden lg:block" />
+            and <AnimatedWord word="deliver" /> loving messages,{" "}
+            <br className="hidden lg:block" />
             <AnimatedWord word="even after our passing." />
           </h3>
         </div>
-        <div>
+        <div className="pt-16">
           <ShinyButton
             onClick={handleClick}
-            buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300"
+            buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300 w-52"
             textClassName="text-white"
           >
             Join Early Access

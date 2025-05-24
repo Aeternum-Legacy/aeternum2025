@@ -13,19 +13,19 @@ export default function LegalSectionTitle({
 }: LegalSectionTitleProps) {
   return (
     <>
-      <div className="content-wrapper">
+      <div >
         <h1>{title}</h1>
         <small>
           Last Updated: <span className="font-semibold">{lastUpdated}</span>
         </small>
       </div>
-      <p className="text-[#4F4949] md:mt-11">
+      <small className="text-[#4F4949]">
         {paragraphs.map((text, i) => (
           <span key={i} className="block">
             {text}
           </span>
         ))}
-      </p>
+      </small>
     </>
   );
 }

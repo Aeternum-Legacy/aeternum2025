@@ -1,33 +1,8 @@
 "use client";
 
+import { PFCFeatures } from '@/lib/facts';
 import Image from "next/image";
 
-const features = [
-  {
-    title: "Private Connection",
-    desc: "Stay close to your family in a private, ad-free space to share memories, exchange messages, and celebrate life’s moments together.",
-    icon: "/icons/private-connection.svg",
-    iconSize: 45,
-  },
-  {
-    title: "Collaborative Storytelling",
-    desc: "Build living legacies together by contributing memories, sharing stories, and even recreating the profiles of loved ones who are no longer with us.",
-    icon: "/icons/collaborative-storytelling.svg",
-    iconSize: 35,
-  },
-  {
-    title: "Personal Family Tree",
-    desc: "Explore your lineage through a beautifully crafted visual map of your family’s connections, bringing generations together in one timeless space.",
-    icon: "/icons/personal-family-tree.svg",
-    iconSize: 40,
-  },
-  {
-    title: "Curated Profiles",
-    desc: "Create lasting profiles for children, seniors, and pets, with memories thoughtfully preserved to be gifted when they come of age or to honor a life well lived.",
-    icon: "/icons/curated-profiles.svg",
-    iconSize: 35,
-  },
-];
 
 export default function PrivateFamilyConnectionDesktop() {
   return (
@@ -63,7 +38,7 @@ export default function PrivateFamilyConnectionDesktop() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 mt-10 justify-items-center">
-          {features.map((feature, index) => (
+          {PFCFeatures.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}
         </div>

@@ -51,7 +51,7 @@ export default function TermsPage() {
           ]}
         />
         <SectionLinkList sections={sections} toId={toId} />
-        <div className="content-wrapper gap-12 mt-12 text-left items-start">
+        <div className="flex flex-col gap-12 mt-12 text-left items-start">
           <SectionBlock
             id="introduction"
             title="01 INTRODUCTION"

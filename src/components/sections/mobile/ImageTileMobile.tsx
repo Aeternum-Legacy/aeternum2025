@@ -22,11 +22,11 @@ export default function ImageTileMobile() {
     "image-tile3.jpg",
   ];
 
-  const repeat = (arr: string[]) => [...arr, ...arr]; // repeat for infinite scroll
+  const repeat = (arr: string[]) => [...arr, ...arr]; 
 
   return (
     <>
-      <section className="section-wrapper md:hidden gap-y-2">
+      <section className="section-wrapper lg:hidden gap-y-2">
         <h1 className="leading-tighter tracking-tight text-left">
           <span className="block">Do not let</span>
           <span className="block">memories fade</span>
@@ -52,12 +52,11 @@ export default function ImageTileMobile() {
           begin preserving them today.
         </p>
       </section>
-      <div className="relative overflow-x-hidden w-full -mt-12">
+      <div className="lg:hidden relative overflow-x-hidden w-full -mt-12">
         <div className="w-[120%]">
-          <div className="relative overflow-x-hidden w-full md:-mt-18">
+          <div className="relative overflow-x-hidden w-full">
             <div className="w-[120%]">
-              <div className="block md:hidden overflow-hidden space-y-2">
-                {/* Row 1 */}
+              <div className="block lg:hidden overflow-hidden space-y-2">
                 <motion.div
                   className="flex w-max gap-1"
                   animate={{ x: ["0%", "-50%"] }}
@@ -82,10 +81,10 @@ export default function ImageTileMobile() {
                   ))}
                 </motion.div>
 
-                {/* Row 2 (slightly different speed/direction for variation) */}
+              
                 <motion.div
                   className="flex w-max gap-1"
-                  animate={{ x: ["-50%", "0%"] }} // opposite direction
+                  animate={{ x: ["-50%", "0%"] }} 
                   transition={{
                     duration: 30,
                     repeat: Infinity,

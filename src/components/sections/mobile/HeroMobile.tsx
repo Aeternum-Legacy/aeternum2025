@@ -32,7 +32,6 @@ export default function HeroMobile() {
           </div>
         </div>
 
-        {/* Call to Action Button */}
         <div className="absolute bottom-10 left-0 w-full px-6">
           <ShinyButton
             onClick={() =>

@@ -19,7 +19,7 @@ export default function SectionLinkList({
   }, []);
 
   return (
-    <div className="content-wrapper">
+    <div>
       <div className="border-t border-black" />
       {sections.map((title, index) => {
         const id = toId(title);

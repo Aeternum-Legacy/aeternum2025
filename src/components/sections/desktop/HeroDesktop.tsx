@@ -7,27 +7,26 @@ export default function HeroDesktop() {
     <section
       id="hero"
       aria-label="Hero introduction"
-      className="hidden md:flex page-wrapper items-center text-center  flex-col overflow-x-hidden pb-10"
+      className="hidden md:flex items-center text-center overflow-x-hidden page-wrapper"
     >
-      <div className="content-wrapper text-center gap-y-2">
+      <div className="section-wrapper gap-y-2">
         <h1 className="sr-only">How will you be remembered?</h1>
         <FadeInText
           text={"How will you be remembered?"}
-          className="tracking-normal text-black mb-4"
+          className="tracking-normal text-black"
           duration={4}
         />
 
         <div className="text-[#738483]">
-          {/* Below h5 are properly centered */}
-          <h5 className="leading-tight tracking-normal">Words left unspoken</h5>
-          <h5 className="leading-tight tracking-normal">
+          <h6 className="leading-tight tracking-normal">Words left unspoken</h6>
+          <h6 className="leading-tight tracking-normal">
             Memories left forgotten
-          </h5>
-          <h5 className="leading-tight tracking-normal">Stories left untold</h5>
+          </h6>
+          <h6 className="leading-tight tracking-normal">Stories left untold</h6>
         </div>
       </div>
 
-      <div className="-mt-56 overflow-x-visible">
+      <div className="-mt-52 overflow-x-visible pb-10">
         <div className="relative left-1/2 -translate-x-1/2 w-[110vw] grid grid-cols-5 gap-x-5">
           <div className="flex justify-center items-start">
             <TiltImageWrapper className="relative w-full aspect-[15/9] mt-7">

@@ -100,7 +100,6 @@ export interface LegacyFeatureCardProps {
   description: string;
 }
 
-// data/aboutContent.ts
 export const aboutContent = {
   mission: {
     title: "Our Mission",

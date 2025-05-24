@@ -23,7 +23,7 @@ export default function CookiePolicyPage() {
         />
         <SectionLinkList sections={sections} toId={toId} />
 
-        <div className="content-wrapper gap-12 mt-12 text-left items-start">
+        <div className="flex flex-col gap-12 mt-12 text-left items-start">
           <SectionBlock
             id="what-are-cookies?"
             title="01 WHAT ARE COOKIES?"
