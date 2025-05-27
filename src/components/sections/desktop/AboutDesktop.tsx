@@ -16,7 +16,7 @@ export default function AboutDesktop() {
   }, []);
 
   return (
-    <section className="page-wrapper overflow-hidden">
+    <section className="page-wrapper overflow-hidden hidden md:block">
       <div className="relative w-full h-[500px] overflow-hidden">
         <motion.div
           initial={{ opacity: 1 }}
