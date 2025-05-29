@@ -1,3 +1,5 @@
+//src/app/not-found.tsx
+
 import Image from "next/image";
 import { LinkPreview } from "@/components/ui/LinkPreview";
 import { Metadata } from "next";
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <section className="page-wrapper relative overflow-hidden">
+    <section className="page-wrapper relative overflow-hidden bg-pattern my-40">
       <div className="section-wrapper flex flex-col items-center justify-center text-center min-h-[70vh]">
         <div className="absolute inset-0 flex items-center justify-center z-0">
           <Image
