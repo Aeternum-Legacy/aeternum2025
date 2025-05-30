@@ -1,7 +1,7 @@
 import { SESv2Client, SendEmailCommand } from "@aws-sdk/client-sesv2";
 import { NextResponse } from "next/server";
 import { db } from "@/db";
-import { signupsTable } from "@/schema"; 
+import { signupsTable } from "@/schema";
 
 const sesv2 = new SESv2Client({
   region: process.env.AWS_REGION,
@@ -65,7 +65,7 @@ export async function POST(req: Request) {
             }),
           },
         },
-        FromEmailAddress: "selina.park@aeternumproject.com",
+        FromEmailAddress: "info@aeternumproject.com",
       });
 
       await sesv2.send(command);
