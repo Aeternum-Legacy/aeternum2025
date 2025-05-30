@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white px-4 py-6 mt-16 md:mt-20">
+    <footer className="bg-black text-white px-4 py-6">
       <div className="flex justify-center mb-6">
         <Image
           src="/icons/Aeternum_logo_TM_white.svg"

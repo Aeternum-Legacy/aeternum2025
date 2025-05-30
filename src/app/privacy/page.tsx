@@ -19,7 +19,7 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <section className="page-wrapper bg-pattern">
-      <div className="section-wrapper">
+      <div className="section-wrapper hero-wrapper">
         <LegalSectionTitle
           title="Privacy Policy"
           lastUpdated={lastUpdated}

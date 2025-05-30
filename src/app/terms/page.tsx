@@ -27,7 +27,7 @@ const sections = [
 export default function TermsPage() {
   return (
     <section className="page-wrapper bg-pattern">
-      <div className="section-wrapper">
+      <div className="section-wrapper hero-wrapper">
         <LegalSectionTitle
           title="Terms & Conditions"
           lastUpdated={lastUpdated}

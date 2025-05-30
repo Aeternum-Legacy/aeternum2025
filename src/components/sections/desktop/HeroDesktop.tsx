@@ -7,9 +7,9 @@ export default function HeroDesktop() {
     <section
       id="hero"
       aria-label="Hero introduction"
-      className="hidden md:flex items-center text-center overflow-x-hidden page-wrapper"
+      className="hidden md:flex items-center text-center overflow-x-hidden hero-wrapper"
     >
-      <div className="section-wrapper gap-y-2">
+      <div className="gap-y-2">
         <h1 className="sr-only">How will you be remembered?</h1>
         <FadeInText
           text={"How will you be remembered?"}
@@ -26,7 +26,7 @@ export default function HeroDesktop() {
         </div>
       </div>
 
-      <div className="-mt-52 overflow-x-visible pb-10">
+      <div className="-mt-16 overflow-x-visible pb-10">
         <div className="relative left-1/2 -translate-x-1/2 w-[110vw] grid grid-cols-5 gap-x-5">
           <div className="flex justify-center items-start">
             <TiltImageWrapper className="relative w-full aspect-[15/9] mt-7">
