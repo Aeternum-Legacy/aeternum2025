@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const companyEmail = "selina.park@aeternumproject.com";
+  const companyEmail = "info@aeternumproject.com";
 
   const sendToCompany = new SendEmailCommand({
     FromEmailAddress: companyEmail,
