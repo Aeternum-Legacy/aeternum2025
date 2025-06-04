@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
-import { Input } from "@/components/ui/Input";
+import { Input } from "@/components/ui/InputCustom";
 import { useState } from "react";
 import { toast } from "sonner";
 
