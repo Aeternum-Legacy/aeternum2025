@@ -316,3 +316,23 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes strike-through {
+  from {
+    background-size: 0% 1px;
+  }
+  to {
+    background-size: 100% 1px;
+  }
+}
+
+.animate-strike-through {
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(to right, #6b7280 100%);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 0% 1px;
+  animation: strike-through 1s ease forwards;
+  animation-delay: 0.4s;
+}

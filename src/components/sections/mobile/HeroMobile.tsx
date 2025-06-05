@@ -6,7 +6,7 @@ import { ShinyButton } from "../../ui/ShinyButton";
 export default function HeroMobile() {
   return (
     <section
-      id="hero"
+      id="hero-mobile"
       aria-label="Hero introduction"
       className="flex md:hidden flex-col items-center text-center overflow-x-hidden"
     >

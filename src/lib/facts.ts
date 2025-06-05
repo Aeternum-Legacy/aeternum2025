@@ -135,6 +135,8 @@ export const aboutContent = {
   ],
 };
 
+// src/lib/facts.ts
+
 export const featuresForAll = [
   "Private Family Connection",
   "Collaborative Storytelling",
@@ -210,8 +212,9 @@ export const tabs = [
 export const pricingPlans = [
   {
     name: "Basic",
-    price: "$0",
-    subtext: "per month / user",
+    monthlyPrice: "$0",
+    yearlyPrice: "$0",
+    subtext: "per user",
     description: "Perfect for getting started.",
     note: "... Pass down your legacy with a Digital Inheritor and enjoy an ad-free experience..",
     bgPattern: "/patterns/Basic.svg",
@@ -225,8 +228,9 @@ export const pricingPlans = [
   },
   {
     name: "Premium",
-    price: "$2.99",
-    subtext: "per month / user",
+    monthlyPrice: "$2.99",
+    yearlyPrice: "$28.69", // updated
+    subtext: "per user",
     description: "More space, more memories.",
     note: "Share your plan with the family, and record Legacy Messages for the future.",
     bgPattern: "/patterns/Premium.svg",
@@ -240,10 +244,11 @@ export const pricingPlans = [
   },
   {
     name: "Legacy",
-    price: "$9.99",
-    subtext: "per month / user",
+    monthlyPrice: "$9.99",
+    yearlyPrice: "$95.89", // updated
+    subtext: "per user",
     description: "Ultimate preservation for your family’s legacy.",
-    note: "With a massive 2TB of storage, multi-user access, and all premium features, this plan ensures your stories are securely passed down through generations. Designed for those who want to safeguard their family’s history in the most comprehensive way.",
+    note: "With a massive 2TB of storage, multi-user access, and all premium features...",
     bgPattern: "/patterns/Legacy.svg",
     featuresHeader: "Ultimate digital legacy protection",
     features: [

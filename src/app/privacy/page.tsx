@@ -1,3 +1,5 @@
+//src/app/privacy/page.tsx
+
 "use client";
 
 import Notification from "@/components/ui/Notification";
@@ -19,7 +21,7 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <section className="page-wrapper bg-pattern">
-      <div className="section-wrapper hero-wrapper">
+      <div className="section-wrapper pt-16 md:pt-20">
         <LegalSectionTitle
           title="Privacy Policy"
           lastUpdated={lastUpdated}

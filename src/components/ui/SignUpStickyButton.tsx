@@ -29,13 +29,30 @@ export default function SignUpStickyButton() {
       const isHeroVisible =
         heroRect.bottom > 0 && heroRect.top < window.innerHeight;
 
-      setIsVisible(!isOverlappingFooter && !isHeroVisible && !isMobileMenuOpen);
+      const newVisible =
+        !isOverlappingFooter && !isHeroVisible && !isMobileMenuOpen;
+
+      setIsVisible(newVisible);
+
+      console.log("🔵 Footer:", isOverlappingFooter);
+      console.log("🟣 Hero:", isHeroVisible);
+      console.log("🟠 Mobile Nav Open:", isMobileMenuOpen);
+      console.log("🟢 Final Visible:", newVisible);
     };
 
+    // scroll listener
     window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    handleScroll(); // run on mount
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    // ✅ run again when mobile nav state changes
+    const timeout = setTimeout(() => {
+      handleScroll();
+    }, 100); // short delay to allow DOM updates
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeout);
+    };
   }, [isMobileMenuOpen]);
 
   const handleClick = () => {
