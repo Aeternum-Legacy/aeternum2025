@@ -6,9 +6,9 @@ import { ShinyButton } from "../../ui/ShinyButton";
 export default function HeroMobile() {
   return (
     <section
-      id="hero"
+      id="hero-mobile"
       aria-label="Hero introduction"
-      className="flex flex-col items-center text-center overflow-x-hidden"
+      className="flex md:hidden flex-col items-center text-center overflow-x-hidden"
     >
       <div className="relative block md:hidden h-[100dvh] w-screen bg-[url('/images/Image5.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden mt-0">
         <div className="flex flex-col min-h-screen items-center justify-start px-4 text-center pt-[20vh]">

@@ -1,3 +1,5 @@
+//src/app.cookie-policy/page.tsx
+
 "use client";
 
 import SectionBlock from "@/components/ui/SectionBlock";
@@ -12,7 +14,7 @@ const sections = ["What Are Cookies?", "Types of Cookies We Use"];
 export default function CookiePolicyPage() {
   return (
     <section className="page-wrapper bg-pattern">
-      <div className="section-wrapper">
+      <div className="section-wrapper pt-16 md:pt-20">
         <LegalSectionTitle
           title="Cookie Policy"
           lastUpdated={lastUpdated}
@@ -21,6 +23,7 @@ export default function CookiePolicyPage() {
             "By continuing to browse our site, you agree to the use of cookies as outlined in this policy.",
           ]}
         />
+
         <SectionLinkList sections={sections} toId={toId} />
 
         <div className="flex flex-col gap-12 mt-12 text-left items-start">

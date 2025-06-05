@@ -135,3 +135,127 @@ export const aboutContent = {
   ],
 };
 
+// src/lib/facts.ts
+
+export const featuresForAll = [
+  "Private Family Connection",
+  "Collaborative Storytelling",
+  "Personal Family Tree",
+  "Memory Storage and Management",
+  "Family Circles Sharing System",
+  "Curated Profiles",
+];
+
+export const featureComparisonByTier = {
+  Basic: {
+    color: "#FBFCF8",
+    features: {
+      "Monthly Price": "Free",
+      "Annual Price": "Free",
+      "Data Storage Capacity": "5 GB",
+      "Shared Plan": "x",
+      "Digital Inheritors": "check",
+      "Automated Digital Inheritance System": "x",
+      "Legacy Messages": "check",
+      "Ad-Free Private Family Connection": "check",
+      "Personal Family Tree": "check",
+      "Family Circle Sharing System": "check",
+      "Collaborative Storytelling": "check",
+      "Memory Storage and Management": "check",
+      "Curated Profiles": "check",
+    },
+  },
+  Premium: {
+    color: "#F8F9F4",
+    features: {
+      "Monthly Price": "$2.99",
+      "Annual Price": "$28.99",
+      "Data Storage Capacity": "100 GB",
+      "Shared Plan": "Multiple Users",
+      "Digital Inheritors": "x",
+      "Automated Digital Inheritance System": "check",
+      "Legacy Messages": "Enhanced",
+      "Ad-Free Private Family Connection": "check",
+      "Personal Family Tree": "check",
+      "Family Circle Sharing System": "check",
+      "Collaborative Storytelling": "check",
+      "Memory Storage and Management": "check",
+      "Curated Profiles": "check",
+    },
+  },
+  Legacy: {
+    color: "#EEF0EC",
+    features: {
+      "Monthly Price": "$9.99",
+      "Annual Price": "$95.99",
+      "Data Storage Capacity": "2 TB",
+      "Shared Plan": "Multiple Users",
+      "Digital Inheritors": "x",
+      "Automated Digital Inheritance System": "check",
+      "Legacy Messages": "Enhanced",
+      "Ad-Free Private Family Connection": "check",
+      "Personal Family Tree": "check",
+      "Family Circle Sharing System": "check",
+      "Collaborative Storytelling": "check",
+      "Memory Storage and Management": "check",
+      "Curated Profiles": "check",
+    },
+  },
+};
+
+export const tabs = [
+  { name: "Yearly (-20%)", value: "yearly", content: "Yearly content" },
+  { name: "Monthly", value: "monthly", content: "Monthly content" },
+  { name: "Addon LPP", value: "addon", content: "Addon LPP content" },
+];
+
+export const pricingPlans = [
+  {
+    name: "Basic",
+    monthlyPrice: "$0",
+    yearlyPrice: "$0",
+    subtext: "per user",
+    description: "Perfect for getting started.",
+    note: "... Pass down your legacy with a Digital Inheritor and enjoy an ad-free experience..",
+    bgPattern: "/patterns/Basic.svg",
+    featuresHeader: "Free, for everyone",
+    features: [
+      "Free",
+      "5 GB Data Storage Capacity",
+      "Designated Digital Inheritor",
+      "Legacy Messages",
+    ],
+  },
+  {
+    name: "Premium",
+    monthlyPrice: "$2.99",
+    yearlyPrice: "$28.69", // updated
+    subtext: "per user",
+    description: "More space, more memories.",
+    note: "Share your plan with the family, and record Legacy Messages for the future.",
+    bgPattern: "/patterns/Premium.svg",
+    featuresHeader: "A step up in preservation",
+    features: [
+      "100 GB Data Storage Capacity",
+      "Multiple Users",
+      "Automated Digital Inheritance System",
+      "Enhanced Legacy Messages",
+    ],
+  },
+  {
+    name: "Legacy",
+    monthlyPrice: "$9.99",
+    yearlyPrice: "$95.89", // updated
+    subtext: "per user",
+    description: "Ultimate preservation for your family’s legacy.",
+    note: "With a massive 2TB of storage, multi-user access, and all premium features...",
+    bgPattern: "/patterns/Legacy.svg",
+    featuresHeader: "Ultimate digital legacy protection",
+    features: [
+      "2 TB Data Storage Capacity",
+      "Multiple Users",
+      "Automated Digital Inheritance System",
+      "Enhanced Legacy Messages",
+    ],
+  },
+];

@@ -1,58 +1,21 @@
-"use client";
+import * as React from "react"
 
+import { cn } from "@/lib/utils"
 
-import * as React from "react";
-import { cn } from "@/lib/utils";
-import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
+function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+  return (
+    <input
+      type={type}
+      data-slot="input"
+      className={cn(
+        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+        className
+      )}
+      {...props}
+    />
+  )
+}
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
-
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
-    const radius = 100;
-    const [visible, setVisible] = React.useState(false);
-
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
-    function handleMouseMove({ currentTarget, clientX, clientY }: any) {
-      const { left, top } = currentTarget.getBoundingClientRect();
-      mouseX.set(clientX - left);
-      mouseY.set(clientY - top);
-    }
-
-    return (
-      <motion.div
-        style={{
-          background: useMotionTemplate`
-            radial-gradient(
-              ${
-                visible ? radius + "px" : "0px"
-              } circle at ${mouseX}px ${mouseY}px,
-              #186E68,
-              transparent 80%
-            )
-          `,
-        }}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={() => setVisible(true)}
-        onMouseLeave={() => setVisible(false)}
-        className="group/input rounded-lg p-[2px] transition duration-300"
-      >
-        <input
-          type={type}
-          className={cn(
-            "border border-black p-3 pt-5 rounded-md w-full text-sm text-black dark:text-white bg-white dark:bg-zinc-800 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 hover:border-transparent",
-            className
-          )}
-          ref={ref}
-          {...props}
-        />
-      </motion.div>
-    );
-  }
-);
-Input.displayName = "Input";
-
-export { Input };
+export { Input }

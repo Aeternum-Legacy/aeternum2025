@@ -20,7 +20,7 @@ export default function ReimagineYourLegacyDesktop() {
     <section
       id="reimagine"
       aria-labelledby="reimagine-heading"
-      className="overflow-hidden hidden md:flex justify-center items-center"
+      className="overflow-hidden hidden md:flex justify-center items-center w-full"
       style={{
         backgroundImage: "url('/images/mom&daughter.png')",
         backgroundSize: "cover",
@@ -30,31 +30,34 @@ export default function ReimagineYourLegacyDesktop() {
         maskImage: "linear-gradient(to top, black 85%, transparent)",
       }}
     >
-      <div className="section-wrapper pt-18 pb-82">
-        <h1 id="reimagine-heading" className="font-bold">
-          Reimagine Your Legacy
-        </h1>
+      <div className="w-full pt-18 pb-82">
+        <div className="section-wrapper">
+          <h1 id="reimagine-heading" className="font-bold">
+            Reimagine Your Legacy
+          </h1>
 
-        <div className="pt-16 ">
-          <h3 className="leading-relaxed text-center">
-            Aeternum offers a <AnimatedWord word="private" /> digital space to{" "}
-            <br className="hidden lg:block" />
-            <AnimatedWord word="connect" /> families,{" "}
-            <AnimatedWord word="share" /> cherished memories,{" "}
-            <br className="hidden lg:block" />
-            and <AnimatedWord word="deliver" /> loving messages,{" "}
-            <br className="hidden lg:block" />
-            <AnimatedWord word="even after our passing." />
-          </h3>
-        </div>
-        <div className="pt-16">
-          <ShinyButton
-            onClick={handleClick}
-            buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300 w-52"
-            textClassName="text-white"
-          >
-            Join Early Access
-          </ShinyButton>
+          <div className="pt-16">
+            <h3 className="leading-relaxed text-center">
+              Aeternum offers a <AnimatedWord word="private" /> digital space to{" "}
+              <br className="hidden lg:block" />
+              <AnimatedWord word="connect" /> families,{" "}
+              <AnimatedWord word="share" /> cherished memories,{" "}
+              <br className="hidden lg:block" />
+              and <AnimatedWord word="deliver" /> loving messages,{" "}
+              <br className="hidden lg:block" />
+              <AnimatedWord word="even after our passing." />
+            </h3>
+          </div>
+
+          <div className="pt-16">
+            <ShinyButton
+              onClick={handleClick}
+              buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300 w-52"
+              textClassName="text-white"
+            >
+              Join Early Access
+            </ShinyButton>
+          </div>
         </div>
       </div>
     </section>

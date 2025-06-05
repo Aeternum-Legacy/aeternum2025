@@ -59,8 +59,6 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -98,6 +96,8 @@
 
   --btn-outline: #bfbfb2; /* neutral gray */
   --btn-outline-hover: #ececec;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
 }
 
 .dark {
@@ -142,6 +142,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* src/app/globals.css */
 @layer base {
   h1 {
     @apply text-[2.35rem] sm:text-[2.85rem] md:text-[3.515rem] lg:text-[4.209rem] xl:text-[4.75rem] 2xl:text-[5.25rem] tracking-wide leading-tight;
@@ -184,16 +185,16 @@
   }
 
   .page-wrapper {
-    @apply flex flex-col gap-y-12 md:gap-y-32 mt-16 md:mt-20;
+    @apply flex flex-col gap-y-12 md:gap-y-32 my-16 md:my-20 items-center justify-center;
   }
 
   .section-wrapper {
     @apply max-w-screen-xl flex flex-col py-6 px-6 lg:px-8 w-full mx-auto gap-6 text-center;
   }
 
-  /* .content-wrapper {
-    @apply flex flex-col items-center text-center gap-2;
-  } */
+  .hero-wrapper {
+    @apply flex flex-col pt-16 md:pt-20 items-center justify-center text-center;
+  }
 
   .grid-wrapper {
     @apply grid gap-10 xl:gap-14;
@@ -305,4 +306,33 @@ html {
 .teal-brand-color {
   background-color: #186e68;
   color: white;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes strike-through {
+  from {
+    background-size: 0% 1px;
+  }
+  to {
+    background-size: 100% 1px;
+  }
+}
+
+.animate-strike-through {
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(to right, #6b7280 100%);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 0% 1px;
+  animation: strike-through 1s ease forwards;
+  animation-delay: 0.4s;
 }

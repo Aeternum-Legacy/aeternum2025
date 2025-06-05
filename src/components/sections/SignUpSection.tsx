@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Input } from "../ui/Input";
+import { Input } from "../ui/InputCustom";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -78,7 +78,7 @@ export default function SignUpSection() {
 
         if (window.gtag) {
           window.gtag("event", "conversion", {
-            send_to: "AW-11453881245/abcDEFghiJKLmnopQRSt", // ← REPLACE this with the actual event label
+            send_to: process.env.NEXT_PUBLIC_GTAG_EVENT!,
           });
         }
       }
@@ -93,13 +93,12 @@ export default function SignUpSection() {
 
   return (
     <section
-      className="-mt-12 lg:-mt-32 flex flex-col lg:flex-row"
+      className="-mt-12 lg:-mt-32 flex flex-col lg:flex-row w-full"
       aria-labelledby="signup-heading"
     >
       <div className="relative w-full h-auto min-h-[600px] lg:min-h-0 bg-[url('/images/tree.png')] bg-cover bg-center flex flex-col items-center justify-center px-4 sm:px-20 py-16 lg:px-0 ">
-        <div className="section-wrapper">
-          <div className="absolute inset-0 bg-white/70 lg:bg-white/70 z-10" />
-
+        <div className="absolute inset-0 bg-white/70 z-10" />
+        <div className="section-wrapper relative z-10 flex items-center justify-center min-h-full px-4">
           <header className="relative z-20 px-2 sm:px-6 text-black text-center max-w-xl">
             <h4
               id="signup-heading"

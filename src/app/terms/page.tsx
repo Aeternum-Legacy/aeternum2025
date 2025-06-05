@@ -1,3 +1,5 @@
+//src/app/terms/page.tsx
+
 "use client";
 
 import SectionBlock from "@/components/ui/SectionBlock";
@@ -27,7 +29,7 @@ const sections = [
 export default function TermsPage() {
   return (
     <section className="page-wrapper bg-pattern">
-      <div className="section-wrapper">
+      <div className="section-wrapper pt-16 md:pt-20">
         <LegalSectionTitle
           title="Terms & Conditions"
           lastUpdated={lastUpdated}

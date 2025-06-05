@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <section className="page-wrapper relative overflow-hidden bg-pattern my-40">
-      <div className="section-wrapper flex flex-col items-center justify-center text-center min-h-[70vh]">
+    <section className="page-wrapper relative overflow-hidden bg-pattern">
+      <div className="section-wrapper hero-wrapper flex flex-col items-center justify-center text-center min-h-[70vh]">
         <div className="absolute inset-0 flex items-center justify-center z-0">
           <Image
             src="/images/tool-icon.png"
