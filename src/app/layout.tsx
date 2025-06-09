@@ -9,7 +9,6 @@ import { NavbarDemo } from "@/components/layout/NavBarDemo";
 import { Toaster } from "sonner";
 import { MobileNavProvider } from "@/context/MobileNavContext";
 import Script from "next/script";
-import BrevoFormTrigger from "@/components/brevo/BrevoFormTrigger"; // import this at top
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -95,7 +94,6 @@ export default function RootLayout({
       <body className="bg-pattern">
         <MobileNavProvider>
           <NavbarDemo />
-          <BrevoFormTrigger />
           {children}
           <SignUpStickyButton />
           <CookieBanner />
