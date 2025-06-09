@@ -135,8 +135,6 @@ export const aboutContent = {
   ],
 };
 
-// src/lib/facts.ts
-
 export const featuresForAll = [
   "Private Family Connection",
   "Collaborative Storytelling",
@@ -214,6 +212,7 @@ export const pricingPlans = [
     name: "Basic",
     monthlyPrice: "$0",
     yearlyPrice: "$0",
+    originalYearlyPrice: "$0",
     subtext: "per user",
     description: "Perfect for getting started.",
     note: "... Pass down your legacy with a Digital Inheritor and enjoy an ad-free experience..",
@@ -229,7 +228,8 @@ export const pricingPlans = [
   {
     name: "Premium",
     monthlyPrice: "$2.99",
-    yearlyPrice: "$28.69", // updated
+    yearlyPrice: "$28.69",
+    originalYearlyPrice: "$35.88",
     subtext: "per user",
     description: "More space, more memories.",
     note: "Share your plan with the family, and record Legacy Messages for the future.",
@@ -245,7 +245,8 @@ export const pricingPlans = [
   {
     name: "Legacy",
     monthlyPrice: "$9.99",
-    yearlyPrice: "$95.89", // updated
+    yearlyPrice: "$95.89",
+    originalYearlyPrice: "$119.88",
     subtext: "per user",
     description: "Ultimate preservation for your family’s legacy.",
     note: "With a massive 2TB of storage, multi-user access, and all premium features...",

@@ -14,21 +14,31 @@ export default function HeroMobile() {
         <div className="flex flex-col min-h-screen items-center justify-start px-4 text-center pt-[20vh]">
           <h1 className="sr-only">How will you be remembered?</h1>
 
-          <FadeInText
-            text={<span className="text-5xl">How will you be remembered?</span>}
-            className="tracking-normal text-white mb-4"
-          />
+          <div
+            className="aspect-square w-96 rounded-full pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 70%)",
+            }}
+          >
+            <FadeInText
+              text={
+                <span className="text-5xl">How will you be remembered?</span>
+              }
+              className="tracking-normal text-white mb-4"
+            />
 
-          <div className="text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-            <h5 className="leading-tight tracking-normal">
-              Words left unspoken
-            </h5>
-            <h5 className="leading-tight tracking-normal">
-              Memories left forgotten
-            </h5>
-            <h5 className="leading-tight tracking-normal">
-              Stories left untold
-            </h5>
+            <div className="text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+              <h5 className="leading-tight tracking-normal">
+                Words left unspoken
+              </h5>
+              <h5 className="leading-tight tracking-normal">
+                Memories left forgotten
+              </h5>
+              <h5 className="leading-tight tracking-normal">
+                Stories left untold
+              </h5>
+            </div>
           </div>
         </div>
 
