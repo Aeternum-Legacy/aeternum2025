@@ -1,6 +1,3 @@
-//src/components/layout/NavBarDemo.tsx
-
-
 "use client";
 
 import { useEffect } from "react";

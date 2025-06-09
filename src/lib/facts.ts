@@ -215,7 +215,7 @@ export const pricingPlans = [
     originalYearlyPrice: "$0",
     subtext: "per user",
     description: "Perfect for getting started.",
-    note: "... Pass down your legacy with a Digital Inheritor and enjoy an ad-free experience..",
+    note: "Pass down your legacy with a Digital Inheritor and enjoy an ad-free experience.",
     bgPattern: "/patterns/Basic.svg",
     featuresHeader: "Free, for everyone",
     features: [
@@ -249,7 +249,7 @@ export const pricingPlans = [
     originalYearlyPrice: "$119.88",
     subtext: "per user",
     description: "Ultimate preservation for your family’s legacy.",
-    note: "With a massive 2TB of storage, multi-user access, and all premium features...",
+    note: "With a massive 2TB of storage, multi-user access, and all premium features.",
     bgPattern: "/patterns/Legacy.svg",
     featuresHeader: "Ultimate digital legacy protection",
     features: [

@@ -1,5 +1,3 @@
-//src/app/terms/page.tsx
-
 "use client";
 
 import SectionBlock from "@/components/ui/SectionBlock";

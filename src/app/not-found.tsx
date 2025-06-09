@@ -1,5 +1,3 @@
-//src/app/not-found.tsx
-
 import Image from "next/image";
 import { LinkPreview } from "@/components/ui/LinkPreview";
 import { Metadata } from "next";

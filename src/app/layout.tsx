@@ -1,4 +1,4 @@
-//src/app/layout.tsx
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
@@ -30,19 +30,20 @@ export default function RootLayout({
   return (
     <html lang="en" className={lato.className}>
       <head>
+        {/* Facebook Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1596991894262715');
-    fbq('track', 'PageView');
-  `}
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1596991894262715');
+            fbq('track', 'PageView');
+          `}
         </Script>
         <noscript>
           <img
@@ -53,40 +54,80 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* ✅ Google Tag Manager JS loader */}
+        {/* Google Analytics / Ads */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
-
-        {/* ✅ Google Tag Initialization */}
         <Script id="google-gtag" strategy="afterInteractive">
           {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
-    ${
-      process.env.NEXT_PUBLIC_GOOGLE_ADS_ID
-        ? `gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');`
-        : ""
-    }
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+            ${
+              process.env.NEXT_PUBLIC_GOOGLE_ADS_ID
+                ? `gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');`
+                : ""
+            }
+          `}
+        </Script>
+        <Script id="brevo-popup" strategy="afterInteractive">
+          {`
+    console.log("🟡 Loading Brevo...");
+    (function () {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.brevo.com/js/sdk-loader.js';
+      script.async = true;
+      script.onload = function () {
+        console.log("🟢 Brevo SDK loaded");
+        if (window.Brevo) {
+          console.log("🟢 Brevo initialized");
+          window.Brevo.push(['init', {
+            client_key: "${process.env.NEXT_PUBLIC_BREVO_PUBLIC_KEY}",
+            popup: {
+              url: '/brevo/brevo-frame.html',
+              trigger: 'auto',
+              delay: 2000
+            }
+          }]);
+        } else {
+          console.error("🔴 window.Brevo not available");
+        }
+      };
+      document.body.appendChild(script);
+    })();
   `}
         </Script>
+
+        {/* 
+        <Script id="brevo-popup" strategy="afterInteractive">
+          {`
+                (function () {
+                  const script = document.createElement('script');
+                  script.src = 'https://cdn.brevo.com/js/sdk-loader.js';
+                  script.async = true;
+                  script.onload = function () {
+                    if (window.Brevo) {
+                      window.Brevo.push(['init', {
+                        client_key: "${process.env.NEXT_PUBLIC_BREVO_PUBLIC_KEY}",
+                        popup: {
+                          url: '/brevo/brevo-frame.html',
+                          trigger: 'auto',
+                          delay: 2000
+                        }
+                      }]);
+                    }
+                  };
+                  document.body.appendChild(script);
+                })();
+              `}
+        </Script> */}
       </head>
 
       <body className="bg-pattern">
         <MobileNavProvider>
           <NavbarDemo />
-          {/* <div className="fixed top-0 left-0 bg-black text-white text-sm px-2 py-1 z-[9999]">
-            <div className="block sm:hidden">xs</div>
-            <div className="hidden sm:block md:hidden">sm</div>
-            <div className="hidden md:block lg:hidden">md</div>
-            <div className="hidden lg:block xl:hidden">lg</div>
-            <div className="hidden xl:block 2xl:hidden">xl</div>
-            <div className="hidden 2xl:block">2xl</div>
-          </div> */}
           {children}
           <SignUpStickyButton />
           <CookieBanner />

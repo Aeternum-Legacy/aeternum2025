@@ -40,14 +40,12 @@ export default function SignUpStickyButton() {
       console.log("🟢 Final Visible:", newVisible);
     };
 
-    // scroll listener
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // run on mount
+    handleScroll();
 
-    // ✅ run again when mobile nav state changes
     const timeout = setTimeout(() => {
       handleScroll();
-    }, 100); // short delay to allow DOM updates
+    }, 100);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);

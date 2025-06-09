@@ -1,5 +1,3 @@
-//src/app/privacy/page.tsx
-
 "use client";
 
 import Notification from "@/components/ui/Notification";
