@@ -82,12 +82,19 @@ export default function RootLayout({
         {/* Brevo init script */}
         <Script id="brevo-init" strategy="afterInteractive">
           {`
-          window.Brevo = window.Brevo || [];
-          Brevo.push([
-            "init",
-            { client_key: "jkcw1uh3nxmkah7y5vqdf2xc" }
-          ]);
-        `}
+window.Brevo = window.Brevo || [];
+Brevo.push([
+  "init",
+  {
+    client_key: "${process.env.NEXT_PUBLIC_BREVO_CLIENT_KEY}",
+    popup: {
+      url: "/brevo-frame.html",
+      trigger: "auto",
+      delay: 2000
+    }
+  }
+]);
+  `}
         </Script>
       </head>
 
