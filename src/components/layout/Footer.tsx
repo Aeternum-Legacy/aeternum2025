@@ -1,7 +1,17 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import BrevoFixedForm from "../brevo/BrevoFixedForm";
 
 export default function Footer() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://sibforms.com/forms/end-form/build/main.js";
+    script.defer = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <footer className="bg-black text-white px-4 py-6">
       <div className="flex justify-center mb-6">
@@ -17,11 +27,14 @@ export default function Footer() {
         <h5 className="font-light leading-snug max-w-[80%]">
           Ready to turn your memories into a lasting legacy?
         </h5>
-        <Link href="/#signup">
+        <div className="w-full mx-auto">
+          <BrevoFixedForm />
+        </div>
+        {/* <Link href="/#signup">
           <button className="font-medium px-6 py-2 border border-white rounded-full transition-colors duration-200 hover:bg-white hover:text-black">
             Sign Up
           </button>
-        </Link>
+        </Link> */}
       </div>
 
       <div className="flex flex-col md:flex-row justify-between pt-10 gap-10 items-center md:items-start text-center md:text-left px-4 md:px-10">

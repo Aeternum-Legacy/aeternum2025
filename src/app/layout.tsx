@@ -30,6 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={lato.className}>
       <head>
+        {/* Brevo font and styles */}
+        <link
+          rel="stylesheet"
+          href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+        />
         {/* Facebook Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
@@ -94,6 +99,8 @@ Brevo.push([
     }
   }
 ]);
+
+window.Brevo.push(["showForm"]);
   `}
         </Script>
       </head>
