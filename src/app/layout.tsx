@@ -9,6 +9,7 @@ import { NavbarDemo } from "@/components/layout/NavBarDemo";
 import { Toaster } from "sonner";
 import { MobileNavProvider } from "@/context/MobileNavContext";
 import Script from "next/script";
+import BrevoFormTrigger from "@/components/brevo/BrevoFormTrigger"; // import this at top
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -72,62 +73,29 @@ export default function RootLayout({
             }
           `}
         </Script>
-        <Script id="brevo-popup" strategy="afterInteractive">
-          {`
-    console.log("🟡 Loading Brevo...");
-    (function () {
-      const script = document.createElement('script');
-      script.src = 'https://cdn.brevo.com/js/sdk-loader.js';
-      script.async = true;
-      script.onload = function () {
-        console.log("🟢 Brevo SDK loaded");
-        if (window.Brevo) {
-          console.log("🟢 Brevo initialized");
-          window.Brevo.push(['init', {
-            client_key: "${process.env.NEXT_PUBLIC_BREVO_PUBLIC_KEY}",
-            popup: {
-              url: '/brevo/brevo-frame.html',
-              trigger: 'auto',
-              delay: 2000
-            }
-          }]);
-        } else {
-          console.error("🔴 window.Brevo not available");
-        }
-      };
-      document.body.appendChild(script);
-    })();
-  `}
-        </Script>
 
-        {/* 
-        <Script id="brevo-popup" strategy="afterInteractive">
+        {/* Brevo SDK script */}
+        <Script
+          src="https://cdn.brevo.com/js/sdk-loader.js"
+          strategy="afterInteractive"
+          async
+        />
+        {/* Brevo init script */}
+        <Script id="brevo-init" strategy="afterInteractive">
           {`
-                (function () {
-                  const script = document.createElement('script');
-                  script.src = 'https://cdn.brevo.com/js/sdk-loader.js';
-                  script.async = true;
-                  script.onload = function () {
-                    if (window.Brevo) {
-                      window.Brevo.push(['init', {
-                        client_key: "${process.env.NEXT_PUBLIC_BREVO_PUBLIC_KEY}",
-                        popup: {
-                          url: '/brevo/brevo-frame.html',
-                          trigger: 'auto',
-                          delay: 2000
-                        }
-                      }]);
-                    }
-                  };
-                  document.body.appendChild(script);
-                })();
-              `}
-        </Script> */}
+          window.Brevo = window.Brevo || [];
+          Brevo.push([
+            "init",
+            { client_key: "jkcw1uh3nxmkah7y5vqdf2xc" }
+          ]);
+        `}
+        </Script>
       </head>
 
       <body className="bg-pattern">
         <MobileNavProvider>
           <NavbarDemo />
+          <BrevoFormTrigger />
           {children}
           <SignUpStickyButton />
           <CookieBanner />
