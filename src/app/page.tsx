@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="page-wrapper">
+    <main className="page-wrapper overflow-x-hidden">
       <HeroSection />
       <DidYouKnowSection />
       <WhatIfSection />

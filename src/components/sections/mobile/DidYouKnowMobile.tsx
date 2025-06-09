@@ -7,7 +7,7 @@ export default function DidYouKnowMobile() {
   return (
     <section className="section-wrapper md:hidden">
       <h6 className="text-[#738483]">
-        Our legacies are at risk of being lost..
+        Our legacies are at risk of being lost...
       </h6>
       <div className="grid-wrapper">
         {facts.map((fact, index) => (
