@@ -27,14 +27,12 @@ export default function Footer() {
         <h5 className="font-light leading-snug max-w-[80%]">
           Ready to turn your memories into a lasting legacy?
         </h5>
-        <div className="w-full mx-auto">
-          <BrevoFixedForm />
-        </div>
-        {/* <Link href="/#signup">
+
+        <Link href="/#signup">
           <button className="font-medium px-6 py-2 border border-white rounded-full transition-colors duration-200 hover:bg-white hover:text-black">
             Sign Up
           </button>
-        </Link> */}
+        </Link>
       </div>
 
       <div className="flex flex-col md:flex-row justify-between pt-10 gap-10 items-center md:items-start text-center md:text-left px-4 md:px-10">
@@ -92,8 +90,10 @@ export default function Footer() {
             </div>
           ))}
         </div>
-
-        <div className="flex justify-center md:justify-start lg:justify-end items-center gap-4">
+        <div className="mx-auto">
+          <BrevoFixedForm />
+        </div>
+        <div className="flex flex-col justify-center md:justify-start lg:justify-end items-center gap-4">
           {[
             {
               icon: "facebook",
