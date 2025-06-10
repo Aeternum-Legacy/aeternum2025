@@ -36,7 +36,7 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col md:flex-row justify-between pt-10 gap-10 items-center md:items-start text-center md:text-left px-4 md:px-10">
-        <div className="w-full md:w-[90%] xl:w-[70%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-10 md:gap-x-5">
+        <div className="w-full md:w-[90%] xl:w-[70%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-10 md:gap-x-5">
           {[
             {
               title: "Company",
@@ -90,36 +90,38 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="mx-auto">
+
+        <div className="flex flex-col">
+          <div className="flex justify-center items-center gap-4">
+            {[
+              {
+                icon: "facebook",
+                alt: "Facebook",
+                link: "https://www.facebook.com/profile.php?id=100093069313770",
+              },
+              {
+                icon: "instagram",
+                alt: "Instagram",
+                link: "https://www.instagram.com/aeternumlegacyproject/",
+              },
+              {
+                icon: "linkedin",
+                alt: "LinkedIn",
+                link: "https://www.linkedin.com/company/aeternum-project",
+              },
+              {
+                icon: "youtube",
+                alt: "YouTube",
+                link: "https://youtu.be/83ONjbzulhY",
+              },
+            ].map(({ icon, alt, link }) => (
+              <Link href={link} key={icon}>
+                <img src={`/icons/${icon}.svg`} alt={alt} className="w-5 h-5" />
+              </Link>
+            ))}
+          </div>
+
           <BrevoFixedForm />
-        </div>
-        <div className="flex flex-col justify-center md:justify-start lg:justify-end items-center gap-4">
-          {[
-            {
-              icon: "facebook",
-              alt: "Facebook",
-              link: "https://www.facebook.com/profile.php?id=100093069313770",
-            },
-            {
-              icon: "instagram",
-              alt: "Instagram",
-              link: "https://www.instagram.com/aeternumlegacyproject/",
-            },
-            {
-              icon: "linkedin",
-              alt: "LinkedIn",
-              link: "https://www.linkedin.com/company/aeternum-project",
-            },
-            {
-              icon: "youtube",
-              alt: "YouTube",
-              link: "https://youtu.be/83ONjbzulhY",
-            },
-          ].map(({ icon, alt, link }) => (
-            <Link href={link} key={icon}>
-              <img src={`/icons/${icon}.svg`} alt={alt} className="w-5 h-5" />
-            </Link>
-          ))}
         </div>
       </div>
 
