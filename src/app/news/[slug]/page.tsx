@@ -1,3 +1,4 @@
+// src/app/news/[slug]/page.tsx
 import { notFound } from "next/navigation";
 
 type Post = {
@@ -14,11 +15,12 @@ async function getPost(slug: string): Promise<Post | null> {
       next: { revalidate: 60 },
     }
   );
+
   const data = await res.json();
   return data.length > 0 ? data[0] : null;
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_WP_API_URL}/posts`);
   const posts: Post[] = await res.json();
 
@@ -27,11 +29,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function NewsDetailPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const post = await getPost(params.slug);
 
   if (!post) return notFound();
