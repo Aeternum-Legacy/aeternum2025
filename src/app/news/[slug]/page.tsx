@@ -1,15 +1,8 @@
-// src/app/news/[slug]/page.tsx
 import { notFound } from "next/navigation";
 
 type Post = {
   title: { rendered: string };
   content: { rendered: string };
-};
-
-type PageProps = {
-  params: {
-    slug: string;
-  };
 };
 
 async function getPost(slug: string): Promise<Post | null> {
@@ -26,7 +19,11 @@ async function getPost(slug: string): Promise<Post | null> {
   return data[0];
 }
 
-export default async function NewsDetailPage({ params }: PageProps) {
+export default async function NewsDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const post = await getPost(params.slug);
 
   if (!post) return notFound();
