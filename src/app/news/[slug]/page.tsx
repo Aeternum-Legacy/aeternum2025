@@ -6,9 +6,15 @@ type Post = {
   content: { rendered: string };
 };
 
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
 async function getPost(slug: string): Promise<Post | null> {
   const res = await fetch(
-    `http://3.148.235.129/wp-json/wp/v2/posts?slug=${slug}&_embed`,
+    `${process.env.NEXT_PUBLIC_WP_API_URL}/posts?slug=${slug}&_embed`,
     {
       next: { revalidate: 60 },
     }
@@ -20,11 +26,7 @@ async function getPost(slug: string): Promise<Post | null> {
   return data[0];
 }
 
-export default async function NewsDetailPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function NewsDetailPage({ params }: PageProps) {
   const post = await getPost(params.slug);
 
   if (!post) return notFound();
