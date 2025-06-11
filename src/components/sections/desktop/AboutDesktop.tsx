@@ -17,7 +17,7 @@ export default function AboutDesktop() {
 
   return (
     <section className="page-wrapper overflow-hidden hidden md:block">
-      <div className="relative w-full h-[500px] overflow-hidden">
+      <div className="relative w-full h-[400px] overflow-hidden">
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: loaded ? 0.6 : 1 }}
@@ -47,16 +47,16 @@ export default function AboutDesktop() {
           transition={{ duration: 2 }}
           className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4"
         >
-          <h1 className="font-bold tracking-normal leading-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]">
+          <h3 className="font-bold tracking-normal leading-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]">
             <span className="block leading-snug">
               <span className="block">Connecting generations</span>
               <span className="block">through cherished moments</span>
             </span>
-          </h1>
+          </h3>
           <img
             src="/icons/aeternum-logo.svg"
             alt="Aeternum Logo"
-            className="w-72 mt-4"
+            className="w-56 mt-4"
           />
         </motion.div>
       </div>
