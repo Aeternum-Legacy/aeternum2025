@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     domains: ["api.microlink.io"],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;

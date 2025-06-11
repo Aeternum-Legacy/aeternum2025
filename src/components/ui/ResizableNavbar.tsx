@@ -1,7 +1,6 @@
-
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
@@ -287,7 +286,7 @@ export const MobileNavToggle = ({
   );
 
 export const NavbarLogo = ({ onClick }: { onClick?: () => void }) => (
-  <a
+  <Link
     href="/"
     onClick={onClick}
     className="relative z-20 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black dark:text-white"
@@ -298,7 +297,7 @@ export const NavbarLogo = ({ onClick }: { onClick?: () => void }) => (
       width={150}
       height={40}
     />
-  </a>
+  </Link>
 );
 
 export const NavbarMdLogo = ({ onClick }: { onClick?: () => void }) => (

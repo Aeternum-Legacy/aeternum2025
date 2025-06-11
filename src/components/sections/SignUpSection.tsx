@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Input } from "../ui/InputCustom";
 import { useState } from "react";
 import { toast } from "sonner";
+import Link from "next/link";
 
 declare global {
   interface Window {
@@ -206,9 +207,9 @@ export default function SignUpSection() {
                 />
                 <label htmlFor="agree" className="text-sm">
                   By signing up, you agree to Aeternum’s{" "}
-                  <a href="/terms" className="underline text-blue-600">
+                  <Link href="/terms" className="underline text-blue-600">
                     terms
-                  </a>{" "}
+                  </Link>{" "}
                   regarding data collection and usage.
                 </label>
               </div>
