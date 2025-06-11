@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 type Post = {
   title: { rendered: string };
   content: { rendered: string };
+  slug: string;
+  id: number;
 };
 
 async function getPost(slug: string): Promise<Post | null> {
@@ -12,11 +14,17 @@ async function getPost(slug: string): Promise<Post | null> {
       next: { revalidate: 60 },
     }
   );
-
   const data = await res.json();
-  if (!data || data.length === 0) return null;
+  return data.length > 0 ? data[0] : null;
+}
 
-  return data[0];
+export async function generateStaticParams() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_WP_API_URL}/posts`);
+  const posts: Post[] = await res.json();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 export default async function NewsDetailPage({
