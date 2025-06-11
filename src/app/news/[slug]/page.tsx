@@ -1,4 +1,3 @@
-// src/app/news/[slug]/page.tsx
 import { notFound } from "next/navigation";
 
 type Post = {
@@ -29,7 +28,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   }));
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: any) {
   const post = await getPost(params.slug);
 
   if (!post) return notFound();
