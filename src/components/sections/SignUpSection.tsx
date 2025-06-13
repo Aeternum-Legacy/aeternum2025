@@ -109,14 +109,14 @@ export default function SignUpSection() {
             </h4>
 
             <p className="mb-4">
-              Sign up as a Priority User{" "}
+              Sign up as an Early Member{" "}
               <span className="block lg:inline">
                 and get exclusive early access to Aeternum,{" "}
               </span>
               <span className="block lg:inline">launching in 2025.</span>
             </p>
 
-            <p className="mb-4 font-semibold">As a Priority User, you will:</p>
+            <p className="mb-4 font-semibold">As an Early Member, you will:</p>
 
             <ul className="text-left">
               {[
