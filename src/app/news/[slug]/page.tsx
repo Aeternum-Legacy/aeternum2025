@@ -17,6 +17,7 @@ import {
   categoryColors,
   Post,
   PostResponse,
+  Props,
   RecentPost,
   RecentPostResponse,
 } from "@/types/post";
@@ -41,7 +42,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return data.posts.nodes.map((post) => ({ slug: post.slug }));
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: Props) {
   const [post, recentPosts] = await Promise.all([
     getPost(params.slug),
     getRecentPosts(),
@@ -57,7 +58,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
     })} ${date.getFullYear()}`;
     archiveSet.add(key);
   });
-  const archives = Array.from(archiveSet);
 
   return (
     <div className="page-wrapper">

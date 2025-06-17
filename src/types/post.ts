@@ -46,3 +46,9 @@ export const categoryColors: Record<string, string> = {
   "launch-announcements": "bg-pink-100 text-pink-600",
   "product-updates": "bg-orange-100 text-orange-600",
 };
+
+export type Props = {
+  params: {
+    slug: string;
+  };
+};
