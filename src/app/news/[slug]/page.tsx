@@ -17,10 +17,15 @@ import {
   categoryColors,
   Post,
   PostResponse,
-  Props,
   RecentPost,
   RecentPostResponse,
 } from "@/types/post";
+
+export type Props = {
+  params: {
+    slug: string;
+  };
+};
 
 async function getPost(slug: string): Promise<Post | null> {
   const data = await graphQLClient.request<PostResponse>(
@@ -43,6 +48,8 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 }
 
 export default async function Page({ params }: Props) {
+  const slug = params.slug;
+
   const [post, recentPosts] = await Promise.all([
     getPost(params.slug),
     getRecentPosts(),
