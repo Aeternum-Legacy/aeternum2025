@@ -21,12 +21,6 @@ import {
   RecentPostResponse,
 } from "@/types/post";
 
-export type Props = {
-  params: {
-    slug: string;
-  };
-};
-
 async function getPost(slug: string): Promise<Post | null> {
   const data = await graphQLClient.request<PostResponse>(
     GET_POST_BY_SLUG_QUERY,
@@ -47,8 +41,8 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return data.posts.nodes.map((post) => ({ slug: post.slug }));
 }
 
-export default async function Page({ params }: Props) {
-  const slug = params.slug;
+export default async function Page({ params }: { params: any }) {
+  if (!params.slug) return notFound();
 
   const [post, recentPosts] = await Promise.all([
     getPost(params.slug),
