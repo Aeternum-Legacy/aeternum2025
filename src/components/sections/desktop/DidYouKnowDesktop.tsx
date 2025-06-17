@@ -32,9 +32,9 @@ export default function DidYouKnowDesktop() {
           alt="Right arrow icon indicating insight"
           className="w-5 h-5 grayscale brightness-75"
         />
-        <h5 className="text-[#738483]">
+        <h6 className="text-[#738483]">
           Our legacies are at risk of being lost...
-        </h5>
+        </h6>
       </div>
 
       <div className="w-full flex">

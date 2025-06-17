@@ -102,7 +102,7 @@ export const NavItems = ({
       )}
       aria-label="Main navigation"
     >
-      <ul className="flex flex-row md:gap-5 lg:gap-10 text-base font-medium text-zinc-600">
+      <ul className="flex flex-row md:gap-5 lg:gap-10 text-sm font-medium text-zinc-600">
         {items.map(({ title, links }, idx) => (
           <li
             key={title}
@@ -113,7 +113,7 @@ export const NavItems = ({
             <div>
               <button
                 className={cn(
-                  "relative px-4 py-2 dark:text-neutral-300 transition-colors",
+                  "relative px-4 py-2 text-sm dark:text-neutral-300 transition-colors",
                   hovered === idx ? "text-black" : "text-gray-300",
                   "hover:text-black"
                 )}
@@ -144,7 +144,7 @@ export const NavItems = ({
                           key={href}
                           href={href}
                           onClick={onItemClick}
-                          className="block px-3 py-2 text-base text-white rounded transition-colors hover:text-black hover:bg-white"
+                          className="block px-3 py-2 text-sm text-white rounded transition-colors hover:text-black hover:bg-white"
                         >
                           {label}
                         </Link>

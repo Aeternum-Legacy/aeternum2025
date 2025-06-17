@@ -1,5 +1,3 @@
-//src/app.cookie-policy/page.tsx
-
 "use client";
 
 import SectionBlock from "@/components/ui/SectionBlock";

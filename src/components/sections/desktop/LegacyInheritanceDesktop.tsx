@@ -14,7 +14,7 @@ export default function LegacyInheritanceDesktop() {
       <div className="flex lg:hidden justify-center px-4">
         <div className="relative w-full max-w-[620px] h-[500px]">
           <Image
-            src="/images/legacy-inheritance.png"
+            src="/icons/legacy-inheritance.png"
             alt="Illustration of a digital legacy being preserved"
             fill
             className="object-contain"
@@ -52,7 +52,7 @@ export default function LegacyInheritanceDesktop() {
         <div className="hidden lg:flex items-center justify-center h-full">
           <div className="relative w-full max-w-[750px]">
             <Image
-              src="/images/legacy-inheritance.png"
+              src="/icons/legacy-inheritance.png"
               alt="Illustration of a digital legacy being preserved"
               width={750}
               height={600}

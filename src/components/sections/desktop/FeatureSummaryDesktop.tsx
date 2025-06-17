@@ -34,7 +34,7 @@ export default function FeatureSummaryDesktop() {
       className="-mt-32 hidden md:flex items-center justify-center w-full bg-[#F7F8EA]"
     >
       <div className="w-full">
-        <div className="section-wrapper">
+        <div className="section-wrapper gap-0">
           <LogoLabel
             src="/icons/aeternum-logo2.svg"
             alt="Aeternum logo"

@@ -121,7 +121,6 @@ export default function Footer() {
             ))}
           </div>
 
-          <BrevoFixedForm />
         </div>
       </div>
 

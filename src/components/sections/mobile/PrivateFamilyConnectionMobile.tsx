@@ -9,7 +9,7 @@ export default function PrivateFamilyConnectionMobile() {
       <div className="flex items-center justify-center">
         <div className="relative w-full aspect-square">
           <Image
-            src="/images/pfc-image1.png"
+            src="/icons/pfc-image1.png"
             alt="..."
             fill
             className="object-contain"

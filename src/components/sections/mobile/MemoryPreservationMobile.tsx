@@ -12,7 +12,7 @@ export default function MemoryPreservationMobile() {
       <div className="flex items-center justify-center">
         <div className="relative w-full aspect-square">
           <Image
-            src="/images/memory-preservation.png"
+            src="/icons/memory-preservation.png"
             alt="..."
             fill
             className="object-contain"

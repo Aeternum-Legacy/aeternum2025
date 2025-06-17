@@ -1,16 +1,15 @@
 "use client";
 
-import { PFCFeatures } from '@/lib/facts';
+import { PFCFeatures } from "@/lib/facts";
 import Image from "next/image";
-
 
 export default function PrivateFamilyConnectionDesktop() {
   return (
-    <section className="hidden md:flex flex-col lg:flex-row gap-10">
+    <section className="hidden md:flex flex-col lg:flex-row gap-14">
       <div className="flex md:justify-center relative flex-[0.9]">
         <div className="relative w-full h-auto md:h-[500px] lg:h-full lg:bottom-10">
           <Image
-            src="/images/pfc-image1.png"
+            src="/icons/pfc-image1.png"
             alt="holding hands symbolizing family connection"
             title="Family holding hands"
             fill
@@ -18,9 +17,9 @@ export default function PrivateFamilyConnectionDesktop() {
           />
         </div>
 
-        <div className="hidden lg:block absolute bottom-5 -right-5 z-10 w-full max-w-[350px] aspect-square">
+        <div className="hidden lg:block absolute bottom-5 -right-10 z-10 w-full max-w-[350px] aspect-square">
           <Image
-            src="/images/pfc-image2.png"
+            src="/icons/pfc-image2.png"
             alt="Photo album representing preserved family memories"
             title="Photo album"
             fill

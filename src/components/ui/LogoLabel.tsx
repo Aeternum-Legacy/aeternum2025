@@ -4,7 +4,7 @@ import Image from "next/image";
 interface LogoLabelProps {
   src: string;
   alt: string;
-  text: string;
+  text?: string;
   className?: string;
   iconClassName?: string;
   textClassName?: string;
@@ -16,7 +16,7 @@ export default function LogoLabel({
   text,
   className = "",
   iconClassName = "w-8 md:w-12",
-  textClassName = "font-bold leading-relaxed tracking-[0.25em] text-[#186E68] text-xs md:text-sm",
+  textClassName = "uppercase font-bold leading-relaxed tracking-[0.25em] text-[#186E68] text-xs md:text-sm",
 }: LogoLabelProps) {
   return (
     <div className={`flex flex-col items-center gap-2 my-4 ${className}`}>
@@ -27,7 +27,7 @@ export default function LogoLabel({
         height={48}
         className={iconClassName}
       />
-      <p className={textClassName}>{text}</p>
+      {text && <p className={textClassName}>{text}</p>}
     </div>
   );
 }

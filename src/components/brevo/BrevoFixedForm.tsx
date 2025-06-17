@@ -1,16 +1,15 @@
 export default function BrevoFixedForm() {
   return (
     <iframe
-      width="540"
-      height="305"
-      src="https://sibforms.com/serve/MUIFAKezriEZbqDMKVPy_qUXn4mCX-5E8kCCtWjorlUYwd98AMbjEIbDTg3-EiaE6HdarbvLbevOdD6hcvczQEwv0cSs36X3afLikv84td97foms3H59-V69VbuuyaQs-B4VLZdh-lBl7F1qzFLK0Wh2a_hw9DRK7qrvyatjzkJpcKXKLPwyyofcAxnJkMEU-kdD0EdPTOSSmxol"
+      width="100%"
+      height="700"
+      src="https://a276752d.sibforms.com/serve/MUIFAKJuKixrAE_EiW_XlkGWil_oERmtZFX4xgyzvMeIl4o6lujg4vIta2Uux6ONqLkpDU-0w-ENja5NsTN8i9rVSzfW5Z1Uexg136TiNsaze7Q9Me5YLzAPL0FFPeN7-Byao6THA3VaFNjC8EF2EL36TnY8GqyQ8Kymi-mYddVf5a2r9kwvbzqB7PMGNTeYx5Fha8u3lZYdt9na"
       frameBorder="0"
-      scrolling="auto"
+      scrolling="no"
       allowFullScreen
       style={{
         display: "block",
-        marginLeft: "auto",
-        marginRight: "auto",
+        margin: "0 auto",
         maxWidth: "100%",
       }}
     ></iframe>

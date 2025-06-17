@@ -12,7 +12,7 @@ export default function MemoryPreservationDesktop() {
       <div className="flex lg:hidden justify-center">
         <div className="relative w-full max-w-[620px] h-[500px] -translate-y-5 scale-105">
           <Image
-            src="/images/memory-preservation.png"
+            src="/icons/memory-preservation.png"
             alt="Illustration of digital memory preservation in Aeternum"
             fill
             className="object-contain"
@@ -53,7 +53,7 @@ export default function MemoryPreservationDesktop() {
         <div className="hidden lg:flex justify-center">
           <div className="relative w-full max-w-[620px] h-[620px] -translate-y-5 scale-105">
             <Image
-              src="/images/memory-preservation.png"
+              src="/icons/memory-preservation.png"
               alt="Illustration of digital memory preservation in Aeternum"
               fill
               className="object-contain"

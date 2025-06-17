@@ -22,7 +22,7 @@ export default function ReimagineYourLegacyMobile() {
       aria-labelledby="reimagine-heading"
       className="overflow-hidden md:hidden"
       style={{
-        backgroundImage: "url('/images/mom&daughter.png')",
+        backgroundImage: "url('/icons/mom&daughter.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

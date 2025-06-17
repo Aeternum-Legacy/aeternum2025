@@ -22,6 +22,7 @@
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.43.1",
     "framer-motion": "^12.6.3",
+    "graphql-request": "^7.2.0",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.487.0",
     "motion": "^12.9.2",
@@ -31,6 +32,7 @@
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "sharp": "^0.33.5",
     "sonner": "^2.0.3",
+    "string-strip-html": "^13.4.12",
     "tailwind-merge": "^2.6.0"
   },
   "overrides": {

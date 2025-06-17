@@ -1,4 +1,3 @@
-//src/app/pricing/page.tsx
 "use client";
 
 import {

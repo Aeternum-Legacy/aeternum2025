@@ -1,7 +1,7 @@
-// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
+
 import Footer from "@/components/layout/Footer";
 import SignUpStickyButton from "@/components/ui/SignUpStickyButton";
 import CookieBanner from "@/components/ui/CookieBanner";
@@ -30,12 +30,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={lato.className}>
       <head>
-        {/* Brevo font and styles */}
+        {/* Brevo form styles */}
         <link
           rel="stylesheet"
           href="https://sibforms.com/forms/end-form/build/sib-styles.css"
         />
-        {/* Facebook Pixel */}
+
+        {/* Meta (Facebook) Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -44,9 +45,9 @@ export default function RootLayout({
             if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
             n.queue=[];t=b.createElement(e);t.async=!0;
             t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1596991894262715');
+            s.parentNode.insertBefore(t,s)}
+            (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1031535068960292');
             fbq('track', 'PageView');
           `}
         </Script>
@@ -55,7 +56,7 @@ export default function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1596991894262715&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=1031535068960292&ev=PageView&noscript=1"
           />
         </noscript>
 
@@ -78,30 +79,28 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Brevo SDK script */}
+        {/* Brevo SDK */}
         <Script
           src="https://cdn.brevo.com/js/sdk-loader.js"
           strategy="afterInteractive"
           async
         />
-        {/* Brevo init script */}
         <Script id="brevo-init" strategy="afterInteractive">
           {`
-window.Brevo = window.Brevo || [];
-Brevo.push([
-  "init",
-  {
-    client_key: "${process.env.NEXT_PUBLIC_BREVO_CLIENT_KEY}",
-    popup: {
-      url: "/brevo-frame.html",
-      trigger: "auto",
-      delay: 2000
-    }
-  }
-]);
-
-window.Brevo.push(["showForm"]);
-  `}
+            window.Brevo = window.Brevo || [];
+            Brevo.push([
+              "init",
+              {
+                client_key: "${process.env.NEXT_PUBLIC_BREVO_CLIENT_KEY}",
+                popup: {
+                  url: "/brevo-frame.html",
+                  trigger: "auto",
+                  delay: 2000
+                }
+              }
+            ]);
+            Brevo.push(["showForm"]);
+          `}
         </Script>
       </head>
 

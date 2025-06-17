@@ -18,7 +18,7 @@ export default function NotFound() {
       <div className="section-wrapper hero-wrapper flex flex-col items-center justify-center text-center min-h-[70vh]">
         <div className="absolute inset-0 flex items-center justify-center z-0">
           <Image
-            src="/images/tool-icon.png"
+            src="/icons/tool-icon.png"
             alt="Spinning Background"
             width={400}
             height={400}

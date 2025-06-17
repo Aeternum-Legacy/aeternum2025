@@ -1,50 +1,120 @@
+import { graphQLClient } from "@/lib/graphql-client";
+import {
+  GET_POST_BY_SLUG_QUERY,
+  POSTS_QUERY,
+  RECENT_POSTS_QUERY,
+} from "@/lib/queries";
 import { notFound } from "next/navigation";
-
-type Post = {
-  title: { rendered: string };
-  content: { rendered: string };
-  slug: string;
-  id: number;
-};
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import {
+  categoryColors,
+  Post,
+  PostResponse,
+  RecentPost,
+  RecentPostResponse,
+} from "@/types/post";
 
 async function getPost(slug: string): Promise<Post | null> {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_WP_API_URL}/posts?slug=${slug}&_embed`,
-    {
-      next: { revalidate: 60 },
-    }
+  const data = await graphQLClient.request<PostResponse>(
+    GET_POST_BY_SLUG_QUERY,
+    { slug }
   );
+  return data.posts.nodes[0] || null;
+}
 
-  const data = await res.json();
-  return data.length > 0 ? data[0] : null;
+async function getRecentPosts(): Promise<RecentPost[]> {
+  const data = await graphQLClient.request<RecentPostResponse>(
+    RECENT_POSTS_QUERY
+  );
+  return data.posts.nodes;
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_WP_API_URL}/posts`);
-  const posts: Post[] = await res.json();
-
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  const data = await graphQLClient.request<PostResponse>(POSTS_QUERY);
+  return data.posts.nodes.map((post) => ({ slug: post.slug }));
 }
 
-export default async function Page({ params }: any) {
-  const post = await getPost(params.slug);
+export default async function Page({ params }: { params: { slug: string } }) {
+  const [post, recentPosts] = await Promise.all([
+    getPost(params.slug),
+    getRecentPosts(),
+  ]);
 
   if (!post) return notFound();
 
+  const archiveSet = new Set<string>();
+  recentPosts.forEach((p) => {
+    const date = new Date(p.date);
+    const key = `${date.toLocaleString("default", {
+      month: "long",
+    })} ${date.getFullYear()}`;
+    archiveSet.add(key);
+  });
+  const archives = Array.from(archiveSet);
+
   return (
     <div className="page-wrapper">
-      <div className="hero-wrapper">
-        <h1
-          className="text-3xl font-bold mb-6"
-          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+      <section className="section-wrapper text-left items-start pt-16">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/news">News</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{post.title}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
+        <h2
+          className="font-bold "
+          dangerouslySetInnerHTML={{ __html: post.title }}
         />
+        <div className="flex flex-row items-start gap-2">
+          <p className="text-sm text-gray-500">
+            {new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </p>
+          {(
+            post.categories?.nodes || [{ name: "General", slug: "general" }]
+          ).map((cat, idx) => {
+            const color =
+              categoryColors[cat.slug] || "bg-gray-100 text-gray-600";
+            return (
+              <span
+                key={idx}
+                className={`${color} text-xs font-medium w-fit px-3 py-1 rounded-full`}
+              >
+                {cat.name}
+              </span>
+            );
+          })}
+        </div>
+
         <div
-          className="prose max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+          className="prose prose-neutral max-w-none
+    prose-img:rounded-xl
+    prose-h1:mt-12 prose-h2:mt-10 prose-h3:mt-8
+    [&_figure]:my-8
+    [&_iframe]:aspect-video [&_iframe]:w-full [&_iframe]:h-auto"
+          dangerouslySetInnerHTML={{ __html: post.content }}
         />
-      </div>
+      </section>
     </div>
   );
 }

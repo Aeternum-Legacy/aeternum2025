@@ -12,7 +12,7 @@ export default function LegacyInheritanceMobile() {
       <div className="flex items-center justify-center">
         <div className="relative w-full aspect-square">
           <Image
-            src="/images/legacy-inheritance.png"
+            src="/icons/legacy-inheritance.png"
             alt="Aeternum platform preserving a digital legacy for future generations"
             title="Digital legacy preservation with Aeternum"
             fill
