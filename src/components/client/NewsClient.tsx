@@ -125,7 +125,7 @@ export default function NewsClient() {
               <div className="flex-grow border-b-2 border-gray-300" />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 min-h-[200px]">
-              {posts === null ? (
+              {/* {posts === null ? (
                 Array.from({ length: 3 }).map((_, i) => (
                   <div
                     key={i}
@@ -187,7 +187,13 @@ export default function NewsClient() {
                 <div className="col-span-full flex justify-center items-center min-h-[200px]">
                   <p className="text-sm text-gray-400">No posts found.</p>
                 </div>
-              )}
+              )} */}
+              {/* Temporarily hide posts */}
+              <div className="col-span-full flex justify-center items-center min-h-[200px]">
+                <p className="text-sm text-gray-400 italic">
+                  Posts are currently hidden while we finalize this section.
+                </p>
+              </div>
             </div>
           </div>
 
