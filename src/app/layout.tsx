@@ -11,7 +11,7 @@ import { MobileNavProvider } from "@/context/MobileNavContext";
 import Script from "next/script";
 
 import SignupTracker from "@/components/client/SignupTracker";
-import { Suspense } from 'react';
+import { Suspense } from "react";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -98,7 +98,7 @@ export default function RootLayout({
                 popup: {
                   url: "/brevo-frame.html",
                   trigger: "auto",
-                  delay: 2000
+                  delay: 1000
                 }
               }
             ]);
