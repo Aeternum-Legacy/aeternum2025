@@ -12,6 +12,14 @@ import {
 } from "@/components/ui/breadcrumb";
 import { categoryColors, PostResponse } from "@/types/post";
 
+interface MetadataProps {
+  params: Promise<{ slug: string }>;
+}
+
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
 async function getPost(slug: string) {
   const data: PostResponse = await graphQLClient.request(
     GET_POST_BY_SLUG_WITH_SEO,
@@ -21,7 +29,7 @@ async function getPost(slug: string) {
 }
 
 export async function generateMetadata(
-  { params }: { params: Promise<{ slug: string }> },
+  { params }: MetadataProps,
   _parent?: ResolvingMetadata
 ): Promise<Metadata> {
   const { slug } = await params;
@@ -60,11 +68,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return data.posts.nodes.map((post) => ({ slug: post.slug }));
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function Page({ params }: PageProps) {
   const { slug } = await params;
   const post = await getPost(slug);
   if (!post) return notFound();
