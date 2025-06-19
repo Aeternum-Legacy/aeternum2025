@@ -1,20 +1,25 @@
 // src/app/sitemap.xml/route.ts
 import { NextRequest } from "next/server";
 
-export async function GET(req: NextRequest) {
-  const baseURL = process.env.WORDPRESS_API_URL;
+export async function GET() {
+  const wpURL = process.env.WORDPRESS_API_URL; 
+  const frontendURL = "https://www.aeternumproject.com";
 
-  if (!baseURL) {
-    return new Response("WORDPRESS_API_URL not set", { status: 500 });
+  const res = await fetch(`${wpURL}/sitemap.xml`);
+  if (!res.ok) {
+    return new Response("Failed to fetch", { status: 502 });
   }
 
-  const response = await fetch(`${baseURL}/sitemap_index.xml`);
+  let xml = await res.text();
 
-  if (!response.ok) {
-    return new Response("Failed to fetch sitemap", { status: 502 });
-  }
+  xml = xml
+    .replaceAll(`${wpURL}`, frontendURL)
+    .replaceAll("http://", "https://");
 
-  const xml = await response.text();
+  xml = xml.replace(
+    /<\?xml-stylesheet.+?>/gi,
+    "" 
+  );
 
   return new Response(xml, {
     status: 200,
