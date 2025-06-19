@@ -28,10 +28,7 @@ async function getPost(slug: string) {
   return data.posts.nodes[0] || null;
 }
 
-export async function generateMetadata(
-  { params }: MetadataProps,
-  _parent?: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPost(slug);
   if (!post) return notFound();
