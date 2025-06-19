@@ -11,6 +11,7 @@ import { MobileNavProvider } from "@/context/MobileNavContext";
 import Script from "next/script";
 
 import SignupTracker from "@/components/client/SignupTracker";
+import { Suspense } from 'react';
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -109,7 +110,9 @@ export default function RootLayout({
       <body className="bg-pattern">
         <MobileNavProvider>
           <NavbarDemo />
-          <SignupTracker />
+          <Suspense fallback={null}>
+            <SignupTracker />
+          </Suspense>
           {children}
           <SignUpStickyButton />
           <CookieBanner />
