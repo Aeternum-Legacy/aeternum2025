@@ -2,7 +2,7 @@
 import { NextRequest } from "next/server";
 
 export async function GET() {
-  const wpURL = process.env.WORDPRESS_API_URL; 
+  const wpURL = process.env.WORDPRESS_API_URL?.replace(/\/$/, ""); 
   const frontendURL = "https://www.aeternumproject.com";
 
   const res = await fetch(`${wpURL}/sitemap.xml`);
@@ -14,12 +14,13 @@ export async function GET() {
 
   xml = xml
     .replaceAll(`${wpURL}`, frontendURL)
-    .replaceAll("http://", "https://");
+    .replaceAll("http://", "https://")
+    .replaceAll(
+      'href="//api.aeternumproject.com',
+      'href="https://www.aeternumproject.com'
+    );
 
-  xml = xml.replace(
-    /<\?xml-stylesheet.+?>/gi,
-    "" 
-  );
+  xml = xml.replace(/<\?xml-stylesheet.+?>/gi, "");
 
   return new Response(xml, {
     status: 200,
