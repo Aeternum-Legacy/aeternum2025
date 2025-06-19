@@ -8,6 +8,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  env: {
+    WORDPRESS_API_URL: process.env.WORDPRESS_API_URL,
+  },
 };
 
 module.exports = nextConfig;
