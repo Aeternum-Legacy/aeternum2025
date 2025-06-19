@@ -62,7 +62,7 @@ export default async function Page({ params }: { params: any }) {
 
   return (
     <div className="page-wrapper">
-      <section className="section-wrapper text-left items-start pt-16">
+      <section className="section-wrapper text-left items-start lg:pt-16">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>

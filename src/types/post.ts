@@ -5,13 +5,22 @@ export type Category = {
 
 export type Post = {
   id: string;
-  slug: string;
   title: string;
+  slug: string;
   excerpt: string;
-  isSticky?: boolean;
-  featuredImage?: { node: { sourceUrl: string } };
-  categories?: { nodes: Category[] };
   content: string;
+  isSticky?: boolean;
+  featuredImage?: {
+    node?: {
+      sourceUrl?: string;
+    };
+  };
+  categories?: {
+    nodes: {
+      name: string;
+      slug: string;
+    }[];
+  };
   date: string;
 };
 
@@ -46,4 +55,3 @@ export const categoryColors: Record<string, string> = {
   "launch-announcements": "bg-pink-100 text-pink-600",
   "product-updates": "bg-orange-100 text-orange-600",
 };
-
