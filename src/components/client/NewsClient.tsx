@@ -297,6 +297,7 @@ export default function NewsClient() {
                   <p className="text-sm text-gray-400">No posts found.</p>
                 </div>
               )} */}
+              {/* Delete below later */}
               <div className="col-span-full flex justify-center items-center min-h-[200px]">
                 <p className="text-sm text-gray-400 italic">
                   Posts are currently hidden while we finalize this section.

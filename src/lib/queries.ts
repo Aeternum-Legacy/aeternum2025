@@ -26,7 +26,7 @@ export const POSTS_QUERY = gql`
   }
 `;
 
-export const GET_POST_BY_SLUG_QUERY = gql`
+export const GET_POST_BY_SLUG_WITH_SEO = gql`
   query GetPostBySlug($slug: String!) {
     posts(where: { name: $slug }) {
       nodes {
@@ -35,6 +35,16 @@ export const GET_POST_BY_SLUG_QUERY = gql`
         title
         content
         date
+        seo {
+          title
+          metaDesc
+          opengraphTitle
+          opengraphDescription
+          opengraphImage {
+            sourceUrl
+          }
+          fullHead
+        }
       }
     }
   }

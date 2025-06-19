@@ -1,8 +1,8 @@
+import Head from "next/head";
 import { graphQLClient } from "@/lib/graphql-client";
 import {
-  GET_POST_BY_SLUG_QUERY,
+  GET_POST_BY_SLUG_WITH_SEO,
   POSTS_QUERY,
-  RECENT_POSTS_QUERY,
 } from "@/lib/queries";
 import { notFound } from "next/navigation";
 import {
@@ -23,17 +23,10 @@ import {
 
 async function getPost(slug: string): Promise<Post | null> {
   const data = await graphQLClient.request<PostResponse>(
-    GET_POST_BY_SLUG_QUERY,
+    GET_POST_BY_SLUG_WITH_SEO,
     { slug }
   );
   return data.posts.nodes[0] || null;
-}
-
-async function getRecentPosts(): Promise<RecentPost[]> {
-  const data = await graphQLClient.request<RecentPostResponse>(
-    RECENT_POSTS_QUERY
-  );
-  return data.posts.nodes;
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -44,24 +37,25 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 export default async function Page({ params }: { params: any }) {
   if (!params.slug) return notFound();
 
-  const [post, recentPosts] = await Promise.all([
-    getPost(params.slug),
-    getRecentPosts(),
-  ]);
-
+  const post = await getPost(params.slug);
   if (!post) return notFound();
 
-  const archiveSet = new Set<string>();
-  recentPosts.forEach((p) => {
-    const date = new Date(p.date);
-    const key = `${date.toLocaleString("default", {
-      month: "long",
-    })} ${date.getFullYear()}`;
-    archiveSet.add(key);
-  });
+  const seo = post.seo || {};
 
   return (
     <div className="page-wrapper">
+      <Head>
+        <title>{seo.title || post.title}</title>
+        <meta name="description" content={seo.metaDesc || ""} />
+        {seo.opengraphImage?.sourceUrl && (
+          <meta property="og:image" content={seo.opengraphImage.sourceUrl} />
+        )}
+        <meta property="og:title" content={seo.opengraphTitle || seo.title} />
+        <meta
+          property="og:description"
+          content={seo.opengraphDescription || seo.metaDesc}
+        />
+      </Head>
       <section className="section-wrapper text-left items-start lg:pt-16">
         <Breadcrumb>
           <BreadcrumbList>

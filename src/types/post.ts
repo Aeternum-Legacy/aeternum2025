@@ -22,6 +22,15 @@ export type Post = {
     }[];
   };
   date: string;
+  seo?: {
+    title?: string;
+    metaDesc?: string;
+    opengraphTitle?: string;
+    opengraphDescription?: string;
+    opengraphImage?: {
+      sourceUrl?: string;
+    };
+  };
 };
 
 export type PostsResponse = {
