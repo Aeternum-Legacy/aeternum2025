@@ -3,6 +3,10 @@ export type Category = {
   slug: string;
 };
 
+export interface NewsParams {
+  slug: string;
+}
+
 export type Post = {
   id: string;
   title: string;
