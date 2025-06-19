@@ -14,7 +14,6 @@ export async function GET() {
 
   xml = xml
     .replaceAll(`${wpURL}`, frontendURL)
-    .replaceAll("http://", "https://")
     .replaceAll(
       'href="//api.aeternumproject.com',
       'href="https://www.aeternumproject.com'
