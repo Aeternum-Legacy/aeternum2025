@@ -1,5 +1,5 @@
 import NotFound from "../not-found";
 
-export default function Faq() {
+export default function FaqPage() {
   return <NotFound />;
 }

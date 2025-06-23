@@ -1,5 +1,5 @@
 import NotFound from "../not-found";
 
-export default function Page() {
+export default function CareersPage() {
   return <NotFound />;
 }

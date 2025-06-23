@@ -107,10 +107,10 @@ export default function TermsPage() {
                 If you have any questions or comments about these Terms of Use,
                 please contact us at{" "}
                 <a
-                  href="mailto:privacy@aeternumproject.com"
+                  href="mailto:info@aeternumproject.com"
                   className="text-teal-700 hover:underline"
                 >
-                  privacy@aeternumproject.com
+                  info@aeternumproject.com
                 </a>
                 .
               </>,

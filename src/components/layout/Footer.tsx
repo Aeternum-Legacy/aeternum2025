@@ -41,14 +41,14 @@ export default function Footer() {
             {
               title: "Company",
               links: [
-                { label: "About Us", href: "/about" },
-                { label: "Career", href: "/career" },
+                { label: "About Us", href: "/about-us" },
+                { label: "Careers", href: "/careers" },
               ],
             },
             {
               title: "Product",
               links: [
-                { label: "Pricing Information", href: "/pricing" },
+                { label: "Pricing Information", href: "/pricing-information" },
                 { label: "FAQ", href: "/faq" },
               ],
             },
@@ -120,7 +120,6 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-
         </div>
       </div>
 
@@ -128,7 +127,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-2">
           <Link href="/terms">Terms & Conditions</Link>
           <span className="hidden sm:inline">|</span>
-          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
         </div>
         <p className="italic">©2025 Aeternum Corp. All rights reserved.</p>
       </div>

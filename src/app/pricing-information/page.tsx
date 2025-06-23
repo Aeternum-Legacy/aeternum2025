@@ -19,7 +19,7 @@ const allFeatures: FeatureKey[] = Object.keys(
   exampleFeatureMap
 ) as FeatureKey[];
 
-export default function Pricing() {
+export default function PricingInformationPage() {
   const [activeTab, setActiveTab] = useState("monthly");
 
   const formatCAD = (amount: number) =>

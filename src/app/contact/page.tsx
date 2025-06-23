@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/InputCustom";
 import { useState } from "react";
 import { toast } from "sonner";
 
-export default function Contact() {
+export default function ContactPage() {
   const [loading, setLoading] = useState(false);
 
   async function handleContactSubmit(e: React.FormEvent<HTMLFormElement>) {

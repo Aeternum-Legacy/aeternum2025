@@ -1,5 +1,5 @@
 import NotFound from "../not-found";
 
-export default function Development() {
+export default function DevelopmentProgressPage() {
   return <NotFound />;
 }

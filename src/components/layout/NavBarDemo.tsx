@@ -21,14 +21,14 @@ const navItems = [
   {
     title: "Company",
     links: [
-      { href: "/about", label: "About Us" },
+      { href: "/about-us", label: "About Us" },
       { href: "/careers", label: "Careers" },
     ],
   },
   {
     title: "Product",
     links: [
-      { href: "/pricing", label: "Pricing Information" },
+      { href: "/pricing-information", label: "Pricing Information" },
       { href: "/faq", label: "FAQ" },
     ],
   },
@@ -36,7 +36,7 @@ const navItems = [
     title: "Updates",
     links: [
       { href: "/news", label: "News" },
-      { href: "/development", label: "Development Progress" },
+      { href: "/development-progress", label: "Development Progress" },
     ],
   },
   {

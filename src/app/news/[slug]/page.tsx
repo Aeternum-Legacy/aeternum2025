@@ -65,7 +65,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return data.posts.nodes.map((post) => ({ slug: post.slug }));
 }
 
-export default async function Page({ params }: PageProps) {
+export default async function SingleNewsPage({ params }: PageProps) {
   const { slug } = await params;
   const post = await getPost(slug);
   if (!post) return notFound();
