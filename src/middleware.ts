@@ -6,8 +6,8 @@ export function middleware(request: NextRequest) {
 
   const redirects: Record<string, string> = {
     "/home": "/",
-    "/aeternumfeatures/messagesthattranscendtime": "/features",
-    "/developmentprogress": "/development",
+    "/aeternumfeatures/messagesthattranscendtime": "/",
+    "/developmentprogress": "/development-progress",
   };
 
   if (redirects[pathname]) {
