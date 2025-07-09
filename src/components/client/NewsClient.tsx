@@ -258,8 +258,8 @@ export default function NewsClient() {
                         className="relative h-[250px] rounded-2xl overflow-hidden bg-cover bg-center"
                         style={{ backgroundImage: `url(${imageUrl})` }}
                       />
-                      <h3
-                        className="text-left mt-3 text-lg font-semibold text-gray-800 line-clamp-3"
+                      <h4
+                        className="text-left mt-3 text-base font-semibold text-gray-800 line-clamp-3"
                         dangerouslySetInnerHTML={{ __html: post.title }}
                       />
                     </Link>

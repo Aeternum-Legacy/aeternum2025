@@ -117,10 +117,18 @@ export default async function SingleNewsPage({ params }: PageProps) {
 
         <div
           className="prose prose-neutral max-w-none
-    prose-img:rounded-xl
     prose-h1:mt-12 prose-h2:mt-10 prose-h3:mt-8
-  [&_p]:my-5     [&_figure]:my-8
-    [&_iframe]:aspect-video [&_iframe]:w-full [&_iframe]:h-auto"
+    prose-img:rounded-xl
+    [&_p]:my-5 [&_figure]:my-8
+    [&_iframe]:aspect-video [&_iframe]:w-full [&_iframe]:h-auto
+
+    [&_h1]:text-3xl 
+    [&_h2]:text-2xl 
+    [&_h3]:text-xl 
+    [&_h4]:text-lg 
+    [&_h5]:text-base 
+    [&_h6]:text-sm 
+  "
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </section>
