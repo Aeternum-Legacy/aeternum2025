@@ -238,7 +238,7 @@ export default function NewsClient() {
                 Array.from({ length: 3 }).map((_, i) => (
                   <div
                     key={i}
-                    className="h-[360px] bg-gray-100 animate-pulse rounded-2xl"
+                    className="h-[250px] bg-gray-100 animate-pulse rounded-2xl"
                   />
                 ))
               ) : filteredPosts && filteredPosts.length > 0 ? (
@@ -249,47 +249,20 @@ export default function NewsClient() {
                   const cleanExcerpt = stripHtml(post.excerpt).result;
 
                   return (
-                    <article
+                    <Link
                       key={post.id}
-                      className="relative group h-[360px] rounded-2xl overflow-hidden bg-cover bg-center flex"
-                      style={{ backgroundImage: `url(${imageUrl})` }}
+                      href={`/news/${post.slug}`}
+                      className="block group"
                     >
-                      <Link
-                        href={`/news/${post.slug}`}
-                        className="absolute inset-0 z-20"
-                        aria-label={`Read more: ${post.title}`}
+                      <article
+                        className="relative h-[250px] rounded-2xl overflow-hidden bg-cover bg-center"
+                        style={{ backgroundImage: `url(${imageUrl})` }}
                       />
-                      <div className="p-5 flex flex-col justify-end w-full mt-auto pointer-events-none gap-2">
-                        <div className="w-fit">
-                          {(
-                            post.categories?.nodes || [
-                              { name: "General", slug: "general" },
-                            ]
-                          ).map((cat, idx) => {
-                            const color =
-                              categoryColors[cat.slug] ||
-                              "bg-gray-100 text-gray-600";
-                            return (
-                              <span
-                                key={idx}
-                                className={`${color} text-xs font-medium w-fit px-3 py-1 rounded-full`}
-                              >
-                                {cat.name}
-                              </span>
-                            );
-                          })}
-                        </div>
-                        <div className="w-fit text-left text-white">
-                          <h6
-                            className="font-semibold leading-snug"
-                            dangerouslySetInnerHTML={{ __html: post.title }}
-                          />
-                          <p className="text-white line-clamp-4 text-sm">
-                            {cleanExcerpt}
-                          </p>
-                        </div>
-                      </div>
-                    </article>
+                      <h3
+                        className="text-left mt-3 text-lg font-semibold text-gray-800 line-clamp-3"
+                        dangerouslySetInnerHTML={{ __html: post.title }}
+                      />
+                    </Link>
                   );
                 })
               ) : (

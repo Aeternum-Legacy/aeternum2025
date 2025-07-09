@@ -72,7 +72,7 @@ export default async function SingleNewsPage({ params }: PageProps) {
 
   return (
     <div className="page-wrapper">
-      <section className="section-wrapper text-left items-start lg:pt-16">
+      <section className="section-wrapper text-left items-start lg:pt-16 ">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -89,7 +89,7 @@ export default async function SingleNewsPage({ params }: PageProps) {
           </BreadcrumbList>
         </Breadcrumb>
 
-        <h2
+        <h4
           className="font-bold"
           dangerouslySetInnerHTML={{ __html: post.title }}
         />
@@ -117,10 +117,10 @@ export default async function SingleNewsPage({ params }: PageProps) {
 
         <div
           className="prose prose-neutral max-w-none
-            prose-img:rounded-xl
-            prose-h1:mt-12 prose-h2:mt-10 prose-h3:mt-8
-            [&_figure]:my-8
-            [&_iframe]:aspect-video [&_iframe]:w-full [&_iframe]:h-auto"
+    prose-img:rounded-xl
+    prose-h1:mt-12 prose-h2:mt-10 prose-h3:mt-8
+  [&_p]:my-5     [&_figure]:my-8
+    [&_iframe]:aspect-video [&_iframe]:w-full [&_iframe]:h-auto"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </section>
