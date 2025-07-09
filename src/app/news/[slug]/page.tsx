@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/breadcrumb";
 import { categoryColors, PostResponse } from "@/types/post";
 
+export const revalidate = 60;
+
 interface MetadataProps {
   params: Promise<{ slug: string }>;
 }
@@ -121,7 +123,6 @@ export default async function SingleNewsPage({ params }: PageProps) {
     prose-img:rounded-xl
     [&_p]:my-5 [&_figure]:my-8
     [&_iframe]:aspect-video [&_iframe]:w-full [&_iframe]:h-auto
-
     [&_h1]:text-3xl 
     [&_h2]:text-2xl 
     [&_h3]:text-xl 
