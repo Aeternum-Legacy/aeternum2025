@@ -17,13 +17,13 @@ export default function Home() {
   return (
     <main className="page-wrapper overflow-x-hidden">
       <HeroSection />
+      <SignUpSection />
       <DidYouKnowSection />
       <WhatIfSection />
       <ReimagineYourLegacySection />
       <FeatureSummarySection />
       <FeatureDetailSection />
       <ImageTileSection />
-      <SignUpSection />
     </main>
   );
 }
