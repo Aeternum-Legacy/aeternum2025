@@ -1,4 +1,3 @@
-// src/app/post-sitemap.xml/route.ts
 export async function GET() {
   const wpURL = process.env.WORDPRESS_API_URL?.replace(/\/$/, "");
 

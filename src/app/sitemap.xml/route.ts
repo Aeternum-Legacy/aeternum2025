@@ -1,8 +1,5 @@
-// src/app/sitemap.xml/route.ts
-import { NextRequest } from "next/server";
-
 export async function GET() {
-  const wpURL = process.env.WORDPRESS_API_URL?.replace(/\/$/, ""); 
+  const wpURL = process.env.WORDPRESS_API_URL?.replace(/\/$/, ""); // trailing slash 제거
   const frontendURL = "https://www.aeternumproject.com";
 
   const res = await fetch(`${wpURL}/sitemap.xml`);
@@ -12,14 +9,15 @@ export async function GET() {
 
   let xml = await res.text();
 
-  xml = xml
-    .replaceAll(`${wpURL}`, frontendURL)
-    .replaceAll(
-      'href="//api.aeternumproject.com',
-      'href="https://www.aeternumproject.com'
-    );
+  xml = xml.replaceAll(`${wpURL}`, frontendURL);
+
+  xml = xml.replaceAll(
+    'href="//api.aeternumproject.com',
+    'href="https://www.aeternumproject.com'
+  );
 
   xml = xml.replace(/<\?xml-stylesheet.+?>/gi, "");
+
 
   return new Response(xml, {
     status: 200,
