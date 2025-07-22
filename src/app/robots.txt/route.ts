@@ -5,8 +5,8 @@ export async function GET(req: NextRequest) {
 User-agent: *
 Allow: /
 
-Sitemap: https://aeternumproject.com/sitemap.xml
-Sitemap: https://aeternumproject.com/blog/sitemap.xml
+Sitemap: https://www.aeternumproject.com/sitemap.xml
+Sitemap: https://www.aeternumproject.com/blog/sitemap.xml
   `.trim();
 
   return new Response(txt, {
