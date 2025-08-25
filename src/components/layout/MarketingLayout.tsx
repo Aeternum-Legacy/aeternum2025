@@ -1,4 +1,3 @@
-//File: src/components/layout/MarketingLayout.tsx
 export default function MarketingLayout({
   children,
 }: {

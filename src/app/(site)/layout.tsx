@@ -1,4 +1,3 @@
-//File: src/app/(site)/layout.tsx
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "../globals.css";
