@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import {
   DropdownMenu,
@@ -125,20 +124,20 @@ export default function ContactPage() {
           </div> */}
 
           <div className="flex items-center justify-center w-full py-2">
-            <div className="w-full max-w-md sm:max-w-[500px] sm:aspect-square sm:rounded-full sm:bg-[#F3FAF9] sm:shadow-xl sm:flex sm:items-center sm:justify-center">
+            <div className="w-full max-w-md sm:max-w-[600px] sm:aspect-square sm:rounded-full sm:bg-[#F3FAF9] sm:shadow-xl sm:flex sm:items-center sm:justify-center p-10">
               <div className="w-full h-full sm:w-[80%] sm:h-[80%] sm:flex sm:flex-col sm:items-center sm:justify-center">
+                <div className="flex justify-center mb-10">
+                  <img
+                    src="/icons/aeternum-logo4.svg"
+                    alt="Aeternum Logo"
+                    className="w-[150px]"
+                  />
+                </div>
+
                 <form
                   onSubmit={handleContactSubmit}
                   className="flex flex-col w-full z-10 gap-4"
                 >
-                  <div className="flex justify-center">
-                    <img
-                      src="/icons/aeternum-logo4.svg"
-                      alt="Aeternum Logo"
-                      className="w-[140px]"
-                    />
-                  </div>
-
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="relative">
                       <label
@@ -201,7 +200,35 @@ export default function ContactPage() {
                     ></textarea>
                   </div>
 
-                  <div className="flex justify-center">
+                  <div
+                    className="flex flex-col items-center justify-center w-full"
+                    style={{ gap: 12 }} 
+                  >
+                    <label
+                      htmlFor="consent"
+                      className="flex items-start text-sm text-gray-700 leading-snug"
+                      style={{ gap: 8 }} 
+                    >
+                      <input
+                        id="consent"
+                        name="consent"
+                        type="checkbox"
+                        required
+                        className="mt-1"
+                      />
+                      <span>
+                        By clicking <strong>Submit</strong>, I agree to the{" "}
+                        <Link href="/terms" className="underline">
+                          Terms of Service
+                        </Link>{" "}
+                        and consent to the{" "}
+                        <Link href="/privacy-policy" className="underline">
+                          Privacy Policy
+                        </Link>
+                        .
+                      </span>
+                    </label>
+
                     <button
                       type="submit"
                       disabled={loading}

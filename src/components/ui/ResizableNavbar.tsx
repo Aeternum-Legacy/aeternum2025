@@ -292,7 +292,7 @@ export const NavbarLogo = ({ onClick }: { onClick?: () => void }) => (
     className="relative z-20 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black dark:text-white"
   >
     <Image
-      src="icons/Aeternum_logo_TM_black.svg"
+      src="/icons/Aeternum_logo_TM_black.svg"
       alt="logo"
       width={150}
       height={40}

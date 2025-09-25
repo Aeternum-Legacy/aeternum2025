@@ -19,12 +19,15 @@ export async function POST(req: Request) {
     );
   }
 
-  const companyEmail = "info@aeternumproject.com";
+  const companyEmails = [
+    "selina.park@aeternumproject.com",
+    "info@aeternumproject.com",
+  ];
 
   const sendToCompany = new SendEmailCommand({
-    FromEmailAddress: companyEmail,
+    FromEmailAddress: companyEmails[0],
     Destination: {
-      ToAddresses: [companyEmail],
+      ToAddresses: companyEmails,
     },
     Content: {
       Simple: {
@@ -41,7 +44,7 @@ export async function POST(req: Request) {
   });
 
   const sendToUser = new SendEmailCommand({
-    FromEmailAddress: companyEmail,
+    FromEmailAddress: companyEmails[0],
     Destination: {
       ToAddresses: [email],
     },
