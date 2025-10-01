@@ -11,21 +11,21 @@ export type Post = {
   id: string;
   title: string;
   slug: string;
-  excerpt: string;
-  content: string;
-  isSticky?: boolean;
+  excerpt?: string | null;
+  content?: string | null;
+  isSticky?: boolean | null;
   featuredImage?: {
     node?: {
-      sourceUrl?: string;
-    };
-  };
+      sourceUrl?: string | null;
+    } | null;
+  } | null;
   categories?: {
     nodes: {
       name: string;
       slug: string;
     }[];
-  };
-  date: string;
+  } | null;
+  date: string | null;
   seo?: {
     title?: string;
     metaDesc?: string;
@@ -38,7 +38,13 @@ export type Post = {
 };
 
 export type PostsResponse = {
-  posts: { nodes: Post[] };
+  posts: {
+    nodes: Post[];
+    pageInfo: {
+      hasNextPage: boolean;
+      endCursor: string | null;
+    };
+  };
 };
 
 export type PostResponse = {

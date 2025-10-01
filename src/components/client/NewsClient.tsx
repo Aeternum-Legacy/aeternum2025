@@ -1,13 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { stripHtml } from "string-strip-html";
+import { useRouter, useSearchParams } from "next/navigation";
 import LogoLabel from "@/components/ui/LogoLabel";
 import NewsInputWrapper from "@/components/ui/NewsInputWrapper";
-import { graphQLClient } from "@/lib/graphql-client";
-import { POSTS_QUERY } from "@/lib/queries";
-import { categoryColors, Post, PostsResponse } from "@/types/post";
 import {
   Pagination,
   PaginationContent,
@@ -15,7 +12,20 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
+  PaginationEllipsis,
 } from "@/components/ui/pagination";
+
+type Post = {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt?: string | null;
+  content?: string | null;
+  date: string | null;
+  isSticky?: boolean | null;
+  featuredImage?: { node?: { sourceUrl?: string | null } | null } | null;
+  categories?: { nodes: { name: string; slug: string }[] } | null;
+};
 
 const fallbackImages = [
   "/images/family-walking.jpg",
@@ -47,57 +57,56 @@ const fallbackImages = [
 
 function getStableFallbackImage(id: string) {
   const index =
-    id.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0) %
+    id.split("").reduce((sum, ch) => sum + ch.charCodeAt(0), 0) %
     fallbackImages.length;
   return fallbackImages[index];
 }
 
-export default function NewsClient() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [lastSubmittedSearch, setLastSubmittedSearch] = useState("");
-  const [posts, setPosts] = useState<Post[] | null>(null);
+type Props = {
+  initialPosts: Post[];
+  totalPages: number;
+  currentPage: number;
+  searchTermFromUrl: string;
+  featuredPostsInitial: Post[];
+  postsPerPage: number;
+};
+
+export default function NewsClient({
+  initialPosts,
+  totalPages,
+  currentPage,
+  searchTermFromUrl,
+  featuredPostsInitial,
+}: Props) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const [searchTerm, setSearchTerm] = useState(searchTermFromUrl);
+  const [lastSubmittedSearch, setLastSubmittedSearch] =
+    useState(searchTermFromUrl);
+
+  const [isLoading, setIsLoading] = useState(false);
+
   const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
   }, []);
 
-  useEffect(() => {
-    async function fetchPosts() {
-      const data = await graphQLClient.request<PostsResponse>(POSTS_QUERY);
-      setPosts(data.posts.nodes);
-    }
-    fetchPosts();
-  }, []);
-
-  const filteredPosts = posts?.filter((post) =>
-    (post.title + post.excerpt).toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const POSTS_PER_PAGE = 6;
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const PAGES_PER_GROUP = 5;
-  const totalPages = Math.ceil((filteredPosts?.length || 0) / POSTS_PER_PAGE);
-  const currentGroup = Math.floor((currentPage - 1) / PAGES_PER_GROUP);
-  const groupStart = currentGroup * PAGES_PER_GROUP + 1;
-  const groupEnd = Math.min(groupStart + PAGES_PER_GROUP - 1, totalPages);
-
-  const paginatedPosts = filteredPosts?.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
-  );
+  const paginatedPosts = initialPosts;
 
   const FEATURED_PER_PAGE = isMobile ? 3 : 7;
   const [featuredPage, setFeaturedPage] = useState(1);
-  const featuredPosts = posts?.filter((post) => post.isSticky) || [];
-
+  const featuredPosts = useMemo(
+    () => (featuredPostsInitial || []).filter((p) => !!p.isSticky),
+    [featuredPostsInitial]
+  );
   const FEATURED_PAGES_PER_GROUP = 3;
-  const totalFeaturedPages = Math.ceil(
-    featuredPosts.length / FEATURED_PER_PAGE
+  const totalFeaturedPages = Math.max(
+    1,
+    Math.ceil(featuredPosts.length / FEATURED_PER_PAGE)
   );
   const featuredGroup = Math.floor(
     (featuredPage - 1) / FEATURED_PAGES_PER_GROUP
@@ -107,15 +116,24 @@ export default function NewsClient() {
     featuredGroupStart + FEATURED_PAGES_PER_GROUP - 1,
     totalFeaturedPages
   );
-
   const paginatedFeatured = featuredPosts.slice(
     (featuredPage - 1) * FEATURED_PER_PAGE,
     featuredPage * FEATURED_PER_PAGE
   );
 
-  useEffect(() => {
+  const goToPage = (page: number, q: string) => {
+    setIsLoading(true);
+    const params = new URLSearchParams(searchParams?.toString());
+    if (q) params.set("q", q);
+    else params.delete("q");
+    params.set("page", String(page));
+    router.push(`/news?${params.toString()}`);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentPage]);
+  };
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, [initialPosts]);
 
   return (
     <div className="page-wrapper bg-pattern section-wrapper gap-y-12 md:gap-y-24">
@@ -125,21 +143,23 @@ export default function NewsClient() {
           alt="Aeternum Logo"
           text="LATEST NEWS"
         />
-        <div className="relative z-10 text-center flex flex-col gap-y-4">
+
+        <div
+          className="relative z-10 text-center flex flex-col"
+          style={{ gap: 16 }}
+        >
           <h3 className="font-bold mb-2">Discover the Latest from Aeternum</h3>
           <p>
             Product Updates, News, and Stories. Follow along as we grow,
             improve, and continue building for meaningful legacy sharing.
           </p>
-
           <NewsInputWrapper
             onChange={(val) => setSearchTerm(val)}
             onSubmit={() => {
               setLastSubmittedSearch(searchTerm);
-              setCurrentPage(1);
+              goToPage(1, searchTerm);
             }}
           />
-
           {lastSubmittedSearch && (
             <p className="text-sm text-gray-600">
               Showing results for <strong>"{lastSubmittedSearch}"</strong>
@@ -147,8 +167,9 @@ export default function NewsClient() {
                 onClick={() => {
                   setSearchTerm("");
                   setLastSubmittedSearch("");
+                  goToPage(1, "");
                 }}
-                className="ml-2 text-blue-600 underline"
+                className="ml-2 underline"
               >
                 Clear
               </button>
@@ -157,21 +178,28 @@ export default function NewsClient() {
         </div>
       </div>
 
-      <section className="w-full flex flex-col gap-4">
-        <div className="gap-6 w-full hidden md:flex">
-          <div className="flex items-center gap-2 flex-[8] min-w-0">
+      <section className="w-full flex flex-col" style={{ gap: 16 }}>
+        <div className="w-full hidden md:flex items-center" style={{ gap: 24 }}>
+          <div
+            className="flex items-center flex-[8] min-w-0"
+            style={{ gap: 8 }}
+          >
             <h2 className="text-2xl font-semibold whitespace-nowrap">
               Aeternum Updates & Announcements
             </h2>
             <div className="flex-grow border-b-2 border-gray-300" />
           </div>
-          <div className="flex items-center justify-between gap-2 flex-[2] min-w-[200px]">
+
+          <div className="flex items-center justify-between flex-[2] min-w-[200px]">
             <h2 className="text-2xl font-semibold whitespace-nowrap">
               Featured
             </h2>
 
             <div className="flex items-center justify-center min-h-8 w-full">
-              <div className="flex items-center gap-2 w-[120px] justify-center">
+              <div
+                className="flex items-center w-[120px] justify-center"
+                style={{ gap: 8 }}
+              >
                 <button
                   onClick={() =>
                     featuredGroupStart > 1 &&
@@ -187,7 +215,10 @@ export default function NewsClient() {
                   <span className="text-lg">&lt;</span>
                 </button>
 
-                <div className="flex items-center gap-1 w-[36px] justify-center">
+                <div
+                  className="flex items-center w-[36px] justify-center"
+                  style={{ gap: 4 }}
+                >
                   {Array.from({
                     length: featuredGroupEnd - featuredGroupStart + 1,
                   }).map((_, i) => {
@@ -224,29 +255,37 @@ export default function NewsClient() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-6 min-h-[400px] w-full">
+        <div
+          className="flex flex-col md:flex-row w-full"
+          style={{ gap: 24, minHeight: 400 }}
+        >
           <div className="flex-[8] min-w-0 flex flex-col">
-            <div className="flex md:hidden items-center gap-2">
+            <div className="flex md:hidden items-center" style={{ gap: 8 }}>
               <h6 className="font-semibold whitespace-nowrap">
                 Aeternum Updates & Announcements
               </h6>
               <div className="flex-grow border-b-2 border-gray-300" />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 min-h-[200px]">
-              {posts === null ? (
-                Array.from({ length: 3 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="h-[250px] bg-gray-100 animate-pulse rounded-2xl"
-                  />
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 min-h-[200px]"
+              style={{ gap: 24 }}
+            >
+              {isLoading ? (
+                Array.from({ length: 6 }).map((_, i) => (
+                  <div key={`skeleton-${i}`} className="animate-pulse">
+                    <div className="h-[250px] bg-gray-200 rounded-2xl mb-3"></div>
+                    <div className="space-y-2">
+                      <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                      <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                    </div>
+                  </div>
                 ))
-              ) : filteredPosts && filteredPosts.length > 0 ? (
-                paginatedPosts?.map((post) => {
+              ) : paginatedPosts && paginatedPosts.length > 0 ? (
+                paginatedPosts.map((post) => {
                   const imageUrl =
                     post.featuredImage?.node?.sourceUrl ||
                     getStableFallbackImage(post.id);
-                  const cleanExcerpt = stripHtml(post.excerpt).result;
 
                   return (
                     <Link
@@ -266,18 +305,40 @@ export default function NewsClient() {
                   );
                 })
               ) : (
-                <div className="col-span-full flex justify-center items-center min-h-[200px]">
-                  <p className="text-sm text-gray-400">No posts found.</p>
+                <div className="col-span-full flex flex-col justify-center items-center min-h-[200px] space-y-4">
+                  <p className="text-lg text-gray-400">
+                    {lastSubmittedSearch
+                      ? `No posts found for "${lastSubmittedSearch}"`
+                      : "No posts found."}
+                  </p>
+                  {lastSubmittedSearch && (
+                    <button
+                      onClick={() => {
+                        setSearchTerm("");
+                        setLastSubmittedSearch("");
+                        goToPage(1, "");
+                      }}
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Clear search and view all posts
+                    </button>
+                  )}
                 </div>
               )}
             </div>
           </div>
 
-          <div className="flex-[2] min-w-[200px] flex flex-col gap-6">
-            <div className="flex md:hidden items-center justify-between gap-2">
+          <div
+            className="flex-[2] min-w-[200px] flex flex-col"
+            style={{ gap: 24 }}
+          >
+            <div className="flex md:hidden items-center justify-between min-w-[80px]">
               <h6 className="font-semibold whitespace-nowrap">Featured</h6>
 
-              <div className="flex items-center gap-2 min-w-[80px] justify-center">
+              <div
+                className="flex items-center justify-center"
+                style={{ gap: 8 }}
+              >
                 <button
                   onClick={() =>
                     featuredGroupStart > 1 &&
@@ -293,7 +354,7 @@ export default function NewsClient() {
                   <span className="text-sm">&lt;</span>
                 </button>
 
-                <div className="flex items-center gap-1">
+                <div className="flex items-center" style={{ gap: 4 }}>
                   {Array.from({
                     length: featuredGroupEnd - featuredGroupStart + 1,
                   }).map((_, i) => {
@@ -328,20 +389,14 @@ export default function NewsClient() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4">
-              {posts === null ? (
-                Array.from({ length: 3 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-full h-24 bg-gray-100 animate-pulse rounded-xl"
-                  />
-                ))
-              ) : paginatedFeatured.length > 0 ? (
+            <div className="flex flex-col" style={{ gap: 16 }}>
+              {paginatedFeatured.length > 0 ? (
                 paginatedFeatured.map((post) => (
                   <Link
                     key={post.id}
                     href={`/news/${post.slug}`}
-                    className="flex items-start gap-4 group"
+                    className="flex items-start group"
+                    style={{ gap: 16 }}
                   >
                     <div className="w-24 h-24 rounded-lg overflow-hidden shrink-0">
                       <img
@@ -349,11 +404,14 @@ export default function NewsClient() {
                           post.featuredImage?.node?.sourceUrl ||
                           getStableFallbackImage(post.id)
                         }
-                        alt={post.title}
+                        alt={post.title ?? "featured post"}
                         className="object-cover w-full h-full transition group-hover:scale-105"
                       />
                     </div>
-                    <div className="flex flex-col flex-1 items-start text-left">
+                    <div
+                      className="flex flex-col flex-1 items-start text-left"
+                      style={{ gap: 4 }}
+                    >
                       <span className="text-sm text-gray-400">
                         {new Date(post.date || "").toLocaleDateString("en-US", {
                           month: "long",
@@ -378,48 +436,127 @@ export default function NewsClient() {
         </div>
       </section>
 
-      {filteredPosts && filteredPosts.length > POSTS_PER_PAGE && (
+      {totalPages > 1 && (
         <Pagination>
           <PaginationContent>
-            {groupStart > 1 && (
-              <PaginationItem>
-                <PaginationPrevious
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setCurrentPage(groupStart - 1);
-                  }}
-                />
-              </PaginationItem>
-            )}
-            {Array.from({ length: groupEnd - groupStart + 1 }).map((_, i) => {
-              const pageNum = groupStart + i;
-              return (
-                <PaginationItem key={pageNum}>
-                  <PaginationLink
-                    href="#"
-                    isActive={currentPage === pageNum}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setCurrentPage(pageNum);
-                    }}
-                  >
-                    {pageNum}
-                  </PaginationLink>
-                </PaginationItem>
+            {(() => {
+              const PAGES_PER_GROUP = 5;
+              const currentGroup = Math.floor(
+                (currentPage - 1) / PAGES_PER_GROUP
               );
-            })}
-            {groupEnd < totalPages && (
-              <PaginationItem>
-                <PaginationNext
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setCurrentPage(groupEnd + 1);
-                  }}
-                />
-              </PaginationItem>
-            )}
+              const groupStart = currentGroup * PAGES_PER_GROUP + 1;
+              const groupEnd = Math.min(
+                groupStart + PAGES_PER_GROUP - 1,
+                totalPages
+              );
+
+              const pages: JSX.Element[] = [];
+
+              if (groupStart > 1) {
+                pages.push(
+                  <PaginationItem key="prev-group">
+                    <PaginationPrevious
+                      href="#"
+                      className={
+                        isLoading ? "pointer-events-none opacity-50" : ""
+                      }
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (!isLoading) {
+                          // Go to last page of previous group
+                          const prevGroupEnd = groupStart - 1;
+                          goToPage(prevGroupEnd, searchTerm);
+                        }
+                      }}
+                    />
+                  </PaginationItem>
+                );
+
+                if (groupStart > PAGES_PER_GROUP + 1) {
+                  pages.push(
+                    <PaginationItem key="prev-ellipsis">
+                      <PaginationEllipsis />
+                    </PaginationItem>
+                  );
+                }
+              }
+
+              if (totalPages <= PAGES_PER_GROUP) {
+                for (let p = 1; p <= totalPages; p++) {
+                  pages.push(
+                    <PaginationItem key={p}>
+                      <PaginationLink
+                        href="#"
+                        isActive={p === currentPage}
+                        className={
+                          isLoading ? "pointer-events-none opacity-50" : ""
+                        }
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (!isLoading) {
+                            goToPage(p, searchTerm);
+                          }
+                        }}
+                      >
+                        {p}
+                      </PaginationLink>
+                    </PaginationItem>
+                  );
+                }
+              } else {
+                for (let p = groupStart; p <= groupEnd; p++) {
+                  pages.push(
+                    <PaginationItem key={p}>
+                      <PaginationLink
+                        href="#"
+                        isActive={p === currentPage}
+                        className={
+                          isLoading ? "pointer-events-none opacity-50" : ""
+                        }
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (!isLoading) {
+                            goToPage(p, searchTerm);
+                          }
+                        }}
+                      >
+                        {p}
+                      </PaginationLink>
+                    </PaginationItem>
+                  );
+                }
+
+                if (groupEnd < totalPages) {
+                  if (groupEnd < totalPages - 1) {
+                    pages.push(
+                      <PaginationItem key="next-ellipsis">
+                        <PaginationEllipsis />
+                      </PaginationItem>
+                    );
+                  }
+
+                  pages.push(
+                    <PaginationItem key="next-group">
+                      <PaginationNext
+                        href="#"
+                        className={
+                          isLoading ? "pointer-events-none opacity-50" : ""
+                        }
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (!isLoading) {
+                            const nextGroupStart = groupEnd + 1;
+                            goToPage(nextGroupStart, searchTerm);
+                          }
+                        }}
+                      />
+                    </PaginationItem>
+                  );
+                }
+              }
+
+              return pages;
+            })()}
           </PaginationContent>
         </Pagination>
       )}

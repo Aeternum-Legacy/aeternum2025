@@ -1,14 +1,23 @@
 import { gql } from "graphql-request";
 
 export const POSTS_QUERY = gql`
-  {
-    posts {
+  query GetPosts($first: Int = 50, $after: String) {
+    posts(
+      first: $first
+      after: $after
+      where: { orderby: { field: DATE, order: DESC } }
+    ) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
       nodes {
         id
         title
         slug
         excerpt
         content
+        date
         isSticky
         featuredImage {
           node {
