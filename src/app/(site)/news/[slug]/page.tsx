@@ -97,11 +97,13 @@ export default async function SingleNewsPage({ params }: PageProps) {
         />
         <div className="flex flex-row items-start gap-2">
           <p className="text-sm text-gray-500">
-            {new Date(post.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
+            {post.date
+              ? new Date(post.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
+              : "No date available"}
           </p>
           {(post.categories?.nodes || []).map((cat, idx) => {
             const color =
@@ -130,7 +132,7 @@ export default async function SingleNewsPage({ params }: PageProps) {
     [&_h5]:text-base 
     [&_h6]:text-sm 
   "
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: post.content || "" }}
         />
       </section>
     </div>
