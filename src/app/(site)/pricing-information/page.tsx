@@ -22,10 +22,13 @@ const allFeatures: FeatureKey[] = Object.keys(
 export default function PricingInformationPage() {
   const [activeTab, setActiveTab] = useState("monthly");
 
-  const formatCAD = (amount: number) =>
-    new Intl.NumberFormat("en-CA", {
+  const [currency, setCurrency] = useState<"CAD" | "USD">("CAD");
+  const FX_CAD_TO_USD = 0.71;
+
+  const formatSelected = (amount: number) =>
+    new Intl.NumberFormat(currency === "CAD" ? "en-CA" : "en-US", {
       style: "currency",
-      currency: "CAD",
+      currency,
       maximumFractionDigits: 2,
     }).format(amount);
 
@@ -101,10 +104,19 @@ export default function PricingInformationPage() {
               ))}
             </TabsList>
           </Tabs>
-          <p className="mt-2 text-sm text-gray-600">
-            Pricing and product details are subject to change based on final
-            product specifications.
-          </p>
+
+          <div className="mt-2 flex flex-col sm:flex-row justify-center items-center gap-2 text-sm">
+            <p className="text-gray-600 text-center">
+              Pricing and product details are subject to change based on final
+              product specifications.
+            </p>
+            <button
+              onClick={() => setCurrency(currency === "CAD" ? "USD" : "CAD")}
+              className="text-blue-600 hover:underline transition-colors"
+            >
+              View pricing in {currency === "CAD" ? "USD" : "CAD"}
+            </button>
+          </div>
         </div>
 
         <div
@@ -133,40 +145,64 @@ export default function PricingInformationPage() {
               >
                 <div className="flex flex-col gap-y-2 overflow-y-auto flex-grow">
                   <h6 className="tracking-wider font-medium">{plan.name}</h6>
+
                   <div className="flex items-center gap-2">
                     {activeTab === "yearly" && plan.monthlyPrice !== "$0" ? (
                       <>
-                        <div className="flex items-baseline gap-2">
-                          <p
-                            className={cn(
-                              "text-gray-500",
-                              "animate-strike-through"
-                            )}
-                          >
-                            {formatCAD(
-                              parseFloat(
-                                plan.originalYearlyPrice.replace("$", "")
-                              )
-                            )}
-                          </p>
-                          <AnimatedNumber
-                            from={
-                              plan.monthlyPrice === "$2.99" ? 35.88 : 119.88
-                            }
-                            to={parseFloat(plan.yearlyPrice.replace("$", ""))}
-                          />
-                        </div>
+                        {(() => {
+                          const cadOriginal = parseFloat(
+                            plan.originalYearlyPrice.replace("$", "")
+                          );
+                          const cadDiscount = parseFloat(
+                            plan.yearlyPrice.replace("$", "")
+                          );
+                          const fromVal =
+                            currency === "CAD"
+                              ? cadOriginal
+                              : cadOriginal * FX_CAD_TO_USD;
+                          const toVal =
+                            currency === "CAD"
+                              ? cadDiscount
+                              : cadDiscount * FX_CAD_TO_USD;
+
+                          return (
+                            <div className="flex items-baseline gap-2">
+                              <p
+                                className={cn(
+                                  "text-gray-500",
+                                  "animate-strike-through"
+                                )}
+                              >
+                                {formatSelected(fromVal)}
+                              </p>
+                              <AnimatedNumber
+                                from={fromVal}
+                                to={toVal}
+                                formatter={(n: number) => formatSelected(n)}
+                              />
+                            </div>
+                          );
+                        })()}
                         <p className="text-sm leading-none">{plan.subtext}</p>
                       </>
                     ) : activeTab === "addon" ? (
                       <h4>hi</h4>
                     ) : (
                       <>
-                        <p className="text-3xl font-bold leading-none">
-                          {formatCAD(
-                            parseFloat(plan.monthlyPrice.replace("$", ""))
-                          )}
-                        </p>
+                        {(() => {
+                          const cadMonthly = parseFloat(
+                            plan.monthlyPrice.replace("$", "")
+                          );
+                          const monthlyVal =
+                            currency === "CAD"
+                              ? cadMonthly
+                              : cadMonthly * FX_CAD_TO_USD;
+                          return (
+                            <p className="text-3xl font-bold leading-none">
+                              {formatSelected(monthlyVal)}
+                            </p>
+                          );
+                        })()}
                         <p className="text-sm leading-none">{plan.subtext}</p>
                       </>
                     )}

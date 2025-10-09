@@ -2,6 +2,7 @@ export default function SectionBlock({
   id,
   title,
   intro,
+  paragraphs,
   bullets,
   outro,
   useRomanStyle = false,
@@ -14,6 +15,13 @@ export default function SectionBlock({
 
       <div className="flex flex-col gap-2 md:ml-10 lg:ml-64">
         {intro && <div className="tracking-widest leading-loose">{intro}</div>}
+
+        {paragraphs &&
+          paragraphs.map((para, idx) => (
+            <div key={idx} className="tracking-widest leading-loose">
+              {para}
+            </div>
+          ))}
 
         {bullets && (
           <ul
@@ -37,6 +45,7 @@ interface SectionBlockProps {
   id?: string;
   title: string;
   intro?: string | React.ReactNode;
+  paragraphs?: (string | React.ReactNode)[];
   bullets?: React.ReactNode[];
   outro?: string | React.ReactNode;
   useRomanStyle?: boolean;

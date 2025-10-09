@@ -8,28 +8,41 @@ export default function AnimatedNumber({
   to,
   duration = 1,
   prefix = "$",
+  formatter,
 }: {
   from: number;
   to: number;
   duration?: number;
   prefix?: string;
+  formatter?: (n: number) => string;
 }) {
-  const [display, setDisplay] = useState(from.toFixed(2));
+  const formatValue = (val: number) => {
+    if (formatter) return formatter(val);
+    return val.toFixed(2);
+  };
+
+  const [display, setDisplay] = useState(formatValue(from));
 
   useEffect(() => {
     const controls = animate(from, to, {
       duration,
       onUpdate(value) {
-        setDisplay(value.toFixed(2));
+        setDisplay(formatValue(value));
       },
     });
     return () => controls.stop();
-  }, [from, to, duration]);
+  }, [from, to, duration, formatter]);
 
   return (
     <p className="text-3xl font-bold leading-none text-[#186E68]">
-      {prefix}
-      {display}
+      {formatter ? (
+        display
+      ) : (
+        <>
+          {prefix}
+          {display}
+        </>
+      )}
     </p>
   );
 }

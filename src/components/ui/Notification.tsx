@@ -13,10 +13,10 @@ export default function Notification({ title, text }: NotificationProps) {
         For <span className="font-bold">any questions</span> regarding these{" "}
         {title}, contact us at{" "}
         <a
-          href="mailto:info@aeternumproject.com"
+          href="mailto:legal@aeternumproject.com"
           className="underline underline-offset-2 font-medium"
         >
-          info@aeternumproject.com
+          legal@aeternumproject.com
         </a>
         .
       </p>
