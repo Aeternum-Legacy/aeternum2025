@@ -9,12 +9,14 @@ export default function AnimatedNumber({
   duration = 1,
   prefix = "$",
   formatter,
+  className,
 }: {
   from: number;
   to: number;
   duration?: number;
   prefix?: string;
   formatter?: (n: number) => string;
+  className?: string;
 }) {
   const formatValue = (val: number) => {
     if (formatter) return formatter(val);
@@ -34,7 +36,9 @@ export default function AnimatedNumber({
   }, [from, to, duration, formatter]);
 
   return (
-    <p className="text-3xl font-bold leading-none text-[#186E68]">
+    <p
+      className={className ?? "text-3xl font-bold leading-none text-[#186E68]"}
+    >
       {formatter ? (
         display
       ) : (
