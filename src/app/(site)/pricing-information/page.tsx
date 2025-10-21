@@ -33,10 +33,6 @@ export default function PricingInformationPage() {
     }).format(amount);
   };
 
-  const USD_TO_CAD = 1.4; // 1 USD = 1.4 CAD
-  const convertFromUSD = (amountUSD: number) =>
-    currency === "CAD" ? amountUSD * USD_TO_CAD : amountUSD;
-
   return (
     <main className="page-wrapper md:gap-y-18">
       <section className="hero-wrapper gap-y-6 z-10">
@@ -146,34 +142,16 @@ export default function PricingInformationPage() {
                   <h6 className="tracking-wider font-medium">{plan.name}</h6>
 
                   <div className="flex items-center gap-2">
-                    {activeTab === "yearly" && plan.monthlyPrice !== "$0" ? (
+                    {activeTab === "yearly" && plan.monthly[currency] !== 0 ? (
                       <>
                         {(() => {
-                          const originalRaw = plan.originalYearlyPrice.replace(
-                            "$",
-                            ""
-                          );
-                          const discountedRaw = plan.yearlyPrice.replace(
-                            "$",
-                            ""
-                          );
-                          const original = parseFloat(originalRaw);
-                          const discounted = parseFloat(discountedRaw);
+                          const original = plan.yearly.original[currency];
+                          const discounted = plan.yearly.discounted[currency];
 
-                          // If parsing failed for either, fall back to raw text display
-                          const originalIsNumber = !Number.isNaN(original);
-                          const discountedIsNumber = !Number.isNaN(discounted);
-
-                          // If discounted is numeric and zero, show FREE
-                          // If this plan is explicitly FREE (e.g., Basic) show a simple FREE label
-                          const discountedRawUpper = plan.yearlyPrice
-                            .trim()
-                            .toUpperCase();
                           const isExplicitFree =
                             plan.name === "Basic" ||
-                            discountedRawUpper === "FREE" ||
-                            discountedRawUpper === "$0" ||
-                            (discountedIsNumber && discounted === 0);
+                            (typeof discounted === "number" &&
+                              discounted === 0);
 
                           if (isExplicitFree) {
                             return (
@@ -185,55 +163,46 @@ export default function PricingInformationPage() {
                             );
                           }
 
-                          // If both numeric, animate between them
-                          if (originalIsNumber && discountedIsNumber) {
+                          // Numeric prices: animate between original and discounted
+                          if (
+                            typeof original === "number" &&
+                            typeof discounted === "number"
+                          ) {
                             return (
                               <div className="flex items-baseline gap-2">
-                                {(() => {
-                                  const origConv = convertFromUSD(original);
-                                  const discConv = convertFromUSD(discounted);
-                                  return (
-                                    <>
-                                      <p
-                                        className={cn(
-                                          "text-gray-500",
-                                          "animate-strike-through"
-                                        )}
-                                      >
-                                        {formatSelected(origConv)}
-                                      </p>
-                                      <div className="flex items-baseline gap-2">
-                                        <AnimatedNumber
-                                          from={origConv}
-                                          to={discConv}
-                                          formatter={(n: number) =>
-                                            formatSelected(n)
-                                          }
-                                        />
-                                        <span className="text-3xl font-bold leading-none text-[#186E68]">
-                                          {currency}
-                                        </span>
-                                      </div>
-                                    </>
-                                  );
-                                })()}
+                                <>
+                                  <p
+                                    className={cn(
+                                      "text-gray-500",
+                                      "animate-strike-through"
+                                    )}
+                                  >
+                                    {formatSelected(original)}
+                                  </p>
+                                  <div className="flex items-baseline gap-2">
+                                    <AnimatedNumber
+                                      from={original}
+                                      to={discounted}
+                                      formatter={(n: number) =>
+                                        formatSelected(n)
+                                      }
+                                    />
+                                    <span className="text-3xl font-bold leading-none text-[#186E68]">
+                                      {currency}
+                                    </span>
+                                  </div>
+                                </>
                               </div>
                             );
                           }
 
-                          // Fallback: show raw strings (e.g., "Free" or other text)
+                          // Fallback: show discounted value formatted if possible
                           return (
                             <div className="flex items-baseline gap-2">
-                              <p
-                                className={cn(
-                                  "text-gray-500",
-                                  "animate-strike-through"
-                                )}
-                              >
-                                {plan.originalYearlyPrice}
-                              </p>
                               <p className="text-3xl font-bold leading-none">
-                                {plan.yearlyPrice}
+                                {typeof discounted === "number"
+                                  ? formatSelected(discounted)
+                                  : String(discounted)}
                               </p>
                             </div>
                           );
@@ -245,11 +214,11 @@ export default function PricingInformationPage() {
                     ) : (
                       <>
                         {(() => {
-                          const monthlyRaw = plan.monthlyPrice.replace("$", "");
-                          const monthlyVal = parseFloat(monthlyRaw);
-                          const monthlyIsNumber = !Number.isNaN(monthlyVal);
-
-                          if (monthlyIsNumber && monthlyVal === 0) {
+                          const monthlyVal = plan.monthly[currency];
+                          if (
+                            typeof monthlyVal === "number" &&
+                            monthlyVal === 0
+                          ) {
                             return (
                               <p className="text-3xl font-bold leading-none">
                                 FREE
@@ -257,12 +226,10 @@ export default function PricingInformationPage() {
                             );
                           }
 
-                          if (monthlyIsNumber) {
+                          if (typeof monthlyVal === "number") {
                             return (
                               <p className="text-3xl font-bold leading-none flex items-baseline gap-2">
-                                <span>
-                                  {formatSelected(convertFromUSD(monthlyVal))}
-                                </span>
+                                <span>{formatSelected(monthlyVal)}</span>
                                 <span className="text-3xl font-bold leading-none">
                                   {currency}
                                 </span>
@@ -270,10 +237,10 @@ export default function PricingInformationPage() {
                             );
                           }
 
-                          // Fallback: raw text (e.g., "Free")
+                          // Fallback: raw monthly value
                           return (
                             <p className="text-3xl font-bold leading-none">
-                              {plan.monthlyPrice}
+                              {String(monthlyVal)}
                             </p>
                           );
                         })()}
@@ -346,33 +313,111 @@ export default function PricingInformationPage() {
 
                         // Special handling for the Monthly Price row: convert and format
                         if (feature === "Monthly Price") {
-                          const plan = pricingPlans.find(
-                            (p) => p.name === tier
-                          );
-                          if (!plan) {
+                          // Prefer the value from featureComparisonByTier (it now
+                          // contains { USD, CAD }) but fall back to pricingPlans if
+                          // needed.
+                          const featureVal = value as any;
+
+                          if (
+                            featureVal &&
+                            typeof featureVal === "object" &&
+                            "USD" in featureVal
+                          ) {
+                            const monthlyVal = featureVal[currency];
+
+                            if (
+                              typeof monthlyVal === "number" &&
+                              monthlyVal === 0
+                            ) {
+                              return (
+                                <td
+                                  key={tier}
+                                  className="p-2 md:p-3 text-center"
+                                  style={{ backgroundColor: color }}
+                                >
+                                  Free
+                                </td>
+                              );
+                            }
+
+                            if (typeof monthlyVal === "number") {
+                              return (
+                                <td
+                                  key={tier}
+                                  className="p-2 md:p-3 text-center"
+                                  style={{ backgroundColor: color }}
+                                >
+                                  <div className="flex items-center justify-center">
+                                    <p className="text-sm font-medium">
+                                      {formatSelected(monthlyVal)}
+                                    </p>
+                                  </div>
+                                </td>
+                              );
+                            }
+
                             return (
                               <td
                                 key={tier}
                                 className="p-2 md:p-3 text-center"
                                 style={{ backgroundColor: color }}
                               >
-                                {value}
+                                {String(monthlyVal)}
                               </td>
                             );
                           }
 
-                          const monthlyRaw = plan.monthlyPrice.replace("$", "");
-                          const monthlyVal = parseFloat(monthlyRaw);
-                          const monthlyIsNumber = !Number.isNaN(monthlyVal);
+                          // Fallback to pricingPlans (older source) if featureComparison
+                          // entry isn't an object with USD/CAD
+                          const plan = pricingPlans.find(
+                            (p) => p.name === tier
+                          );
+                          if (!plan) {
+                            // featureComparisonByTier may hold the price object directly
+                            const fv = value as any;
+                            if (fv && typeof fv === "object") {
+                              if ("USD" in fv) {
+                                return (
+                                  <td
+                                    key={tier}
+                                    className="p-2 md:p-3 text-center"
+                                    style={{ backgroundColor: color }}
+                                  >
+                                    {formatSelected(fv[currency])}
+                                  </td>
+                                );
+                              }
+                              if ("discounted" in fv && fv.discounted) {
+                                const disc = fv.discounted[currency];
+                                return (
+                                  <td
+                                    key={tier}
+                                    className="p-2 md:p-3 text-center"
+                                    style={{ backgroundColor: color }}
+                                  >
+                                    {typeof disc === "number"
+                                      ? formatSelected(disc)
+                                      : String(disc)}
+                                  </td>
+                                );
+                              }
+                            }
 
-                          // If numeric and zero or the plan explicitly says Free
+                            return (
+                              <td
+                                key={tier}
+                                className="p-2 md:p-3 text-center"
+                                style={{ backgroundColor: color }}
+                              >
+                                {String(value)}
+                              </td>
+                            );
+                          }
+
+                          const monthlyVal = plan.monthly[currency];
                           if (
                             plan.name === "Basic" ||
-                            plan.monthlyPrice
-                              .toString()
-                              .toUpperCase()
-                              .includes("FREE") ||
-                            (monthlyIsNumber && monthlyVal === 0)
+                            (typeof monthlyVal === "number" && monthlyVal === 0)
                           ) {
                             return (
                               <td
@@ -385,8 +430,7 @@ export default function PricingInformationPage() {
                             );
                           }
 
-                          if (monthlyIsNumber) {
-                            const conv = convertFromUSD(monthlyVal);
+                          if (typeof monthlyVal === "number") {
                             return (
                               <td
                                 key={tier}
@@ -395,21 +439,20 @@ export default function PricingInformationPage() {
                               >
                                 <div className="flex items-center justify-center">
                                   <p className="text-sm font-medium">
-                                    {formatSelected(conv)}
+                                    {formatSelected(monthlyVal)}
                                   </p>
                                 </div>
                               </td>
                             );
                           }
 
-                          // Fallback: raw monthlyPrice string
                           return (
                             <td
                               key={tier}
                               className="p-2 md:p-3 text-center"
                               style={{ backgroundColor: color }}
                             >
-                              {plan.monthlyPrice}
+                              {String(monthlyVal)}
                             </td>
                           );
                         }
@@ -417,39 +460,125 @@ export default function PricingInformationPage() {
                         // Special handling for the Annual Price row: show original price (strike)
                         // and an animated discounted price for Premium/Legacy, or FREE for Basic.
                         if (feature === "Annual Price") {
-                          const plan = pricingPlans.find(
-                            (p) => p.name === tier
-                          );
-                          if (!plan) {
+                          // Prefer the value from featureComparisonByTier if present
+                          const featureVal = value as any;
+
+                          if (
+                            featureVal &&
+                            typeof featureVal === "object" &&
+                            "original" in featureVal &&
+                            "discounted" in featureVal
+                          ) {
+                            const orig = featureVal.original[currency];
+                            const disc = featureVal.discounted[currency];
+
+                            if (typeof disc === "number" && disc === 0) {
+                              return (
+                                <td
+                                  key={tier}
+                                  className="p-2 md:p-3 text-center"
+                                  style={{ backgroundColor: color }}
+                                >
+                                  Free
+                                </td>
+                              );
+                            }
+
+                            if (
+                              typeof orig === "number" &&
+                              typeof disc === "number"
+                            ) {
+                              return (
+                                <td
+                                  key={tier}
+                                  className="p-2 md:p-3 text-center"
+                                  style={{ backgroundColor: color }}
+                                >
+                                  <div className="flex flex-row items-center gap-2 justify-center">
+                                    <>
+                                      <p className="text-gray-500 text-sm line-through">
+                                        {formatSelected(orig)}
+                                      </p>
+                                      <div className="flex items-baseline gap-2">
+                                        <AnimatedNumber
+                                          from={orig}
+                                          to={disc}
+                                          formatter={(n: number) =>
+                                            formatSelected(n)
+                                          }
+                                          className="text-base font-medium leading-none"
+                                        />
+                                      </div>
+                                    </>
+                                  </div>
+                                </td>
+                              );
+                            }
+
                             return (
                               <td
                                 key={tier}
                                 className="p-2 md:p-3 text-center"
                                 style={{ backgroundColor: color }}
                               >
-                                {value}
+                                {typeof disc === "number"
+                                  ? formatSelected(disc)
+                                  : String(disc)}
                               </td>
                             );
                           }
 
-                          const origRaw = plan.originalYearlyPrice.replace(
-                            "$",
-                            ""
+                          // Fallback to pricingPlans if featureComparison entry missing
+                          const plan = pricingPlans.find(
+                            (p) => p.name === tier
                           );
-                          const discRaw = plan.yearlyPrice.replace("$", "");
-                          const orig = parseFloat(origRaw);
-                          const disc = parseFloat(discRaw);
-                          const origIsNum = !Number.isNaN(orig);
-                          const discIsNum = !Number.isNaN(disc);
+                          if (!plan) {
+                            const fv = value as any;
+                            if (fv && typeof fv === "object") {
+                              if (fv.original && fv.discounted) {
+                                const disc = fv.discounted[currency];
+                                return (
+                                  <td
+                                    key={tier}
+                                    className="p-2 md:p-3 text-center"
+                                    style={{ backgroundColor: color }}
+                                  >
+                                    {typeof disc === "number"
+                                      ? formatSelected(disc)
+                                      : String(disc)}
+                                  </td>
+                                );
+                              }
+                              if ("USD" in fv) {
+                                return (
+                                  <td
+                                    key={tier}
+                                    className="p-2 md:p-3 text-center"
+                                    style={{ backgroundColor: color }}
+                                  >
+                                    {formatSelected(fv[currency])}
+                                  </td>
+                                );
+                              }
+                            }
 
-                          // If plan is free or discounted to zero -> show FREE
+                            return (
+                              <td
+                                key={tier}
+                                className="p-2 md:p-3 text-center"
+                                style={{ backgroundColor: color }}
+                              >
+                                {String(value)}
+                              </td>
+                            );
+                          }
+
+                          const orig = plan.yearly.original[currency];
+                          const disc = plan.yearly.discounted[currency];
+
                           if (
                             plan.name === "Basic" ||
-                            plan.yearlyPrice
-                              .toString()
-                              .toUpperCase()
-                              .includes("FREE") ||
-                            (discIsNum && disc === 0)
+                            (typeof disc === "number" && disc === 0)
                           ) {
                             return (
                               <td
@@ -462,8 +591,10 @@ export default function PricingInformationPage() {
                             );
                           }
 
-                          // Numeric prices: show strike-through original and animated discounted
-                          if (origIsNum && discIsNum) {
+                          if (
+                            typeof orig === "number" &&
+                            typeof disc === "number"
+                          ) {
                             return (
                               <td
                                 key={tier}
@@ -471,40 +602,35 @@ export default function PricingInformationPage() {
                                 style={{ backgroundColor: color }}
                               >
                                 <div className="flex flex-row items-center gap-2 justify-center">
-                                  {(() => {
-                                    const origConv = convertFromUSD(orig);
-                                    const discConv = convertFromUSD(disc);
-                                    return (
-                                      <>
-                                        <p className="text-gray-500 text-sm line-through">
-                                          {formatSelected(origConv)}
-                                        </p>
-                                        <div className="flex items-baseline gap-2">
-                                          <AnimatedNumber
-                                            from={origConv}
-                                            to={discConv}
-                                            formatter={(n: number) =>
-                                              formatSelected(n)
-                                            }
-                                            className="text-base font-medium leading-none"
-                                          />
-                                        </div>
-                                      </>
-                                    );
-                                  })()}
+                                  <>
+                                    <p className="text-gray-500 text-sm line-through">
+                                      {formatSelected(orig)}
+                                    </p>
+                                    <div className="flex items-baseline gap-2">
+                                      <AnimatedNumber
+                                        from={orig}
+                                        to={disc}
+                                        formatter={(n: number) =>
+                                          formatSelected(n)
+                                        }
+                                        className="text-base font-medium leading-none"
+                                      />
+                                    </div>
+                                  </>
                                 </div>
                               </td>
                             );
                           }
 
-                          // Fallback: show the raw yearlyPrice string
                           return (
                             <td
                               key={tier}
                               className="p-2 md:p-3 text-center"
                               style={{ backgroundColor: color }}
                             >
-                              {plan.yearlyPrice}
+                              {typeof disc === "number"
+                                ? formatSelected(disc)
+                                : String(disc)}
                             </td>
                           );
                         }
@@ -529,7 +655,27 @@ export default function PricingInformationPage() {
                                 className="mx-auto w-4 h-4"
                               />
                             ) : (
-                              value
+                              // If value is an object (updated featureComparisonByTier
+                              // uses objects for price rows), render appropriately.
+                              (() => {
+                                const vAny = value as any;
+                                if (vAny && typeof vAny === "object") {
+                                  if ("USD" in vAny) {
+                                    return formatSelected(vAny[currency]);
+                                  }
+                                  if (
+                                    vAny.discounted &&
+                                    typeof vAny.discounted === "object"
+                                  ) {
+                                    const disc = vAny.discounted[currency];
+                                    return typeof disc === "number"
+                                      ? formatSelected(disc)
+                                      : String(disc);
+                                  }
+                                  return String(vAny);
+                                }
+                                return value as React.ReactNode;
+                              })()
                             )}
                           </td>
                         );

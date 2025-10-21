@@ -148,8 +148,11 @@ export const featureComparisonByTier = {
   Basic: {
     color: "#FBFCF8",
     features: {
-      "Monthly Price": "Free",
-      "Annual Price": "Free",
+      "Monthly Price": { USD: 0, CAD: 0 },
+      "Annual Price": {
+        original: { USD: 0, CAD: 0 },
+        discounted: { USD: 0, CAD: 0 },
+      },
       "Data Storage Capacity": "2 GB",
       "Shared Plan": "x",
       "Digital Inheritors": "check",
@@ -166,8 +169,12 @@ export const featureComparisonByTier = {
   Premium: {
     color: "#F8F9F4",
     features: {
-      "Monthly Price": "$4.19",
-      "Annual Price": "$40.19",
+      "Monthly Price": { USD: 2.99, CAD: 4.19 },
+
+      "Annual Price": {
+        original: { USD: 35.88, CAD: 50.28 },
+        discounted: { USD: 28.7, CAD: 40.22 },
+      },
       "Data Storage Capacity": "100 GB",
       "Shared Plan": "Up to 6 Users",
       "Digital Inheritors": "x",
@@ -184,8 +191,11 @@ export const featureComparisonByTier = {
   Legacy: {
     color: "#EEF0EC",
     features: {
-      "Monthly Price": "$13.99",
-      "Annual Price": "$134.27",
+      "Monthly Price": { USD: 9.99, CAD: 13.99 },
+      "Annual Price": {
+        original: { USD: 119.88, CAD: 167.88 },
+        discounted: { USD: 95.9, CAD: 134.3 },
+      },
       "Data Storage Capacity": "2 TB",
       "Shared Plan": "Up to 6 Users",
       "Digital Inheritors": "x",
@@ -210,9 +220,14 @@ export const tabs = [
 export const pricingPlans = [
   {
     name: "Basic",
-    monthlyPrice: "FREE",
-    yearlyPrice: "FREE",
-    originalYearlyPrice: "FREE",
+    monthly: {
+      USD: 0,
+      CAD: 0,
+    },
+    yearly: {
+      original: { USD: 0, CAD: 0 },
+      discounted: { USD: 0, CAD: 0 },
+    },
     subtext: "per user",
     description: "Perfect for getting started.",
     note: "Pass down your legacy with a Digital Inheritor and enjoy an ad-free experience.",
@@ -227,9 +242,14 @@ export const pricingPlans = [
   },
   {
     name: "Premium",
-    monthlyPrice: "$4.19",
-    yearlyPrice: "$40.19",
-    originalYearlyPrice: "$50.23",
+    monthly: {
+      USD: 2.99,
+      CAD: 4.19,
+    },
+    yearly: {
+      original: { USD: 35.88, CAD: 50.28 },
+      discounted: { USD: 28.7, CAD: 40.22 },
+    },
     subtext: "per user",
     description: "More space, more memories.",
     note: "Share your plan with the family, and record Legacy Messages for the future.",
@@ -244,9 +264,14 @@ export const pricingPlans = [
   },
   {
     name: "Legacy",
-    monthlyPrice: "$13.99",
-    yearlyPrice: "$134.27",
-    originalYearlyPrice: "$167.83",
+    monthly: {
+      USD: 9.99,
+      CAD: 13.99,
+    },
+    yearly: {
+      original: { USD: 119.88, CAD: 167.88 },
+      discounted: { USD: 95.9, CAD: 134.3 },
+    },
     subtext: "per user",
     description: "Ultimate preservation for your family’s legacy.",
     note: "With a massive 2TB of storage, multi-user access, and all premium features.",
