@@ -46,7 +46,7 @@ export default function AeternumLegacyPlan() {
               sharing features.
             </p>
             <p className="text-3xl font-bold mb-2 ">
-              $9.99<span className="text-lg font-normal">/month</span>
+              $4.99<span className="text-lg font-normal">/month</span>
             </p>
             <p className="line-through text-neutral-500 mb-4">$13.99 USD</p>
             <a
@@ -73,7 +73,7 @@ export default function AeternumLegacyPlan() {
               Get every premium feature plus early access to new updates.
             </p>
             <p className="text-3xl font-bold mb-2 ">
-              $95.90<span className="text-lg font-normal">/year</span>
+              $29.97<span className="text-lg font-normal">/year</span>
             </p>
             <p className="line-through text-neutral-500 mb-4">$119.88 USD</p>
             <a
