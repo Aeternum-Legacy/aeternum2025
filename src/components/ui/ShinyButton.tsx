@@ -11,16 +11,19 @@ const animationProps = {
   transition: {
     repeat: Infinity,
     repeatType: "loop",
-    repeatDelay: 1,
+    // Increased delay for a slower, less busy shine
+    repeatDelay: 2.5,
+    // Use a softer spring for gentler motion
     type: "spring",
-    stiffness: 20,
-    damping: 15,
-    mass: 2,
+    stiffness: 10,
+    damping: 30,
+    mass: 3,
+    // Make the scale spring slower and smoother as well
     scale: {
       type: "spring",
-      stiffness: 200,
-      damping: 5,
-      mass: 0.5,
+      stiffness: 80,
+      damping: 18,
+      mass: 0.9,
     },
   },
 } as AnimationProps;
@@ -43,8 +46,8 @@ export const ShinyButton = React.forwardRef<
       ref={ref}
       className={cn(
         "relative rounded-lg backdrop-blur-xl transition-shadow duration-300 ease-in-out hover:shadow dark:bg-[radial-gradient(circle_at_50%_0%,var(--primary)/10%_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_var(--primary)/10%]",
-        "px-4 py-2 text-sm", 
-        "md:px-6 md:py-3 md:text-base", 
+        "px-4 py-2 text-sm",
+        "md:px-6 md:py-3 md:text-base",
         buttonClassName,
         className
       )}

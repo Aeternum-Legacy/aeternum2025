@@ -24,7 +24,7 @@ export default function SignUpSection() {
           className="
         lg:w-1/2 relative flex items-center justify-center 
         shadow-[4px_8px_8px_rgba(0,0,0,0.38)] overflow-hidden bg-cover bg-center
-        min-h-[320px] lg:h-[550px]      // 모바일에서는 최소 높이만 유지
+        min-h-[320px] lg:h-[550px]     
       "
           style={{ backgroundImage: "url('/images/tree.png')" }}
         >

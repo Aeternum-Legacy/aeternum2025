@@ -1,10 +1,14 @@
+"use client";
 import React from "react";
 import CookieBannerClient from "./CookieBannerClient";
 import Footer from "@/components/layout/Footer";
+import { ShinyButton } from "@/components/ui/ShinyButton";
+import MemoryPreservationDesktop from "@/components/sections/desktop/MemoryPreservationDesktop";
+import MemoryPreservationMobile from "@/components/sections/mobile/MemoryPreservationMobile";
 
 export default function AeternumLegacyPlan() {
   return (
-    <main className="bg-pattern">
+    <main className="bg-pattern bg-white">
       <CookieBannerClient />
       {/* Logo positioned at left end (non-fixed) */}
       <div className="flex justify-start px-6 pt-4">
@@ -21,7 +25,9 @@ export default function AeternumLegacyPlan() {
         <section className=" hero-wrapper gap-y-6 text-center items-center justify-center flex flex-col">
           <div className="space-y-4 px-6">
             <h3 className="text-center font-bold">
-              Preserve What Matters Most — For Less
+              Alpha Launch Founding Supporter Benefit
+              <br />
+              Preserve What Matters Most
             </h3>
             <p className="max-w-2xl mx-auto text-[#4F4949] text-center">
               Your family’s stories deserve more than social feeds and scattered
@@ -29,14 +35,20 @@ export default function AeternumLegacyPlan() {
               your memories, voices, and values for generations to come.
             </p>
           </div>
-          <div className="w-fit h-fit p-4 rounded-3xl bg-gradient-to-b from-[#D7E9E8] to-transparent">
-            <p className="relative font-bold text-[#0f766e]">
-              Get exclusive launch pricing until
-              <span className="inline-block italic px-3 py-1 rounded-lg font-bold">
-                November 14th
-              </span>
-            </p>
-          </div>
+          <ShinyButton
+            buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300 w-72"
+            textClassName="text-white"
+            onClick={() => {
+              // Open Stripe checkout with Forlife75 promo in a new tab
+              window.open(
+                "https://buy.stripe.com/4gM00iccb4uAbZKbWe4Ja02?prefilled_promo_code=Forlife75",
+                "_blank",
+                "noopener,noreferrer"
+              );
+            }}
+          >
+            Become a Founding Supporter
+          </ShinyButton>
         </section>
 
         {/* Plans Section */}
@@ -45,152 +57,293 @@ export default function AeternumLegacyPlan() {
           className="justify-center items-center z-10 relative bg-[#979980]/30 py-12"
         >
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 px-6">
-            {/* Monthly Plan */}
+            {/* Legacy Family Plan */}
             <div
-              className="rounded-2xl border border-white/10 p-6 text-center bg-gradient-to-br from-neutral-800/60 to-neutral-700/30 backdrop-blur-sm shadow-2xl bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: "url(/patterns/Basic.svg)" }}
+              className="flex flex-col gap-2 justify-center items-center rounded-2xl border border-white/10 p-6 text-center bg-gradient-to-br from-neutral-800/60 to-neutral-700/30 backdrop-blur-sm shadow-2xl bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: "url(/patterns/Basic.svg)",
+                backgroundPosition: "center 95%",
+              }}
             >
-              <h2 className="text-2xl font-semibold mb-2">
-                Monthly Legacy Plan
-              </h2>
-              <p className="text-emerald-400 font-bold mb-1">
-                50% Off for 12 months
-              </p>
-              <p className="text-neutral-700 mb-4">
+              <h2 className="text-2xl font-semibold">Legacy Family Plan</h2>
+              <p className="text-emerald-600 font-bold">75% Off For Life</p>
+              <p className="text-neutral-700">
                 Perfect for families getting started on their preservation
                 journey. Includes full access to Aeternum’s secure vault and
                 sharing features.
               </p>
-              <p className="text-3xl font-bold mb-2 ">
-                USD 4.99<span className="text-lg font-normal">/month</span>
-              </p>
-              <p className="line-through text-neutral-500 mb-4">$13.99 USD</p>
+              <div className="leading-tight mb-3">
+                <p className="text-3xl font-bold">
+                  <strong className="text-lg">Now: </strong> USD 2.50
+                  <span className="text-lg font-normal">/month</span>
+                </p>
+                <p className="text-sm text-neutral-700 -mt-2">
+                  billed annually
+                </p>
+                <p className="text-md text-neutral-500">
+                  (was USD 9.99)
+                  <a href="#legal-note" className=" text-blue-800">
+                    *
+                  </a>
+                </p>
+              </div>
               <a
                 href="https://buy.stripe.com/bJe9AS4JJgdiaVG8K24Ja03?prefilled_promo_code=alpha50"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold"
               >
-                Start Monthly Plan
+                Secure my Lifetime Discount
               </a>
+              <p className="text-xs w-96">
+                The Guarantee: It's totally risk-free. Secure your Founder's
+                Rate today, and if you don't love the platform within 30 days
+                after our November launch
+                <a href="#legal-note" className=" text-blue-800">
+                  *
+                </a>
+                , we'll refund you 100%.
+              </p>
             </div>
 
-            {/* Annual Plan */}
+            {/* Plan Details */}
             <div
-              className="rounded-2xl border border-white/10 p-6 text-center bg-gradient-to-br from-sage-300 to-teal-700 backdrop-blur-sm shadow-2xl bg-cover bg-center bg-no-repeat"
+              className="flex flex-col gap-2 rounded-2xl border border-white/10 p-6 text-center bg-gradient-to-br from-sage-300 to-teal-700 backdrop-blur-sm shadow-2xl bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: "url(/patterns/Premium.svg)" }}
             >
-              <h2 className="text-2xl font-semibold mb-2">
-                Annual Legacy Plan
-              </h2>
-              <p className="text-amber-700 font-bold mb-1">
-                75% Off for the first year
-              </p>
-              <p className="text-neutral-700 mb-4">
-                Unlock the best value: protect your family’s legacy all year
-                long. Get every premium feature plus early access to new
-                updates.
-              </p>
-              <p className="text-3xl font-bold mb-2 ">
-                USD 29.97<span className="text-lg font-normal">/year</span>
-              </p>
-              <p className="line-through text-neutral-500 mb-4">$119.88 USD</p>
-              <a
-                href="https://buy.stripe.com/4gM00iccb4uAbZKbWe4Ja02?prefilled_promo_code=alpha75"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-amber-700 hover:bg-amber-900 text-white px-6 py-3 rounded-xl font-semibold"
-              >
-                Start Annual Plan
-              </a>
+              <div className="mb-4 flex flex-col gap-2">
+                <h2 className="text-2xl font-semibold">
+                  What’s Included in Your Legacy Plan{" "}
+                </h2>
+                <p>
+                  As a Founding Supporter, you get{" "}
+                  <span className="text-amber-700 font-bold mb-1">
+                    immediate access
+                  </span>{" "}
+                  to our Alpha platform and a{" "}
+                  <span className="text-amber-700 font-bold mb-1">
+                    first-in-line pass
+                  </span>{" "}
+                  to all our new features as they roll out!
+                </p>
+              </div>
+
+              <div className="mb-4">
+                <p className="font-bold">
+                  Available at Alpha Launch (This November):
+                </p>
+                <ul className="text-neutral-800 space-y-1">
+                  <li className="flex items-start text-left gap-2 text-sm">
+                    <img
+                      src="/icons/check-1.svg"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>2 TB Secure Storage for all your memories </span>
+                  </li>
+                  <li className="flex items-start text-left  gap-2 text-sm">
+                    <img
+                      src="/icons/check-1.svg"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Up to 6 Family Members per account</span>
+                  </li>
+                  <li className="flex items-start  text-left gap-2 text-sm">
+                    <img
+                      src="/icons/check-1.svg"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>
+                      Private Digital Vault with end-to-end encryption
+                    </span>
+                  </li>
+                  <li className="flex items-start  text-left gap-2 text-sm">
+                    <img
+                      src="/icons/check-1.svg"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>
+                      Family Tree Integration to connect stories across
+                      generations
+                    </span>
+                  </li>
+                  <li className="flex items-start text-left gap-2 text-sm">
+                    <img
+                      src="/icons/check-1.svg"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>
+                      Privacy Circles for shared storytelling and collaboration
+                    </span>
+                  </li>
+                  <li className="flex items-start text-left gap-2 text-sm">
+                    <img
+                      src="/icons/check-1.svg"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Ad-Free & Privacy-First — your data stays yours</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-bold">
+                  Coming Soon (Rolling out in the next 6 months!):
+                </p>
+                <ul className="text-neutral-800 space-y-1">
+                  <li className="flex items-start text-left gap-2 text-sm">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Share with 5 Family Members</span>
+                  </li>
+                  <li className="flex items-start text-left  gap-2 text-sm">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Native Mobile Version for iOS and Android</span>
+                  </li>
+                  <li className="flex items-start  text-left gap-2 text-sm">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>In App Recorded Voice Notes</span>
+                  </li>
+                  <li className="flex items-start  text-left gap-2 text-sm">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Enhanced Memory & Legacy Suite:</span>
+                  </li>
+
+                  <li className="flex items-start text-left gap-2 text-sm ml-7">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Customizable Privacy Circles</span>
+                  </li>
+                  <li className="flex items-start text-left gap-2 text-sm ml-7">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Memory Collections & Chain Memory System</span>
+                  </li>
+                  <li className="flex items-start text-left gap-2 text-sm ml-7">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Aeternum Legacy Messages</span>
+                  </li>
+                  <li className="flex items-start text-left gap-2 text-sm ml-7">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Digital Inheritance Management System</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="max-w-4xl mx-auto px-6 py-20">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            What’s Included At Launch
-          </h2>
-          <ul className="text-neutral-800 space-y-3 text-sm md:text-lg px-10">
-            <li className="flex items-start md:items-center gap-3">
-              <img
-                src="/icons/check-1.svg"
-                alt="check"
-                className="w-4 h-4 md:w-5 md:h-5 mt-1 md:mt-0"
-              />
-              <span>2 TB Secure Storage for all your memories </span>
-            </li>
-            <li className="flex items-start md:items-center gap-3">
-              <img
-                src="/icons/check-1.svg"
-                alt="check"
-                className="w-4 h-4 md:w-5 md:h-5 mt-1 md:mt-0"
-              />
-              <span>Up to 6 Family Members per account</span>
-            </li>
-            <li className="flex items-start md:items-center gap-3">
-              <img
-                src="/icons/check-1.svg"
-                alt="check"
-                className="w-4 h-4 md:w-5 md:h-5 mt-1 md:mt-0"
-              />
-              <span>Private Digital Vault with end-to-end encryption</span>
-            </li>
-            <li className="flex items-start md:items-center gap-3">
-              <img
-                src="/icons/check-1.svg"
-                alt="check"
-                className="w-4 h-4 md:w-5 md:h-5 mt-1 md:mt-0"
-              />
-              <span>
-                Family Tree Integration to connect stories across generations
-              </span>
-            </li>
-            <li className="flex items-start md:items-center gap-3">
-              <img
-                src="/icons/check-1.svg"
-                alt="check"
-                className="w-4 h-4 md:w-5 md:h-5 mt-1 md:mt-0"
-              />
-              <span>
-                Privacy Circles for shared storytelling and collaboration
-              </span>
-            </li>
-            <li className="flex items-start md:items-center gap-3">
-              <img
-                src="/icons/check-1.svg"
-                alt="check"
-                className="w-4 h-4 md:w-5 md:h-5 mt-1 md:mt-0"
-              />
-              <span>Ad-Free & Privacy-First — your data stays yours</span>
-            </li>
-          </ul>
+        <section className="w-full py-10">
+          <h4 className=" font-bold text-center">
+            Welcome to Aeternum’s Alpha Platform
+          </h4>
+          <img
+            src="/images/alpha_intro_image_banner-2.png"
+            alt="Aeternum Alpha Intro"
+            className="px-2 md:px-0 w-full md:w-[60%] h-auto mx-auto block"
+          />
+        </section>
+
+        <section className="max-w-screen-xl flex flex-col py-6 px-6 lg:px-8 w-full mx-auto gap-6 text-center;">
+          <MemoryPreservationMobile />
+          <MemoryPreservationDesktop />
         </section>
 
         {/* Testimonial */}
-        <section className="bg-neutral-900 py-16 text-center px-6">
-          <blockquote className="max-w-2xl mx-auto text-lg italic text-neutral-300">
+        <section className="bg-[#F7F8EA]/80 py-16 text-center px-6">
+          <blockquote className="max-w-2xl mx-auto text-lg italic text-neutral-800">
             “I will use Aeternum to digitize my family’s genealogy and share it
             with my children and other family. It’s not just storage — it’s how
             we bring our history to life.”
           </blockquote>
-          <p className="mt-4 font-semibold text-white">
+          <p className="mt-4 font-semibold text-black">
             — Bethny T., Legacy Keeper
           </p>
         </section>
 
         {/* CTA Section */}
-        <section className="max-w-3xl mx-auto px-6 py-20 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-[#0f766e]">
-            Your Story. Protected Forever.
-          </h2>
-          <p className="text-neutral-700 mb-8">
-            Aeternum isn’t another cloud.
-            <br />
-            It’s your family’s digital heirloom; built for permanence,
-            connection, and privacy.
-          </p>
+        <section
+          className="flex w-full items-center justify-center bg-cover relative"
+          style={{
+            backgroundImage: "url('/icons/mom&daughter.png')",
+            backgroundPosition: "center 85%",
+            minHeight: "600px",
+          }}
+        >
+          {/* full-section overlay */}
+          <div className="absolute inset-0 bg-grey/20" aria-hidden="true" />
+          <div className="relative z-10 w-full max-w-4xl text-center px-6">
+            <h2
+              className=" font-bold mb-4 text-white"
+              style={{ textShadow: "0 2px 6px rgba(0,0,0,0.65)" }}
+            >
+              Your Story. <br />
+              Protected Forever.
+            </h2>
+            <p
+              className="text-neutral-100 mb-8 text-xl font-semibold"
+              style={{ textShadow: "0 1px 4px rgba(0,0,0,0.6)" }}
+            >
+              Aeternum isn’t another cloud.
+              <br />
+              It’s your family’s digital heirloom; built for permanence,
+              connection, and privacy.
+            </p>
+            <p
+              className="text-white mb-8 text-xl font-semibold"
+              style={{ textShadow: "0 1px 4px rgba(0,0,0,3)" }}
+            >
+              Founder's Offer ends November 14th!
+            </p>
+            <ShinyButton
+              buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300 w-72"
+              textClassName="text-white"
+              onClick={() => {
+                // Open Stripe checkout with Forlife75 promo in a new tab
+                window.open(
+                  "https://buy.stripe.com/4gM00iccb4uAbZKbWe4Ja02?prefilled_promo_code=Forlife75",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }}
+            >
+              Become a Founding Supporter
+            </ShinyButton>
+          </div>
         </section>
 
         {/* FAQs */}
@@ -284,6 +437,46 @@ export default function AeternumLegacyPlan() {
           >
             Start Your Plan Today
           </a>
+        </section>
+
+        {/* Legal note */}
+        <section id="legal-note" className="flex items-center justify-center">
+          <p className="text-xs text-neutral-600 text-center px-6 mb-10 w-[90%]">
+            *Plan will be billed annually at a payment of $29.97 under a
+            recurring annual subscription. Your card will be charged immediately
+            upon checkout to secure your Founder's Rate. This Founder's Rate is
+            locked in for life and will not increase, valid for as long as your
+            subscription remains active. This offer is for Founding Supporters
+            only, ends November 14, 2025, and is non-transferable. Refunds must
+            be requested via email at
+            <a
+              href="mailto:support@aeternumproject.com"
+              className="text-[#0f766e] underline mx-1"
+            >
+              support@aeternumproject.com
+            </a>
+            within 30 days of the platform alpha launch announcement. For full
+            details of the Legacy Plan and applicable Terms of Service, please
+            refer to our
+            <a
+              href="https://www.aeternumproject.com/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0f766e] underline mx-1"
+            >
+              Terms of Service
+            </a>
+            and
+            <a
+              href="https://www.aeternumproject.com/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0f766e] underline mx-1"
+            >
+              Privacy Policy
+            </a>
+            .
+          </p>
         </section>
       </div>
 
