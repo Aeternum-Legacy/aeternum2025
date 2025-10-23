@@ -59,7 +59,7 @@ export default function AeternumLegacyPlan() {
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 px-6">
             {/* Legacy Family Plan */}
             <div
-              className="flex flex-col gap-2 justify-center items-center rounded-2xl border border-white/10 p-6 text-center bg-gradient-to-br from-neutral-800/60 to-neutral-700/30 backdrop-blur-sm shadow-2xl bg-cover bg-center bg-no-repeat"
+              className="flex flex-col gap-2 justify-center items-center min-w-0 rounded-2xl border border-white/10 p-6 text-center bg-gradient-to-br from-neutral-800/60 to-neutral-700/30 backdrop-blur-sm shadow-2xl bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: "url(/patterns/Basic.svg)",
                 backgroundPosition: "center 95%",
@@ -95,7 +95,7 @@ export default function AeternumLegacyPlan() {
               >
                 Secure my Lifetime Discount
               </a>
-              <p className="text-xs w-96">
+              <p className="text-xs w-full md:w-96 break-words">
                 The Guarantee: It's totally risk-free. Secure your Founder's
                 Rate today, and if you don't love the platform within 30 days
                 after our November launch
@@ -108,7 +108,7 @@ export default function AeternumLegacyPlan() {
 
             {/* Plan Details */}
             <div
-              className="flex flex-col gap-2 rounded-2xl border border-white/10 p-6 text-center bg-gradient-to-br from-sage-300 to-teal-700 backdrop-blur-sm shadow-2xl bg-cover bg-center bg-no-repeat"
+              className="flex flex-col gap-2 min-w-0 rounded-2xl border border-white/10 p-6 text-center bg-gradient-to-br from-sage-300 to-teal-700 backdrop-blur-sm shadow-2xl bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: "url(/patterns/Premium.svg)" }}
             >
               <div className="mb-4 flex flex-col gap-2">
