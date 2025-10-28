@@ -88,10 +88,10 @@ export default function AeternumLegacyPlan() {
                 </p>
               </div>
               <a
-                href="https://buy.stripe.com/bJe9AS4JJgdiaVG8K24Ja03?prefilled_promo_code=alpha50"
+                href="https://buy.stripe.com/4gM00iccb4uAbZKbWe4Ja02?prefilled_promo_code=Forlife75"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold"
+                className="inline-block bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white px-6 py-3 rounded-xl font-semibold"
               >
                 Secure my Lifetime Discount
               </a>
@@ -140,7 +140,7 @@ export default function AeternumLegacyPlan() {
                       className="w-4 h-4 mt-2"
                     />
                     <span>
-                      2 TB Secure Storage for photos, videos, and audio files
+                      2 TB Secure Storage for photos, videos, audio, & PDF files
                     </span>
                   </li>
                   <li className="flex items-start text-left  gap-2 text-sm">
@@ -223,24 +223,9 @@ export default function AeternumLegacyPlan() {
                       alt="check"
                       className="w-4 h-4 mt-2"
                     />
-                    <span>In App Recorded Voice Notes</span>
-                  </li>
-                  <li className="flex items-start text-left gap-2 text-sm">
-                    <img
-                      src="/icons/loading.png"
-                      alt="check"
-                      className="w-4 h-4 mt-2"
-                    />
-                    <span>Private Message file attachments</span>
-                  </li>
-                  <li className="flex items-start text-left gap-2 text-sm">
-                    <img
-                      src="/icons/loading.png"
-                      alt="check"
-                      className="w-4 h-4 mt-2"
-                    />
                     <span>File Management System</span>
                   </li>
+
                   <li className="flex items-start text-left gap-2 text-sm">
                     <img
                       src="/icons/loading.png"
@@ -248,14 +233,6 @@ export default function AeternumLegacyPlan() {
                       className="w-4 h-4 mt-2"
                     />
                     <span>Timeline Memory View</span>
-                  </li>
-                  <li className="flex items-start text-left gap-2 text-sm">
-                    <img
-                      src="/icons/loading.png"
-                      alt="check"
-                      className="w-4 h-4 mt-2"
-                    />
-                    <span>Connection blocking management</span>
                   </li>
                   <li className="flex items-start text-left gap-2 text-sm">
                     <img
@@ -282,6 +259,14 @@ export default function AeternumLegacyPlan() {
                       />
                       <span>Memory Collections &amp; Chain Memory System</span>
                     </li>
+                    <li className="flex items-start text-left gap-2 text-sm">
+                      <img
+                        src="/icons/loading.png"
+                        alt="check"
+                        className="w-4 h-4 mt-2"
+                      />
+                      <span>Memory Integrated File Management System</span>
+                    </li>
                   </ul>
                 </ul>
               </div>
@@ -306,6 +291,14 @@ export default function AeternumLegacyPlan() {
                     />
                     <span>Digital Inheritance Management System</span>
                   </li>
+                  <li className="flex items-start text-left gap-2 text-sm">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>In App Recorded Voice Notes</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -320,7 +313,7 @@ export default function AeternumLegacyPlan() {
           <img
             src="/images/alpha_intro_image_banner-2.png"
             alt="Aeternum Alpha Intro"
-            className="px-2 md:px-0 w-full md:w-[60%] h-auto mx-auto block"
+            className="px-2 md:px-0 w-full md:w-[40%] h-auto mx-auto block"
           />
         </section>
 
@@ -468,10 +461,8 @@ export default function AeternumLegacyPlan() {
                 </p>
                 <p>
                   You’ll receive an email with access instructions{" "}
-                  <strong>
-                    on or shortly after our Alpha launch in November.
-                  </strong>{" "}
-                  Your subscription service officially begins at that time.
+                  <strong>on or shortly after our Alpha launch.</strong> Your
+                  subscription service officially begins at that time.
                 </p>
               </div>
             </div>
