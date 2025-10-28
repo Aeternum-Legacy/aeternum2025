@@ -7,340 +7,338 @@ import Link from "next/link";
 import SectionLinkList from "@/components/ui/SectionLinkList";
 import { toId } from "@/lib/utils";
 
-const lastUpdated = "May 14th, 2025";
+const lastUpdated = "2025-10-24";
 const sections = [
   "Introduction",
   "Use of the Website",
   "Restricted Access",
   "Password Protected Links",
-  "User Content",
+  "Submitted Content",
   "Intellectual Property",
-  "Material Interests",
-  "Linked Websites",
   "Links to Third-Party Websites",
-  "Website Disclaimers and Limitations of Liability",
+  "No Reliance",
+  "Forward Looking Statements",
+  "No Assurance",
   "Limitation of Liability",
   "Indemnification",
-  "Dispute Resolution by Binding Arbitration",
-  "Governing Law",
+  "Dispute Resolution",
+  "Notices",
+  "General",
 ];
+
 export default function TermsPage() {
   return (
     <section className="page-wrapper bg-pattern">
       <div className="section-wrapper pt-16 md:pt-20">
         <LegalSectionTitle
-          title="Terms & Conditions"
+          title="AETERNUM TERMS OF SERVICE"
           lastUpdated={lastUpdated}
           paragraphs={[
-            "These Terms & Conditions govern your access and use of the Aeternum Website.",
-            "By using the Website, you agree to comply with these Terms. If you do not agree, please do not use the Website.",
-            "Your continued use of the Website after changes are posted constitutes acceptance of the revised Terms.",
-            "The Website is not intended for minors. If you are under the age of 18, please do not provide any personal information.",
-            "We may update these Terms at any time without notice.",
+            // 1
             <>
-              Click to see the{" "}
+              PLEASE READ THESE{" "}
+              <Link
+                href="http://www.aeternumproject.com"
+                className="text-teal-700 hover:underline"
+                target="_blank"
+              >
+                AETERNUMPROJECT.COM
+              </Link>{" "}
+              WEBSITE TERMS OF SERVICE (THE “TERMS OF SERVICE”) CAREFULLY BEFORE
+              USING THE{" "}
+              <Link
+                href="http://www.aeternumproject.com"
+                className="text-teal-700 hover:underline"
+                target="_blank"
+              >
+                HTTP://WWW.AETERNUMPROJECT.COM
+              </Link>{" "}
+              WEBSITE (THE “WEBSITE”).
+            </>,
+            // 2
+            <>
+              THIS TERMS OF SERVICE AGREEMENT (THE “TERMS OF SERVICE”) IS
+              BETWEEN USER AND AETERNUM CORP. (“WE”, “US”, “OUR”, “AETERNUM”).
+              THE INDIVIDUAL WHO USES THE WEBSITE OR REGISTERS FOR THE PLATFORM
+              (“YOU”, “YOUR”, “USER”) ACKNOWLEDGES THAT THEY HAVE READ THIS
+              TERMS OF SERVICE, UNDERSTAND IT, AND AGREE TO BE BOUND BY IT
+              EFFECTIVE THE DATE THEY USED THE WEBSITE OR REGISTERED FOR THE
+              PLATFORM (THE “EFFECTIVE DATE”), WHICHEVER COMES FIRST. IN THIS
+              TERMS OF SERVICE, EACH PARTY IS A “PARTY” AND TOGETHER THEY ARE
+              THE “PARTIES”.
+            </>,
+            // 3
+            <>
+              THIS TERMS OF SERVICE GOVERNS YOUR ACCESS TO AND USE OF OUR
+              WEBSITE AND OUR PLATFORM FOUND AT{" "}
+              <Link
+                href="http://www.aeternumproject.com"
+                className="text-teal-700 hover:underline"
+                target="_blank"
+              >
+                WWW.AETERNUMPROJECT.COM
+              </Link>{" "}
+              AND AS FOUND ON THE APPLE APP STORE AND GOOGLE PLAY STORE (THE
+              “PLATFORM”), INCLUDING YOUR PARTICIPATION ON THE WEBSITE AND
+              PLATFORM AS A USER, YOUR SUBMISSION AND PUBLISHING OF USER
+              CONTENT, YOUR TRANSACTIONS ON THE WEBSITE AND PLATFORM, YOUR
+              ACCESS TO AND USE OF OUR INTELLECTUAL PROPERTY, AND YOUR
+              INTERACTIONS WITH AETERNUM AND OTHER USERS ON THE PLATFORM.
+            </>,
+            // 4
+            <>
+              THIS TERMS OF SERVICE PROVIDES ONLY SOME OF THE TERMS AND
+              CONDITIONS APPLICABLE TO YOUR ACCESS TO AND USE OF OUR WEBSITE AND
+              PLATFORM. BY USING OUR WEBSITE, USER ADDITIONALLY AGREES TO AND
+              PROVIDES EXPRESS CONSENT TO OUR{" "}
+              <Link
+                href="/privacy-policy"
+                className="text-teal-700 hover:underline"
+              >
+                PRIVACY POLICY
+              </Link>{" "}
+              AND{" "}
               <Link
                 href="/cookie-policy"
-                className="text-teal-700 hover:underline font-medium"
-                aria-label="View our Cookie Policy"
+                className="text-teal-700 hover:underline"
               >
-                Cookie Policy
+                COOKIES POLICY
               </Link>
-              .
+              . BY REGISTERING ON OUR PLATFORM, USER ADDITIONALLY AGREES TO AND
+              PROVIDES EXPRESS CONSENT TO OUR{" "}
+              <Link
+                href="/privacy-policy"
+                className="text-teal-700 hover:underline"
+              >
+                PRIVACY POLICY
+              </Link>
+              {", "}
+              <Link
+                href="/cookie-policy"
+                className="text-teal-700 hover:underline"
+              >
+                COOKIES POLICY
+              </Link>
+              {", "}
+              <Link
+                href="/digitalinheritance"
+                className="text-teal-700 hover:underline"
+              >
+                DIGITAL INHERITANCE POLICY
+              </Link>
+              {", AND "}
+              <Link
+                href="/userlicenseagreement"
+                className="text-teal-700 hover:underline"
+              >
+                USER LICENSE AGREEMENT
+              </Link>
+              . PLEASE REVIEW THOSE DOCUMENTS TOGETHER WITH THIS TERMS OF
+              SERVICE.
+            </>,
+            // 5
+            <>
+              NOW, THEREFORE, in consideration of the mutual covenants, terms,
+              and conditions set forth herein, and for other good and valuable
+              consideration, the receipt and sufficiency of which are hereby
+              acknowledged, the Parties agree as follows:
             </>,
           ]}
         />
         <SectionLinkList sections={sections} toId={toId} />
         <div className="flex flex-col gap-12 mt-12 text-left items-start">
+          {/* 01: INTRODUCTION */}
           <SectionBlock
             id="introduction"
             title="01 INTRODUCTION"
-            intro={
+            paragraphs={[
+              `Your use of the Website and Platform, including, but not limited to, all images, text, illustrations, designs, icons, photographs, programs, music clips, downloads, systems and methods of trading, video clips, graphics, user interfaces, visual interfaces, information, data, tools, products, written materials, services, design, structure, selection, coordination, expression content, information, design, marks and layout therein, including but not limited to the design, structure, selection, coordination, expression and arrangement of any of the foregoing available on or through the Website and Platform, together (the “Content”), is subject to these Terms of Service, which may be updated by us at any time without notice to you.`,
+              `If we update our Terms of Service, we will post the updated Terms of Service on the Website. Any such changes will be effective upon posting.`,
+              `If you do not agree with these Terms of Service, you should not use the Website or register as a user on the Platform and you agree that your sole and exclusive remedy is to discontinue using the Website and to not complete your registration on the Platform.`,
+              `The Website and Platform is not designed for use by minors and minors should not provide personal information through the Website and Platform.`,
+              `Nothing contained in these Terms of Service is intended to modify any other written agreement you may have with AETERNUM (if any) that may be in effect.`,
+              `The websites of other AETERNUM affiliates are governed by separate terms of service agreements.`,
               <>
-                Please read these{" "}
-                <Link
-                  href="https://www.aeternumproject.com"
-                  className="text-teal-700 hover:underline"
-                  target="_blank"
-                >
-                  AeternumProject.com
-                </Link>{" "}
-                Website Terms of Use (“Terms of Use”) carefully before using the{" "}
-                <Link
-                  href="http://www.aeternumproject.com"
-                  className="text-teal-700 hover:underline"
-                  target="_blank"
-                >
-                  http://www.aeternumproject.com
-                </Link>{" "}
-                website (the “Website”). By browsing, accessing or otherwise
-                using the Website, you agree to accept these Terms of Use.
-              </>
-            }
-            bullets={[
-              `Your visit to the Website, including, but not limited to, all images, text, illustrations, designs, icons, photographs, programs, music clips, downloads, systems and methods of trading, video clips, graphics, user interfaces, visual interfaces, information, data, tools, products, written materials, services, design, structure, selection, coordination, expression content, information, design, marks and layout therein, including but not limited to the design, structure, selection, coordination, expression and arrangement of any of the foregoing available on or through the Website, together (the “Content”), is subject to these Terms of Use, our `,
-              <>
-                <Link
-                  href="/privacy-policy"
-                  className="text-teal-700 hover:underline"
-                >
-                  Privacy Policy
-                </Link>{" "}
-                and{" "}
-                <Link
-                  href="/cookie-policy"
-                  className="text-teal-700 hover:underline"
-                >
-                  Cookies Policy
-                </Link>
-                , which may be updated by us at any time without notice to you.
-              </>,
-              "If we update our Terms of Use, we will post the updated Terms of Use on the Website. Any such changes will be effective upon posting.",
-              "If you do not agree with these Terms of Use, you should not use the Website and you agree that your sole and exclusive remedy is to discontinue using the Website.",
-              "The Website is not designed for use by minors and minors should not provide personal information through this Website.",
-              "Nothing contained in these Terms of Use is intended to modify any other written agreement you may have with Aeternum (if any) that may be in effect.",
-              "Additional terms and conditions of use may be applicable to password-restricted areas of the Website.",
-              `For the purposes of these Terms of Use, “Aeternum,” “we” and “us” means Aeternum(TM) Corp. which controls this Website and the “User”, "you" and "your" means any person accessing the Website.`,
-              "The websites of other Aeternum affiliates are governed by separate terms of use.",
-              "Any disputes between User and Aeternum in connection with these Terms of Use may be resolved in arbitration or small claims court, subject to applicable law.",
-              <>
-                If you have any questions or comments about these Terms of Use,
-                please contact us at{" "}
+                If you have any questions or comments about these Terms of
+                Service, please contact us at{" "}
                 <a
-                  href="mailto:info@aeternumproject.com"
+                  href="mailto:legal@aeternumproject.com"
                   className="text-teal-700 hover:underline"
                 >
-                  info@aeternumproject.com
+                  legal@aeternumproject.com
                 </a>
                 .
               </>,
             ]}
           />
+
+          {/* 02: USE OF THE WEBSITE */}
           <SectionBlock
             id="use-of-the-website"
             title="02 USE OF THE WEBSITE"
-            intro="You are responsible for your use of the Website and the Content. You undertake to use your best endeavors to ensure that nothing you do whilst accessing the Website will damage the Website or otherwise violate these Terms of Use. You may not (and may not encourage or assist others) to:"
+            intro={`You are responsible for your use of the Website, Platform, and the Content. You undertake to use your best endeavors to ensure that nothing you do whilst accessing the Website and Platform will damage the Website or Platform or otherwise violate these Terms of Service. You acknowledge and agree that you may not (and may not encourage or assist others) to:`}
             bullets={[
-              "reproduce, republish, distribute, exploit commercially, use or modify without Aeternum’s express written consent, the Website or Content",
-              "access, copy or download the Website or Content using automated methods, including but not limited to, “web scraping” or “bots”, “robots” or “spiders” that “harvest” the Website or Content, interfere with the functioning of the Website or Content or restrict or inhibit any others from using the Website or Content",
-              "use any trade mark, service mark or logo of Aeternum or any third party that appears on the Website without prior written consent or remove or obscure any copyright or other notices contained in the Website or the Content",
-              "if you link other websites to the Website, imply or suggest that Aeternum has endorsed or is affiliated with such websites and you may not display the Website as “framed” or “mirrored” within another website",
-              "delete, decompose, decompile, reverse engineer, disassemble or otherwise deconstruct all or any portion of the Website or Content or any of the Websites’ source code or software",
-              "transmit any virus, worm, time bomb or similar system interference through the Website",
-              "violate these Terms of Use, the Privacy Policy or Cookies Policy or any law, regulation, rule or intellectual property or contractual rights of others, or attempt to violate the security of the Website, including attempting to gain unauthorized access to Content or use or gain access to the identities, information or computers of others through the Website",
-              "impersonate any person or entity or create a user account for anyone other than yourself or create another user account without permission if Aeternum has suspended or terminated your user account; or",
-              "use any hidden text or metatags using “Aeternum” on a website or content published on a website or otherwise. Aeternum has the right (but not the obligation) to monitor the Website for any unauthorized or objectionable conduct and to take all appropriate actions in response, without notice to you, and we may at any time revoke your right to use all or any portion of the Website or Content. ",
+              "A. reproduce, republish, distribute, exploit commercially, use or modify without AETERNUM’s express written consent, the Website, Platform, or Content, or access, copy or download the Website, Platform, or Content;",
+              "B. use automated methods, including but not limited to “web scraping” or “bots,” “robots,” or “spiders” that “harvest” the Website, Platform, or Content, interfere with the functioning of the Website, Platform, or Content, or restrict or inhibit any others from using the Website, Platform, or Content;",
+              "C. use any trade mark, service mark or logo of AETERNUM or any third party that appears on the Website and Platform without prior written consent, or remove or obscure any copyright or other notices contained in the Website, Platform, or the Content;",
+              "D. link other websites to the Website or Platform, imply or suggest that AETERNUM has endorsed or is affiliated with such websites, or display the Website or Platform as “framed” or “mirrored” within another website;",
+              "E. delete, decompose, decompile, reverse engineer, disassemble or otherwise deconstruct all or any portion of the Website, Platform, or Content, or any of the Website’s and Platform’s source code or software;",
+              "F. transmit any virus, worm, time bomb or similar system interference through the Website and Platform;",
+              "G. violate these Terms of Service, any AETERNUM policy referenced in these Terms of Service, or any law, regulation, rule or intellectual property or contractual rights of others, or attempt to violate the security of the Website and Platform, including attempting to gain unauthorized access to Content or use or gain access to the identities, information or computers of others through the Website and Platform;",
+              "H. impersonate any person or entity or create a user account for anyone other than yourself, or create another user account without permission if AETERNUM has suspended or terminated your user account; or",
+              "I. use any hidden text or metatags using “Aeternum” on a website or content published on a website or otherwise. AETERNUM has the right (but not the obligation) to monitor the Website and Platform for any unauthorized or objectionable conduct and to take all appropriate actions in response, without notice to you, and we may at any time revoke your right to use all or any portion of the Website, Platform, or Content.",
             ]}
-            outro="Aeternum may investigate any complaint regarding a suspected violation of these Terms of Use, and may report any activity relating to the Website or Content to regulators, law enforcement officials or other persons or entities that it deems appropriate.The Website or any part of the Website may be periodically unavailable, and Content may be removed or modified at any time without notice. Aeternum may, in its sole discretion, restrict, suspend or cancel access to or use of the Website, for all or any one or number of Users. Users will have no right to compensation or other remedy for being unable to access the Website."
-            useRomanStyle
+            outro={`AETERNUM may investigate any complaint regarding a suspected violation of these Terms of Service, and may report any activity relating to the Website, Platform, or Content to regulators, law enforcement officials or other persons or entities that it deems appropriate. The Website or Platform, or any part of the Website or Platform, may be periodically unavailable, and Content may be removed or modified at any time without notice. AETERNUM may, in its sole discretion, restrict, suspend or cancel access to or use of the Website or Platform, for all or any one or number of users. You acknowledge that you will have no right to compensation or other remedy for being unable to access the Website or Platform.`}
           />
+
+          {/* 03: RESTRICTED ACCESS */}
           <SectionBlock
             id="restricted-access"
             title="03 RESTRICTED ACCESS"
-            intro={`The Website is operated and controlled by us in Canada. Access to the Website from countries or territories where such access is illegal is prohibited. Aeternum makes no representations that the transactions, financial or investment products, securities, and other services ("Products or Services") discussed on or accessible through the Website are available or appropriate for sale or use in all jurisdictions or by all Users. Those who access the Website do so on their own initiative and are responsible for compliance with local laws, rules and regulations.`}
+            paragraphs={[
+              `The Website and Platform is operated and controlled by us in Canada. You acknowledge that access to the Website and Platform from countries or territories where such access is illegal is prohibited.`,
+              `You agree that AETERNUM makes no representations that the services discussed on or accessible through the Website and Platform are available or appropriate for sale or use in all jurisdictions or by all users.`,
+              `You acknowledge that you access the Website or Platform on your own initiative and are responsible for compliance with local laws, rules and regulations.`,
+            ]}
           />
+
+          {/* 04: PASSWORD PROTECTED LINKS */}
           <SectionBlock
             id="password-protected-links"
-            title="04 Password Protected Links"
-            intro="Some pages on the Website are available only to clients with registered accounts and log-on credentials. You are responsible for the confidentiality of your log-on credentials and account information, and for all actions taken on the Website while logged on with your credentials. You should not disclose your log-on credentials or account information and you should choose a unique password. Aeternum reserves the right to suspend or cancel Website accounts and log-on credentials at any time, for any, or no, reason and without notice. If you suspect that your log-on credentials have been compromised, please notify us immediately using the support contact information provided on the relevant account log-on page."
-            outro="Pages on the Website that are accessible only via registered accounts and with log-on credentials are only available to institutional or professional Users. By accessing such pages, Users will be deemed to have confirmed that they meet the criteria for this classification. Such confirmation will be treated by Aeternum as the User's acceptance that they understand the classification of these Terms of Use as applicable under the regulatory regime of their country of residence."
-            useRomanStyle
+            title="04 PASSWORD PROTECTED LINKS"
+            paragraphs={[
+              `Some pages on the Website and Platform are available only to users with registered accounts and log-on credentials. You are responsible for the confidentiality of your log-on credentials and account information, and for all actions taken on the Website and Platform while logged on with your credentials. You should not disclose your log-on credentials or account information and you should choose a unique password. You agree that AETERNUM reserves the right to suspend or cancel Website and Platform accounts and log-on credentials at any time, for any, or no, reason and without notice. If you suspect that your log-on credentials have been compromised, please notify us immediately using the support contact information provided on the relevant account log-on page.`,
+            ]}
           />
+
+          {/* 05: SUBMITTED CONTENT */}
           <SectionBlock
-            id="user-content"
-            title="05 User Content"
-            intro={
-              <>
-                Electronic communications can be intercepted by third parties
-                and electronic mail and other transmissions to and from the
-                Website and Aeternum may not be secure. Any communications to
-                Aeternum should be sent to the contact information provided in
-                the{" "}
-                <Link href="/contact" className="text-teal-700 hover:underline">
-                  Contact Us
-                </Link>{" "}
-                section of the Website. You are responsible for any content that
-                you post on the Website or submit to us via contact forms on the
-                Website, email, social media accounts or otherwise, including
-                your feedback, comments, questions, ideas, suggestions, survey
-                responses or other information or materials (“User Content”).
-                You hereby represent and warrant that any User Content you
-                submit to us is either your original content or that you have
-                obtained all necessary rights to your User Content, including
-                the right to authorize us to use your User Content as set forth
-                in these Terms of Use. By submitting any User Content, you
-                hereby grant to Aeternum an irrevocable, perpetual, worldwide,
-                non-exclusive, transferable, royalty-free, fully paid-up,
-                sub-licensable license to use, display, reproduce, publish,
-                transmit, store, modify and create derivative works of your User
-                Content.
-              </>
-            }
+            id="submitted-content"
+            title="05 SUBMITTED CONTENT"
+            paragraphs={[
+              `Electronic communications can be intercepted by third parties and electronic mail and other transmissions to and from the Website, Platform, and AETERNUM may not be secure. Any communications to AETERNUM should be sent to the contact information provided in the Contact Us section of the Website or Platform.`,
+              `You are responsible for any content that you post on the Website or that you submit to us via contact forms on the Website, email, social media accounts or otherwise, including your feedback, comments, questions, ideas, suggestions, survey responses or other information or materials (“Submitted Content”). You hereby represent and warrant that any Submitted Content you submit to us is either your original content or that you have obtained all necessary rights to your Submitted Content, including the right to authorize us to use your Submitted Content as set forth in these Terms of Service.`,
+              `By submitting any Submitted Content, you hereby grant to AETERNUM an irrevocable, perpetual, worldwide, non-exclusive, transferable, royalty-free, fully paid-up, sub-licensable license to use, display, reproduce, publish, transmit, store, modify and create derivative works of your Submitted Content.`,
+            ]}
           />
+
+          {/* 06: INTELLECTUAL PROPERTY */}
           <SectionBlock
             id="intellectual-property"
             title="06 INTELLECTUAL PROPERTY"
-            intro="All content on the Website, including text, images, trademarks, and software, is owned by Aeternum or its licensors. You may not use any Aeternum trademarks or copyrighted materials without permission."
+            paragraphs={[
+              `All content on the Website and Platform, including text, images, trademarks, and software, is owned by AETERNUM or its licensors. You may not use any AETERNUM trademarks or copyrighted materials without permission.`,
+            ]}
           />
-          <SectionBlock
-            id="material-interests"
-            title="07 Material Interests"
-            intro="Any part of Aeternum and/or its Affiliates may have or have had an interest or holding, relationship or other arrangement with the Products or Services, which may be material. Potential investors should refer to the applicable offering documents for any Product or Service and in particular, the potential conflicts of interest discussed therein."
-          />
-          <SectionBlock
-            id="linked-websites"
-            title="08 Linked Websites"
-            intro="The Website may contain links to other websites. We are not responsible for the content, security or privacy practices of other websites and we do not endorse other websites or their content by virtue of linking to them from the Website. You should review the terms of use and privacy policies of any third party website that you visit."
-          />
+
+          {/* 07: LINKS TO THIRD-PARTY WEBSITES */}
           <SectionBlock
             id="links-to-third-party-websites"
-            title="09 LINKS TO THIRD-PARTY WEBSITES"
-            intro="The Website may contain links to external sites that are not operated by Aeternum. We are not responsible for their content or privacy practices."
+            title="07 LINKS TO THIRD-PARTY WEBSITES"
+            paragraphs={[
+              `The Website and Platform may contain links to other websites. We are not responsible for the content, security or privacy practices of other websites and we do not endorse other websites or their content by virtue of linking to them from the Website and Platform. You should review the terms of service and privacy policies of any third party website that you visit.`,
+            ]}
           />
+
+          {/* 08: NO RELIANCE */}
           <SectionBlock
-            id="website-disclaimers-and-limitations-of-liability"
-            title="10 Website Disclaimers and Limitations of Liability"
-            intro={
-              <>
-                <p className="tracking-widest leading-loose">
-                  Subject to any applicable law that cannot be excluded, the
-                  Website and Content are provided “as is” and “as available”
-                  without any representation, warranty or condition. No reliance
-                  should be placed on any information on the Website or the
-                  Content. Users agree to bear all risks associated with their
-                  use of the Website and Content, including any reliance on the
-                  availability, accuracy, completeness, timeliness, usefulness
-                  or appropriateness of the Website or Content. You agree that
-                  Aeternum is not liable for any action you take, omission, or
-                  decision you make in reliance on the Website or the Content,
-                  subject to applicable law.
-                </p>
-
-                <p className="mt-4 tracking-widest leading-loose">
-                  The Content and the Website are for informational purposes
-                  only and are not investment, professional, legal or other
-                  advice nor are they to be relied upon in making an investment
-                  or other decision. The Website and Content is not an offer to
-                  sell, or a solicitation of an offer to buy and do not
-                  constitute an invitation or inducement of any sort to any
-                  person.
-                </p>
-
-                <p className="mt-4 tracking-widest leading-loose">
-                  Certain information contained on the Website and in the
-                  Content may constitute “forward-looking statements” as defined
-                  in applicable securities laws. Forward-looking statements
-                  include statements that are predictive in nature, depend upon
-                  or refer to future events or conditions, and include
-                  statements regarding Aeternum’s competitive strengths, goals,
-                  expansion, growth, future success, operations, business,
-                  financial condition, expected financial results, performance,
-                  prospects, opportunities, priorities, targets, goals, ongoing
-                  objectives, strategies, and outlook. Words such as
-                  “anticipate”, “estimate”, “expect”, “project”, “intend”,
-                  “plan” and “believe” are intended to identify forward-looking
-                  statements. No reliance should be placed on forward-looking
-                  statements because they involve known and unknown risks,
-                  uncertainties, and other factors which may cause the actual
-                  results, performance, or achievements of Aeternum to differ
-                  materially. Except as required by law, Aeternum undertakes no
-                  obligation to update or revise statements or information on
-                  the Website or in Content.
-                </p>
-
-                <p className="mt-4 tracking-widest leading-loose">
-                  Any transactions described on the Website or in any Content as
-                  having been engaged in by Aeternum are included as
-                  representative transactions for illustrative purposes only.
-                  Past performance is not indicative of future results. No
-                  assurance or representation is made, that comparable results
-                  or any target returns disclosed on the Website or in Content
-                  will be achieved.
-                </p>
-
-                <p className="mt-4 tracking-widest leading-loose">
-                  You agree that, to the maximum extent permitted by applicable
-                  law, in no event shall you seek to hold Aeternum, its
-                  affiliates and/or their respective officers, directors,
-                  managers, partners, members, shareholders, employees and
-                  agents (“Affiliates”), liable and in no event shall Aeternum
-                  or its Affiliates be liable to any party, whether in contract,
-                  tort (including negligence) or otherwise, for damages
-                  (including direct, indirect, incidental, consequential,
-                  special, punitive, exemplary and aggravated damages and
-                  damages for loss of use, profits or revenue) or any other
-                  remedy relating to the access, use, inability to use,
-                  availability of the Website or the Content, irrespective of
-                  whether Aeternum has been advised of the possibility of such
-                  damages and/or losses.
-                </p>
-
-                <p className="mt-4 tracking-widest leading-loose">
-                  The liability of Aeternum and/or its Affiliates for breach of
-                  any condition, guarantee or warranty implied by statute that
-                  cannot be excluded, is limited to the maximum extent permitted
-                  by law, at Aeternum’s option, to the re-supply of goods or
-                  services, or the payment of the costs of having goods or
-                  services re-supplied.
-                </p>
-              </>
-            }
+            id="no-reliance"
+            title="08 NO RELIANCE"
+            paragraphs={[
+              `Subject to any applicable law that cannot be excluded, the Website, Platform, and Content are provided “as is” and “as available” without any representation, warranty or condition. No reliance should be placed on any information on the Website, Platform, or the Content. You agree to bear all risks associated with your use of the Website, Platform, and Content, including any reliance on the availability, accuracy, completeness, timeliness, usefulness, or appropriateness of the Website, Platform, or Content. You agree that AETERNUM is not liable for any action you take, omission, or decision you make in reliance on the Website, Platform, or the Content, subject to applicable law.`,
+              `The Content, Website, and Platform are for informational purposes only and are not investment, professional, legal, or other advice nor are they to be relied upon in making an investment or other decision. The Website, Platform, and Content is not an offer to sell, or a solicitation of an offer to buy and does not constitute an invitation or inducement of any sort to any person.`,
+            ]}
           />
+
+          {/* 09: FORWARD LOOKING STATEMENTS */}
+          <SectionBlock
+            id="forward-looking-statements"
+            title="09 FORWARD LOOKING STATEMENTS"
+            paragraphs={[
+              `Certain information contained on the Website, Platform, and in the Content may constitute “forward-looking statements” as defined in applicable securities laws. Forward-looking statements include statements that are predictive in nature, depend upon or refer to future events or conditions, and include statements regarding AETERNUM’s competitive strengths, goals, expansion, growth, future success, operations, business, financial condition, expected financial results, performance, prospects, opportunities, priorities, targets, goals, ongoing objectives, strategies, and outlook.`,
+              `Words such as “anticipate”, “estimate”, “expect”, “project”, “intend”, “plan” and “believe” are intended to identify forward-looking statements. No reliance should be placed on forward-looking statements because they involve known and unknown risks, uncertainties, and other factors which may cause the actual results, performance, or achievements of AETERNUM to differ materially.`,
+              `Except as required by law, AETERNUM undertakes no obligation to update or revise statements or information on the Website, Platform, or in Content.`,
+            ]}
+          />
+
+          {/* 10: NO ASSURANCE */}
+          <SectionBlock
+            id="no-assurance"
+            title="10 NO ASSURANCE"
+            paragraphs={[
+              `Any transactions described on the Website, Platform, or in any Content as having been engaged in by AETERNUM are included as representative transactions for illustrative purposes only. Past performance is not indicative of future results. No assurance or representation is made that comparable results or any target returns disclosed on the Website, Platform, or in Content will be achieved.`,
+            ]}
+          />
+
+          {/* 11: LIMITATION OF LIABILITY */}
           <SectionBlock
             id="limitation-of-liability"
             title="11 LIMITATION OF LIABILITY"
-            intro='The Website and its content are provided "as is" without warranties of any kind. Aeternum is not liable for any errors, omissions, or interruptions on the Website. To the maximum extent permitted by law, Aeternum is not responsible for any direct, indirect, incidental, or consequential damages resulting from your use of the Website.'
+            paragraphs={[
+              `TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE WEBSITE, PLATFORM, CONTENT, INTELLECTUAL PROPERTY, PRODUCTS, AND SERVICES ARE PROVIDED ‘AS IS’ AND ON AN ‘AS AVAILABLE’ BASIS AND AETERNUM HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS. IN NO EVENT WILL AETERNUM BE LIABLE UNDER OR IN CONNECTION WITH: THIS TERMS OF SERVICE; THE WEBSITE; THE PLATFORM; INTERACTIONS WITH OTHER USERS OF THE WEBSITE AND PLATFORM; INTERACTIONS WITH THIRD-PARTY CONTENT OR FEATURES; YOUR USE OF OR ACCESS TO THE WEBSITE, PLATFORM, ITS CONTENTS, OR OUR INTELLECTUAL PROPERTY; YOUR SUBMITTED CONTENT; OR WITH RESPECT TO THE TRANSMISSION OR TRANSFER OF SUBMITTED CONTENT, PROFILE, OR DATA. NOTWITHSTANDING, IN NO EVENT WILL AETERNUM’S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS TERMS OF SERVICE UNDER ANY LEGAL OR EQUITABLE THEORY OR JURISDICTION EXCEED THE TOTAL FEES PAID TO AETERNUM BY USER UNDER THIS TERMS OF SERVICE. ANY THIRD PARTY CLAIMS AGAINST AETERNUM THAT ARISE OUT OF THIS TERMS OF SERVICE ARE CONSIDERED A CLAIM OF USER UNDER THIS TERMS OF SERVICE.`,
+            ]}
           />
+
+          {/* 12: INDEMNIFICATION */}
           <SectionBlock
             id="indemnification"
             title="12 INDEMNIFICATION"
-            intro="You agree that a condition of your use of the Website and Content is that you indemnify Aeternum, its Affiliates and their respective representatives harmless against any and all liabilities, losses, damages, suits, claims, demands, costs (including court costs and legal fees), fines and actions of any kind or nature suffered as a result of your use of the Website or Content, your breach, violation or non-performance of any term or condition of these Terms of Use, or your violation of any third party’s rights relating to the Website or Content."
+            paragraphs={[
+              `To the maximum extent permitted by applicable law, you agree to defend, indemnify, release, and hold harmless AETERNUM, and its subsidiaries, affiliates, and their respective directors, officers, employees, agents, service providers, contractors, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees arising out of or relating to your breach of this Terms of Service; your use of the Website or Platform in contravention of our Privacy Policy; your use of or access to the Website, Platform or our Intellectual Property; your Submitted Content; your unauthorized use of a third party’s property; or your infringement or breach of a third party’s rights or a third party agreement.`,
+            ]}
           />
+
+          {/* 13: DISPUTE RESOLUTION */}
           <SectionBlock
-            id="dispute-resolution-by-binding-arbitration"
-            title="13 Dispute Resolution by Binding Arbitration"
-            intro="Subject to applicable law, in the interest of resolving disputes between you and Aeternum, you agree that Aeternum may, at its sole discretion, require that a dispute arising out of or in connection with these Terms of Use or your use of the Website or Content shall be resolved through binding arbitration or small claims court, at Aeternum’s option, instead of in courts of general jurisdiction. Arbitration is more informal than a lawsuit in court. Arbitration uses a neutral arbitrator instead of a judge or jury, allows for more limited discovery than in court, and is subject to very limited review by courts. Arbitrators can award the same damages and relief that a court can award. Any arbitration under these Terms of Use will take place on an individual basis; class arbitrations and class actions are not permitted. You acknowledge and agree that the arbitrator may award relief (including monetary, injunctive, and declaratory relief) only in favor of the individual party seeking relief and only to the extent necessary to provide relief necessitated by that individual party’s claim(s). Any relief awarded cannot affect other Users."
+            id="dispute-resolution"
+            title="13 DISPUTE RESOLUTION"
+            paragraphs={[
+              `In any dispute brought by a Party to this Terms of Service, the Parties agree to first negotiate in good faith to cure or resolve such dispute.`,
+              `If the dispute is not cured or resolved within ten (10) days of prior written notice to the other Party, each Party shall submit to arbitration and the decision of such arbitrator shall be final and binding.`,
+              `To the fullest extent permitted by law, each Party waives trial by jury in any action, proceeding, or counterclaim brought by or on behalf of either Party with respect to any matter relating to this Terms of Service.`,
+              `The arbitrator shall award to the prevailing Party, if any, the costs and attorneys’ fees reasonably incurred by the prevailing Party in connection with the arbitration, and the losing Party shall cover the costs of the arbitrator.`,
+              `To the extent permitted under applicable law, the Parties agree to resolve any dispute in arbitration on an individual basis only, and not on a class or collective action basis.`,
+              `If any court or arbitrator finds that this agreement to arbitrate is unenforceable, the Parties agree to submit to the personal and exclusive jurisdiction of the courts of Alberta and Canada, as applicable.`,
+            ]}
           />
+
+          {/* 14: NOTICES */}
           <SectionBlock
-            id="governing-law"
-            title="14 Governing Law"
-            intro={
+            id="notices"
+            title="14 NOTICES"
+            paragraphs={[
+              `All notices and communications under this Terms of Service shall be delivered via email to AETERNUM at `,
               <>
-                <p className="tracking-widest leading-loose">
-                  Subject to the Disputes Resolution by Binding Arbitration
-                  section above, these Terms of Use and the rights and
-                  obligations of any recipient or viewer of the Website or the
-                  Content (and any person that they represent) arising out of or
-                  in connection with the Website or the Content, whether
-                  contractual, non-contractual, pre-contractual or otherwise,
-                  are governed by the laws of the Province of Alberta and any
-                  disputes arising out of or in connection with the foregoing
-                  shall be subject to the exclusive jurisdiction of the province
-                  or federal courts located in Edmonton. You agree to waive
-                  trial by jury in any such action.
-                </p>
+                <a
+                  href="mailto:legal@aeternumproject.com"
+                  className="text-teal-700 hover:underline"
+                >
+                  legal@aeternumproject.com
+                </a>
+                {", "}Attention: Privacy Officer. All communications to you
+                shall be sent to the email address you used to register for the
+                Platform, as updated on your profile, or as submitted through
+                the Website’s contact form.
+              </>,
+            ]}
+          />
 
-                <p className="mt-4 tracking-widest leading-loose">
-                  No waiver by Aeternum or any of its Affiliates of any right
-                  under or term or provision of these Terms of Use will be
-                  deemed a waiver of any other right, term or provision of these
-                  Terms of Use. If any provision of these Terms of Use shall be
-                  deemed unlawful, void or for any reason unenforceable, then
-                  that provision shall be deemed severable from these Terms of
-                  Use and shall not affect the validity and enforceability of
-                  any remaining provisions.
-                </p>
-
-                <p className="mt-4 tracking-widest leading-loose">
-                  You should be aware that any rules and/or regulations
-                  applicable to the provision of financial services (and the
-                  resultant investor protection benefits that may be available),
-                  may not be applicable to interfacing conducted through the
-                  internet and its various applications, of which this material
-                  forms part.
-                </p>
-              </>
-            }
+          {/* 15: GENERAL */}
+          <SectionBlock
+            id="general"
+            title="15 GENERAL"
+            paragraphs={[
+              `This Terms of Service will be governed by and construed in accordance with the laws of Alberta and Canada, as applicable. Subject to the Disputes clause of this Terms of Service, any action or proceeding arising out of or relating to the Website, Platform, or under this Terms of Service will be instituted in those courts, as applicable, and each party irrevocably submits to the exclusive jurisdiction of such courts in any such action or proceeding.`,
+              `This Terms of Service may be executed in any number of counterparts, each of which shall constitute an original, but all of which, when taken together, shall be considered one document, and the transmittal of signatures by facsimile or other electronic form is good and valid execution of this Terms of Service and is legally binding on the Parties.`,
+              `Unless mutually agreed by the Parties in writing, no failure to exercise, or delay in exercising, any right, remedy, power, or privilege arising from this Terms of Service operates, or may be construed, as a waiver thereof. Any waiver or partial waiver by AETERNUM of any obligation owed to AETERNUM shall be understood to be a one-time occurrence and shall not create any presumptions thereof and shall not reduce or limit the obligations the USER owed to AETERNUM thereafter. No waiver by AETERNUM or any of its affiliates of any right under or term or provision of this Terms of Service will be deemed a waiver of any other right, term, or provision of this Terms of Service.`,
+              `If any term or provision of this Terms of Service is invalid, illegal, or unenforceable in any jurisdiction, such invalidity, illegality, or unenforceability shall not affect any other term or provision of this Terms of Service or invalidate or render unenforceable such term or provision in any other jurisdiction.`,
+              `This Terms of Service, our Privacy Policy, and our User License Agreement constitute the entire agreement between you and AETERNUM regarding our relationship and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, whether written, oral, or inferred from conduct, regarding such subject matter. In the event of any conflict between this Terms of Service and our User License Agreement, the User License Agreement shall prevail.`,
+              `Nothing contained herein, expressed, or implied, will constitute or contemplate a partnership, joint venture, employment, or other agency or business relationship between the Parties.`,
+              `The Parties agree that only AETERNUM may assign or transfer this Terms of Service and its rights and obligations under this Terms of Service to a third party, at its option and discretion.`,
+              `If any legal proceeding is brought by either Party hereto to enforce or interpret this Terms of Service, both Parties will be deemed to have jointly drafted this Terms of Service and neither side will enjoy the benefit of any presumptions regarding which party drafted the contract.`,
+              `The word “including” in this Terms of Service means ‘including without limitation’. The sections and headers in this Terms of Service are for context only.`,
+              `Each Party acknowledges to the other that they had the opportunity to obtain independent legal advice or have freely chosen not to obtain such advice.`,
+            ]}
           />
         </div>
         <div className="border-t border-black my-12" />

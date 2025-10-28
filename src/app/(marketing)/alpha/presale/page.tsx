@@ -88,7 +88,7 @@ export default function AeternumLegacyPlan() {
                 </p>
               </div>
               <a
-                href="https://buy.stripe.com/4gM00iccb4uAbZKbWe4Ja02?prefilled_promo_code=Forlife75"
+                href="https://buy.stripe.com/8x2fZg0ttd169RCaSa4Ja04?prefilled_promo_code=75forlife"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white px-6 py-3 rounded-xl font-semibold"
