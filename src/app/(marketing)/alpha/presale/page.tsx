@@ -139,17 +139,11 @@ export default function AeternumLegacyPlan() {
                       alt="check"
                       className="w-4 h-4 mt-2"
                     />
-                    <span>2 TB Secure Storage for all your memories </span>
+                    <span>
+                      2 TB Secure Storage for photos, videos, and audio files
+                    </span>
                   </li>
                   <li className="flex items-start text-left  gap-2 text-sm">
-                    <img
-                      src="/icons/check-1.svg"
-                      alt="check"
-                      className="w-4 h-4 mt-2"
-                    />
-                    <span>Up to 6 Family Members per account</span>
-                  </li>
-                  <li className="flex items-start  text-left gap-2 text-sm">
                     <img
                       src="/icons/check-1.svg"
                       alt="check"
@@ -165,10 +159,15 @@ export default function AeternumLegacyPlan() {
                       alt="check"
                       className="w-4 h-4 mt-2"
                     />
-                    <span>
-                      Family Tree Integration to connect stories across
-                      generations
-                    </span>
+                    <span>Family Connections</span>
+                  </li>
+                  <li className="flex items-start  text-left gap-2 text-sm">
+                    <img
+                      src="/icons/check-1.svg"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Curated Profiles for a loved one</span>
                   </li>
                   <li className="flex items-start text-left gap-2 text-sm">
                     <img
@@ -176,9 +175,7 @@ export default function AeternumLegacyPlan() {
                       alt="check"
                       className="w-4 h-4 mt-2"
                     />
-                    <span>
-                      Privacy Circles for shared storytelling and collaboration
-                    </span>
+                    <span>Privacy Circles (Standard Version)</span>
                   </li>
                   <li className="flex items-start text-left gap-2 text-sm">
                     <img
@@ -186,13 +183,14 @@ export default function AeternumLegacyPlan() {
                       alt="check"
                       className="w-4 h-4 mt-2"
                     />
-                    <span>Ad-Free & Privacy-First — your data stays yours</span>
+                    <span>Ad-Free & Privacy-First experience</span>
                   </li>
                 </ul>
               </div>
+
               <div>
                 <p className="font-bold">
-                  Coming Soon (Rolling out in the next 6 months!):
+                  Coming Soon (Rolling out in the next 2 months!):
                 </p>
                 <ul className="text-neutral-800 space-y-1">
                   <li className="flex items-start text-left gap-2 text-sm">
@@ -201,9 +199,17 @@ export default function AeternumLegacyPlan() {
                       alt="check"
                       className="w-4 h-4 mt-2"
                     />
+                    <span>Family Tree Integration</span>
+                  </li>
+                  <li className="flex items-start text-left gap-2 text-sm">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
                     <span>Share with 5 Family Members</span>
                   </li>
-                  <li className="flex items-start text-left  gap-2 text-sm">
+                  <li className="flex items-start text-left gap-2 text-sm">
                     <img
                       src="/icons/loading.png"
                       alt="check"
@@ -211,7 +217,7 @@ export default function AeternumLegacyPlan() {
                     />
                     <span>Native Mobile Version for iOS and Android</span>
                   </li>
-                  <li className="flex items-start  text-left gap-2 text-sm">
+                  <li className="flex items-start text-left gap-2 text-sm">
                     <img
                       src="/icons/loading.png"
                       alt="check"
@@ -219,32 +225,72 @@ export default function AeternumLegacyPlan() {
                     />
                     <span>In App Recorded Voice Notes</span>
                   </li>
-                  <li className="flex items-start  text-left gap-2 text-sm">
+                  <li className="flex items-start text-left gap-2 text-sm">
                     <img
                       src="/icons/loading.png"
                       alt="check"
                       className="w-4 h-4 mt-2"
                     />
-                    <span>Enhanced Memory & Legacy Suite:</span>
+                    <span>Private Message file attachments</span>
                   </li>
-
-                  <li className="flex items-start text-left gap-2 text-sm ml-7">
+                  <li className="flex items-start text-left gap-2 text-sm">
                     <img
                       src="/icons/loading.png"
                       alt="check"
                       className="w-4 h-4 mt-2"
                     />
-                    <span>Customizable Privacy Circles</span>
+                    <span>File Management System</span>
                   </li>
-                  <li className="flex items-start text-left gap-2 text-sm ml-7">
+                  <li className="flex items-start text-left gap-2 text-sm">
                     <img
                       src="/icons/loading.png"
                       alt="check"
                       className="w-4 h-4 mt-2"
                     />
-                    <span>Memory Collections & Chain Memory System</span>
+                    <span>Timeline Memory View</span>
                   </li>
-                  <li className="flex items-start text-left gap-2 text-sm ml-7">
+                  <li className="flex items-start text-left gap-2 text-sm">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Connection blocking management</span>
+                  </li>
+                  <li className="flex items-start text-left gap-2 text-sm">
+                    <img
+                      src="/icons/loading.png"
+                      alt="check"
+                      className="w-4 h-4 mt-2"
+                    />
+                    <span>Enhanced Memory &amp; Legacy Suite:</span>
+                  </li>
+                  <ul className="list-none mt-2 ml-7 space-y-1">
+                    <li className="flex items-start text-left gap-2 text-sm">
+                      <img
+                        src="/icons/loading.png"
+                        alt="check"
+                        className="w-4 h-4 mt-2"
+                      />
+                      <span>Customizable Privacy Circles</span>
+                    </li>
+                    <li className="flex items-start text-left gap-2 text-sm">
+                      <img
+                        src="/icons/loading.png"
+                        alt="check"
+                        className="w-4 h-4 mt-2"
+                      />
+                      <span>Memory Collections &amp; Chain Memory System</span>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+              <div className="mt-4">
+                <p className="font-bold">
+                  Coming Soon to Aeternum Beta (Q1 2026):
+                </p>
+                <ul className="text-neutral-800 space-y-1 mt-2">
+                  <li className="flex items-start text-left gap-2 text-sm">
                     <img
                       src="/icons/loading.png"
                       alt="check"
@@ -252,7 +298,7 @@ export default function AeternumLegacyPlan() {
                     />
                     <span>Aeternum Legacy Messages</span>
                   </li>
-                  <li className="flex items-start text-left gap-2 text-sm ml-7">
+                  <li className="flex items-start text-left gap-2 text-sm">
                     <img
                       src="/icons/loading.png"
                       alt="check"
@@ -405,6 +451,15 @@ export default function AeternumLegacyPlan() {
                 <p>
                   A: Our limited-time Alpha pre-launch offer is available until{" "}
                   <strong>November 14 at 10:59 PM PST</strong>.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-500">
+                  Q: When is Alpha launching?
+                </p>
+                <p>
+                  A: We plan to launch Alpha access on or before{" "}
+                  <strong>November 28th, 2026</strong>.
                 </p>
               </div>
               <div>
