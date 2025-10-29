@@ -16,10 +16,14 @@ export default function LegalSectionTitle({
   // safe.
   const renderEntry = (entry: string | React.ReactNode, baseKey: number) => {
     if (typeof entry !== "string") {
+      // Wrap non-string entries in a block-level element so they can
+      // safely contain other block-level children like <ul> without
+      // producing invalid HTML (e.g. <p><ul>...). Use a div to keep the
+      // same spacing behavior as the string paragraphs.
       return (
-        <p key={baseKey} className="mb-4 last:mb-0">
+        <div key={baseKey} className="mb-4 last:mb-0">
           {entry}
-        </p>
+        </div>
       );
     }
 

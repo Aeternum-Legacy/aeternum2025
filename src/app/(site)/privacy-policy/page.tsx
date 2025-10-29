@@ -6,7 +6,7 @@ import { toId } from "@/lib/utils";
 import LegalSectionTitle from "@/components/ui/LegalSectionTitle";
 import SectionLinkList from "@/components/ui/SectionLinkList";
 
-const lastUpdated = "October 2nd, 2025";
+const lastUpdated = "2025-10-02";
 
 const sections = [
   "Introduction",
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
     <section className="page-wrapper bg-pattern">
       <div className="section-wrapper pt-16 md:pt-20">
         <LegalSectionTitle
-          title="Privacy Policy"
+          title="AETERNUM PRIVACY POLICY"
           lastUpdated={lastUpdated}
           paragraphs={[
             "PLEASE READ THIS PRIVACY POLICY CAREFULLY TO UNDERSTAND OUR POLICIES AND PRACTICES FOR COLLECTING, PROCESSING, STORING, USING, AND DISCLOSING YOUR DATA. BY ACCESSING OR USING ANY PORTION OF THE PLATFORM, THE INDIVIDUAL ACCESSING OR USING THE PLATFORM (“USER”, “YOU”, “YOUR”) ACKNOWLEDGES THAT THEY HAVE READ THIS POLICY, UNDERSTAND IT, AND PROVIDE EXPRESS CONSENT TO THE POLICIES AND PRACTICES STATED HEREIN EFFECTIVE THE DATE YOU FIRST USED THE PLATFORM.",

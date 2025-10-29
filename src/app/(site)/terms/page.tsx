@@ -138,10 +138,10 @@ export default function TermsPage() {
             </>,
             // 5
             <>
-              NOW, THEREFORE, in consideration of the mutual covenants, terms,
-              and conditions set forth herein, and for other good and valuable
-              consideration, the receipt and sufficiency of which are hereby
-              acknowledged, the Parties agree as follows:
+              <strong>NOW, THEREFORE,</strong> {" "} in consideration of the mutual
+              covenants, terms, and conditions set forth herein, and for other
+              good and valuable consideration, the receipt and sufficiency of
+              which are hereby acknowledged, the Parties agree as follows:
             </>,
           ]}
         />
@@ -344,7 +344,7 @@ export default function TermsPage() {
         <div className="border-t border-black my-12" />
         <div className="flex justify-center items-center">
           <Notification
-            title="Terms & Conditions"
+            title="AETERNUM TERMS OF SERVICE"
             text="If any provision of these Terms is found to be unenforceable, the
           remaining provisions will remain in effect."
           />

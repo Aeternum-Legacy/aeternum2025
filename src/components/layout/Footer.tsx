@@ -124,9 +124,9 @@ export default function Footer() {
 
       <div className="flex flex-col items-center justify-center gap-2 pt-8 mt-10 border-t border-white/40 text-center px-4 md:px-10">
         <div className="flex flex-wrap justify-center gap-2">
-          <Link href="/terms">Terms & Conditions</Link>
+          <Link href="/terms">TERMS OF SERVICE</Link>
           <span className="hidden sm:inline">|</span>
-          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/privacy-policy">PRIVACY POLICY</Link>
         </div>
         <p className="italic">©2025 Aeternum Corp. All rights reserved.</p>
       </div>
