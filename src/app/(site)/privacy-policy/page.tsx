@@ -299,8 +299,8 @@ This Privacy Policy interacts with and User additionally agrees to our Terms of 
         <div className="border-t border-black my-12" />
         <div className="flex justify-center items-center">
           <Notification
-            title="Privacy Policy"
-            text="We may update this Privacy Policy at any time.  (next line) Changes will be posted on this page, and your continued use of the Website will indicate acceptance."
+            title="PRIVACY POLICY"
+            text="We may update this PRIVACY POLICY at any time.  (next line) Changes will be posted on this page, and your continued use of the Website will indicate acceptance."
           />
         </div>
       </div>
