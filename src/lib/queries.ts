@@ -1,7 +1,7 @@
 import { gql } from "graphql-request";
 
 export const POSTS_QUERY = gql`
-  query GetPosts($first: Int = 50, $after: String) {
+  query GetPosts($first: Int = 6, $after: String) {
     posts(
       first: $first
       after: $after
@@ -28,6 +28,28 @@ export const POSTS_QUERY = gql`
           nodes {
             name
             slug
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const FEATURED_QUERY = gql`
+  query GetFeatured($first: Int!, $search: String) {
+    posts(
+      first: $first
+      where: { orderby: { field: DATE, order: DESC }, search: $search }
+    ) {
+      nodes {
+        id
+        title
+        slug
+        date
+        isSticky
+        featuredImage {
+          node {
+            sourceUrl
           }
         }
       }

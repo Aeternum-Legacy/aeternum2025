@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: { caseSensitiveRoutes: true },
   images: {
-    domains: ["api.microlink.io", "3.148.235.129"],
+    domains: ["api.microlink.io", "3.144.117.179"],
   },
   eslint: {
     ignoreDuringBuilds: true,

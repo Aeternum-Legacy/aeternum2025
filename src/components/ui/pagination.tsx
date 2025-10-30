@@ -8,7 +8,21 @@ import {
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 
-function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
+type PaginationProps = React.ComponentProps<"nav"> & {
+  onPrev?: () => void;
+  onNext?: () => void;
+  prevDisabled?: boolean;
+  nextDisabled?: boolean;
+};
+
+function Pagination({
+  className,
+  onPrev,
+  onNext,
+  prevDisabled = false,
+  nextDisabled = false,
+  ...props
+}: PaginationProps) {
   return (
     <nav
       role="navigation"
@@ -16,7 +30,36 @@ function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
       data-slot="pagination"
       className={cn("mx-auto flex w-full justify-center", className)}
       {...props}
-    />
+    >
+      <ul
+        data-slot="pagination-content"
+        className={cn("flex items-center gap-2")}
+      >
+        <li data-slot="pagination-item">
+          <button
+            type="button"
+            onClick={onPrev}
+            aria-label="Go to previous page"
+            disabled={prevDisabled}
+            className={buttonVariants({ variant: "ghost", size: "default" })}
+          >
+            <ChevronLeftIcon />
+          </button>
+        </li>
+
+        <li data-slot="pagination-item">
+          <button
+            type="button"
+            onClick={onNext}
+            aria-label="Go to next page"
+            disabled={nextDisabled}
+            className={buttonVariants({ variant: "ghost", size: "default" })}
+          >
+            <ChevronRightIcon />
+          </button>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
