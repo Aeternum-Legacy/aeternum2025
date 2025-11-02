@@ -41,7 +41,7 @@ export default function AeternumLegacyPlan() {
             onClick={() => {
               // Open Stripe checkout with Forlife75 promo in a new tab
               window.open(
-                "https://buy.stripe.com/4gM00iccb4uAbZKbWe4Ja02?prefilled_promo_code=Forlife75",
+                "https://buy.stripe.com/8x2fZg0ttd169RCaSa4Ja04?prefilled_promo_code=75forlife",
                 "_blank",
                 "noopener,noreferrer"
               );
@@ -372,9 +372,9 @@ export default function AeternumLegacyPlan() {
               buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300 w-72"
               textClassName="text-white"
               onClick={() => {
-                // Open Stripe checkout with Forlife75 promo in a new tab
+                // Open Stripe checkout with 75forlife promo in a new tab
                 window.open(
-                  "https://buy.stripe.com/4gM00iccb4uAbZKbWe4Ja02?prefilled_promo_code=Forlife75",
+                  "https://buy.stripe.com/8x2fZg0ttd169RCaSa4Ja04?prefilled_promo_code=75forlife",
                   "_blank",
                   "noopener,noreferrer"
                 );
