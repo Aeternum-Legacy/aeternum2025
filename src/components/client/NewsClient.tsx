@@ -5,7 +5,15 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import LogoLabel from "@/components/ui/LogoLabel";
 import NewsInputWrapper from "@/components/ui/NewsInputWrapper";
-import { Pagination } from "@/components/ui/pagination";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+  PaginationEllipsis,
+} from "@/components/ui/pagination";
 
 type Post = {
   id: string;
@@ -61,7 +69,6 @@ type Props = {
   searchTermFromUrl: string;
   featuredPostsInitial: Post[];
   postsPerPage: number;
-  hasMore?: boolean;
 };
 
 export default function NewsClient({
@@ -70,7 +77,6 @@ export default function NewsClient({
   currentPage,
   searchTermFromUrl,
   featuredPostsInitial,
-  hasMore = false,
 }: Props) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -430,21 +436,129 @@ export default function NewsClient({
         </div>
       </section>
 
-      {(totalPages > 1 || hasMore) && (
-        <Pagination
-          onPrev={() => {
-            if (!isLoading && currentPage > 1) {
-              goToPage(currentPage - 1, searchTerm);
-            }
-          }}
-          onNext={() => {
-            if (!isLoading && (currentPage < totalPages || hasMore)) {
-              goToPage(currentPage + 1, searchTerm);
-            }
-          }}
-          prevDisabled={isLoading || currentPage <= 1}
-          nextDisabled={isLoading || !(currentPage < totalPages || hasMore)}
-        />
+      {totalPages > 1 && (
+        <Pagination>
+          <PaginationContent>
+            {(() => {
+              const PAGES_PER_GROUP = 5;
+              const currentGroup = Math.floor(
+                (currentPage - 1) / PAGES_PER_GROUP
+              );
+              const groupStart = currentGroup * PAGES_PER_GROUP + 1;
+              const groupEnd = Math.min(
+                groupStart + PAGES_PER_GROUP - 1,
+                totalPages
+              );
+
+              const pages: JSX.Element[] = [];
+
+              if (groupStart > 1) {
+                pages.push(
+                  <PaginationItem key="prev-group">
+                    <PaginationPrevious
+                      href="#"
+                      className={
+                        isLoading ? "pointer-events-none opacity-50" : ""
+                      }
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (!isLoading) {
+                          // Go to last page of previous group
+                          const prevGroupEnd = groupStart - 1;
+                          goToPage(prevGroupEnd, searchTerm);
+                        }
+                      }}
+                    />
+                  </PaginationItem>
+                );
+
+                if (groupStart > PAGES_PER_GROUP + 1) {
+                  pages.push(
+                    <PaginationItem key="prev-ellipsis">
+                      <PaginationEllipsis />
+                    </PaginationItem>
+                  );
+                }
+              }
+
+              if (totalPages <= PAGES_PER_GROUP) {
+                for (let p = 1; p <= totalPages; p++) {
+                  pages.push(
+                    <PaginationItem key={p}>
+                      <PaginationLink
+                        href="#"
+                        isActive={p === currentPage}
+                        className={
+                          isLoading ? "pointer-events-none opacity-50" : ""
+                        }
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (!isLoading) {
+                            goToPage(p, searchTerm);
+                          }
+                        }}
+                      >
+                        {p}
+                      </PaginationLink>
+                    </PaginationItem>
+                  );
+                }
+              } else {
+                for (let p = groupStart; p <= groupEnd; p++) {
+                  pages.push(
+                    <PaginationItem key={p}>
+                      <PaginationLink
+                        href="#"
+                        isActive={p === currentPage}
+                        className={
+                          isLoading ? "pointer-events-none opacity-50" : ""
+                        }
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (!isLoading) {
+                            goToPage(p, searchTerm);
+                          }
+                        }}
+                      >
+                        {p}
+                      </PaginationLink>
+                    </PaginationItem>
+                  );
+                }
+
+                if (groupEnd < totalPages) {
+                  if (groupEnd < totalPages - 1) {
+                    pages.push(
+                      <PaginationItem key="next-ellipsis">
+                        <PaginationEllipsis />
+                      </PaginationItem>
+                    );
+                  }
+
+                  pages.push(
+                    <PaginationItem key="next-group">
+                      <PaginationNext
+                        href="#"
+                        className={
+                          isLoading ? "pointer-events-none opacity-50" : ""
+                        }
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (!isLoading) {
+                            const nextGroupStart = groupEnd + 1;
+                            goToPage(nextGroupStart, searchTerm);
+                          }
+                        }}
+                      />
+                    </PaginationItem>
+                  );
+                }
+              }
+
+              return pages;
+            })()}
+          </PaginationContent>
+        </Pagination>
       )}
     </div>
   );

@@ -33,9 +33,14 @@ export const Navbar = ({
   return (
     <motion.div
       ref={ref}
+      style={{
+        top: visible
+          ? "calc(var(--pre-sale-banner-height, 0px))"
+          : "calc(var(--pre-sale-banner-height, 0px) + var(--pre-sale-gap, 6px) + 2px)",
+      }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-40 w-full transition-all duration-500 ease-in-out",
-        visible ? "px-0" : "top-4 px-3",
+        "fixed left-0 right-0 z-40 w-full transition-all duration-500 ease-in-out",
+        visible ? "px-0" : "px-3",
         className
       )}
     >
@@ -165,14 +170,26 @@ export const MobileNav = ({
   children,
   className,
   visible,
+  style,
 }: {
   children: React.ReactNode;
   className?: string;
   visible?: boolean;
+  style?: React.CSSProperties;
 }) => (
   <div
+    style={{
+      ...(style || {}),
+      top: visible
+        ? "calc(var(--pre-sale-banner-height, 0px))"
+        : "calc(var(--pre-sale-banner-height, 0px) + var(--pre-sale-gap, 6px) + 2px)",
+      position: "fixed",
+      left: 0,
+      width: "100%",
+      zIndex: 50,
+    }}
     className={cn(
-      "relative z-50 w-full md:hidden transition-shadow duration-300",
+      "md:hidden transition-shadow duration-300",
       visible && "shadow-md",
       className
     )}
@@ -223,19 +240,29 @@ export const MobileNavMenu = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className={cn(
-          "fixed inset-0 z-50 bg-white dark:bg-neutral-950 overflow-y-auto",
-          className
-        )}
+        style={{
+          position: "fixed",
+          left: 0,
+          right: 0,
+          top: "calc(var(--pre-sale-banner-height, 0px) + var(--pre-sale-gap, 6px))",
+          bottom: 0,
+          zIndex: 50,
+          overflowY: "auto",
+        }}
+        className={cn("bg-white dark:bg-neutral-950", className)}
       >
-        <div className="sticky top-0 z-50 h-16 px-4 flex items-center justify-between bg-white dark:bg-neutral-950 dark:border-neutral-800">
+        {/* sticky header inside the overlay should sit at the very top of this overlay */}
+        <div
+          style={{ top: 0 }}
+          className="sticky z-50 h-16 px-4 flex items-center justify-between bg-white dark:bg-neutral-950 dark:border-neutral-800"
+        >
           <NavbarLogo onClick={onClose} />
           <button onClick={onClose} className="text-black dark:text-white">
             <IconX size={24} />
           </button>
         </div>
 
-        <div className="space-y-5 p-6">
+        <div className="space-y-5 p-6 pt-4">
           {navItems.map((item) => {
             const filteredLinks = item.links.filter(
               (link) => !["Sign Up", "Login"].includes(link.label)
@@ -245,7 +272,7 @@ export const MobileNavMenu = ({
 
             return (
               <div key={item.title} className="w-full">
-                <h3 className="text-gray-800 dark:text-white text-3xl mb-2 tracking-wider">
+                <h3 className="text-gray-800 dark:text-white text-xl mb-2 tracking-wider">
                   {item.title}
                 </h3>
                 <ul className="space-y-2">
@@ -254,7 +281,7 @@ export const MobileNavMenu = ({
                       <a
                         href={link.href}
                         onClick={onClose}
-                        className="text-xl text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                        className="text-lg text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                       >
                         {link.label}
                       </a>

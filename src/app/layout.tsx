@@ -2,6 +2,7 @@ import { lato } from "@/app/font";
 import "./globals.css";
 import Head from "./(site)/head";
 import Script from "next/script";
+import GlobalPreSaleBanner from "@/components/ui/GlobalPreSaleBanner";
 
 export default function RootLayout({
   children,
@@ -99,6 +100,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
 
+        <GlobalPreSaleBanner />
         {children}
       </body>
     </html>
