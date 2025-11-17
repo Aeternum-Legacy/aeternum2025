@@ -3,6 +3,7 @@ import "./globals.css";
 import Head from "./(site)/head";
 import Script from "next/script";
 import GlobalPreSaleBanner from "@/components/ui/GlobalPreSaleBanner";
+import BrevoAutoShow from "@/components/client/BrevoAutoShow";
 
 export default function RootLayout({
   children,
@@ -101,6 +102,7 @@ export default function RootLayout({
         </noscript>
 
         <GlobalPreSaleBanner />
+        <BrevoAutoShow />
         {children}
       </body>
     </html>

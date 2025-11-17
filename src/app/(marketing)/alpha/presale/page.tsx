@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 import CookieBannerClient from "./CookieBannerClient";
 import Footer from "@/components/layout/Footer";
 import { ShinyButton } from "@/components/ui/ShinyButton";
@@ -7,10 +8,10 @@ import MemoryPreservationDesktop from "@/components/sections/desktop/MemoryPrese
 import MemoryPreservationMobile from "@/components/sections/mobile/MemoryPreservationMobile";
 
 export default function AeternumLegacyPlan() {
+  const router = useRouter();
   return (
     <main className="bg-pattern bg-white">
       <CookieBannerClient />
-      {/* Logo positioned at left end (non-fixed) */}
       <div className="flex justify-start px-6 pt-4">
         <a href="/" aria-label="Aeternum home" className="bg-transparent">
           <img
@@ -35,16 +36,18 @@ export default function AeternumLegacyPlan() {
               your memories, voices, and values for generations to come.
             </p>
           </div>
+          <div className="text-center">
+            <strong>
+              This offer is now ended. Missed becoming a Founding Supporter?
+              Sign up to get our latest offers and get Early Access.
+            </strong>
+          </div>
+
           <ShinyButton
             buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300 w-72"
             textClassName="text-white"
             onClick={() => {
-              // Open Stripe checkout with Forlife75 promo in a new tab
-              window.open(
-                "https://buy.stripe.com/8x2fZg0ttd169RCaSa4Ja04?prefilled_promo_code=75forlife",
-                "_blank",
-                "noopener,noreferrer"
-              );
+              router.push("/#signup");
             }}
           >
             Become a Founding Supporter
@@ -65,6 +68,9 @@ export default function AeternumLegacyPlan() {
                 backgroundPosition: "center 95%",
               }}
             >
+              <div className="text-center mb-4 px-6">
+                <strong>Offer ended Nov. 14, 2025</strong>
+              </div>
               <h2 className="text-2xl font-semibold">Legacy Family Plan</h2>
               <p className="text-emerald-600 font-bold">75% Off For Life</p>
               <p className="text-neutral-700">
@@ -87,14 +93,14 @@ export default function AeternumLegacyPlan() {
                   </a>
                 </p>
               </div>
-              <a
+              {/* <a
                 href="https://buy.stripe.com/8x2fZg0ttd169RCaSa4Ja04?prefilled_promo_code=75forlife"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white px-6 py-3 rounded-xl font-semibold"
+                className="inline-block bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white px-6 py-3 rounded-full font-semibold"
               >
                 Secure my Lifetime Discount
-              </a>
+              </a> */}
               <p className="text-xs w-full md:w-96 break-words">
                 The Guarantee: It's totally risk-free. Secure your Founder's
                 Rate today, and if you don't love the platform within 30 days
@@ -368,7 +374,7 @@ export default function AeternumLegacyPlan() {
             >
               Founder's Offer ends November 14th!
             </p>
-            <ShinyButton
+            {/* <ShinyButton
               buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300 w-72"
               textClassName="text-white"
               onClick={() => {
@@ -381,7 +387,7 @@ export default function AeternumLegacyPlan() {
               }}
             >
               Become a Founding Supporter
-            </ShinyButton>
+            </ShinyButton> */}
           </div>
         </section>
 
@@ -477,11 +483,12 @@ export default function AeternumLegacyPlan() {
             <br />
             Join thousands of families building their legacies with Aeternum.
           </p>
+
           <a
-            href="#plans"
-            className="inline-block bg-teal-600 hover:bg-teal-800 text-white px-8 py-4 rounded-xl text-lg font-semibold"
+            href="/#signup"
+            className="inline-block bg-teal-600 hover:bg-teal-800 text-white px-8 py-4 rounded-full text-lg font-semibold"
           >
-            Start Your Plan Today
+            Join Early Access
           </a>
         </section>
 

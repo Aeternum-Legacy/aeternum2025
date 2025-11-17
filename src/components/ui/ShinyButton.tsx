@@ -7,6 +7,7 @@ import React from "react";
 const animationProps = {
   initial: { "--x": "100%", scale: 0.8 },
   animate: { "--x": "-100%", scale: 1 },
+  whileHover: { scale: 1.03 },
   whileTap: { scale: 0.95 },
   transition: {
     repeat: Infinity,
@@ -45,7 +46,9 @@ export const ShinyButton = React.forwardRef<
     <motion.button
       ref={ref}
       className={cn(
-        "relative rounded-lg backdrop-blur-xl transition-shadow duration-300 ease-in-out hover:shadow dark:bg-[radial-gradient(circle_at_50%_0%,var(--primary)/10%_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_var(--primary)/10%]",
+        "relative rounded-lg backdrop-blur-xl transition duration-300 ease-in-out hover:shadow-lg transform-gpu",
+        "cursor-pointer",
+        "dark:bg-[radial-gradient(circle_at_50%_0%,var(--primary)/10%_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_var(--primary)/10%]",
         "px-4 py-2 text-sm",
         "md:px-6 md:py-3 md:text-base",
         buttonClassName,
