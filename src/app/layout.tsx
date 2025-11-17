@@ -2,7 +2,6 @@ import { lato } from "@/app/font";
 import "./globals.css";
 import Head from "./(site)/head";
 import Script from "next/script";
-import GlobalPreSaleBanner from "@/components/ui/GlobalPreSaleBanner";
 import BrevoAutoShow from "@/components/client/BrevoAutoShow";
 
 export default function RootLayout({
@@ -101,7 +100,6 @@ export default function RootLayout({
           ></iframe>
         </noscript>
 
-        <GlobalPreSaleBanner />
         <BrevoAutoShow />
         {children}
       </body>
