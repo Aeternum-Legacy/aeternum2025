@@ -8,12 +8,11 @@ export default function ReimagineYourLegacyDesktop() {
   const router = useRouter();
 
   const handleClick = () => {
-    const signupSection = document.getElementById("signup");
-    if (signupSection) {
-      signupSection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      router.push("/#signup");
-    }
+    window.open(
+      "https://app.aeternumproject.com",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   return (
@@ -55,7 +54,7 @@ export default function ReimagineYourLegacyDesktop() {
               buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300 w-52"
               textClassName="text-white"
             >
-              Join Early Access
+              Join the Alpha
             </ShinyButton>
           </div>
         </div>

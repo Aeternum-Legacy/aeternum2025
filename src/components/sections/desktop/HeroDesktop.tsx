@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TiltImageWrapper from "../../ui/TiltImageWrapper";
 import { FadeInText } from "../../animations/FadeInText";
+import { heroContent } from "@/lib/hero";
 
 export default function HeroDesktop() {
   return (
@@ -10,19 +11,23 @@ export default function HeroDesktop() {
       className="hidden md:flex items-center text-center overflow-x-hidden hero-wrapper"
     >
       <div className="gap-y-2">
-        <h1 className="sr-only">How will you be remembered?</h1>
+        <h1 className="sr-only">{heroContent.headline}</h1>
         <FadeInText
-          text={"How will you be remembered?"}
+          text={
+            <span dangerouslySetInnerHTML={{ __html: heroContent.headline }} />
+          }
           className="tracking-normal text-black"
           duration={4}
         />
 
         <div className="text-[#738483]">
-          <h6 className="leading-tight tracking-normal">Words left unspoken</h6>
-          <h6 className="leading-tight tracking-normal">
-            Memories left forgotten
-          </h6>
-          <h6 className="leading-tight tracking-normal">Stories left untold</h6>
+          {heroContent.subheadlines.map((line, index) => (
+            <h6
+              key={index}
+              className="leading-tight tracking-normal"
+              dangerouslySetInnerHTML={{ __html: line }}
+            />
+          ))}
         </div>
       </div>
 
@@ -31,8 +36,8 @@ export default function HeroDesktop() {
           <div className="flex justify-center items-start">
             <TiltImageWrapper className="relative w-full aspect-[15/9] mt-7">
               <Image
-                src="/images/Image2.jpg"
-                alt="Father holding his son"
+                src={heroContent.images[0].src}
+                alt={heroContent.images[0].alt}
                 fill
                 className="object-cover rounded-xl"
               />
@@ -42,8 +47,8 @@ export default function HeroDesktop() {
           <div className="flex justify-center items-start pt-20">
             <TiltImageWrapper className="relative w-80 aspect-[9/10] mt-7">
               <Image
-                src="/images/Image3.jpg"
-                alt="Mom holding her son"
+                src={heroContent.images[1].src}
+                alt={heroContent.images[1].alt}
                 fill
                 className="object-cover rounded-xl"
               />
@@ -53,8 +58,8 @@ export default function HeroDesktop() {
           <div className="flex justify-center items-start pt-40">
             <TiltImageWrapper className="relative w-full aspect-[16/11]">
               <Image
-                src="/images/Image4.jpg"
-                alt="Father holding his daughter"
+                src={heroContent.images[2].src}
+                alt={heroContent.images[2].alt}
                 fill
                 className="object-cover rounded-xl"
               />
@@ -64,8 +69,8 @@ export default function HeroDesktop() {
           <div className="flex justify-center items-start pt-20">
             <TiltImageWrapper className="relative w-80 aspect-[9/10] mt-7">
               <Image
-                src="/images/Image5.jpg"
-                alt="Senior couple holding hands peacefully together"
+                src={heroContent.images[3].src}
+                alt={heroContent.images[3].alt}
                 fill
                 className="object-cover rounded-xl"
               />
@@ -75,8 +80,8 @@ export default function HeroDesktop() {
           <div className="flex justify-center items-start">
             <TiltImageWrapper className="relative w-[120%] lg:w-[110%] aspect-[16/9] mt-7">
               <Image
-                src="/images/Image1.jpg"
-                alt="Old couple"
+                src={heroContent.images[4].src}
+                alt={heroContent.images[4].alt}
                 fill
                 className="object-cover rounded-xl"
               />

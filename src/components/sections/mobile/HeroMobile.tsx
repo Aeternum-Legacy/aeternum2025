@@ -2,6 +2,7 @@
 
 import { FadeInText } from "../../animations/FadeInText";
 import { ShinyButton } from "../../ui/ShinyButton";
+import { heroContent } from "@/lib/hero";
 
 export default function HeroMobile() {
   return (
@@ -12,7 +13,7 @@ export default function HeroMobile() {
     >
       <div className="relative block md:hidden h-[100dvh] w-screen bg-[url('/images/Image5.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden mt-0">
         <div className="flex flex-col min-h-screen items-center justify-start px-4 text-center pt-[20vh]">
-          <h1 className="sr-only">How will you be remembered?</h1>
+          <h1 className="sr-only">{heroContent.headline}</h1>
 
           <div
             className="aspect-square w-96 rounded-full pointer-events-none"
@@ -23,21 +24,22 @@ export default function HeroMobile() {
           >
             <FadeInText
               text={
-                <span className="text-5xl">How will you be remembered?</span>
+                <span
+                  className="text-5xl"
+                  dangerouslySetInnerHTML={{ __html: heroContent.headline }}
+                />
               }
               className="tracking-normal text-white mb-4"
             />
 
             <div className="text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
-              <h5 className="leading-tight tracking-normal">
-                Words left unspoken
-              </h5>
-              <h5 className="leading-tight tracking-normal">
-                Memories left forgotten
-              </h5>
-              <h5 className="leading-tight tracking-normal">
-                Stories left untold
-              </h5>
+              {heroContent.subheadlines.map((line, index) => (
+                <h5
+                  key={index}
+                  className="leading-tight tracking-normal"
+                  dangerouslySetInnerHTML={{ __html: line }}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -45,14 +47,16 @@ export default function HeroMobile() {
         <div className="absolute bottom-10 left-0 w-full px-6">
           <ShinyButton
             onClick={() =>
-              document
-                .getElementById("signup")
-                ?.scrollIntoView({ behavior: "smooth" })
+              window.open(
+                "https://app.aeternumproject.com",
+                "_blank",
+                "noopener,noreferrer"
+              )
             }
             buttonClassName="w-full bg-[var(--btn-primary)] hover:bg-[var(--btn-primary-hover)] text-white text-base font-medium py-3 rounded-full transition-colors duration-300"
             textClassName="text-white"
           >
-            Join Early Access
+            Join the Alpha
           </ShinyButton>
         </div>
       </div>

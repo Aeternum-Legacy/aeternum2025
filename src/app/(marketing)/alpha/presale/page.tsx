@@ -135,9 +135,7 @@ export default function AeternumLegacyPlan() {
               </div>
 
               <div className="mb-4">
-                <p className="font-bold">
-                  Available at Alpha Launch (This November):
-                </p>
+                <p className="font-bold">Available at Alpha Launch:</p>
                 <ul className="text-neutral-800 space-y-1">
                   <li className="flex items-start text-left gap-2 text-sm">
                     <img
@@ -479,16 +477,18 @@ export default function AeternumLegacyPlan() {
         <section className="max-w-3xl mx-auto text-center px-6 py-20 mb-10">
           <h3 className=" font-bold mb-4">Start Preserving Today</h3>
           <p className="text-neutral-700 mb-8">
-            Your family’s story deserves a safe home.
+            Your family's story deserves a safe home.
             <br />
             Join thousands of families building their legacies with Aeternum.
           </p>
 
           <a
-            href="/#signup"
+            href="https://app.aeternumproject.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-teal-600 hover:bg-teal-800 text-white px-8 py-4 rounded-full text-lg font-semibold"
           >
-            Join Early Access
+            Join the Alpha
           </a>
         </section>
 

@@ -72,26 +72,31 @@ export default function SignUpStickyButton() {
         animate={controls}
         whileHover={{ scale: 1.05 }}
         id="sticky-signup-btn"
-        onClick={handleClick}
       >
-        <Button
-          borderRadius="1.75rem"
-          className="bg-[#186E68] hover:bg-[#1a4f49] text-white border border-white/20 shadow-[0_0_0_2px_white/20] transition duration-300"
+        <a
+          href="https://app.aeternumproject.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <span className="group-hover:translate-x-32 opacity-100 group-hover:opacity-0 transition-all duration-500 tracking-wider">
-            Join Early Access
-          </span>
+          <Button
+            borderRadius="1.75rem"
+            className="bg-[#186E68] hover:bg-[#1a4f49] text-white border border-white/20 shadow-[0_0_0_2px_white/20] transition duration-300"
+          >
+            <span className="group-hover:translate-x-32 opacity-100 group-hover:opacity-0 transition-all duration-500 tracking-wider">
+              Join the Alpha
+            </span>
 
-          <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-            <Image
-              src="/icons/aeternum-logo.svg"
-              alt="Aeternum logo"
-              width={100}
-              height={100}
-              className="w-25 h-25 object-contain"
-            />
-          </span>
-        </Button>
+            <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+              <Image
+                src="/icons/aeternum-logo.svg"
+                alt="Aeternum logo"
+                width={100}
+                height={100}
+                className="w-25 h-25 object-contain"
+              />
+            </span>
+          </Button>
+        </a>
       </motion.div>
     </div>
   );

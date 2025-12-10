@@ -6,6 +6,7 @@ import ImageTileSection from "@/components/sections/ImageTileSection";
 import ReimagineYourLegacySection from "@/components/sections/ReimagineYourLegacySection";
 import SignUpSection from "@/components/sections/SignUpSection";
 import WhatIfSection from "@/components/sections/WhatIfSection";
+import Prices from "@/components/sections/Prices";
 
 export const metadata = {
   title: "Reimagine Your Legacy | Aeternum",
@@ -19,6 +20,7 @@ export default function Home() {
       <HeroSection />
       <SignUpSection />
       <DidYouKnowSection />
+      <Prices />
       <WhatIfSection />
       <ReimagineYourLegacySection />
       <FeatureSummarySection />

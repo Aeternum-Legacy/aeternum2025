@@ -10,78 +10,90 @@ declare global {
 
 export default function SignUpSection() {
   return (
-    <section
-      aria-labelledby="signup-heading"
-      className="w-full h-fit lg:h-[550px]"
-    >
+    <section aria-labelledby="signup-heading" className="w-full h-fit">
       <div
         className="
-      lg:mx-8 flex flex-col lg:flex-row overflow-hidden lg:rounded-3xl
-      bg-[#F7F8EA] h-fit lg:h-[550px]   
+      lg:mx-8 overflow-hidden lg:rounded-3xl
+      bg-[#F7F8EA] h-fit
     "
       >
         <div
           className="
-        lg:w-1/2 relative flex items-center justify-center 
+        relative flex items-center justify-center 
         shadow-[4px_8px_8px_rgba(0,0,0,0.38)] overflow-hidden bg-cover bg-center
-        min-h-[320px] lg:h-[550px]     
+        min-h-[320px] py-12
       "
           style={{ backgroundImage: "url('/images/tree.png')" }}
         >
           <div className="absolute inset-0 bg-[#F7F8EA]/80 w-full h-full " />
-          <div className="relative z-10 flex flex-col justify-center items-center text-black text-center px-4 py-8 w-full h-full">
+          <div className="relative z-10 flex flex-col justify-center items-center text-black px-8 py-8 w-full h-full max-w-7xl mx-auto">
             <h4
               id="signup-heading"
-              className="mb-4 font-bold lg:font-normal tracking-tight"
+              className="mb-8 font-bold lg:font-normal tracking-tight text-center"
             >
               Early Access to Aeternum
             </h4>
-            <p className="mb-4">
-              Sign up as an Early Adopter and get exclusive early access to
-              Aeternum.
-            </p>
-            <p className="mb-4 font-semibold">As an Early Adopter, you will:</p>
-            <ul className="text-left max-w-lg">
-              {[
-                "Get an exclusive invitation to the Beta Test and shape the future of legacy preservation.",
-                "Be the first to experience Aeternum through early access to the final version.",
-                "Get exclusive updates on special offers, discount codes, events, and development progress.",
-                "Get 50% off during the beta phase, plus 20% off an annual subscription when Aeternum officially launches.",
-              ].map((text, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-2 leading-normal tracking-normal mb-2"
-                >
-                  <Image
-                    src="/icons/list.svg"
-                    alt="check icon"
-                    width={20}
-                    height={20}
-                    className="mt-[0.3rem]"
-                  />
-                  <span>{text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+            <div>
+              <h5 className="font-semibold text-lg mb-2">Supporter Benefit:</h5>
+              <p className="text-sm" style={{ marginBottom: "48px" }}>
+                As a Founding Supporter, you get immediate access to the Alpha
+                platform and a first-in-line pass to all new features as they
+                roll out!
+              </p>
+            </div>
 
-        <div
-          id="signup"
-          className="
-        lg:w-1/2 grid place-items-center
-        h-[500px] lg:h-[550px]        
-      "
-        >
-          <div className="w-full h-full min-h-[320px] flex items-center justify-center overflow-hidden">
-            <iframe
-              src="https://a276752d.sibforms.com/serve/MUIFADvHCOpCEY3oWkUMEl0bNTu2r09khoCDyqLgkEe-hOlEgdxdU9gPyTRaP0e1NOFFQeYwTKPB7rZm6sJnRQGrPoylhMtagAyY-FnpUKGfAev6xW8VHhNDQNGMruySbHNJgaLOeJ4BhhmHLE5tvatv5Iz6qYRHOKX9U65whVcBOdcEvOSjPU1R_-caY6olFWkwnLc4WzzpQMTL"
-              className="block w-full h-full"
-              style={{ border: 0, maxWidth: "100%", maxHeight: "100%" }}
-              scrolling="no"
-              frameBorder={0}
-              allowFullScreen
-            />
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
+              <div>
+                <h5 className="font-semibold text-lg mb-2">
+                  Available at Alpha Launch (This November):
+                </h5>
+                <ul className="text-sm space-y-1 list-disc list-inside">
+                  <li>
+                    2 TB Secure Storage for photos, videos, audio, & PDF files
+                  </li>
+                  <li>Private Digital Vault with end-to-end encryption</li>
+                  <li>Family Connections</li>
+                  <li>Curated Profiles for a loved one</li>
+                  <li>Privacy Circles (Standard Version)</li>
+                  <li>Ad-Free & Privacy-First experience</li>
+                </ul>
+              </div>
+
+              <div>
+                <h5 className="font-semibold text-lg mb-2">
+                  Coming Soon (Rolling out in the next 2 months!):
+                </h5>
+                <ul className="text-sm space-y-1 list-disc list-inside">
+                  <li>Family Tree Integration</li>
+                  <li>Share with 5 Family Members</li>
+                  <li>Native Mobile Version for iOS and Android</li>
+                  <li>File Management System</li>
+                  <li>Timeline Memory View</li>
+                </ul>
+              </div>
+
+              <div>
+                <h5 className="font-semibold text-lg mb-2">
+                  Enhanced Memory & Legacy Suite:
+                </h5>
+                <ul className="text-sm space-y-1 list-disc list-inside">
+                  <li>Customizable Privacy Circles</li>
+                  <li>Memory Collections & Chain Memory System</li>
+                  <li>Memory Integrated File Management System</li>
+                </ul>
+              </div>
+
+              <div>
+                <h5 className="font-semibold text-lg mb-2">
+                  Coming Soon to Aeternum Beta (Q1 2026):
+                </h5>
+                <ul className="text-sm space-y-1 list-disc list-inside">
+                  <li>Aeternum Legacy Messages</li>
+                  <li>Digital Inheritance Management System</li>
+                  <li>In App Recorded Voice Notes</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
