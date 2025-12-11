@@ -57,16 +57,6 @@ export default function Footer() {
               ],
             },
             {
-              title: "Updates",
-              links: [
-                { label: "News", href: "/news" },
-                {
-                  label: "Development Progress",
-                  href: "/development-progress",
-                },
-              ],
-            },
-            {
               title: "Support",
               links: [
                 { label: "Contact", href: "/contact" },

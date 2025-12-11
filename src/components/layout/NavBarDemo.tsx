@@ -34,13 +34,6 @@ const navItems = [
     ],
   },
   {
-    title: "Updates",
-    links: [
-      { href: "/news", label: "News" },
-      { href: "/development-progress", label: "Development Progress" },
-    ],
-  },
-  {
     title: "Support",
     links: [
       { href: "/contact", label: "Contact" },

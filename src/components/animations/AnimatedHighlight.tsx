@@ -4,20 +4,6 @@ import React, { ElementType, useEffect, useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const defaultHighlightVariants = {
-  initial: { width: 0, opacity: 0 },
-  animate: {
-    width: "100%",
-    opacity: 1,
-    transition: { duration: 0.8, ease: "easeInOut" },
-  },
-  exit: {
-    width: 0,
-    opacity: 0,
-    transition: { duration: 0.8, ease: "easeInOut" },
-  },
-};
-
 interface AnimatedHighlightProps {
   text?: string;
   highlight: string;
@@ -99,10 +85,17 @@ export function AnimatedHighlight({
             {showHighlight && (
               <motion.span
                 className="absolute bottom-0 left-0 h-[2px] bg-gray-400/30"
-                variants={defaultHighlightVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
+                initial={{ width: 0, opacity: 0 }}
+                animate={{
+                  width: "100%",
+                  opacity: 1,
+                  transition: { duration: 0.8 },
+                }}
+                exit={{
+                  width: 0,
+                  opacity: 0,
+                  transition: { duration: 0.8 },
+                }}
               />
             )}
           </AnimatePresence>

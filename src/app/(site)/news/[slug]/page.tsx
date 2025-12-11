@@ -23,11 +23,16 @@ interface PageProps {
 }
 
 async function getPost(slug: string) {
-  const data: PostResponse = await graphQLClient.request(
-    GET_POST_BY_SLUG_WITH_SEO,
-    { slug }
-  );
-  return data.posts.nodes[0] || null;
+  try {
+    const data: PostResponse = await graphQLClient.request(
+      GET_POST_BY_SLUG_WITH_SEO,
+      { slug }
+    );
+    return data.posts.nodes[0] || null;
+  } catch (error) {
+    console.warn(`Failed to fetch post with slug: ${slug}`);
+    return null;
+  }
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
@@ -63,8 +68,15 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const data = await graphQLClient.request<PostResponse>(POSTS_QUERY);
-  return data.posts.nodes.map((post) => ({ slug: post.slug }));
+  try {
+    const data = await graphQLClient.request<PostResponse>(POSTS_QUERY);
+    return data.posts.nodes.map((post) => ({ slug: post.slug }));
+  } catch (error) {
+    console.warn(
+      "Failed to fetch posts for static params, returning empty array"
+    );
+    return [];
+  }
 }
 
 export default async function SingleNewsPage({ params }: PageProps) {

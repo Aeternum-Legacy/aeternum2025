@@ -1,16 +1,16 @@
 import { GraphQLClient } from "graphql-request";
 
 // Prefer the public URL (exposed to the browser) but fall back to a server-only
-// env var if available. Throw a clear error when neither is set so the runtime
-// doesn't end up calling fetch(undefined) and producing an opaque "fetch failed".
+// env var if available. Use a placeholder for build time if not configured.
 const endpoint =
-  process.env.NEXT_PUBLIC_WP_GRAPHQL_URL || process.env.WP_GRAPHQL_URL || "";
+  process.env.NEXT_PUBLIC_WP_GRAPHQL_URL ||
+  process.env.WP_GRAPHQL_URL ||
+  "https://placeholder.wordpress.com/graphql";
 
-if (!endpoint) {
-  // Throw at import time so server-side rendering fails fast with a helpful
-  // message pointing at the missing configuration.
-  throw new Error(
-    "WP GraphQL endpoint is not configured. Set NEXT_PUBLIC_WP_GRAPHQL_URL or WP_GRAPHQL_URL in your environment."
+// Warn if endpoint is not configured (but don't throw during build)
+if (!process.env.NEXT_PUBLIC_WP_GRAPHQL_URL && !process.env.WP_GRAPHQL_URL) {
+  console.warn(
+    "WP GraphQL endpoint is not configured. Set NEXT_PUBLIC_WP_GRAPHQL_URL or WP_GRAPHQL_URL in your environment. Using placeholder."
   );
 }
 

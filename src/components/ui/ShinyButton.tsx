@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion, MotionProps, type AnimationProps } from "motion/react";
+import { motion, type MotionProps } from "framer-motion";
 import React from "react";
 
 const animationProps = {
@@ -11,23 +11,23 @@ const animationProps = {
   whileTap: { scale: 0.95 },
   transition: {
     repeat: Infinity,
-    repeatType: "loop",
+    repeatType: "loop" as const,
     // Increased delay for a slower, less busy shine
     repeatDelay: 2.5,
     // Use a softer spring for gentler motion
-    type: "spring",
+    type: "spring" as const,
     stiffness: 10,
     damping: 30,
     mass: 3,
     // Make the scale spring slower and smoother as well
     scale: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 80,
       damping: 18,
       mass: 0.9,
     },
   },
-} as AnimationProps;
+} as const;
 
 interface ShinyButtonProps
   extends Omit<React.HTMLAttributes<HTMLButtonElement>, keyof MotionProps>,

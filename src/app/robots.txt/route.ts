@@ -6,7 +6,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.aeternumproject.com/sitemap.xml
-Sitemap: https://www.aeternumproject.com/news/sitemap.xml
   `.trim();
 
   return new Response(txt, {

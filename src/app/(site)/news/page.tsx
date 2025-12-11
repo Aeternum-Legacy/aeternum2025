@@ -167,13 +167,19 @@ export default async function Page({
 
   const { posts, totalPages } = await getPostsForPage(page, q || null);
 
-  const featuredData = await graphQLClient.request<FeaturedPostsResponse>(
-    FEATURED_QUERY,
-    {
-      first: 30,
-      search: q || null,
-    }
-  );
+  let featuredPosts: GqlPostNode[] = [];
+  try {
+    const featuredData = await graphQLClient.request<FeaturedPostsResponse>(
+      FEATURED_QUERY,
+      {
+        first: 30,
+        search: q || null,
+      }
+    );
+    featuredPosts = featuredData.posts.nodes;
+  } catch (error) {
+    console.warn("Failed to fetch featured posts, using empty array");
+  }
 
   return (
     <NewsClient
@@ -181,7 +187,7 @@ export default async function Page({
       totalPages={totalPages}
       currentPage={page}
       searchTermFromUrl={q}
-      featuredPostsInitial={featuredData.posts.nodes}
+      featuredPostsInitial={featuredPosts}
       postsPerPage={POSTS_PER_PAGE}
     />
   );
