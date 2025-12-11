@@ -15,12 +15,7 @@ export default function FaqPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[#186E68]/10 to-transparent pt-20 pb-12 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <img
-              src="/icons/question.svg"
-              alt="Question mark icon"
-              className="w-12 h-12"
-            />
+          <div className="mb-4">
             <h1 className="text-4xl md:text-5xl font-bold text-[#186E68]">
               FAQ
             </h1>
@@ -39,7 +34,7 @@ export default function FaqPage() {
               key={category.id}
               onClick={() => setActiveTab(category.id)}
               className={cn(
-                "px-6 py-3 rounded-full font-semibold transition-all duration-200",
+                "px-6 py-3 rounded-full font-semibold transition-all duration-200 cursor-pointer",
                 activeTab === category.id
                   ? "bg-[#186E68] text-white shadow-lg"
                   : "bg-white text-[#4F4949] border border-[#8BA39C] hover:border-[#186E68] hover:text-[#186E68]"
@@ -57,16 +52,9 @@ export default function FaqPage() {
               key={index}
               className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-[#E5E5E0]"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <img
-                  src={faq.icon}
-                  alt=""
-                  className="w-8 h-8 flex-shrink-0 mt-1"
-                />
-                <h3 className="text-lg font-bold text-[#186E68]">
-                  {faq.question}
-                </h3>
-              </div>
+              <h3 className="text-lg font-bold text-[#186E68] mb-4">
+                {faq.question}
+              </h3>
               <p className="text-[#4F4949] leading-relaxed">{faq.answer}</p>
             </div>
           ))}
@@ -76,9 +64,6 @@ export default function FaqPage() {
       {/* Support Section */}
       <section className="bg-gradient-to-b from-[#186E68]/5 to-[#186E68]/10 py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-6">
-            <span className="text-6xl">💬</span>
-          </div>
           <h2 className="text-3xl font-bold text-[#186E68] mb-4">
             {supportSection.heading}
           </h2>
@@ -94,9 +79,6 @@ export default function FaqPage() {
       {/* Contact Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="bg-white rounded-2xl p-10 shadow-lg border border-[#E5E5E0] text-center">
-          <div className="mb-6">
-            <span className="text-6xl">📧</span>
-          </div>
           <h2 className="text-2xl font-bold text-[#186E68] mb-4">
             {contactSection.title}
           </h2>

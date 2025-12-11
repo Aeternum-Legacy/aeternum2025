@@ -12,13 +12,21 @@ export default function AeternumLegacyPlan() {
   return (
     <main className="bg-pattern bg-white">
       <CookieBannerClient />
-      <div className="flex justify-start px-6 pt-4">
+      <div className="flex justify-between items-center px-6 pt-4">
         <a href="/" aria-label="Aeternum home" className="bg-transparent">
           <img
             src="/icons/Aeternum_logo_TM_black.svg"
             alt="Aeternum Logo"
             className="w-40 h-auto md:w-48"
           />
+        </a>
+        <a
+          href="https://app.aeternumproject.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-2 border border-black rounded-full bg-transparent hover:bg-black hover:text-white transition-colors duration-200"
+        >
+          Join the Alpha
         </a>
       </div>
 

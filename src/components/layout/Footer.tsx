@@ -27,11 +27,16 @@ export default function Footer() {
           Ready to turn your memories into a lasting legacy?
         </h5>
 
-        <Link href="/#signup">
-          <button className="font-medium px-6 py-2 border border-white rounded-full transition-colors duration-200 hover:bg-white hover:text-black">
-            Sign Up
-          </button>
-        </Link>
+        <div className="flex gap-4">
+          <a
+            href="https://app.aeternumproject.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium px-6 py-2 border border-white rounded-full transition-colors duration-200 hover:bg-white hover:text-black"
+          >
+            Join the Alpha
+          </a>
+        </div>
       </div>
 
       <div className="flex flex-col md:flex-row justify-between pt-10 gap-10 items-center md:items-start text-center md:text-left px-4 md:px-10">

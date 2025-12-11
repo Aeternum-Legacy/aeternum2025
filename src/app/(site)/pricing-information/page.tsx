@@ -163,11 +163,14 @@ export default function PricingInformationPage() {
                             );
                           }
 
-                          // Numeric prices: animate between original and discounted
+                          // Numeric prices: animate between original and discounted (divide by 12 for monthly display)
                           if (
                             typeof original === "number" &&
                             typeof discounted === "number"
                           ) {
+                            const originalMonthly = original / 12;
+                            const discountedMonthly = discounted / 12;
+
                             return (
                               <div className="flex items-baseline gap-2">
                                 <>
@@ -177,12 +180,12 @@ export default function PricingInformationPage() {
                                       "animate-strike-through"
                                     )}
                                   >
-                                    {formatSelected(original)}
+                                    {formatSelected(originalMonthly)}
                                   </p>
                                   <div className="flex items-baseline gap-2">
                                     <AnimatedNumber
-                                      from={original}
-                                      to={discounted}
+                                      from={originalMonthly}
+                                      to={discountedMonthly}
                                       formatter={(n: number) =>
                                         formatSelected(n)
                                       }
@@ -275,6 +278,26 @@ export default function PricingInformationPage() {
                     ))}
                   </ul>
                 </div>
+
+                {/* Payment Button */}
+                {(plan as any).paymentLinks && (
+                  <div className="mt-6">
+                    <a
+                      href={
+                        activeTab === "yearly"
+                          ? (plan as any).paymentLinks.yearly[currency]
+                          : (plan as any).paymentLinks.monthly[currency]
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-[#186E68] hover:bg-[#145a55] text-white font-semibold py-3 rounded-full text-center transition-colors"
+                    >
+                      {plan.name === "Basic"
+                        ? "Get Started Free"
+                        : `Choose ${plan.name}`}
+                    </a>
+                  </div>
+                )}
               </div>
             ))
           )}

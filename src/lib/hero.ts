@@ -1,13 +1,10 @@
 // Hero Section Content
 export const heroContent = {
-  headline: "Preserve What Matters.<br>Share With Who Matters.",
+  headline: "How will you perserve your legacy?",
   subheadlines: [
-    "A private digital vault that protects your family's memories and ensures they're inherited, not lost.",
-    "<a href='https://app.aeternumproject.com' class='text-[#738483] hover:text-[#5a6968] underline transition-colors'>Join the Alpha</a>",
-    "Privacy-First, You Own Your Data",
-    "Curate Profiles & Inheritable Accounts",
-    "Canadian Made, Built by Families for Families",
-    "Ad-Free. No Algorithm. No Public Content",
+    "Words left unspoken",
+    "Memories left forgotten",
+    "Stories left untold",
   ],
   images: [
     {
