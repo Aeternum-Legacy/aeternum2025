@@ -12,6 +12,7 @@ import {
   MobileNavMenu,
   NavbarBrowserLogo,
   NavbarMdLogo,
+  NavbarButton,
 } from "@/components/ui/ResizableNavbar";
 import { SignUpButton } from "../ui/SignUpButton";
 import { useRouter } from "next/navigation";
@@ -64,9 +65,20 @@ export function NavbarDemo() {
           <NavbarBrowserLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            {/* <NavbarButton href="/#signup" variant="primary">
-              Sign Up
-            </NavbarButton> */}
+            <NavbarButton
+              href="https://app.aeternumproject.com"
+              variant="primary"
+            >
+              Join the Alpha
+            </NavbarButton>
+            {/* <a
+              href="https://app.aeternumproject.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium px-6 py-2 border border-white rounded-full transition-colors duration-200 hover:bg-white hover:text-black"
+            >
+              Join the Alpha
+            </a> */}
           </div>
         </NavBody>
 
