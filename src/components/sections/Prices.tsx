@@ -7,15 +7,15 @@ export default function Prices() {
   const [currency, setCurrency] = useState<"USD" | "CAD">("USD");
 
   const premiumPricing = {
-    promo: { USD: 2.79, CAD: 3.19 },
-    regular: { USD: 3.99, CAD: 4.57 },
+    promo: { USD: 2.09, CAD: 2.79 },
+    regular: { USD: 2.99, CAD: 3.99 },
     discount: "30%",
   };
 
   const legacyPricing = {
-    promo: { USD: 6.99, CAD: 7.99 },
-    regular: { USD: 13.99, CAD: 15.99 },
-    yearTwoPrice: { USD: 11.19, CAD: 12.79 },
+    promo: { USD: 4.99, CAD: 6.99 },
+    regular: { USD: 9.99, CAD: 13.99 },
+    yearTwoPrice: { USD: 7.99, CAD: 11.19 },
     discount: "50%",
   };
 

@@ -169,11 +169,11 @@ export const featureComparisonByTier = {
   Premium: {
     color: "#F8F9F4",
     features: {
-      "Monthly Price": { USD: 3.99, CAD: 4.57 },
+      "Monthly Price": { USD: 2.99, CAD: 3.99 },
 
       "Annual Price": {
-        original: { USD: 47.88, CAD: 54.84 },
-        discounted: { USD: 33.48, CAD: 38.36 },
+        original: { USD: 35.88, CAD: 47.88 },
+        discounted: { USD: 25.08, CAD: 33.48 },
       },
       "Data Storage Capacity": "100 GB",
       "Shared Plan": "Multiple Users",
@@ -191,10 +191,10 @@ export const featureComparisonByTier = {
   Legacy: {
     color: "#EEF0EC",
     features: {
-      "Monthly Price": { USD: 13.99, CAD: 15.99 },
+      "Monthly Price": { USD: 9.99, CAD: 13.99 },
       "Annual Price": {
-        original: { USD: 167.88, CAD: 191.88 },
-        discounted: { USD: 95.88, CAD: 109.56 },
+        original: { USD: 119.88, CAD: 167.88 },
+        discounted: { USD: 59.88, CAD: 83.88 },
       },
       "Data Storage Capacity": "2 TB",
       "Shared Plan": "Multiple Users",
