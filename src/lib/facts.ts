@@ -253,12 +253,12 @@ export const pricingPlans = [
   {
     name: "Premium",
     monthly: {
-      USD: 3.99,
-      CAD: 4.57,
+      USD: 2.99,
+      CAD: 3.99,
     },
     yearly: {
-      original: { USD: 47.88, CAD: 54.84 },
-      discounted: { USD: 33.48, CAD: 38.36 },
+      original: { USD: 35.88, CAD: 47.88 },
+      discounted: { USD: 28.68, CAD: 38.28 },
     },
     paymentLinks: {
       monthly: {
@@ -288,12 +288,12 @@ export const pricingPlans = [
   {
     name: "Legacy",
     monthly: {
-      USD: 13.99,
-      CAD: 15.99,
+      USD: 9.99,
+      CAD: 13.99,
     },
     yearly: {
-      original: { USD: 167.88, CAD: 191.88 },
-      discounted: { USD: 95.88, CAD: 109.56 },
+      original: { USD: 119.88, CAD: 167.88 },
+      discounted: { USD: 95.88, CAD: 134.28 },
     },
     paymentLinks: {
       monthly: {
