@@ -3,13 +3,16 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: { caseSensitiveRoutes: true },
   images: {
-    domains: ["api.microlink.io", "3.144.117.179"],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  env: {
-    WORDPRESS_API_URL: process.env.WORDPRESS_API_URL,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.microlink.io",
+      },
+      {
+        protocol: "http",
+        hostname: "3.144.117.179",
+      },
+    ],
   },
 };
 
